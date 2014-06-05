@@ -8,6 +8,11 @@ inline int max(int a, int b){
     return ((a>b)? a : b);
 }
 
+inline double mod(double x){
+	return ((x>0)? x : -x) ;
+}
+
+
 void printPairs(int *array, int pair){
 
     int i;
@@ -68,3 +73,19 @@ void getShell(double *shell){
     fclose(input);
     //printf("exit getShell\n");
 }
+
+double relError(double *V1, double *V2, int size, int dimension){
+	
+	int i;
+	long double total = 0;
+	long double error = 0;
+	for(i=0;i<size*dimension;i++){
+		total += mod(V1[i]);
+		error += mod(V1[i] - V2[i]);
+	}
+	return (error/total);	
+	
+	
+}
+
+

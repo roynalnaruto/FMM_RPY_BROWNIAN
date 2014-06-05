@@ -16,6 +16,8 @@
 
 inline int min(int a, int b);
 inline int max(int a, int b);
+inline double mod(double x);
+
 
 void printPairs(int *array, int pair);
 void setPosRad(double *pos, double *rad);
@@ -23,6 +25,8 @@ void getShell(double *shell);
 void print3DVectors(double *array, int size, int dim);
 int interactions(int npos, double *pos, double L, int boxdim, double cutoff2, double *distances2, int *pairs, int maxnumpairs, int *numpairs_p);
 void interactionsFilter(int *numpairs_p, int *pairs, int *finalPairs, double *rad, double *pos);
+double relError(double *V1, double *V2, int size, int dimension);
+
 
 struct box{
     int head;
