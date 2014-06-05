@@ -1,0 +1,147 @@
+\documentclass[a4paper,9pt]{report}
+
+
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage[top=1.0in, bottom=1.0in, left=.6in, right=.6in]{geometry}
+\usepackage{float}
+\usepackage{amsmath}
+\addtolength{\topmargin}{-.50in}
+\title{A Fast Multipole Method for the Rotne-Prager-Yamakawa tensor with different particle size}
+\author{Edmond Chow \and Rohit Narurkar \and Vipul Harsh\\[0.3 cm]}
+
+\begin{document}
+
+
+\maketitle
+
+
+
+\section*{FMM for RPY for Polydisperse Particle system}
+The Rpy tensor D(x,y) is defined as follows.
+\begin{center}
+  $$
+D(x,y) = \left\{
+        \begin{array}{ll}
+            \frac{k_{\beta}T}{8\pi\eta}[(\frac{1}{r}\textbf{I} + \frac{r\otimes r}{r^{3}}) + \frac{2a^{2}}{3r^{3}}(1-3\frac{r\otimes r}{r^{2}})]   & \quad r \geq a_{x}+a_{y} \\
+            \\
+            \frac{k_{\beta}T}{6\pi\eta a}[(1 - \frac{9r}{32a})\textbf{I} + \frac{3}{32a} \frac{r\otimes r}{r}] & \quad r < a_{x}+a_{y}
+        \end{array}
+    \right.
+$$
+\end{center}
+
+In this report, we consider the calculation of the following sums.
+
+\begin{center}
+  $u^{m}_{i}$ = $\sum\limits_{i=1}^n \sum\limits_{j=1}^3 D_{ij}(x^{m}, x^{n})v^{n}_{j}$   
+\end{center}
+  Where, 
+   x = ($x_{1}$, $x_{2}$, $x_{3}$),  y = ($y_{1}$, $y_{2}$, $y_{3}$) are the position vectors of particle centers,
+   a = $\frac{a_{x}^{2} + a_{y}^{2}}{2}$ \newline
+    and $a_{x}$ and $a_{y}$ are the radii of particles x and y respectively.
+
+\vskip 1cm   
+   
+   
+ The classical FMM for coulombic interactions is as follows.  
+\begin{center}
+$P^{m}$(q,p,d) = $\sum\limits_{n=1, n\neq m}^N \frac{q^{n}}{r_{mn}}$ + 
+			   $\sum\limits_{n=1, n\neq m}^N \frac{(d^{n} . r_{mn})p^{n}}{r_{mn}^{3}}$
+
+\vskip 1cm
+
+$F_{m}^{i}$(q,p,d) = $\frac{\delta P^{m}(q,p,d)}{\delta x_{i}^{m}}$
+\end{center}
+
+
+To make things simple, we assume that this sum is computed seperately as two sums, one for neighbouring particles and one for far away particles. 
+
+Revisiting our original goal,
+\begin{equation} \label{eq1}
+\begin{split}
+  u^{m}_{i} = \sum\limits_{i=1}^n \sum\limits_{j=1}^3 D_{ij}(x^{m}, x^{n})v^{n}_{j}   
+\end{split}
+\end{equation}
+
+
+
+We split this sum in two, one for neighbouring particles and one for far particles.
+\begin{center}
+$u^{m}_{i}$ = $u^{m}_{i,loc}$ + $u^{m}_{i,far}$ 
+\end{center}
+
+ 
+ 
+
+
+
+ 
+The \textit{ij}th entry of D(x,y) can be rewritten as 
+\vskip 0.5cm
+  
+  
+
+\begin{equation} \label{eq2}
+\begin{split}
+D_{ij}(x,y) & = C_{1}\bigg(\frac{\textbf{I}_{ij}}{|x-y|} + \frac{(x_{i} - y_{i})(x_{j} - y_{j})}{|x-y|^{3}}\bigg) + \frac{C_{2}(a_{x}^{2} + a_{y}^{2})}{2}\bigg(\frac{\textbf{I}_{ij}}{|x-y|^{3}} - \frac{(x_{i} - y_{i})(x_{j} - y_{j})}{|x-y|^{5}}\bigg)   \\
+ & = C_{1}\bigg(\frac{\textbf{I}_{ij}}{|x-y|} - (x_{j} - y_{j})\frac{\delta}{\delta x_{i}}\frac{(x_{i} - y_{i})}{|x-y|}\bigg) + \frac{C_{2}(a_{x}^{2} + a_{y}^{2})}{2}\frac{\delta}{\delta x_{i}}\frac{(x_{i} - y_{i})}{|x-y|^{3}}
+\end{split}
+\end{equation}
+
+Where, $C_{1}$ =  $\frac{k_{\beta}T}{8\pi\eta}$ and $C_{2}$ = $\frac{k_{\beta}T}{6\pi\eta}$ are constants.
+
+
+\vskip 0.5cm  
+
+Substituting this in \textbf{1}, we obtain
+
+\begin{equation} \label{eq3}
+\begin{split}
+u^{m}_{i} & = \sum_{n\notin nborlist(m)} \sum\limits_{j=1}^3 D_{ij}(x^{m}, x^{n})v^{n}_{j} \\
+&= \sum_{n\notin nborlist(m)} \sum\limits_{j=1}^3 \bigg[C_{1}\bigg(\frac{I_{ij}}{r_{mn}} - (x_{j}^{m} - x_{j}^{n})\frac{\delta}{\delta x_{i}^{m}}\frac{1}{r_{mn}} \bigg) + C_{2}\frac{(a_{m}^{2} + a_{n}^{2})}{2}\frac{\delta}{\delta x_{i}^{m}}\frac{x_{j}^{m} - x_{j}^{n}}{r_{mn}^{3}} \bigg]v_{j}^{n} \\
+ & = \sum_{n\notin nborlist(m)} C_{1}\bigg(\frac{V_{i}^{n}}{r_{mn}} - \sum\limits_{j=1}^3 x_{j}^{m} \frac{\delta}{\delta x_{j}^{m}}\frac{v_{j}^{n}}{r_{mn}} +  \frac{\delta}{\delta x_{j}^{m}}\frac{x^{n}.v^{n}}{r_{mn}} \bigg) + C_{2}\frac{\delta}{\delta x_{j}^{m}}\frac{(\frac{a_{n}^{2}}{2}v^{n}).r_{mn}}{r_{mn}} + \frac{a_{m}^{2}}{2}C_{2}\frac{\delta}{\delta x_{j}^{m}}\frac{v^{n}.r_{mn}}{r_{mn}} \\
+ & = C_{1}\sum_{n\notin nborlist(m)}\frac{V_{i}^{n}}{r_{mn}} - C_{1}\sum\limits_{j=1}^3 x_{j}^{m}\frac{\delta}{\delta x_{i}^{m}}  \sum_{n\notin nborlist(m)}\frac{v_{j}^{n}}{r_{mn}} + \frac{\delta}{\delta x_{i}^{m}}\bigg(\sum_{n\notin nborlist(m)}\frac{C_{1}(x^{n}.v^{n})}{r_{mn}} + \sum_{n\notin nborlist(m)}\frac{C_{2}(\frac{a_{n}^{2}}{2}v^{n}.r_{mn})}{r_{mn}^{3}}\bigg)\\
+\hskip 0.1cm  &  +  \frac{a_{m}^{2}}{2}\frac{\delta}{\delta x_{i}^{m}}\sum_{n\notin nborlist(m)}\frac{C_{2}(v^{n}.r_{mn})}{r_{mn}^{3}}
+\end{split}
+\end{equation}
+ 
+ 
+\vskip 0.1cm 
+ This leads to the expression, 
+
+\begin{equation} \label{eq4}
+\begin{split}
+u^{m}_{i,far} = C_{1}P^{m}_{far}(v_{i}, 0, 0) - 
+				  C_{1}\sum\limits_{j=1}^3 x_{j}^{m}F_{i,far}^{m}(v_{j}, 0, 0) +
+                  F_{i,far}^{m}(C_{1}(x.v), C_{2}, \frac{a_{n}^{2}}{2}v) + 
+            \frac{a_{m}^{2}}{2} F_{i,far}^{m}(0, C_{2}, v)
+\end{split}
+\end{equation}
+
+ \vskip 1cm
+
+ In the fourth call, we let ($C_{1}x^{1}.v^{1}, C_{1}x^{2}.v^{2},...,C_{1}x^{n}.v^{n}$) be the charge strengths, ($C_{2},C_{2},...,C_{2}$) be the dipole strengths and ($\frac{a_{1}^{2}}{2}v^{1}, \frac{a_{2}^{2}}{2}v^{2},...,\frac{a_{n}^{2}}{2}v^{n}$) be the dipole orientation vectors.   
+ 
+ \vskip 0.5cm
+
+ In the fifth call, we let (0, 0,...,0) be the charge strengths, ($C_{2},C_{2},...,C_{2}$) be the dipole strengths and ($v^{1}, v^{2},...,v^{n}$) be the dipole orientation vectors.   
+
+\vskip 0.5cm
+In short, to compute $u^{m}_{i,far}$, we need to call the harmonic FMM five times, using the source locations $\{x_{n}\}$. Note that, the original goal was to compute $u^{m}$ and not $u^{m}_{i,far}$. We still need to add the forces due to neighbouring particles. For this purpose we introduce the next step \textbf{\textit{Post Correction}}.
+
+
+
+\subsection*{Post Correction}
+  
+  We call the harmonic library five times as stated in equation \textbf{4}. Note that this evaluates forces due to closer particles the same way as far away particles. For post correction, we first identify which particles are close. A naive way to do this is by simply looping over all pairs of particles. The complexity of this approach is $O(n^{2})$ and is not scalable for a large number of particles. There are better ways to do this.  
+
+
+
+
+
+
+
+     
+\end{document}
