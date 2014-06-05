@@ -203,6 +203,20 @@ void computeForce(double *f, complex *f1, complex *f2, complex *f3, double *pos,
     int i, j, pair;
     double a1, a2;
     double r1, r2, r3, s;
+
+    //initialize to zero
+    for(i=0; i<npos; i++){
+        f[3*i + 0] = 0.0;
+        f[3*i + 1] = 0.0;
+        f[3*i + 2] = 0.0;
+        f1[i].dr   = 0.0;
+        f2[i].dr   = 0.0;
+        f3[i].dr   = 0.0;
+        f1[i].di   = 0.0;
+        f2[i].di   = 0.0;
+        f3[i].di   = 0.0;
+    }
+
     for(pair=0; pair<2*numpairs; pair+=2){
 
         i = pairs[pair]-1;
@@ -228,9 +242,9 @@ void computeForce(double *f, complex *f1, complex *f2, complex *f3, double *pos,
             f[3*i + 0] += -kparticle*(1 - (a1 + a2)/s)*r1;
             f[3*i + 1] += -kparticle*(1 - (a1 + a2)/s)*r2;
             f[3*i + 2] += -kparticle*(1 - (a1 + a2)/s)*r3;
-            f[3*j + 0] += -kparticle*(1 - (a1 + a2)/s)*r1;
-            f[3*j + 1] += -kparticle*(1 - (a1 + a2)/s)*r2;
-            f[3*j + 2] += -kparticle*(1 - (a1 + a2)/s)*r3;
+            f[3*j + 0] += kparticle*(1 - (a1 + a2)/s)*r1;
+            f[3*j + 1] += kparticle*(1 - (a1 + a2)/s)*r2;
+            f[3*j + 2] += kparticle*(1 - (a1 + a2)/s)*r3;
 
             f1[i].dr   += -kparticle*(1 - (a1 + a2)/s)*r1;
             f2[i].dr   += -kparticle*(1 - (a1 + a2)/s)*r2;

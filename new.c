@@ -83,9 +83,19 @@ int main(){
     f1 = (complex *)malloc(sizeof(complex)*npos);
     f2 = (complex *)malloc(sizeof(complex)*npos);
     f3 = (complex *)malloc(sizeof(complex)*npos);
+
     computeForce(f, f1, f2, f3, pos, rad, finalPairs, numpairs_p);
 
-    //printf("%lf\n", f[]);
+
+    double *f_serial;
+    f_serial = (double *)malloc(sizeof(double)*3*npos);
+    computeForceSerial(f_serial, pos, rad, shell);
+
+    printf("printing f:\n");
+    printVectors(f, npos, 3);
+
+    printf("printing f_serial:\n");
+    printVectors(f_serial, npos, 3);
 
 	return 0;
 }

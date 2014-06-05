@@ -18,11 +18,15 @@ inline int min(int a, int b);
 inline int max(int a, int b);
 
 void printPairs(int *array, int pair);
+void printVectors(double *array, int size, int dim);
 void setPosRad(double *pos, double *rad);
 void getShell(double *shell);
-void print3DVectors(double *array, int size, int dim);
 int interactions(int npos, double *pos, double L, int boxdim, double cutoff2, double *distances2, int *pairs, int maxnumpairs, int *numpairs_p);
 void interactionsFilter(int *numpairs_p, int *pairs, int *finalPairs, double *rad, double *pos);
+
+////////////////////////////////
+void computeForceSerial(double *f, double *pos, double *rad, double *shell);
+////////////////////////////////
 
 struct box{
     int head;
