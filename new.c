@@ -91,11 +91,14 @@ int main(){
     f_serial = (double *)malloc(sizeof(double)*3*npos);
     computeForceSerial(f_serial, pos, rad, shell);
 
-    printf("printing f:\n");
-    printVectors(f, npos, 3);
+    //printf("printing f:\n");
+    //printVectors(f, npos, 3);
 
-    printf("printing f_serial:\n");
-    printVectors(f_serial, npos, 3);
+    //printf("printing f_serial:\n");
+    //printVectors(f_serial, npos, 3);
+
+    double error = relError(f_serial, f, npos, 3);
+    printf("%lf\n", error);
 
 	return 0;
 }
