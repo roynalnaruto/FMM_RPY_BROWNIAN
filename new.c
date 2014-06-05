@@ -70,13 +70,22 @@ int main(){
     int numpairs_p;
 
     interactions(npos+nsphere, pos, L, boxdim, cutoff2, distances2, pairs, maxnumpairs, &numpairs_p);
-    printf("Num_pairs : %d\n", numpairs_p);
+    printPairs(pairs, numpairs_p);
+    printf("Number of pairs : %d\n", numpairs_p);
     
     interactionsFilter(&numpairs_p, pairs, finalPairs, rad, pos);
     printPairs(finalPairs, numpairs_p);
-    printf("Final_pairs (after filtering) : %d\n", numpairs_p);
+    printf("Final number of pairs (after filtering) : %d\n", numpairs_p);
 
-    computeForce(f, f1, f2, f3, pos, rad);
+    double *f;
+    f = (double *)malloc(sizeof(double)*3*npos);
+    complex *f1, *f2, *f3;
+    f1 = (complex *)malloc(sizeof(complex)*npos);
+    f2 = (complex *)malloc(sizeof(complex)*npos);
+    f3 = (complex *)malloc(sizeof(complex)*npos);
+    computeForce(f, f1, f2, f3, pos, rad, finalPairs, numpairs_p);
+
+    //printf("%lf\n", f[]);
 
 	return 0;
 }

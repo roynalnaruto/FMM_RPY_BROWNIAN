@@ -6,8 +6,8 @@
 #include "normal.h"
 #include "fmm.h"
 
-#define kb 65.0
-#define ko 150.0
+#define kparticle 65.0
+#define kshell 150.0
 #define dt 0.002
 #define t_end 1
 #define shell_particle_radius 1.0

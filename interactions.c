@@ -188,9 +188,9 @@ void interactionsFilter(int *numpairs_p, int *pairs, int *finalPairs, double *ra
             actualDistance += r[kk]*r[kk]; 
         }
         if((actualDistance <= distance * distance) && (pairs[i] <= npos || pairs[i+1] <= npos)){
+            finalPairs[2*interactingPairs] = min(pairs[i], pairs[i+1]);
+            finalPairs[2*interactingPairs+1] = max(pairs[i], pairs[i+1]);
             interactingPairs++;
-            finalPairs[2*interactingPairs - 1] = pairs[i];
-            finalPairs[2*interactingPairs] = pairs[i+1];
         }
 
     }
@@ -198,6 +198,47 @@ void interactionsFilter(int *numpairs_p, int *pairs, int *finalPairs, double *ra
     *numpairs_p = interactingPairs;
 }
 
-void computeForce(double *f, complex *f1, complex *f2, complex *f3, double *pos, double *rad){
+void computeForce(double *f, complex *f1, complex *f2, complex *f3, double *pos, double *rad, int *pairs, int numpairs){
 
+    int i, j, pair;
+    double a1, a2;
+    double r1, r2, r3, s;
+    for(pair=0; pair<2*numpairs; pair+=2){
+
+        i = pairs[pair]-1;
+        j = pairs[pair+1]-1;
+
+        a1 = rad[i];
+        r1 = pos[3*i + 0] - pos[3*j + 0];
+        r2 = pos[3*i + 1] - pos[3*j + 1];
+        r3 = pos[3*i + 2] - pos[3*j + 2];
+        s = sqrt(r1*r1 + r2*r2 + r3*r3);
+
+        if(j >= npos){
+            f[3*i + 0] += -kshell*(1 - (a1 + shell_particle_radius)/s)*r1;
+            f[3*i + 1] += -kshell*(1 - (a1 + shell_particle_radius)/s)*r2;
+            f[3*i + 2] += -kshell*(1 - (a1 + shell_particle_radius)/s)*r3;
+
+            f1[i].dr   += -kshell*(1 - (a1 + shell_particle_radius)/s)*r1;
+            f2[i].dr   += -kshell*(1 - (a1 + shell_particle_radius)/s)*r2;
+            f3[i].dr   += -kshell*(1 - (a1 + shell_particle_radius)/s)*r3;
+        }
+        else{
+            a2 = rad[j];
+            f[3*i + 0] += -kparticle*(1 - (a1 + a2)/s)*r1;
+            f[3*i + 1] += -kparticle*(1 - (a1 + a2)/s)*r2;
+            f[3*i + 2] += -kparticle*(1 - (a1 + a2)/s)*r3;
+            f[3*j + 0] += -kparticle*(1 - (a1 + a2)/s)*r1;
+            f[3*j + 1] += -kparticle*(1 - (a1 + a2)/s)*r2;
+            f[3*j + 2] += -kparticle*(1 - (a1 + a2)/s)*r3;
+
+            f1[i].dr   += -kparticle*(1 - (a1 + a2)/s)*r1;
+            f2[i].dr   += -kparticle*(1 - (a1 + a2)/s)*r2;
+            f3[i].dr   += -kparticle*(1 - (a1 + a2)/s)*r3;
+            f1[j].dr   += -kparticle*(1 - (a1 + a2)/s)*r1;
+            f2[j].dr   += -kparticle*(1 - (a1 + a2)/s)*r2;
+            f3[j].dr   += -kparticle*(1 - (a1 + a2)/s)*r3;
+        }
+
+    }
 }
