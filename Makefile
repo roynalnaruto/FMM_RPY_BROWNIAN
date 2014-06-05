@@ -1,9 +1,9 @@
 # Configuration ################################################################
 
 CC = gcc
-CFLAGS = -Wall -Wextra
+#CFLAGS = -Wall -Wextra
 #CFLAGS += -DNDEBUG -O		# For production and benchmarks
-CFLAGS += -DDEBUG -g		# For debugging
+CFLAGS = -DDEBUG -g		# For debugging
 INCLUDES = -I.
 LIBS = -lm
 
@@ -17,8 +17,8 @@ DOCDIR = $(PROJECT_ROOT)/doc/
 
 OBJS = $(SRCS:%.c=$(OBJDIR)/%.o)
 DEPS = $(SRCS:%.c=$(OBJDIR)/%.d)
-SRCS = collection.c covtree.c main.c marking.c petrinet.c tree.c wnat.c
-EXE = kmt
+SRCS = new.c utils.c interactions.c 
+EXE = rpy
 
 .PHONY: all clean doc
 
@@ -35,10 +35,11 @@ $(OBJDIR)/%.o : $(SRCDIR)/%.c | $(OBJDIR)
 
 $(OBJDIR)/%.d: $(SRCDIR)/%.c | $(OBJDIR)
 	@$(CC) $(CFLAGS) $(INCLUDES) -MM -MT $(@:%.d=%.o) $< > $@
+
 doc:
-	@latex $(DOCDIR)/pda.tex
-	@dvipdf $(PROJECT_ROOT)/pda.dvi $(DOCDIR)/pda.pdf
-	@rm -rf $(PROJECT_ROOT)/pda.*
+	@latex $(DOCDIR)/report.tex
+	@dvipdf $(PROJECT_ROOT)/report.dvi $(DOCDIR)/report.pdf
+	@rm -rf $(PROJECT_ROOT)/report.*
 
 %.pdf: %.dot
 	@dot -Tpdf $< > $@
