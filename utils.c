@@ -44,6 +44,18 @@ void printVectors(double *array, int size, int dimension){
 
 
 
+void printVectorsComplex(complex *array, int size, int dimension){
+    int i,j;
+    printf("\n");
+    for(i=0;i<size;i++){
+        for(j=0;j<dimension;j++)
+            printf("(%lf, %lf)\t", array[3*i + j].dr, array[3*i + j].di);
+        printf("\n");
+    }
+    printf("\n");
+}
+
+
 
 void setPosRad(double *pos, double *rad){
     //printf("enter setPosRad\n");
@@ -117,6 +129,53 @@ double relErrorRealComplex(double *V1, complex *V2, int size, int dimension){
     }
     return (error/total);
 }
+
+
+
+double maxError(double *V1, double *V2, int size, int dimension){
+	
+	int i;
+	long double maxError = 0;
+	long double error;
+	int index=-1;
+	for(i=0;i<size*dimension;i++){
+		error = mod(V1[i] - V2[i])/mod(V1[i]);
+		if(V1[i] == 0) continue;
+		index =  (maxError>error)? index : i; 
+		maxError = (maxError>error)? maxError : error;
+	}
+	
+	printf("Index is %d \n", index);
+	return maxError;	
+}
+
+
+
+double maxErrorRealComplex(double *V1, complex *V2, int size, int dimension){
+
+	int i;
+	long double maxError = 0;
+	long double error;
+	int index = -1;
+	for(i=0;i<size*dimension;i++){
+		error = mod(V1[i] - V2[i].dr)/mod(V1[i]);
+		if(V1[i] == 0) continue;
+		index =  (maxError>error)? index : i; 	
+		maxError = (maxError>error)? maxError : error; 
+	}
+	printf("Index is %d,V1[i]: %lf, V2[i]: %lf\n", index, V1[index], V2[index].dr);
+	return maxError;	
+}
+
+
+
+
+
+
+
+
+
+
 
 void createDiag(double *A, double *rad){
     //printf("enter createDiag\n");
@@ -193,7 +252,8 @@ void mobilityMatrix(double *A, double *pos, double *rad){
                 }
             }
             else{
-                a_mean = cbrt((1.0/2.0)*(a1*a1*a1 + a2*a2*a2));
+				//! change to cube root
+                a_mean = sqrt((1.0/2.0)*(a1*a1 + a2*a2));
                 term1 = (1.0/a_mean) - (9.0*s)/(32.0*a_mean*a_mean);
                 term2 = (3.0*s)/(32.0*a_mean*a_mean);
                 for(m=0; m<3; m++){

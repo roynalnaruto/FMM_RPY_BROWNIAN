@@ -194,17 +194,13 @@ c
 	        pi=4*atan(done)
 
 
-
-
-
-		
-
 cc //Values of C1 and C2
 		C1 = 0.75 
 		C2 = 0.5
 
-	        call prini(6,13)
-	        iprec=1
+cc //! Uncomment the following line for enabling printing
+c        call prini(6,13)
+        iprec=1
 
 
 
@@ -354,12 +350,13 @@ c     $                     		   (source(3,i) - source(3,j)) *
 c     $                                     (source(3,i) - source(3,j))
 c
 c		    if((i .ne. j) .AND. (distance <  radius * radius)) then
+cc             write(*,*) i,j, "********************************"
 c			call postcorrection(i, j, source, V1, V2, V3, rpy,
 c     $	 				nsource, radii,C1)  
 c	 		endif	
 c			enddo
 c		enddo
-
+c
 
 
 
@@ -427,9 +424,16 @@ c		enddo
 
 c		write(*,*) "Inside Post Correction: *******************",i, j
 
+c		radius  = radii(i) * radii(i) * radii(i)
+c		radius = radius + (radii(j) * radii(j) * radii(j))
+c		radius = (radius/2) ** (1.0/3.0)
+
 		radius  = radii(i) * radii(i)
 		radius = radius + (radii(j) * radii(j))
 		radius = sqrt(radius/2)
+
+
+
 
 		C2 = (C1 * 2)/3;
 		C2 = C2 * radius * radius
@@ -440,10 +444,11 @@ c		write(*,*) "Inside Post Correction: *******************",i, j
 		  do n=1,3
 			rCrossr(m,n) = (source(m,i) - source(m,j)) * 
      $                                 (source(n,i) - source(n,j)) 
-		enddo
-
-		dist = 0.0
-		  enddo
+          enddo
+        enddo
+		
+        
+        dist = 0.0
 		do m=1,3
 			dist = dist + rCrossr(m,m)
 		enddo

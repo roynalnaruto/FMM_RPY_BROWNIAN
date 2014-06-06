@@ -5,39 +5,44 @@ void getBasic(){
 	printf("Enter number of particles (npos) {100, 300, 600, 1000, 2500, 3000, 5000}\n");
 	scanf("%d", &npos);
 
-	switch(npos){
-		case 100:
+	if(npos<100)
 		shell_radius = 6;
-		break;
+	
+	else{	
+		switch(npos){
+			case 100:
+			shell_radius = 6;
+			break;
 
-		case 300:
-		shell_radius = 9;
-		break;
+			case 300:
+			shell_radius = 9;
+			break;
 
-		case 600:
-		shell_radius = 11;
-		break;
+			case 600:
+			shell_radius = 11;
+			break;
 
-		case 1000:
-		shell_radius = 14;
-		break;
+			case 1000:
+			shell_radius = 14;
+			break;
 
-		case 2500:
-		shell_radius = 18;
-		break;
+			case 2500:
+			shell_radius = 18;
+			break;
 
-        case 3000:
-        shell_radius = 18;
-        break;
+			case 3000:
+			shell_radius = 18;
+			break;
 
 
-		case 5000:
-		shell_radius = 24;
-		break;
-		
-		default:
-		printf("Invalid number of particles...exiting ...\n");
-		exit(0);
+			case 5000:
+			shell_radius = 24;
+			break;
+			
+			default:
+			printf("Invalid number of particles...exiting ...\n");
+			exit(0);
+		}
 	}
 
 	nsphere = 900;
@@ -108,11 +113,14 @@ int main(){
 	//printVectors(f_serial, npos, 3);
 
     double error = relError(f_serial, f, npos, 3);
-    printf("Error in computeForce %lf\n", error);
+    printf("Relative Error in computeForce %lf\n", error);
+    error = maxError(f_serial, f, npos, 3);
+    printf("Max Error in computeForce %lf\n", error);
+    
     
     char dir[100] = "outputs/";
     computerpy_(&npos, pos, rad, f1, f2, f3, rpy,dir);
-    postCorrection(npos, pos, rad, numpairs_p, pairs, f1, f2, f3,rpy);
+    postCorrection(npos, pos, rad, numpairs_p, finalPairs, f1, f2, f3,rpy);
 
 	/*
 	 * Mobility Matrix
@@ -124,8 +132,14 @@ int main(){
 	multiplyMatrix(A, f);
 
 	error = relErrorRealComplex(A, rpy, npos, 3);
-	printf("Error in Mf and rpy is : %lf\n", error);
 	
+	//printVectorsComplex(rpy, npos, 3);
+	//printVectors(A, npos, 3);
+	//printVectors(pos, npos, 3);
+
+	printf("Relative Error in Mf and rpy is : %lf\n", error);
+	error = maxErrorRealComplex(A, rpy, npos, 3);
+	printf("Max Error in Mf and rpy is : %lf\n", error);
 	  
 	return 0;
 }

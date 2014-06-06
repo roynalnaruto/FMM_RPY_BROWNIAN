@@ -174,6 +174,7 @@ void interactionsFilter(int *numpairs_p, int *pairs, int *finalPairs, double *ra
     int kk, i, interactingPairs = 0;
     double r[3];
     double actualDistance, distance;
+    int nonshellPairs = 0;
 
     for(i=0; i<2*(*numpairs_p); i+=2){
 
@@ -191,12 +192,18 @@ void interactionsFilter(int *numpairs_p, int *pairs, int *finalPairs, double *ra
             finalPairs[2*interactingPairs] = min(pairs[i], pairs[i+1]);
             finalPairs[2*interactingPairs+1] = max(pairs[i], pairs[i+1]);
             interactingPairs++;
+            if((pairs[i] <= npos) && (pairs[i+1] <= npos))
+			nonshellPairs++;
         }
-
+        
     }
 
     *numpairs_p = interactingPairs;
+    printf("Non shell particles , number of overlaps %d \n", nonshellPairs);
 }
+
+
+
 
 void computeForce(double *f, complex *f1, complex *f2, complex *f3, double *pos, double *rad, int *pairs, int numpairs){
 
@@ -249,9 +256,9 @@ void computeForce(double *f, complex *f1, complex *f2, complex *f3, double *pos,
             f1[i].dr   += -kparticle*(1 - (a1 + a2)/s)*r1;
             f2[i].dr   += -kparticle*(1 - (a1 + a2)/s)*r2;
             f3[i].dr   += -kparticle*(1 - (a1 + a2)/s)*r3;
-            f1[j].dr   += -kparticle*(1 - (a1 + a2)/s)*r1;
-            f2[j].dr   += -kparticle*(1 - (a1 + a2)/s)*r2;
-            f3[j].dr   += -kparticle*(1 - (a1 + a2)/s)*r3;
+            f1[j].dr   += kparticle*(1 - (a1 + a2)/s)*r1;
+            f2[j].dr   += kparticle*(1 - (a1 + a2)/s)*r2;
+            f3[j].dr   += kparticle*(1 - (a1 + a2)/s)*r3;
         }
 
     }
@@ -269,6 +276,7 @@ void computeForceSerial(double *f, double *pos, double *rad, double *shell){
     //float f1, f2, f3;
 
     double f_shell[npos*3];
+    int npairs = 0;
 
     //force between outer shell and inner particles
     for(i=0; i<npos; i++){
@@ -323,13 +331,15 @@ void computeForceSerial(double *f, double *pos, double *rad, double *shell){
 
             //compute forces if s<=(a1+a2)
             if(s<=(a1+a2)){
+				npairs ++;
                 for(m=0; m<3; m++){
                     f[3*i+m] += -kparticle*(1 - (a1+a2)/s)*r[m];
                 }
             }
         }
     }
-    //printf("exit computeForce\n");
+    assert(npairs%2==0);
+    printf("exit computeForce: npairs  = %d \n", npairs/2);
 }
 
 
@@ -346,8 +356,9 @@ int postCorrection(int npos, double *pos, double *rad, int numpairs_p, int *pair
 	C1.di = 0;
 	for(i=0; i<2*(numpairs_p); i+=2){
 		if((pairs[i] <= npos) && (pairs[i+1] <= npos)){
-			printf("Post Correcting pairs %d and %d \n", pairs[i], pairs[i+1]);
+			//printf("Post Correcting pairs %d and %d \n", pairs[i], pairs[i+1]);
 			postcorrection_(&pairs[i], &pairs[i+1], pos, f1, f2, f3, rpy, &npos, rad, &C1);
+			postcorrection_(&pairs[i+1], &pairs[i], pos, f1, f2, f3, rpy, &npos, rad, &C1);		
 		}
 	}
 }

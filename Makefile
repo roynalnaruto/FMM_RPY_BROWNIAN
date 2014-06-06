@@ -43,7 +43,7 @@ $(OBJDIR)/%.d: $(SRCDIR)/%.c | $(OBJDIR)
 
 
 fortranlibrary: $(FORTRANDIR)/*.o
-	@rm -rf libfmmrpy.a
+	rm -rf libfmmrpy.a
 	@ar -cvq libfmmrpy.a $(FORTRANDIR)/*.o
 
 
