@@ -32,7 +32,7 @@ all: $(OBJDIR)/$(EXE)
 $(OBJDIR):
 	@mkdir -p $(OBJDIR)
 
-$(OBJDIR)/$(EXE): $(OBJS) | $(OBJDIR)
+$(OBJDIR)/$(EXE): fortranlibrary $(OBJS) | $(OBJDIR)
 	$(CC) -L$(PROJECT_ROOT) $(CFLAGS) $(INCLUDES)  -o $@ $(OBJS) $(LIBS)
 
 $(OBJDIR)/%.o : $(SRCDIR)/%.c | $(OBJDIR)
@@ -42,7 +42,7 @@ $(OBJDIR)/%.d: $(SRCDIR)/%.c | $(OBJDIR)
 	@$(CC) $(CFLAGS) $(INCLUDES) -MM -MT $(@:%.d=%.o) $< > $@
 
 
-fortranlibrary: $(FORTRANDIR)/*.o
+fortranlibrary: $(FORTRANDIR)/*.o libfmmrpy.a
 	@rm -rf libfmmrpy.a
 	@ar -cvq libfmmrpy.a $(FORTRANDIR)/*.o
 
