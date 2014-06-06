@@ -70,12 +70,12 @@ int main(){
     int numpairs_p;
 
     interactions(npos+nsphere, pos, L, boxdim, cutoff2, distances2, pairs, maxnumpairs, &numpairs_p);
-    printPairs(pairs, numpairs_p);
-    printf("Number of pairs : %d\n", numpairs_p);
+    //printPairs(pairs, numpairs_p);
+    //printf("Number of pairs : %d\n", numpairs_p);
     
     interactionsFilter(&numpairs_p, pairs, finalPairs, rad, pos);
-    printPairs(finalPairs, numpairs_p);
-    printf("Final number of pairs (after filtering) : %d\n", numpairs_p);
+    //printPairs(finalPairs, numpairs_p);
+    //printf("Final number of pairs (after filtering) : %d\n", numpairs_p);
 
     double *f;
     f = (double *)malloc(sizeof(double)*3*npos);
@@ -91,11 +91,8 @@ int main(){
     f_serial = (double *)malloc(sizeof(double)*3*npos);
     computeForceSerial(f_serial, pos, rad, shell);
 
-    //printf("printing f:\n");
     //printVectors(f, npos, 3);
-
-    //printf("printing f_serial:\n");
-    //printVectors(f_serial, npos, 3);
+	//printVectors(f_serial, npos, 3);
 
     double error = relError(f_serial, f, npos, 3);
     printf("%lf\n", error);
