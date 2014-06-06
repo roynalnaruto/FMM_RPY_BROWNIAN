@@ -20,12 +20,22 @@ inline double mod(double x);
 
 void printPairs(int *array, int pair);
 void printVectors(double *array, int size, int dim);
+
 void setPosRad(double *pos, double *rad);
 void getShell(double *shell);
-int interactions(int npos, double *pos, double L, int boxdim, double cutoff2, double *distances2, int *pairs, int maxnumpairs, int *numpairs_p);
+
+int interactions(int npos, double *pos, double L, int boxdim, double cutoff2,
+					double *distances2, int *pairs, int maxnumpairs, int *numpairs_p);
+					
 void interactionsFilter(int *numpairs_p, int *pairs, int *finalPairs, double *rad, double *pos);
+
 double relError(double *V1, double *V2, int size, int dimension);
 void computeForceSerial(double *f, double *pos, double *rad, double *shell);
+
+int postCorrection(int npos, double *pos, double *rad, int numpairs_p, int *pairs,
+					complex *f1, complex *f2, complex *f3, complex *rpy);
+
+
 
 struct box{
     int head;
