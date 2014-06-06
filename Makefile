@@ -42,7 +42,7 @@ $(OBJDIR)/%.d: $(SRCDIR)/%.c | $(OBJDIR)
 	@$(CC) $(CFLAGS) $(INCLUDES) -MM -MT $(@:%.d=%.o) $< > $@
 
 
-fortranlibrary: $(FORTRANDIR)/*.o libfmmrpy.a
+fortranlibrary: $(FORTRANDIR)/*.o
 	@rm -rf libfmmrpy.a
 	@ar -cvq libfmmrpy.a $(FORTRANDIR)/*.o
 

@@ -34,7 +34,7 @@ void computeForceSerial(double *f, double *pos, double *rad, double *shell);
 void multiplyMatrix(double *A, double *f);
 void mobilityMatrix(double *A, double *pos, double *rad);
 void createDiag(double *A, double *rad);
-double relErrorRealComplex(double *V1, complex *V2);
+double relErrorRealComplex(double *V1, complex *V2, int size, int dimension);
 
 int postCorrection(int npos, double *pos, double *rad, int numpairs_p, int *pairs,
 					complex *f1, complex *f2, complex *f3, complex *rpy);
