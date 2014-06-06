@@ -339,26 +339,26 @@ c			write(*,*) F1(i,m), F2(i,m), F3(i,m)
 
 
 cc POST CORRECTION 
-		do i=1,nsource
-		   do j=1,nsource
-				radius = radii(i) + radii(j)
-				distance = (source(1,i) - source(1,j)) * 
-     $		                     (source(1,i) - source(1,j))
-
-				distance = distance +
-     $                     		   (source(2,i) - source(2,j)) * 
-     $                                     (source(2,i) - source(2,j))
-
-				distance = distance +
-     $                     		   (source(3,i) - source(3,j)) * 
-     $                                     (source(3,i) - source(3,j))
-
-		    if((i .ne. j) .AND. (distance <  radius * radius)) then
-			call postcorrection(i, j, source, V1, V2, V3, rpy,
-     $	 				nsource, radii,C1)  
-	 		endif	
-			enddo
-		enddo
+c		do i=1,nsource
+c		   do j=1,nsource
+c				radius = radii(i) + radii(j)
+c				distance = (source(1,i) - source(1,j)) * 
+c     $		                     (source(1,i) - source(1,j))
+c
+c				distance = distance +
+c     $                     		   (source(2,i) - source(2,j)) * 
+c     $                                     (source(2,i) - source(2,j))
+c
+c				distance = distance +
+c     $                     		   (source(3,i) - source(3,j)) * 
+c     $                                     (source(3,i) - source(3,j))
+c
+c		    if((i .ne. j) .AND. (distance <  radius * radius)) then
+c			call postcorrection(i, j, source, V1, V2, V3, rpy,
+c     $	 				nsource, radii,C1)  
+c	 		endif	
+c			enddo
+c		enddo
 
 
 
