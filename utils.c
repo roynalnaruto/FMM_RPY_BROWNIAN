@@ -12,6 +12,10 @@ inline double mod(double x){
 	return ((x>0)? x : -x) ;
 }
 
+
+
+
+
 void printPairs(int *array, int pair){
 
     int i;
@@ -21,6 +25,11 @@ void printPairs(int *array, int pair){
     }
     printf("\n");
 }
+
+
+
+
+
 
 void printVectors(double *array, int size, int dimension){
     int i,j;
@@ -32,6 +41,9 @@ void printVectors(double *array, int size, int dimension){
     }
     printf("\n");
 }
+
+
+
 
 void setPosRad(double *pos, double *rad){
     //printf("enter setPosRad\n");
@@ -53,9 +65,13 @@ void setPosRad(double *pos, double *rad){
         pos[2+(i*3)] = temp_r*cos(temp_theta) + shell_radius;
 
     }
-
     //printf("exit setPosRad\n");
 }
+
+
+
+
+
 
 void getShell(double *shell){
     //printf("enter getShell\n");
@@ -64,6 +80,10 @@ void getShell(double *shell){
     FILE *input;
     sprintf(input_index, "./data-for-outer-shell/data%d_%d.csv", nsphere, shell_radius);
     input = fopen(input_index, "r");
+    if(input == NULL){
+		printf("File for getShell could not be opened\n");
+		exit(0);
+	}
     for(i=0; i<nsphere; i++){
         for(j=0; j<3; j++){
             fscanf(input, "%lf, ", &shell[3*i + j]);

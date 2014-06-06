@@ -1,0 +1,287 @@
+ iprec=
+       1
+ epsfmm=
+  0.50000E-03
+ nbox=
+     160
+ time in d3tstrcr=
+  0.00000E+00
+ scale=
+  0.10000E+01
+  lused7 is 
+     277
+ nterms=
+      14
+ nmax=
+       0
+ finished reordering=
+       0
+ ier=
+       0
+ nboxes=
+       1
+ nlev=
+       0
+ nboxes=
+       1
+ lused7=
+     281
+  lmptot is 
+    1741
+  lused7 is 
+    1742
+ === STEP 1 (form mp) ====
+ === STEP 2 (form lo) ====
+ === STEPS 3,4,5 ====
+ === STEP 6 (eval mp) ====
+ === STEP 7 (eval lo) ====
+ === STEP 8 (direct) =====
+ timeinfo=
+  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+  0.00000E+00  0.00000E+00
+ sum(timeinfo)=
+  0.00000E+00
+ nboxes=
+       1
+ nsource=
+      20
+ ntarget=
+       0
+ time in fmm main=
+  0.00000E+00
+ lwlists=
+     512
+ lused total =
+    1742
+ memory / point = 
+  0.87100E+02
+ epsfmm=
+  0.50000E-03
+ nbox=
+     160
+ time in d3tstrcr=
+  0.00000E+00
+ scale=
+  0.10000E+01
+  lused7 is 
+     277
+ nterms=
+      14
+ nmax=
+       0
+ finished reordering=
+       0
+ ier=
+       0
+ nboxes=
+       1
+ nlev=
+       0
+ nboxes=
+       1
+ lused7=
+     281
+  lmptot is 
+    1741
+  lused7 is 
+    1742
+ === STEP 1 (form mp) ====
+ === STEP 2 (form lo) ====
+ === STEPS 3,4,5 ====
+ === STEP 6 (eval mp) ====
+ === STEP 7 (eval lo) ====
+ === STEP 8 (direct) =====
+ timeinfo=
+  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+  0.00000E+00  0.00000E+00
+ sum(timeinfo)=
+  0.00000E+00
+ nboxes=
+       1
+ nsource=
+      20
+ ntarget=
+       0
+ time in fmm main=
+  0.10000E-02
+ lwlists=
+     512
+ lused total =
+    1742
+ memory / point = 
+  0.87100E+02
+ epsfmm=
+  0.50000E-03
+ nbox=
+     160
+ time in d3tstrcr=
+  0.00000E+00
+ scale=
+  0.10000E+01
+  lused7 is 
+     277
+ nterms=
+      14
+ nmax=
+       0
+ finished reordering=
+       0
+ ier=
+       0
+ nboxes=
+       1
+ nlev=
+       0
+ nboxes=
+       1
+ lused7=
+     281
+  lmptot is 
+    1741
+  lused7 is 
+    1742
+ === STEP 1 (form mp) ====
+ === STEP 2 (form lo) ====
+ === STEPS 3,4,5 ====
+ === STEP 6 (eval mp) ====
+ === STEP 7 (eval lo) ====
+ === STEP 8 (direct) =====
+ timeinfo=
+  0.00000E+00  0.00000E+00  0.00000E+00  0.10000E-02  0.00000E+00  0.00000E+00
+  0.00000E+00  0.00000E+00
+ sum(timeinfo)=
+  0.10000E-02
+ nboxes=
+       1
+ nsource=
+      20
+ ntarget=
+       0
+ time in fmm main=
+  0.10000E-02
+ lwlists=
+     512
+ lused total =
+    1742
+ memory / point = 
+  0.87100E+02
+ epsfmm=
+  0.50000E-03
+ nbox=
+     160
+ time in d3tstrcr=
+  0.00000E+00
+ scale=
+  0.10000E+01
+  lused7 is 
+     372
+ nterms=
+      14
+ nmax=
+       0
+ finished reordering=
+       0
+ ier=
+       0
+ nboxes=
+       1
+ nlev=
+       0
+ nboxes=
+       1
+ lused7=
+     376
+  lmptot is 
+    1741
+  lused7 is 
+    1742
+ === STEP 1 (form mp) ====
+ === STEP 2 (form lo) ====
+ === STEPS 3,4,5 ====
+ === STEP 6 (eval mp) ====
+ === STEP 7 (eval lo) ====
+ === STEP 8 (direct) =====
+ timeinfo=
+  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+  0.00000E+00  0.00000E+00
+ sum(timeinfo)=
+  0.00000E+00
+ nboxes=
+       1
+ nsource=
+      20
+ ntarget=
+       0
+ time in fmm main=
+  0.00000E+00
+ lwlists=
+     512
+ lused total =
+    1742
+ memory / point = 
+  0.87100E+02
+ epsfmm=
+  0.50000E-03
+ nbox=
+     160
+ time in d3tstrcr=
+  0.00000E+00
+ scale=
+  0.10000E+01
+  lused7 is 
+     372
+ nterms=
+      14
+ nmax=
+       0
+ finished reordering=
+       0
+ ier=
+       0
+ nboxes=
+       1
+ nlev=
+       0
+ nboxes=
+       1
+ lused7=
+     376
+  lmptot is 
+    1741
+  lused7 is 
+    1742
+ === STEP 1 (form mp) ====
+ === STEP 2 (form lo) ====
+ === STEPS 3,4,5 ====
+ === STEP 6 (eval mp) ====
+ === STEP 7 (eval lo) ====
+ === STEP 8 (direct) =====
+ timeinfo=
+  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+  0.00000E+00  0.00000E+00
+ sum(timeinfo)=
+  0.00000E+00
+ nboxes=
+       1
+ nsource=
+      20
+ ntarget=
+       0
+ time in fmm main=
+  0.00000E+00
+ lwlists=
+     512
+ lused total =
+    1742
+ memory / point = 
+  0.87100E+02
+ nsource=
+      20
+ after 5 fmm calls, time (sec)=
+  0.59990E-02
+ after 5 fmm calls, speed (points/sec)=
+  0.33339E+04
+ relative error in rpy=
+  0.23465E-06
+ absolute error in rpy=
+  0.91415E-05

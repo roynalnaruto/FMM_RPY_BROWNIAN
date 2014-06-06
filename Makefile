@@ -1,3 +1,6 @@
+
+#gcc -L/home/vipul/final sample.c /home/rohit/final/normal-lib/normal.o -lm -lfmmrpy -lgfortran -g 
+
 # Configuration ################################################################
 
 CC = gcc
@@ -5,19 +8,21 @@ CC = gcc
 #CFLAGS += -DNDEBUG -O		# For production and benchmarks
 CFLAGS = -DDEBUG -g		# For debugging
 INCLUDES = -I.
-LIBS = -lm
+LIBS = -lm -lfmmrpy -lgfortran
 
 # Project Paths
 PROJECT_ROOT ?= $(CURDIR)
 SRCDIR = $(PROJECT_ROOT)
-OBJDIR = $(PROJECT_ROOT)/objs/
-DOCDIR = $(PROJECT_ROOT)/doc/
+OBJDIR = $(PROJECT_ROOT)/objs
+DOCDIR = $(PROJECT_ROOT)/doc
+NORMDIR = $(PROJECT_ROOT)/normal-lib
+FORTRANDIR = $(PROJECT_ROOT)/fmmlibFortran/examples
 
 # Main #########################################################################
 
 OBJS = $(SRCS:%.c=$(OBJDIR)/%.o)
 DEPS = $(SRCS:%.c=$(OBJDIR)/%.d)
-SRCS = new.c utils.c interactions.c 
+SRCS = new.c utils.c interactions.c  
 EXE = rpy
 
 .PHONY: all clean doc
@@ -28,13 +33,19 @@ $(OBJDIR):
 	@mkdir -p $(OBJDIR)
 
 $(OBJDIR)/$(EXE): $(OBJS) | $(OBJDIR)
-	$(CC) $(CFLAGS) $(INCLUDES) -o $@ $(OBJS) $(LIBS)
+	$(CC) -L$(PROJECT_ROOT) $(CFLAGS) $(INCLUDES)  -o $@ $(OBJS) $(LIBS)
 
 $(OBJDIR)/%.o : $(SRCDIR)/%.c | $(OBJDIR)
 	$(CC) $(CFLAGS) $(INCLUDES) -c -o $@ $<
 
 $(OBJDIR)/%.d: $(SRCDIR)/%.c | $(OBJDIR)
 	@$(CC) $(CFLAGS) $(INCLUDES) -MM -MT $(@:%.d=%.o) $< > $@
+
+
+fortranlibrary: $(FORTRANDIR)/*.o
+	@rm -rf libfmmrpy.a
+	@ar -cvq libfmmrpy.a $(FORTRANDIR)/*.o
+
 
 doc:
 	@latex $(DOCDIR)/report.tex

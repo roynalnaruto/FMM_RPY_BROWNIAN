@@ -1,0 +1,12 @@
+ iprec=
+       1
+ nsource=
+      20
+ after 5 fmm calls, time (sec)=
+  0.00000E+00
+ after 5 fmm calls, speed (points/sec)=
+    +Infinity
+ relative error in rpy=
+    +Infinity
+ absolute error in rpy=
+  0.38959E+02
