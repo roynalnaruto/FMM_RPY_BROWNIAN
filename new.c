@@ -34,6 +34,10 @@ void getBasic(){
 		case 5000:
 		shell_radius = 24;
 		break;
+		
+		default:
+		printf("Invalid number of particles...exiting ...\n");
+		exit(0);
 	}
 
 	nsphere = 900;
@@ -81,7 +85,7 @@ int main(){
     
     interactionsFilter(&numpairs_p, pairs, finalPairs, rad, pos);
     //printPairs(finalPairs, numpairs_p);
-    //printf("Final number of pairs (after filtering) : %d\n", numpairs_p);
+    printf("Final number of pairs (after filtering) : %d\n", numpairs_p);
 
     double *f;
     f = (double *)malloc(sizeof(double)*3*npos);
@@ -115,11 +119,11 @@ int main(){
 	C1.dr = 0.75;
 	C1.di = 0;
 	for(i=0; i<2*(numpairs_p); i+=2){
-		if((pairs[i] <= npos) && (pairs[i+1] <= npos))
+		if((pairs[i] <= npos) && (pairs[i+1] <= npos)){
+			printf("Post Correcting pairs %d and %d \n", pairs[i], pairs[i+1]);
 			postcorrection_(&pairs[i], &pairs[i+1], pos, f1, f2, f3, rpy, &npos, rad, &C1);
+		}
 	}
 	  
-
-
 	return 0;
 }
