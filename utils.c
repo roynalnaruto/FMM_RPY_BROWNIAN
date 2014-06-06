@@ -107,7 +107,7 @@ double relError(double *V1, double *V2, int size, int dimension){
 	return (error/total);	
 }
 
-double relErrorRealComplex(double *V1, complex *V2){
+double relErrorRealComplex(double *V1, complex *V2, int size, int dimension){
     int i;
     long double total = 0;
     long double error = 0;
