@@ -106,3 +106,137 @@ double relError(double *V1, double *V2, int size, int dimension){
 	}
 	return (error/total);	
 }
+
+double relErrorRealComplex(double *V1, complex *V2){
+    int i;
+    long double total = 0;
+    long double error = 0;
+    for(i=0; i<size*dimension; i++){
+        total += mod(V1[i]);
+        error += mod(V1[i] - V2[i].dr);
+    }
+    return (error/total);
+}
+
+void createDiag(double *A, double *rad){
+    //printf("enter createDiag\n");
+
+    int i, j;
+    for(i=0; i<(3*(npos)); i++){
+        for(j=0; j<(3*(npos)); j++){
+            if(i==j){
+                A[i+3*npos*j] = 1.0/rad[i/3];
+                //A_vec[(3*(npos) + 1)*i] = d[i];
+            }
+            else{
+                A[i+3*npos*j] = 0.0;
+                //A_vec[3*(npos)*i + j] = 0.0;
+            }
+        }   
+    }
+
+    //printf("exit createDiag\n");
+}
+
+
+void mobilityMatrix(double *A, double *pos, double *rad){
+    //printf("enter mobilityMatrix\n");
+
+    //variables
+    double a1, a2;
+    int k, m, n, index1, index2, i, j;
+    double s, a_mean, term1, term2;
+    double pi[3], pj[3];
+    double e[3], r[3];
+    double ee[3][3], A12[3][3];
+
+    double eye3[3][3];
+    eye3[0][0] = eye3[1][1] = eye3[2][2] = 1.0;
+    eye3[0][1] = eye3[0][2] = eye3[1][0] = eye3[1][2] = eye3[2][0] = eye3[2][1] = 0.0;
+
+    //find mobility matrix
+    for(i=0; i<npos; i++){
+        for(j=i+1; j<npos; j++){
+
+            //create pi and pj and compute r
+            for(k=0; k<3; k++){
+                pi[k] = pos[3*i+k];
+                pj[k] = pos[3*j+k];
+                r[k] = pi[k] - pj[k];
+            }
+
+            //euclidean distance
+            s = sqrt(r[0]*r[0] + r[1]*r[1] + r[2]*r[2]);
+
+            //calculate e
+            for(k=0; k<3; k++){
+                e[k] = r[k]/s;
+            }
+
+            //calculate ee
+            for(m=0; m<3; m++){
+                for(n=0; n<3; n++){
+                    ee[m][n] = e[n]*e[m];
+                }
+            }
+
+            //get radii
+            a1 = rad[i];
+            a2 = rad[j];
+
+            //compute A12
+            if(s >= (a1+a2)){
+                for(m=0; m<3; m++){
+                    for(n=0; n<3; n++){
+                        A12[m][n] = (1.0/s)*((3.0/4.0)*(eye3[m][n]+ee[m][n]) + (1.0/4.0)*(a1*a1 + a2*a2)*(eye3[m][n]-3.0*ee[m][n])/(s*s));
+                    }
+                }
+            }
+            else{
+                a_mean = cbrt((1.0/2.0)*(a1*a1*a1 + a2*a2*a2));
+                term1 = (1.0/a_mean) - (9.0*s)/(32.0*a_mean*a_mean);
+                term2 = (3.0*s)/(32.0*a_mean*a_mean);
+                for(m=0; m<3; m++){
+                    for(n=0; n<3; n++){
+                        A12[m][n] = term1*eye3[m][n] + term2*ee[m][n];
+                    }
+                }
+            }
+
+            //indices and update
+            for(m=0; m<3; m++){
+                index1 = 3*(i+1)-(3-m);
+                for(n=0; n<3; n++){
+                    index2 = 3*(j+1)-(3-n);
+                    A[index1 + 3*npos*index2] += A12[m][n];
+                    //A_vec[3*npos*index1 + index2] = A[index1][index2];
+                    A[index2 + 3*npos*index1] += A12[n][m];
+                    //A_vec[3*npos*index2 + index1] = A[index2][index1];
+                }
+            }
+
+        }
+    }
+
+    //printf("exit mobilityMatrix\n");
+}
+
+
+void multiplyMatrix(double *A, double *f){
+    //printf("enter multiplyMatrix\n");
+
+    int i, j;
+    double temp_value[3*npos];
+    for(i=0; i<3*(npos); i++){
+        temp_value[i] = 0.0;
+        for(j = 0; j<3*(npos); j++){
+            temp_value[i] += A[i+3*npos*j]*f[j];
+        }
+    }
+
+    for(i=0; i<3*npos; i++){
+        A[i] = temp_value[i];
+    }
+    
+    //printf("exit multiplyMatrix\n");
+}

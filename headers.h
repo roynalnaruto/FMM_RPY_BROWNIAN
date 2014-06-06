@@ -26,6 +26,10 @@ int interactions(int npos, double *pos, double L, int boxdim, double cutoff2, do
 void interactionsFilter(int *numpairs_p, int *pairs, int *finalPairs, double *rad, double *pos);
 double relError(double *V1, double *V2, int size, int dimension);
 void computeForceSerial(double *f, double *pos, double *rad, double *shell);
+void multiplyMatrix(double *A, double *f);
+void mobilityMatrix(double *A, double *pos, double *rad);
+void createDiag(double *A, double *rad);
+double relErrorRealComplex(double *V1, complex *V2);
 
 struct box{
     int head;

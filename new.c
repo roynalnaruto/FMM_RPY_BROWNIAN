@@ -125,6 +125,18 @@ int main(){
 			postcorrection_(&pairs[i], &pairs[i+1], pos, f1, f2, f3, rpy, &npos, rad, &C1);
 		}
 	}
+
+	/*
+	 * Mobility Matrix
+	 */
+	double *A;
+	A = (double *)malloc(sizeof(double)*3*3*npos*npos);
+	createDiag(A, rad);
+	mobilityMatrix(A, pos, rad);
+	multiplyMatrix(A, f);
+
+	error = relErrorRealComplex(A, rpy, npos, 3);
+	printf("Error in Mf and rpy is : %lf\n", error);
 	  
 	return 0;
 }
