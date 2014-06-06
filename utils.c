@@ -62,7 +62,7 @@ void getShell(double *shell){
     char input_index[100];
     int i, j;
     FILE *input;
-    sprintf(input_index, "/home/rohit/final/data-for-outer-shell/data%d_%d.csv", nsphere, shell_radius);
+    sprintf(input_index, "./data-for-outer-shell/data%d_%d.csv", nsphere, shell_radius);
     input = fopen(input_index, "r");
     for(i=0; i<nsphere; i++){
         for(j=0; j<3; j++){

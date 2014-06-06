@@ -89,6 +89,7 @@ int main(){
 
     double *f_serial;
     f_serial = (double *)malloc(sizeof(double)*3*npos);
+    
     computeForceSerial(f_serial, pos, rad, shell);
 
     //printVectors(f, npos, 3);
