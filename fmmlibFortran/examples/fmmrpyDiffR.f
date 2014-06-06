@@ -264,6 +264,7 @@ c	write(*,*) "Third call done, status : ", ier
 
 CC The fourth call, no need to compute potential
 		ifdipole = 1
+CC //CHANGE!!, set ifpot to 0       
 		ifpot = 1
 		iffld = 1
 
@@ -288,6 +289,7 @@ c	write(*,*) "Fourth call done, status : ", ier
 
 CC The fifth call, no need to compute potential
 		ifdipole = 1
+CC //CHANGE!!, set ifpot to 0       
 		ifpot = 1
 		iffld = 1
 

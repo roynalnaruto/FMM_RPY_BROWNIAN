@@ -39,9 +39,23 @@ void getBasic(){
 			shell_radius = 24;
 			break;
 			
+			case 10000:
+			shell_radius = 24;
+			break;
+			
+			case 20000:
+			shell_radius = 24;
+			break;
+			
+			case 50000:
+			shell_radius = 24;
+			break;
+
+			
 			default:
-			printf("Invalid number of particles...exiting ...\n");
-			exit(0);
+			shell_radius = 24;
+			//printf("Invalid number of particles...exiting ...\n");
+			//exit(0);
 		}
 	}
 
@@ -57,6 +71,9 @@ int main(){
 
 	time_t t;
 	srand((unsigned) time(&t));
+	
+	struct timeval startTime, endTime;
+	long long time1, time2;
 
 	getBasic();
     printf("%d, %d, %d \n", npos, nsphere, shell_radius);
@@ -77,13 +94,13 @@ int main(){
 	
 
 
-	int maxnumpairs = 200000;
+	int maxnumpairs = 5000000;
 	int *pairs = (int *)malloc(sizeof(int)*2*maxnumpairs);
 	int *finalPairs = (int *)malloc(sizeof(int)*2*maxnumpairs);
     double *distances2 = (double *)malloc(sizeof(double)*maxnumpairs);
     int numpairs_p;
 
-
+	gettimeofday(&startTime, NULL); 
     interactions(npos+nsphere, pos, L, boxdim, cutoff2, distances2, pairs, maxnumpairs, &numpairs_p);
     //printPairs(pairs, numpairs_p);
     //printf("Number of pairs : %d\n", numpairs_p);
@@ -100,10 +117,10 @@ int main(){
     f3 = (complex *)malloc(sizeof(complex)*npos);
     rpy = (complex *)malloc(sizeof(complex)*(npos*3));
 
-
     computeForce(f, f1, f2, f3, pos, rad, finalPairs, numpairs_p);
 
 
+/*
     double *f_serial;
     f_serial = (double *)malloc(sizeof(double)*3*npos);
     
@@ -116,15 +133,22 @@ int main(){
     printf("Relative Error in computeForce %lf\n", error);
     error = maxError(f_serial, f, npos, 3);
     printf("Max Error in computeForce %lf\n", error);
-    
+*/    
     
     char dir[100] = "outputs/";
+    printf("Calling computeRPY : \n");
     computerpy_(&npos, pos, rad, f1, f2, f3, rpy,dir);
+    printf("Calling postCorrection : \n");
     postCorrection(npos, pos, rad, numpairs_p, finalPairs, f1, f2, f3,rpy);
+    gettimeofday(&endTime, NULL); 
+    time1 = (endTime.tv_sec-startTime.tv_sec)*1000000 + endTime.tv_usec-startTime.tv_usec;    
+	printf("PostCorrection Done \n");
+	printf("Total Time taken : %ld \n", time1);
 
-	/*
-	 * Mobility Matrix
-	 */
+/*
+	//
+	// Mobility Matrix
+	//
 	double *A;
 	A = (double *)malloc(sizeof(double)*3*3*npos*npos);
 	createDiag(A, rad);
@@ -132,14 +156,15 @@ int main(){
 	multiplyMatrix(A, f);
 
 	error = relErrorRealComplex(A, rpy, npos, 3);
-	
+*/	
 	//printVectorsComplex(rpy, npos, 3);
 	//printVectors(A, npos, 3);
 	//printVectors(pos, npos, 3);
 
-	printf("Relative Error in Mf and rpy is : %lf\n", error);
-	error = maxErrorRealComplex(A, rpy, npos, 3);
-	printf("Max Error in Mf and rpy is : %lf\n", error);
+	//printf("Relative Error in Mf and rpy is : %lf\n", error);
+
+//	error = maxErrorRealComplex(A, rpy, npos, 3);
+//	printf("Max Error in Mf and rpy is : %lf\n", error);
 	  
 	return 0;
 }
