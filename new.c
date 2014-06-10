@@ -146,33 +146,60 @@ int main(){
 	
 	
 	double *standardNormalZ = (double *)malloc(sizeof(double)*npos*3);
+	double *standardNormalZ1;
 	//obtain standardNormalZ from a standard Normal Distribution ~ N(0, I)
 	//
 	getNorm((1000000+(rand()%999999)), standardNormalZ);
-	//
 	
 	
-	lanczos_t *lanczos = malloc(sizeof(lanczos));
-	int maxiters = 100;
-	create_lanczos (&lanczos, 1, maxiters, npos*3);
-	compute_lanczos(lanczos, 0.01, 1, standardNormalZ, 3*npos,
-				FMM, f1, f2, f3, lanczos_out, pos, rad, numpairs_p, finalPairs);
-	printVectors(lanczos->v, npos, 3);
-	
+
 	if(CHECKCODE){
-		double *A;
+		standardNormalZ1 = (double *)malloc(sizeof(double)*npos*3);
+		for(i=0;i<npos*3;i++)
+			standardNormalZ1[i] = standardNormalZ[i];
+	}
+
+
+	//
+	lanczos_t *lanczos, *lanczos1;
+	lanczos = malloc(sizeof(lanczos));
+	
+	int maxiters = 100;
+	double *A;
+		
+	if(CHECKCODE){
+
+		lanczos1 = malloc(sizeof(lanczos));	
+		create_lanczos (&lanczos1, 1, maxiters, npos*3);
 		A = (double *)malloc(sizeof(double)*3*3*npos*npos);
+		double *Az;
+		Az = (double *)malloc(sizeof(double)*3*npos);
 		createDiag(A, rad);
 		mobilityMatrix(A, pos, rad);
-		multiplyMatrix(A, f);
-		double error = relErrorRealComplex(A, rpy, npos, 3);	
+		compute_lanczos(lanczos1, 0.01, 1, standardNormalZ1, 3*npos,
+				SERIAL, f1, f2, f3, lanczos_out, pos, rad, numpairs_p, finalPairs, A);
+		printf("Serial: \n");
+		printVectors(lanczos1->v, npos, 3);
+		//multiplyMatrix(A, f);
+		//double error = relErrorRealComplex(A, rpy, npos, 3);	
+
 		//printVectorsComplex(rpy, npos, 3);
 		//printVectors(A, npos, 3);
 		//printVectors(pos, npos, 3);
-		printf("Relative Error in Mf and rpy is : %lf\n", error);
-		error = maxErrorRealComplex(A, rpy, npos, 3);
-		printf("Max Error in Mf and rpy is : %lf\n", error);
-	}
 
+		//printf("Relative Error in Mf and rpy is : %lf\n", error);
+		//error = maxErrorRealComplex(A, rpy, npos, 3);
+		//printf("Max Error in Mf and rpy is : %lf\n", error);
+	}
+	
+	
+	create_lanczos (&lanczos, 1, maxiters, npos*3);
+	compute_lanczos(lanczos, 0.01, 1, standardNormalZ, 3*npos,
+				FMM, f1, f2, f3, lanczos_out, pos, rad, numpairs_p, finalPairs, A);
+	printf("FMM: \n");
+	printVectors(lanczos->v, npos, 3);
+	if(CHECKCODE){
+		printf("relative Error %lf: \n", relError(lanczos->v, lanczos1->v, npos, 3));
+	}
 	return 0;
 }

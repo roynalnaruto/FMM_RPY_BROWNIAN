@@ -42,7 +42,7 @@ void compute_lanczos (lanczos_t *lanczos, double tol,
                       complex *fmmin1, complex *fmmin2, complex *fmmin3,
                       complex *fmmout, 
                       double *sourcepos, double *radii,
-                      int numpairs_p, int *pairs,...);
+                      int numpairs_p, int *pairs, double *A,...);
                       
 
 

@@ -105,7 +105,7 @@ void compute_lanczos (lanczos_t *lanczos, double tol,
                       complex *fmmin1, complex *fmmin2, complex *fmmin3,
                       complex *fmmout, 
                       double *sourcepos, double *radii,
-                      int numpairs_p, int *pairs,...)
+                      int numpairs_p, int *pairs, double *A,...)
 {
     struct timeval tv1;
     struct timeval tv2;
@@ -237,7 +237,8 @@ void compute_lanczos (lanczos_t *lanczos, double tol,
                               1.0, w, ldv, 1);
                 }
                 else 
-*/ 
+*/
+                
                 if(mobtype == FMM)
                 {
 					//Copy input to temporaries.
@@ -254,11 +255,17 @@ void compute_lanczos (lanczos_t *lanczos, double tol,
 					char *dir;
 					computerpy_(&nposfmm, sourcepos, radii, fmmin1, fmmin2, fmmin3, fmmout, dir);
 					postCorrection(nposfmm, sourcepos, radii, numpairs_p, pairs, fmmin1, fmmin2, fmmin3, fmmout);
-					//Copy output back from temporary.
+                    //Copy output back from temporary.
 					for(tempi = 0; tempi<nposfmm*3; tempi++){
 						w[tempi] = fmmout[tempi].dr;
-					} 
+					}
 				}
+
+                else if(mobtype == SERIAL)
+                {
+                    double *tempin =  &(v[i * ldv]);
+                    multiplyMatrix_AZ(A, w, tempin);
+                }
 
                 // w = w - h(i-1, i) * v(i-1)                
                 if (i > 0)
@@ -355,4 +362,10 @@ void compute_lanczos (lanczos_t *lanczos, double tol,
 		DPRINTF ("    takes %.3le secs\n",
             timepass);
 	}
+          if(mobtype == SERIAL)
+    {
+        DPRINTF ("   Serial takes %.3le secs\n",
+            timepass);
+    }
+
 }

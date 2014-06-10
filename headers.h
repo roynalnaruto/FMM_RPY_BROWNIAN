@@ -19,7 +19,7 @@
 #define shell_particle_radius 1.0
 #define pie 3.14159
 #define NUM_BOX_NEIGHBORS 13
-#define CHECKCODE 0
+#define CHECKCODE 1
 
 inline int min(int a, int b);
 inline int max(int a, int b);

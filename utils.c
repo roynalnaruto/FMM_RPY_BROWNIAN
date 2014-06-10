@@ -302,6 +302,21 @@ void multiplyMatrix(double *A, double *f){
     //printf("exit multiplyMatrix\n");
 }
 
+void multiplyMatrix_AZ(double *A, double *Az, double *z){
+    //printf("enter multiplyMatrix_AZ\n");
+
+    int i, j;
+    //double temp_value[3*npos];
+    for(i=0; i<3*(npos); i++){
+        Az[i] = 0.0;
+        for(j = 0; j<3*(npos); j++){
+            Az[i] += A[i+3*npos*j]*z[j];
+        }
+    }
+
+    //printf("exit multiplyMatrix_AZ\n");
+}
+
 
 
 void getNorm(int seed, float *z){
