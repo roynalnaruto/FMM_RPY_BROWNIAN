@@ -137,7 +137,7 @@ int main(){
     
     char dir[100] = "outputs/";
     printf("Calling computeRPY : \n");
-    computerpy_(&npos, pos, rad, f1, f2, f3, rpy,dir);
+    computerpy_(&npos, pos, rad, f1, f2, f3, rpy, dir);
     printf("Calling postCorrection : \n");
     postCorrection(npos, pos, rad, numpairs_p, finalPairs, f1, f2, f3,rpy);
     gettimeofday(&endTime, NULL); 
@@ -163,8 +163,9 @@ int main(){
 
 	//printf("Relative Error in Mf and rpy is : %lf\n", error);
 
-//	error = maxErrorRealComplex(A, rpy, npos, 3);
-//	printf("Max Error in Mf and rpy is : %lf\n", error);
-	  
+/*
+	error = maxErrorRealComplex(A, rpy, npos, 3);
+	printf("Max Error in Mf and rpy is : %lf\n", error);
+*/	  
 	return 0;
 }
