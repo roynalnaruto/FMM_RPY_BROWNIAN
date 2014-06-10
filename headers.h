@@ -1,3 +1,8 @@
+#ifndef _HEADERS_H
+#define _HEADERS_H
+
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -5,6 +10,7 @@
 #include <assert.h>
 #include "normal.h"
 #include "fmm.h"
+#include "lanczos.h"
 
 #define kparticle 65.0
 #define kshell 150.0
@@ -13,6 +19,7 @@
 #define shell_particle_radius 1.0
 #define pie 3.14159
 #define NUM_BOX_NEIGHBORS 13
+#define CHECKCODE 0
 
 inline int min(int a, int b);
 inline int max(int a, int b);
@@ -56,3 +63,6 @@ struct box{
 int shell_radius;
 int nsphere;
 int npos;
+
+
+#endif

@@ -111,29 +111,28 @@ int main(){
 
     double *f;
     f = (double *)malloc(sizeof(double)*3*npos);
-    complex *f1, *f2, *f3, *rpy;
+    complex *f1, *f2, *f3, *rpy, *lanczos_out;
     f1 = (complex *)malloc(sizeof(complex)*npos);
     f2 = (complex *)malloc(sizeof(complex)*npos);
     f3 = (complex *)malloc(sizeof(complex)*npos);
     rpy = (complex *)malloc(sizeof(complex)*(npos*3));
+    lanczos_out = (complex *)malloc(sizeof(complex)*(npos*3));
 
     computeForce(f, f1, f2, f3, pos, rad, finalPairs, numpairs_p);
 
 
-/*
-    double *f_serial;
-    f_serial = (double *)malloc(sizeof(double)*3*npos);
+	if(CHECKCODE){		
+		double *f_serial;
+		f_serial = (double *)malloc(sizeof(double)*3*npos);
+		computeForceSerial(f_serial, pos, rad, shell);
+		//printVectors(f, npos, 3);
+		//printVectors(f_serial, npos, 3);	
+		double error = relError(f_serial, f, npos, 3);
+		printf("Relative Error in computeForce %lf\n", error);
+		error = maxError(f_serial, f, npos, 3);
+		printf("Max Error in computeForce %lf\n", error); 
+    }
     
-    computeForceSerial(f_serial, pos, rad, shell);
-
-    //printVectors(f, npos, 3);
-	//printVectors(f_serial, npos, 3);
-
-    double error = relError(f_serial, f, npos, 3);
-    printf("Relative Error in computeForce %lf\n", error);
-    error = maxError(f_serial, f, npos, 3);
-    printf("Max Error in computeForce %lf\n", error);
-*/    
     
     char dir[100] = "outputs/";
     printf("Calling computeRPY : \n");
@@ -144,28 +143,36 @@ int main(){
     time1 = (endTime.tv_sec-startTime.tv_sec)*1000000 + endTime.tv_usec-startTime.tv_usec;    
 	printf("PostCorrection Done \n");
 	printf("Total Time taken : %ld \n", time1);
-
-/*
+	
+	
+	double *standardNormalZ = (double *)malloc(sizeof(double)*npos*3);
+	//obtain standardNormalZ from a standard Normal Distribution ~ N(0, I)
 	//
-	// Mobility Matrix
+	getNorm((1000000+(rand()%999999)), standardNormalZ);
 	//
-	double *A;
-	A = (double *)malloc(sizeof(double)*3*3*npos*npos);
-	createDiag(A, rad);
-	mobilityMatrix(A, pos, rad);
-	multiplyMatrix(A, f);
+	
+	
+	lanczos_t *lanczos = malloc(sizeof(lanczos));
+	int maxiters = 100;
+	create_lanczos (&lanczos, 1, maxiters, npos*3);
+	compute_lanczos(lanczos, 0.01, 1, standardNormalZ, 3*npos,
+				FMM, f1, f2, f3, lanczos_out, pos, rad, numpairs_p, finalPairs);
+	printVectors(lanczos->v, npos, 3);
+	
+	if(CHECKCODE){
+		double *A;
+		A = (double *)malloc(sizeof(double)*3*3*npos*npos);
+		createDiag(A, rad);
+		mobilityMatrix(A, pos, rad);
+		multiplyMatrix(A, f);
+		double error = relErrorRealComplex(A, rpy, npos, 3);	
+		//printVectorsComplex(rpy, npos, 3);
+		//printVectors(A, npos, 3);
+		//printVectors(pos, npos, 3);
+		printf("Relative Error in Mf and rpy is : %lf\n", error);
+		error = maxErrorRealComplex(A, rpy, npos, 3);
+		printf("Max Error in Mf and rpy is : %lf\n", error);
+	}
 
-	error = relErrorRealComplex(A, rpy, npos, 3);
-*/	
-	//printVectorsComplex(rpy, npos, 3);
-	//printVectors(A, npos, 3);
-	//printVectors(pos, npos, 3);
-
-	//printf("Relative Error in Mf and rpy is : %lf\n", error);
-
-/*
-	error = maxErrorRealComplex(A, rpy, npos, 3);
-	printf("Max Error in Mf and rpy is : %lf\n", error);
-*/	  
 	return 0;
 }
