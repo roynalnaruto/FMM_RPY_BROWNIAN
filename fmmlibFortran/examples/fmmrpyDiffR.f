@@ -199,7 +199,7 @@ cc //Values of C1 and C2
 		C2 = 0.5
 
 cc //! Uncomment the following line for enabling printing
-c        call prini(6,13)
+cc        call prini(6,13)
         iprec=1
 
 
@@ -290,7 +290,7 @@ c	write(*,*) "Fourth call done, status : ", ier
 CC The fifth call, no need to compute potential
 		ifdipole = 1
 CC //CHANGE!!, set ifpot to 0       
-		ifpot = 1
+		ifpot = 0
 		iffld = 1
 
 		do i=1,nsource

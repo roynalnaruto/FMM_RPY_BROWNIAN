@@ -1,4 +1,5 @@
 #include "headers.h"
+#include "normal.h"
 
 inline int min(int a, int b){
     return ((a>b)? b : a);
@@ -300,3 +301,22 @@ void multiplyMatrix(double *A, double *f){
     
     //printf("exit multiplyMatrix\n");
 }
+
+
+
+void getNorm(int seed, float *z){
+	//printf("enter getNorm\n");
+	
+	int i;
+	for(i=0; i<3*npos; i++){
+		z[i] = r4_normal_01(&seed);
+	}
+	
+	//printf("exit getNorm\n");
+}
+
+
+
+
+
+
