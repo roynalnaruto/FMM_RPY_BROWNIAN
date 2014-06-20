@@ -1,4 +1,4 @@
-cscope 15 $HOME/FMM_RPY_BROWNIAN/KIFMM_ALL/kifmm--hybrid--double-only-master/fmm               0000516161
+cscope 15 $HOME/FMM_RPY_BROWNIAN/KIFMM_ALL/kifmm--hybrid--double-only-master/fmm               0000517149
 	@driver.cc
 
 1 
@@ -75,21 +75,57 @@ u£
 	}
 }
 
-29 
+29 (*
+kî√l
+)(
+¢
+, 
+ä
+, 
+ªÆ_t
+* 
+x1
+,Ñól_t* 
+x2
+,Ñól_t* 
+x3
+,
+
+30 
+ªÆ_t
+* 
+y1
+,Ñól_t* 
+y2
+,Ñól_t* 
+y3
+,
+
+31 
+ªÆ_t
+* 
+m©
+,Ñól_t* 
+ødii
+,Ñól_à*
+f‹˚_Ve˘‹
+);
+
+34 
 	$gë_£c⁄ds
  () {
 
-30 
+35 
 timevÆ
  
 tv
 ;
 
-31 
+36 
 t
 ;
 
-32 
+37 
 	`gëtimeofday
 (&
 tv
@@ -97,7 +133,7 @@ tv
 NULL
 );
 
-33 
+38 
 t
  = ()
 tv
@@ -105,21 +141,21 @@ tv
 tv_£c
  +
 
-34 (()
+39 (()
 tv
 .
 tv_u£c
 )/()1000000.0;
 
-35  
+40  
 t
 ;
 
-36 
+41 
 	}
 }
 
-46 
+51 
 	$e°im©e_Ê›s_U__
  (
 AŒNodes
@@ -127,13 +163,13 @@ AŒNodes
 AŒ_N
 )
 
-48 
+53 
 	`as£π
  (
 AŒ_N
 );
 
-49 
+54 
 ve˘‹
 <
 NodeTªe
@@ -145,7 +181,7 @@ AŒ_N
 N
 ;
 
-50 
+55 
 Node
  *
 Nt
@@ -153,7 +189,7 @@ Nt
 AŒ_N
 ->Nt;
 
-51 
+56 
 Node
  *
 Ns
@@ -161,15 +197,15 @@ Ns
 AŒ_N
 ->Ns;
 
-53 
+58 
 Ê›_cou¡
  = 0.0;
 
-54 
+59 
 tgt_box_id
 ;
 
-56 
+61 
 tgt_box_id
  = 0;Ågt_box_id < 
 nodeVec
@@ -177,11 +213,11 @@ nodeVec
 	`size
 (); ++tgt_box_id) {
 
-57 
+62 
 k
 ;
 
-58 
+63 
 k
  = 0; k < 
 nodeVec
@@ -193,7 +229,7 @@ Unodes
 	`size
 (); ++k) {
 
-59 
+64 
 §c_box_id
  = 
 nodeVec
@@ -205,7 +241,7 @@ Unodes
 k
 ];
 
-60 
+65 
 Ê›_cou¡
  +11.0 * 
 Nt
@@ -219,15 +255,15 @@ Ns
 §c_box_id
 ].num_pts;
 
-63  
+68  
 Ê›_cou¡
 ;
 
-64 
+69 
 	}
 }
 
-72 
+77 
 	$e°im©e_Ê›s_V__
  (
 AŒNodes
@@ -235,13 +271,13 @@ AŒNodes
 AŒ_N
 )
 
-74 
+79 
 	`as£π
  (
 AŒ_N
 );
 
-75 
+80 
 ve˘‹
 <
 NodeTªe
@@ -253,7 +289,7 @@ AŒ_N
 N
 ;
 
-76 
+81 
 åg_nodes
  = 
 nodeVec
@@ -261,7 +297,7 @@ nodeVec
 	`size
 ();
 
-77 
+82 
 size
  = 
 	`eff_d©a_size
@@ -269,21 +305,21 @@ size
 UE
 );
 
-79 
+84 
 Ê›_cou¡
  = 0.0;
 
-80 
+85 
 tgt_box_id
 ;
 
-81 
+86 
 tgt_box_id
  = 0;Ågt_box_id < 
 åg_nodes
 ; ++tgt_box_id) {
 
-82 
+87 
 Ê›_cou¡
  +4.0 * 
 size
@@ -297,15 +333,15 @@ Vnodes
 	`size
 ();
 
-84  
+89  
 Ê›_cou¡
 ;
 
-85 
+90 
 	}
 }
 
-94 
+99 
 	$e°im©e_byãs_U__
  (
 AŒNodes
@@ -313,13 +349,13 @@ AŒNodes
 AŒ_N
 )
 
-96 
+101 
 	`as£π
  (
 AŒ_N
 );
 
-97 
+102 
 ve˘‹
 <
 NodeTªe
@@ -331,7 +367,7 @@ AŒ_N
 N
 ;
 
-98 
+103 
 Node
  *
 Nt
@@ -339,7 +375,7 @@ Nt
 AŒ_N
 ->Nt;
 
-99 
+104 
 Node
  *
 Ns
@@ -347,15 +383,15 @@ Ns
 AŒ_N
 ->Ns;
 
-101 
+106 
 byã_cou¡
  = 0.0;
 
-102 
+107 
 tgt_box_id
 ;
 
-104 
+109 
 tgt_box_id
  = 0;Ågt_box_id < 
 nodeVec
@@ -363,11 +399,11 @@ nodeVec
 	`size
 (); ++tgt_box_id) {
 
-105 
+110 
 k
 ;
 
-106 
+111 
 byã_cou¡
  +4.0 *  (
 ªÆ_t
@@ -379,7 +415,7 @@ tgt_box_id
 num_±s
 ;
 
-107 
+112 
 k
  = 0; k < 
 nodeVec
@@ -391,7 +427,7 @@ Unodes
 	`size
 (); ++k) {
 
-108 
+113 
 §c_box_id
  = 
 nodeVec
@@ -403,7 +439,7 @@ Unodes
 k
 ];
 
-109 
+114 
 byã_cou¡
  +4.0 *  (
 ªÆ_t
@@ -415,15 +451,15 @@ Ns
 num_±s
 ;
 
-112  
+117  
 byã_cou¡
 ;
 
-113 
+118 
 	}
 }
 
-122 
+127 
 	$e°im©e_byãs_V__
  (
 AŒNodes
@@ -431,13 +467,13 @@ AŒNodes
 AŒ_N
 )
 
-124 
+129 
 	`as£π
  (
 AŒ_N
 );
 
-125 
+130 
 ve˘‹
 <
 NodeTªe
@@ -449,7 +485,7 @@ AŒ_N
 N
 ;
 
-126 
+131 
 åg_nodes
  = 
 nodeVec
@@ -457,7 +493,7 @@ nodeVec
 	`size
 ();
 
-127 
+132 
 size
  = 
 	`eff_d©a_size
@@ -465,21 +501,21 @@ size
 UE
 );
 
-129 
+134 
 byã_cou¡
  = 0.0;
 
-130 
+135 
 tgt_box_id
 ;
 
-131 
+136 
 tgt_box_id
  = 0;Ågt_box_id < 
 åg_nodes
 ; ++tgt_box_id) {
 
-132 
+137 
 byã_cou¡
  + (
 ªÆ_t
@@ -487,7 +523,7 @@ byã_cou¡
 size
 ;
 
-133 
+138 
 byã_cou¡
  +2.0 *  (
 ªÆ_t
@@ -503,15 +539,15 @@ Vnodes
 	`size
 ();
 
-135  
+140  
 byã_cou¡
 ;
 
-136 
+141 
 	}
 }
 
-142 
+147 
 	$vÆid©e
  (
 num_åg
@@ -529,27 +565,27 @@ AŒ_N
 ªº
 )
 
-144 
+149 
 ågDOF
  = 1;
 
-145 
+150 
 §cDOF
  = 1;
 
-148 
+153 
 chk_id
  [
 num_chk
 ];
 
-149 
+154 
 k
  = 0; k < 
 num_chk
 ; k++) {
 
-150 
+155 
 chk_id
 [
 k
@@ -561,7 +597,7 @@ k
 num_åg
 ) );
 
-151 
+156 
 	`as£π
  (
 chk_id
@@ -571,7 +607,7 @@ k
 num_åg
 );
 
-153 
+158 
 ªÆ_t
 * 
 chkPosX
@@ -581,7 +617,7 @@ chkPosX
 num_chk
 );
 
-154 
+159 
 ªÆ_t
 * 
 chkPosY
@@ -591,7 +627,7 @@ chkPosY
 num_chk
 );
 
-155 
+160 
 ªÆ_t
 * 
 chkPosZ
@@ -601,7 +637,7 @@ chkPosZ
 num_chk
 );
 
-156 
+161 
 ªÆ_t
 * 
 chkVÆ
@@ -613,7 +649,7 @@ num_chk
 ågDOF
 );
 
-157 
+162 
 ªÆ_t
 * 
 chkPŸ
@@ -625,13 +661,13 @@ num_chk
 ågDOF
 );
 
-158 
+163 
 k
  = 0; k < 
 num_chk
 ; k++) {
 
-159 
+164 
 chkPosX
 [
 k
@@ -643,7 +679,7 @@ tx_‹ig
 chk_id
 [k]];
 
-160 
+165 
 chkPosY
 [
 k
@@ -655,7 +691,7 @@ ty_‹ig
 chk_id
 [k]];
 
-161 
+166 
 chkPosZ
 [
 k
@@ -667,13 +703,13 @@ tz_‹ig
 chk_id
 [k]];
 
-162 
+167 
 i
  = 0; i < 
 ågDOF
 ; i++)
 
-163 
+168 
 chkVÆ
 [
 k
@@ -689,13 +725,13 @@ pŸ_‹ig
 chk_id
 [k]*trgDOF+i];
 
-167 
+172 
 Node
 * 
 §c
 ;
 
-168 
+173 
 §c
  = (
 Node
@@ -705,7 +741,7 @@ Node
 IDEAL_ALIGNMENT
 );
 
-169 
+174 
 §c
 ->
 x
@@ -715,7 +751,7 @@ AŒ_N
 sx_‹ig
 ;
 
-170 
+175 
 §c
 ->
 y
@@ -725,7 +761,7 @@ AŒ_N
 sy_‹ig
 ;
 
-171 
+176 
 §c
 ->
 z
@@ -735,7 +771,7 @@ AŒ_N
 sz_‹ig
 ;
 
-172 
+177 
 §c
 ->
 dí_pŸ
@@ -745,7 +781,7 @@ AŒ_N
 dí_‹ig
 ;
 
-173 
+178 
 §c
 ->
 num_±s
@@ -753,7 +789,7 @@ num_±s
 num_§c
 ;
 
-175 
+180 
 ªÆ_t
 * 
 öãr
@@ -767,19 +803,19 @@ num_§c
 §cDOF
 );
 
-177 
+182 
 i
  = 0; i < 
 num_chk
 ; i++) {
 
-178 
+183 
 Node
 * 
 chk_pos
 ;
 
-179 
+184 
 chk_pos
  = (
 Node
@@ -789,7 +825,7 @@ Node
 IDEAL_ALIGNMENT
 );
 
-180 
+185 
 chk_pos
 ->
 x
@@ -799,7 +835,7 @@ chkPosX
 i
 ];
 
-181 
+186 
 chk_pos
 ->
 y
@@ -809,7 +845,7 @@ chkPosY
 i
 ];
 
-182 
+187 
 chk_pos
 ->
 z
@@ -819,7 +855,7 @@ chkPosZ
 i
 ];
 
-183 
+188 
 chk_pos
 ->
 dí_pŸ
@@ -829,7 +865,7 @@ chkPŸ
 i
 ];
 
-184 
+189 
 chk_pos
 ->
 num_±s
@@ -837,7 +873,7 @@ num_±s
 ågDOF
 ;
 
-185 
+190 
 	`uli°__dúe˘_evÆu©i⁄
 (*
 chk_pos
@@ -845,19 +881,19 @@ chk_pos
 §c
 );
 
-189 
+194 
 k
  = 0; k < 
 num_chk
 ; k++)
 
-190 
+195 
 i
  = 0; i < 
 ågDOF
 ; i++)
 
-191 
+196 
 chkPŸ
 [
 k
@@ -869,31 +905,31 @@ i
 chkVÆ
 [k*trgDOF+i];
 
-193 
+198 
 ªÆ_t
  
 vn
  = 0;
 
-194 
+199 
 ªÆ_t
  
 í
  = 0;
 
-195 
+200 
 k
  = 0; k < 
 num_chk
 ; k++)
 
-196 
+201 
 i
  = 0; i < 
 ågDOF
 ; i++) {
 
-197 
+202 
 vn
  +
 chkVÆ
@@ -905,7 +941,7 @@ k
 i
 ] * chkVal[k*trgDOF+i];
 
-198 
+203 
 í
  +
 chkPŸ
@@ -917,19 +953,19 @@ k
 i
 ] * chkPot[k*trgDOF+i];
 
-200 
+205 
 vn
  = 
 	`sqπ
 (vn);
 
-201 
+206 
 í
  = 
 	`sqπ
 (en);
 
-203 
+208 
 ªº
  = 
 í
@@ -937,11 +973,11 @@ vn
 vn
 ;
 
-206 
+211 
 	}
 }
 
-211 
+216 
 	$maö
  (
 ¨gc
@@ -949,39 +985,45 @@ vn
 ¨gv
 [])
 
-213 * 
+218 * 
 di°ributi⁄
 ;
 
-214 
+219 
 i
 ;
 
-215 
+220 
 num_±s
 ;
 
-216 
+221 
 num_chk
 ;
 
-217 
+222 
 ±s_max
 ;
 
-218 
+223 
 §c_node_cou¡
 , 
 åg_node_cou¡
 ;
 
-219 
+224 
 ªÆ_t
  
 ªº
 ;
 
-221 
+226 
+kî√l
+ = &
+mykî√l
+;
+
+229 
 ve˘‹
 <
 NodeTªe
@@ -989,19 +1031,19 @@ NodeTªe
 nodeVec
 ;
 
-222 
+230 
 ve˘‹
 <> 
 nodeLevñ
 ;
 
-223 
+231 
 AŒNodes
 * 
 AŒ_N
 ;
 
-225 
+233 
 Node
  *
 Ns
@@ -1009,13 +1051,13 @@ Ns
 Nt
 ;
 
-226 
+234 
 FMMWøµî_t
 * 
 F
 ;
 
-229 
+237 
 °›w©ch_t
 * 
 timî
@@ -1023,35 +1065,35 @@ timî
 NULL
 ;
 
-230 
+238 
 t_wu
 , 
 t_wv
 ;
 
-231 
+239 
 num_Ê›s_U
 , 
 num_Ê›s_V
 ;
 
-232 
+240 
 num_byãs_U
 , 
 num_byãs_V
 ;
 
-234 i‡(
+242 i‡(
 ¨gc
  != 4) {
 
-235 
+243 
 	`ußge__
  (
 ¨gv
 [0]);
 
-240 
+248 
 num_±s
  = 
 	`©oi
@@ -1059,13 +1101,13 @@ num_±s
 ¨gv
 [1]);
 
-241 
+249 
 di°ributi⁄
  = 
 ¨gv
 [2];
 
-242 
+250 
 ±s_max
  = 
 	`©oi
@@ -1073,11 +1115,11 @@ di°ributi⁄
 ¨gv
 [3]);
 
-244 
+252 
 	`§™d48
 (26);
 
-247 
+255 
 AŒ_N
  = (
 AŒNodes
@@ -1085,7 +1127,7 @@ AŒNodes
 	`mÆloc
  ( (AllNodes));
 
-248 
+256 
 	`as£π
  (
 AŒ_N
@@ -1093,7 +1135,7 @@ AŒ_N
 NULL
 );
 
-250 
+258 
 AŒ_N
 ->
 tx_‹ig
@@ -1105,7 +1147,7 @@ tx_‹ig
 num_±s
 );
 
-251 
+259 
 AŒ_N
 ->
 ty_‹ig
@@ -1117,7 +1159,7 @@ ty_‹ig
 num_±s
 );
 
-252 
+260 
 AŒ_N
 ->
 tz_‹ig
@@ -1129,7 +1171,7 @@ tz_‹ig
 num_±s
 );
 
-253 
+261 
 AŒ_N
 ->
 pŸ_‹ig
@@ -1141,7 +1183,7 @@ pŸ_‹ig
 num_±s
 );
 
-255 
+263 
 AŒ_N
 ->
 sx_‹ig
@@ -1153,7 +1195,7 @@ sx_‹ig
 num_±s
 );
 
-256 
+264 
 AŒ_N
 ->
 sy_‹ig
@@ -1165,7 +1207,7 @@ sy_‹ig
 num_±s
 );
 
-257 
+265 
 AŒ_N
 ->
 sz_‹ig
@@ -1177,7 +1219,7 @@ sz_‹ig
 num_±s
 );
 
-258 
+266 
 AŒ_N
 ->
 dí_‹ig
@@ -1189,7 +1231,7 @@ dí_‹ig
 num_±s
 );
 
-260 
+268 
 AŒ_N
 ->
 N
@@ -1197,13 +1239,13 @@ N
 nodeVec
 ;
 
-261 
+269 
 AŒ_N
 ->
 nodeLevñ
  = &nodeLevel;
 
-264 
+272 
 	`¸óã
  (
 num_±s
@@ -1213,13 +1255,13 @@ di°ributi⁄
 AŒ_N
 );
 
-266 
+274 
 i
  = 0; i < 
 num_±s
 ; i++)
 
-267 
+275 
 AŒ_N
 ->
 dí_‹ig
@@ -1229,7 +1271,7 @@ i
 	`dønd48
 ();
 
-270 
+278 
 	`§c_åì
  (
 num_±s
@@ -1239,7 +1281,7 @@ num_±s
 AŒ_N
 );
 
-273 
+281 
 	`åg_åì
  (
 num_±s
@@ -1247,23 +1289,23 @@ num_±s
 AŒ_N
 );
 
-278 
+286 
 	`°›w©ch_öô
  ();
 
-279 
+287 
 timî
  = 
 	`°›w©ch_¸óã
  ();
 
-281 
+289 
 	`Ârötf
  (
 °dîr
 , "Allocating memory forÑe-arranged sourceándÅargetÖoints...\n");
 
-282 
+290 
 AŒ_N
 ->
 tx
@@ -1275,7 +1317,7 @@ tx
 num_±s
 );
 
-283 
+291 
 AŒ_N
 ->
 ty
@@ -1287,7 +1329,7 @@ ty
 num_±s
 );
 
-284 
+292 
 AŒ_N
 ->
 tz
@@ -1299,7 +1341,7 @@ tz
 num_±s
 );
 
-285 
+293 
 AŒ_N
 ->
 pŸ
@@ -1311,7 +1353,7 @@ pŸ
 num_±s
 );
 
-287 
+295 
 AŒ_N
 ->
 sx
@@ -1323,7 +1365,7 @@ sx
 num_±s
 );
 
-288 
+296 
 AŒ_N
 ->
 sy
@@ -1335,7 +1377,7 @@ sy
 num_±s
 );
 
-289 
+297 
 AŒ_N
 ->
 sz
@@ -1347,7 +1389,7 @@ sz
 num_±s
 );
 
-290 
+298 
 AŒ_N
 ->
 dí
@@ -1359,7 +1401,7 @@ dí
 num_±s
 );
 
-292 
+300 
 Ns
  = (
 Node
@@ -1373,7 +1415,7 @@ nodeVec
 IDEAL_ALIGNMENT
 );
 
-293 
+301 
 Nt
  = (
 Node
@@ -1387,43 +1429,43 @@ nodeVec
 IDEAL_ALIGNMENT
 );
 
-295 
+303 
 AŒ_N
 ->
 Ns
  = Ns;
 
-296 
+304 
 AŒ_N
 ->
 Nt
  = Nt;
 
-298 
+306 
 	`Ârötf
  (
 °dîr
 , "Performing initialization...\n");
 
-299 
+307 
 	`gë_öput
  (
 AŒ_N
 );
 
-302 
+310 
 	`Ârötf
  (
 °dîr
 , "Setup forÅranslations....\n");
 
-303 
+311 
 Pos
  *
 SP
 ;
 
-304 
+312 
 SP
  = (
 Pos
@@ -1431,13 +1473,13 @@ Pos
 	`mÆloc
  ((Pos) * 4);
 
-306 
+314 
 Pos
  *
 RP
 ;
 
-307 
+315 
 RP
  = (
 Pos
@@ -1445,7 +1487,7 @@ Pos
 	`mÆloc
  ((Pos));
 
-309 
+317 
 	`å™s_£tup
  (
 SP
@@ -1453,25 +1495,25 @@ SP
 RP
 );
 
-310 
+318 
 AŒ_N
 ->
 SP
  = SP;
 
-311 
+319 
 AŒ_N
 ->
 RP
  = RP;
 
-313 
+321 
 Tøns_m©rix
  *
 TM
 ;
 
-314 
+322 
 TM
  = (
 Tøns_m©rix
@@ -1479,19 +1521,19 @@ Tøns_m©rix
 	`mÆloc
  ((Trans_matrix));
 
-315 
+323 
 AŒ_N
 ->
 TM
  = TM;
 
-317 
+325 
 	`Ârötf
  (
 °dîr
 , "Allocating memory forÅranslations...\n");
 
-318 
+326 
 AŒ_N
 ->
 §c_upw_equ_dí
@@ -1511,7 +1553,7 @@ UE
 SP
 ));
 
-319 
+327 
 AŒ_N
 ->
 eff_dí
@@ -1529,7 +1571,7 @@ nodeVec
 UE
 ));
 
-320 
+328 
 AŒ_N
 ->
 åg_dwn_equ_dí
@@ -1549,7 +1591,7 @@ DE
 SP
 ));
 
-321 
+329 
 AŒ_N
 ->
 åg_dwn_chk_vÆ
@@ -1569,7 +1611,7 @@ DC
 SP
 ));
 
-322 
+330 
 AŒ_N
 ->
 eff_vÆ
@@ -1587,37 +1629,37 @@ nodeVec
 DC
 ));
 
-325 
+333 
 	`Ârötf
  (
 °dîr
 , "Performing U-list workÜoad divisionámongÅheÅhreads...\n");
 
-326 
+334 
 	`w‹k_divisi⁄_U
  (
 AŒ_N
 );
 
-328 
+336 
 	`Ârötf
  (
 °dîr
 , "Performing V-list workÜoad divisionámongÅheÅhreads...\n");
 
-329 
+337 
 	`w‹k_divisi⁄_V
  (
 AŒ_N
 );
 
-331 
+339 
 	`Ârötf
  (
 °dîr
 , "Preprocessing...\n");
 
-332 
+340 
 F
  = 
 	`¥ïroc
@@ -1625,31 +1667,31 @@ F
 AŒ_N
 );
 
-334 
+342 
 	`Ârötf
 (
 °dîr
 , "Finished setup.\n");
 
-336 
+344 
 	`Ârötf
  (
 °dîr
 , "Evaluation...\n");
 
-337 
+345 
 	`run
  (
 F
 );
 
-340 
+348 
 num_chk
  = 
 	`gëív__vÆid©e
 ();
 
-341 
+349 
 	`vÆid©e
  (
 num_±s
@@ -1661,7 +1703,7 @@ AŒ_N
 ªº
 );
 
-343 
+351 
 num_Ê›s_U
  = 
 	`e°im©e_Ê›s_U__
@@ -1669,7 +1711,7 @@ num_Ê›s_U
 AŒ_N
 );
 
-344 
+352 
 num_Ê›s_V
  = 
 	`e°im©e_Ê›s_V__
@@ -1677,7 +1719,7 @@ num_Ê›s_V
 AŒ_N
 );
 
-346 
+354 
 num_byãs_U
  = 
 	`e°im©e_byãs_U__
@@ -1685,7 +1727,7 @@ num_byãs_U
 AŒ_N
 );
 
-347 
+355 
 num_byãs_V
  = 
 	`e°im©e_byãs_V__
@@ -1693,89 +1735,89 @@ num_byãs_V
 AŒ_N
 );
 
-350 
+358 
 	`Ârötf
  (
 °dout
 , "Inputs: %d | %s | %d \n",
 
-351 
+359 
 num_±s
 ,
 
-352 
+360 
 di°ributi⁄
 ,
 
-353 
+361 
 ±s_max
 );
 
-354 
+362 
 	`Ârötf
  (
 °dout
 , "EstimatedÇo. of flops (Ulist): %Lg\n",
 
-355 
+363 
 num_Ê›s_U
-);
-
-356 
-	`Ârötf
- (
-°dout
-, "EstimatedÇo. of flops (Vlist): %Lg\n",
-
-357 
-num_Ê›s_V
-);
-
-358 
-	`Ârötf
- (
-°dout
-, "Lower-bound on maximum memoryÅraffic (Ulist): %Lg GB\n",
-
-359 1e-9 * 
-num_byãs_U
-);
-
-360 
-	`Ârötf
- (
-°dout
-, "Lower-bound on maximum memoryÅraffic (Vlist): %Lg GB\n",
-
-361 1e-9 * 
-num_byãs_V
 );
 
 364 
 	`Ârötf
  (
 °dout
-, "Lower-bound onáverage intensity (Ulist): %.2Lf flops / byte\n",
+, "EstimatedÇo. of flops (Vlist): %Lg\n",
 
 365 
-num_Ê›s_U
- / 
-num_byãs_U
+num_Ê›s_V
 );
 
 366 
 	`Ârötf
  (
 °dout
+, "Lower-bound on maximum memoryÅraffic (Ulist): %Lg GB\n",
+
+367 1e-9 * 
+num_byãs_U
+);
+
+368 
+	`Ârötf
+ (
+°dout
+, "Lower-bound on maximum memoryÅraffic (Vlist): %Lg GB\n",
+
+369 1e-9 * 
+num_byãs_V
+);
+
+372 
+	`Ârötf
+ (
+°dout
+, "Lower-bound onáverage intensity (Ulist): %.2Lf flops / byte\n",
+
+373 
+num_Ê›s_U
+ / 
+num_byãs_U
+);
+
+374 
+	`Ârötf
+ (
+°dout
 , "Lower-bound onáverage intensity (Vlist): %.2Lf flops / byte\n",
 
-367 
+375 
 num_Ê›s_V
  / 
 num_byãs_V
 );
 
-368 
+376 
 	`Ârötf
  (
 °dîr
@@ -1783,13 +1825,13 @@ num_byãs_V
 ªº
 );
 
-370 
+378 
 	`°›w©ch_de°roy
  (
 timî
 );
 
-373 
+381 
 	}
 }
 
@@ -3473,7 +3515,7 @@ __EVALUATE_H__
 	~<node.h
 >
 
-10 
+9 
 	#OOFP_R
  (1.0/(4.0 * 
 M_PI
@@ -3481,98 +3523,124 @@ M_PI
 
 	)
 
-16 
+15 (*
+kî√l
+)(
+¢
+, 
+ä
+, 
+ªÆ_t
+* 
+x1
+,Ñól_t* 
+x2
+,Ñól_t* 
+x3
+,
+
+16 
+ªÆ_t
+* 
+y1
+,Ñól_t* 
+y2
+,Ñól_t* 
+y3
+,
+
+17 
+ªÆ_t
+* 
+m©
+,Ñól_t* 
+ødii
+,Ñól_à*
+f‹˚_Ve˘‹
+);
+
+19 
 FMMWøµî
  
 	tFMMWøµî_t
 ;
 
-18 
+21 
 FMMWøµî_t
 * 
-¥ïroc
+	`¥ïroc
  (
 AŒNodes
  *
 AŒ_N
 );
 
-19 
-w‹k_divisi⁄_U
+22 
+	`w‹k_divisi⁄_U
  (
 AŒNodes
  *
 AŒ_N
 );
 
-20 
-w‹k_divisi⁄_V
+23 
+	`w‹k_divisi⁄_V
  (
 AŒNodes
  *
 AŒ_N
 );
 
-21 c⁄° * 
-gë_im∂emíèti⁄_«me
+24 c⁄° * 
+	`gë_im∂emíèti⁄_«me
  ();
 
-22 
-gë_num_thªads
+25 
+	`gë_num_thªads
  ();
 
-23 
-run
+26 
+	`run
  (
 FMMWøµî_t
  *
 F
 );
 
-24 
-gë_vÆue
- (
-n
-, 
-ªÆ_t
-* 
-x
-,Ñól_t* 
-x‹ig
-, 
-ve˘‹
-<>& 
-vÆ
-);
-
-25 
-£t_vÆue
- (
-n
-, 
-ªÆ_t
-* 
-x‹ig
-,Ñól_t* 
-x
-, 
-ve˘‹
-<>& 
-vÆ
-);
-
-26 
-£t_zîo
- (
-n
-, 
-ªÆ_t
-* 
-x
-);
-
 27 
-£t_ønd
+	`gë_vÆue
+ (
+n
+, 
+ªÆ_t
+* 
+x
+,Ñól_t* 
+x‹ig
+, 
+ve˘‹
+<>& 
+vÆ
+);
+
+28 
+	`£t_vÆue
+ (
+n
+, 
+ªÆ_t
+* 
+x‹ig
+,Ñól_t* 
+x
+, 
+ve˘‹
+<>& 
+vÆ
+);
+
+29 
+	`£t_zîo
  (
 n
 , 
@@ -3581,16 +3649,26 @@ n
 x
 );
 
-28 
-gë_öput
+30 
+	`£t_ønd
+ (
+n
+, 
+ªÆ_t
+* 
+x
+);
+
+31 
+	`gë_öput
  (
 AŒNodes
 * 
 AŒ_N
 );
 
-30 
-uli°__dúe˘_evÆu©i⁄
+33 
+	`uli°__dúe˘_evÆu©i⁄
  (
 Node
  
@@ -3599,8 +3677,8 @@ Node
 §c
 );
 
-31 
-poötwi£_mu…
+34 
+	`poötwi£_mu…
  (
 n
 , 
@@ -3619,8 +3697,8 @@ z
 iz
 );
 
-32 
-kî√l
+35 
+	`mykî√l
  (
 ¢
 , 
@@ -3633,58 +3711,30 @@ x1
 x2
 ,Ñól_t* 
 x3
-,Ñól_t* 
+,
+
+36 
+ªÆ_t
+* 
 y1
 ,Ñól_t* 
 y2
 ,Ñól_t* 
 y3
-,Ñól_t* 
+,
+
+37 
+ªÆ_t
+* 
 m©
-);
-
-34 
-up_ˇlc__˝u
- (
-FMMWøµî_t
-* 
-F
-);
-
-35 
-uli°_ˇlc__˝u
- (
-FMMWøµî_t
-* 
-F
-);
-
-36 
-vli°_ˇlc__˝u
- (
-FMMWøµî_t
-* 
-F
-);
-
-37 
-wli°_ˇlc__˝u
- (
-FMMWøµî_t
-* 
-F
-);
-
-38 
-xli°_ˇlc__˝u
- (
-FMMWøµî_t
-* 
-F
+,Ñól_t* 
+ødii
+,Ñól_à*
+f‹˚_Ve˘‹
 );
 
 39 
-down_ˇlc__˝u
+	`up_ˇlc__˝u
  (
 FMMWøµî_t
 * 
@@ -3692,7 +3742,15 @@ F
 );
 
 40 
-c›y_åg_vÆ__˝u
+	`uli°_ˇlc__˝u
+ (
+FMMWøµî_t
+* 
+F
+);
+
+41 
+	`vli°_ˇlc__˝u
  (
 FMMWøµî_t
 * 
@@ -3700,7 +3758,7 @@ F
 );
 
 42 
-up_ˇlc__gpu
+	`wli°_ˇlc__˝u
  (
 FMMWøµî_t
 * 
@@ -3708,7 +3766,7 @@ F
 );
 
 43 
-uli°_ˇlc__gpu
+	`xli°_ˇlc__˝u
  (
 FMMWøµî_t
 * 
@@ -3716,15 +3774,47 @@ F
 );
 
 44 
-vli°_ˇlc__gpu
+	`down_ˇlc__˝u
  (
 FMMWøµî_t
 * 
 F
 );
 
-45 
-compuã_f·_§c__gpu
+45 
+	`c›y_åg_vÆ__˝u
+ (
+FMMWøµî_t
+* 
+F
+);
+
+47 
+	`up_ˇlc__gpu
+ (
+FMMWøµî_t
+* 
+F
+);
+
+48 
+	`uli°_ˇlc__gpu
+ (
+FMMWøµî_t
+* 
+F
+);
+
+49 
+	`vli°_ˇlc__gpu
+ (
+FMMWøµî_t
+* 
+F
+);
+
+50 
+	`compuã_f·_§c__gpu
  (
 FMMWøµî_t
  *
@@ -3735,8 +3825,8 @@ AŒNodes
 AŒ_N
 );
 
-46 
-compuã_f·_å™s__gpu
+51 
+	`compuã_f·_å™s__gpu
  (
 FMMWøµî_t
  *
@@ -3747,8 +3837,8 @@ AŒNodes
 AŒ_N
 );
 
-47 
-vli°_ˇlc__gpu_
+52 
+	`vli°_ˇlc__gpu_
  (
 FMMWøµî_t
  *
@@ -3759,8 +3849,8 @@ AŒNodes
 AŒ_N
 );
 
-48 
-compuã_if·_åg__gpu
+53 
+	`compuã_if·_åg__gpu
  (
 FMMWøµî_t
  *
@@ -3769,98 +3859,58 @@ f
 AŒNodes
  *
 AŒ_N
-);
-
-52 
-wli°_ˇlc__gpu
- (
-FMMWøµî_t
-* 
-F
-);
-
-53 
-xli°_ˇlc__gpu
- (
-FMMWøµî_t
-* 
-F
-);
-
-54 
-down_ˇlc__gpu
- (
-FMMWøµî_t
-* 
-F
-);
-
-55 
-d2d__gpu
- (
-FMMWøµî_t
-* 
-F
-);
-
-56 
-d2t__gpu
- (
-FMMWøµî_t
-* 
-F
 );
 
 57 
-c›y_åg_vÆ__gpu
+	`wli°_ˇlc__gpu
  (
 FMMWøµî_t
 * 
 F
 );
 
-61 
-Æloc__SOURCE_BOX__
+58 
+	`xli°_ˇlc__gpu
  (
 FMMWøµî_t
 * 
-f
+F
 );
 
-62 
-Æloc__TARGET_BOX__
+59 
+	`down_ˇlc__gpu
  (
 FMMWøµî_t
 * 
-f
+F
 );
 
-63 
-Æloc__U_LIST__
+60 
+	`d2d__gpu
  (
 FMMWøµî_t
 * 
-f
+F
 );
 
-64 
-Æloc__TAG__
+61 
+	`d2t__gpu
  (
 FMMWøµî_t
 * 
-f
+F
 );
 
-65 
-Æloc__DEPTH__
+62 
+	`c›y_åg_vÆ__gpu
  (
 FMMWøµî_t
 * 
-f
+F
 );
 
 66 
-Æloc__CHILDREN__
+	`Æloc__SOURCE_BOX__
  (
 FMMWøµî_t
 * 
@@ -3868,7 +3918,7 @@ f
 );
 
 67 
-Æloc__RADIUS__
+	`Æloc__TARGET_BOX__
  (
 FMMWøµî_t
 * 
@@ -3876,7 +3926,7 @@ f
 );
 
 68 
-Æloc__CENTER__
+	`Æloc__U_LIST__
  (
 FMMWøµî_t
 * 
@@ -3884,7 +3934,7 @@ f
 );
 
 69 
-Æloc__SP_UC__
+	`Æloc__TAG__
  (
 FMMWøµî_t
 * 
@@ -3892,7 +3942,7 @@ f
 );
 
 70 
-Æloc__UC2UE__
+	`Æloc__DEPTH__
  (
 FMMWøµî_t
 * 
@@ -3900,7 +3950,7 @@ f
 );
 
 71 
-Æloc__UE2UC__
+	`Æloc__CHILDREN__
  (
 FMMWøµî_t
 * 
@@ -3908,7 +3958,7 @@ f
 );
 
 72 
-Æloc__SRC_UPW_EQU_DEN__
+	`Æloc__RADIUS__
  (
 FMMWøµî_t
 * 
@@ -3916,7 +3966,7 @@ f
 );
 
 73 
-Æloc__VLIST_SRC__
+	`Æloc__CENTER__
  (
 FMMWøµî_t
 * 
@@ -3924,7 +3974,7 @@ f
 );
 
 74 
-Æloc__REG_DEN__
+	`Æloc__SP_UC__
  (
 FMMWøµî_t
 * 
@@ -3932,7 +3982,7 @@ f
 );
 
 75 
-Æloc__TT__
+	`Æloc__UC2UE__
  (
 FMMWøµî_t
 * 
@@ -3940,7 +3990,7 @@ f
 );
 
 76 
-Æloc__VLIST_TRANS__
+	`Æloc__UE2UC__
  (
 FMMWøµî_t
 * 
@@ -3948,7 +3998,7 @@ f
 );
 
 77 
-Æloc__VLIST_TRG__
+	`Æloc__SRC_UPW_EQU_DEN__
  (
 FMMWøµî_t
 * 
@@ -3956,7 +4006,7 @@ f
 );
 
 78 
-Æloc__VLIST_TLIST__
+	`Æloc__VLIST_SRC__
  (
 FMMWøµî_t
 * 
@@ -3964,7 +4014,7 @@ f
 );
 
 79 
-Æloc__TRG_DWN_CHK_VAL__
+	`Æloc__REG_DEN__
  (
 FMMWøµî_t
 * 
@@ -3972,7 +4022,7 @@ f
 );
 
 80 
-Æloc__PATH2NODE__
+	`Æloc__TT__
  (
 FMMWøµî_t
 * 
@@ -3980,7 +4030,7 @@ f
 );
 
 81 
-Æloc__PARENT__
+	`Æloc__VLIST_TRANS__
  (
 FMMWøµî_t
 * 
@@ -3988,7 +4038,7 @@ f
 );
 
 82 
-Æloc__TRG_DWN_EQU_DEN__
+	`Æloc__VLIST_TRG__
  (
 FMMWøµî_t
 * 
@@ -3996,7 +4046,7 @@ f
 );
 
 83 
-Æloc__DC2DE__
+	`Æloc__VLIST_TLIST__
  (
 FMMWøµî_t
 * 
@@ -4004,7 +4054,7 @@ f
 );
 
 84 
-Æloc__DE2DC__
+	`Æloc__TRG_DWN_CHK_VAL__
  (
 FMMWøµî_t
 * 
@@ -4012,7 +4062,7 @@ f
 );
 
 85 
-Æloc__SP_DE__
+	`Æloc__PATH2NODE__
  (
 FMMWøµî_t
 * 
@@ -4020,7 +4070,7 @@ f
 );
 
 86 
-Æloc__SP_UE__
+	`Æloc__PARENT__
  (
 FMMWøµî_t
 * 
@@ -4028,7 +4078,7 @@ f
 );
 
 87 
-Æloc__W_LIST__
+	`Æloc__TRG_DWN_EQU_DEN__
  (
 FMMWøµî_t
 * 
@@ -4036,7 +4086,7 @@ f
 );
 
 88 
-Æloc__SRCNUM__
+	`Æloc__DC2DE__
  (
 FMMWøµî_t
 * 
@@ -4044,7 +4094,7 @@ f
 );
 
 89 
-Æloc__SP_DC__
+	`Æloc__DE2DC__
  (
 FMMWøµî_t
 * 
@@ -4052,7 +4102,7 @@ f
 );
 
 90 
-Æloc__X_LIST__
+	`Æloc__SP_DE__
  (
 FMMWøµî_t
 * 
@@ -4060,7 +4110,15 @@ f
 );
 
 91 
-Æloc__TRGNUM__
+	`Æloc__SP_UE__
+ (
+FMMWøµî_t
+* 
+f
+);
+
+92 
+	`Æloc__W_LIST__
  (
 FMMWøµî_t
 * 
@@ -4068,7 +4126,7 @@ f
 );
 
 93 
-x„r__SOURCE_BOX__
+	`Æloc__SRCNUM__
  (
 FMMWøµî_t
 * 
@@ -4076,7 +4134,7 @@ f
 );
 
 94 
-x„r__TARGET_BOX__
+	`Æloc__SP_DC__
  (
 FMMWøµî_t
 * 
@@ -4084,7 +4142,7 @@ f
 );
 
 95 
-x„r__U_LIST__
+	`Æloc__X_LIST__
  (
 FMMWøµî_t
 * 
@@ -4092,15 +4150,7 @@ f
 );
 
 96 
-x„r__TAG__
- (
-FMMWøµî_t
-* 
-f
-);
-
-97 
-x„r__DEPTH__
+	`Æloc__TRGNUM__
  (
 FMMWøµî_t
 * 
@@ -4108,7 +4158,7 @@ f
 );
 
 98 
-x„r__CHILDREN__
+	`x„r__SOURCE_BOX__
  (
 FMMWøµî_t
 * 
@@ -4116,7 +4166,7 @@ f
 );
 
 99 
-x„r__RADIUS__
+	`x„r__TARGET_BOX__
  (
 FMMWøµî_t
 * 
@@ -4124,7 +4174,7 @@ f
 );
 
 100 
-x„r__CENTER__
+	`x„r__U_LIST__
  (
 FMMWøµî_t
 * 
@@ -4132,7 +4182,7 @@ f
 );
 
 101 
-x„r__SP_UC__
+	`x„r__TAG__
  (
 FMMWøµî_t
 * 
@@ -4140,7 +4190,7 @@ f
 );
 
 102 
-x„r__UC2UE__
+	`x„r__DEPTH__
  (
 FMMWøµî_t
 * 
@@ -4148,7 +4198,7 @@ f
 );
 
 103 
-x„r__UE2UC__
+	`x„r__CHILDREN__
  (
 FMMWøµî_t
 * 
@@ -4156,39 +4206,47 @@ f
 );
 
 104 
-x„r__SRC_UPW_EQU_DEN__
+	`x„r__RADIUS__
  (
 FMMWøµî_t
 * 
 f
 );
 
-110 
-x„r__VLIST_TLIST__
+105 
+	`x„r__CENTER__
  (
 FMMWøµî_t
 * 
 f
 );
 
-111 
-x„r__TRG_DWN_CHK_VAL__
+106 
+	`x„r__SP_UC__
  (
 FMMWøµî_t
 * 
 f
 );
 
-112 
-x„r__PATH2NODE__
+107 
+	`x„r__UC2UE__
  (
 FMMWøµî_t
 * 
 f
 );
 
-113 
-x„r__PARENT__
+108 
+	`x„r__UE2UC__
+ (
+FMMWøµî_t
+* 
+f
+);
+
+109 
+	`x„r__SRC_UPW_EQU_DEN__
  (
 FMMWøµî_t
 * 
@@ -4196,7 +4254,7 @@ f
 );
 
 115 
-x„r__DC2DE__
+	`x„r__VLIST_TLIST__
  (
 FMMWøµî_t
 * 
@@ -4204,7 +4262,7 @@ f
 );
 
 116 
-x„r__DE2DC__
+	`x„r__TRG_DWN_CHK_VAL__
  (
 FMMWøµî_t
 * 
@@ -4212,7 +4270,7 @@ f
 );
 
 117 
-x„r__SP_DE__
+	`x„r__PATH2NODE__
  (
 FMMWøµî_t
 * 
@@ -4220,15 +4278,7 @@ f
 );
 
 118 
-x„r__SP_UE__
- (
-FMMWøµî_t
-* 
-f
-);
-
-119 
-x„r__W_LIST__
+	`x„r__PARENT__
  (
 FMMWøµî_t
 * 
@@ -4236,7 +4286,7 @@ f
 );
 
 120 
-x„r__SRCNUM__
+	`x„r__DC2DE__
  (
 FMMWøµî_t
 * 
@@ -4244,7 +4294,7 @@ f
 );
 
 121 
-x„r__SP_DC__
+	`x„r__DE2DC__
  (
 FMMWøµî_t
 * 
@@ -4252,7 +4302,7 @@ f
 );
 
 122 
-x„r__X_LIST__
+	`x„r__SP_DE__
  (
 FMMWøµî_t
 * 
@@ -4260,7 +4310,31 @@ f
 );
 
 123 
-x„r__TRGNUM__
+	`x„r__SP_UE__
+ (
+FMMWøµî_t
+* 
+f
+);
+
+124 
+	`x„r__W_LIST__
+ (
+FMMWøµî_t
+* 
+f
+);
+
+125 
+	`x„r__SRCNUM__
+ (
+FMMWøµî_t
+* 
+f
+);
+
+126 
+	`x„r__SP_DC__
  (
 FMMWøµî_t
 * 
@@ -4268,7 +4342,7 @@ f
 );
 
 127 
-‰ì__SOURCE_BOX__
+	`x„r__X_LIST__
  (
 FMMWøµî_t
 * 
@@ -4276,31 +4350,7 @@ f
 );
 
 128 
-‰ì__TARGET_BOX__
- (
-FMMWøµî_t
-* 
-f
-);
-
-129 
-‰ì__U_LIST__
- (
-FMMWøµî_t
-* 
-f
-);
-
-130 
-‰ì__TAG__
- (
-FMMWøµî_t
-* 
-f
-);
-
-131 
-‰ì__DEPTH__
+	`x„r__TRGNUM__
  (
 FMMWøµî_t
 * 
@@ -4308,7 +4358,7 @@ f
 );
 
 132 
-‰ì__CHILDREN__
+	`‰ì__SOURCE_BOX__
  (
 FMMWøµî_t
 * 
@@ -4316,7 +4366,7 @@ f
 );
 
 133 
-‰ì__RADIUS__
+	`‰ì__TARGET_BOX__
  (
 FMMWøµî_t
 * 
@@ -4324,7 +4374,7 @@ f
 );
 
 134 
-‰ì__CENTER__
+	`‰ì__U_LIST__
  (
 FMMWøµî_t
 * 
@@ -4332,7 +4382,7 @@ f
 );
 
 135 
-‰ì__SP_UC__
+	`‰ì__TAG__
  (
 FMMWøµî_t
 * 
@@ -4340,7 +4390,7 @@ f
 );
 
 136 
-‰ì__UC2UE__
+	`‰ì__DEPTH__
  (
 FMMWøµî_t
 * 
@@ -4348,7 +4398,7 @@ f
 );
 
 137 
-‰ì__UE2UC__
+	`‰ì__CHILDREN__
  (
 FMMWøµî_t
 * 
@@ -4356,7 +4406,7 @@ f
 );
 
 138 
-‰ì__SRC_UPW_EQU_DEN__
+	`‰ì__RADIUS__
  (
 FMMWøµî_t
 * 
@@ -4364,7 +4414,7 @@ f
 );
 
 139 
-‰ì__VLIST_SRC__
+	`‰ì__CENTER__
  (
 FMMWøµî_t
 * 
@@ -4372,7 +4422,7 @@ f
 );
 
 140 
-‰ì__REG_DEN__
+	`‰ì__SP_UC__
  (
 FMMWøµî_t
 * 
@@ -4380,7 +4430,7 @@ f
 );
 
 141 
-‰ì__TT__
+	`‰ì__UC2UE__
  (
 FMMWøµî_t
 * 
@@ -4388,7 +4438,7 @@ f
 );
 
 142 
-‰ì__VLIST_TRANS__
+	`‰ì__UE2UC__
  (
 FMMWøµî_t
 * 
@@ -4396,7 +4446,7 @@ f
 );
 
 143 
-‰ì__VLIST_TRG__
+	`‰ì__SRC_UPW_EQU_DEN__
  (
 FMMWøµî_t
 * 
@@ -4404,7 +4454,7 @@ f
 );
 
 144 
-‰ì__VLIST_TLIST__
+	`‰ì__VLIST_SRC__
  (
 FMMWøµî_t
 * 
@@ -4412,7 +4462,7 @@ f
 );
 
 145 
-‰ì__TRG_DWN_CHK_VAL__
+	`‰ì__REG_DEN__
  (
 FMMWøµî_t
 * 
@@ -4420,7 +4470,7 @@ f
 );
 
 146 
-‰ì__PATH2NODE__
+	`‰ì__TT__
  (
 FMMWøµî_t
 * 
@@ -4428,7 +4478,7 @@ f
 );
 
 147 
-‰ì__PARENT__
+	`‰ì__VLIST_TRANS__
  (
 FMMWøµî_t
 * 
@@ -4436,7 +4486,7 @@ f
 );
 
 148 
-‰ì__TRG_DWN_EQU_DEN__
+	`‰ì__VLIST_TRG__
  (
 FMMWøµî_t
 * 
@@ -4444,7 +4494,7 @@ f
 );
 
 149 
-‰ì__DC2DE__
+	`‰ì__VLIST_TLIST__
  (
 FMMWøµî_t
 * 
@@ -4452,7 +4502,7 @@ f
 );
 
 150 
-‰ì__DE2DC__
+	`‰ì__TRG_DWN_CHK_VAL__
  (
 FMMWøµî_t
 * 
@@ -4460,7 +4510,7 @@ f
 );
 
 151 
-‰ì__SP_DE__
+	`‰ì__PATH2NODE__
  (
 FMMWøµî_t
 * 
@@ -4468,7 +4518,7 @@ f
 );
 
 152 
-‰ì__SP_UE__
+	`‰ì__PARENT__
  (
 FMMWøµî_t
 * 
@@ -4476,7 +4526,7 @@ f
 );
 
 153 
-‰ì__W_LIST__
+	`‰ì__TRG_DWN_EQU_DEN__
  (
 FMMWøµî_t
 * 
@@ -4484,7 +4534,7 @@ f
 );
 
 154 
-‰ì__SRCNUM__
+	`‰ì__DC2DE__
  (
 FMMWøµî_t
 * 
@@ -4492,7 +4542,7 @@ f
 );
 
 155 
-‰ì__SP_DC__
+	`‰ì__DE2DC__
  (
 FMMWøµî_t
 * 
@@ -4500,7 +4550,7 @@ f
 );
 
 156 
-‰ì__X_LIST__
+	`‰ì__SP_DE__
  (
 FMMWøµî_t
 * 
@@ -4508,7 +4558,23 @@ f
 );
 
 157 
-‰ì__TRGNUM__
+	`‰ì__SP_UE__
+ (
+FMMWøµî_t
+* 
+f
+);
+
+158 
+	`‰ì__W_LIST__
+ (
+FMMWøµî_t
+* 
+f
+);
+
+159 
+	`‰ì__SRCNUM__
  (
 FMMWøµî_t
 * 
@@ -4516,7 +4582,7 @@ f
 );
 
 160 
-x„r__SRC_UPW_EQU_DEN__back
+	`‰ì__SP_DC__
  (
 FMMWøµî_t
 * 
@@ -4524,7 +4590,7 @@ f
 );
 
 161 
-x„r__TRG_DWN_CHK_VAL__back
+	`‰ì__X_LIST__
  (
 FMMWøµî_t
 * 
@@ -4532,7 +4598,31 @@ f
 );
 
 162 
-x„r__TARGET_BOX__back
+	`‰ì__TRGNUM__
+ (
+FMMWøµî_t
+* 
+f
+);
+
+165 
+	`x„r__SRC_UPW_EQU_DEN__back
+ (
+FMMWøµî_t
+* 
+f
+);
+
+166 
+	`x„r__TRG_DWN_CHK_VAL__back
+ (
+FMMWøµî_t
+* 
+f
+);
+
+167 
+	`x„r__TARGET_BOX__back
  (
 FMMWøµî_t
 * 
@@ -8075,8 +8165,8 @@ td
 	}
 }
 
-194 
-	$kî√l
+195 
+	$mykî√l
  (
 ¢
 , 
@@ -8089,7 +8179,11 @@ x1
 x2
 ,Ñól_t* 
 x3
-,Ñól_t* 
+,
+
+196 
+ªÆ_t
+* 
 y1
 ,Ñól_t* 
 y2
@@ -8097,19 +8191,23 @@ y2
 y3
 ,
 
-195 
+197 
 ªÆ_t
 * 
 m©
+,Ñól_t* 
+ødii
+,Ñól_à*
+f‹˚_Ve˘‹
 )
 
-197 
+199 
 i
 , 
 j
 ;
 
-198 
+200 
 ªÆ_t
  
 x
@@ -8123,13 +8221,13 @@ r2
 r
 ;
 
-200 
+202 
 i
  = 0; i < 
 ¢
 ; i++) {
 
-201 
+203 
 ªÆ_t
  
 sx
@@ -8139,7 +8237,7 @@ x1
 i
 ];
 
-202 
+204 
 ªÆ_t
  
 sy
@@ -8149,7 +8247,7 @@ x2
 i
 ];
 
-203 
+205 
 ªÆ_t
  
 sz
@@ -8159,19 +8257,19 @@ x3
 i
 ];
 
-204 
+206 
 ªÆ_t
  
 td
  = 0.0;
 
-205 
+207 
 j
  = 0; j < 
 ä
 ; j++) {
 
-206 
+208 
 x
  = 
 sx
@@ -8181,7 +8279,7 @@ y1
 j
 ];
 
-207 
+209 
 y
  = 
 sy
@@ -8191,7 +8289,7 @@ y2
 j
 ];
 
-208 
+210 
 z
  = 
 sz
@@ -8201,7 +8299,7 @@ y3
 j
 ];
 
-209 
+211 
 r2
  = 
 x
@@ -8211,13 +8309,13 @@ y
 z
 *z;
 
-210 #i‡!
+212 #i‡!
 	`deföed
  (
 USE_FLOAT
 )
 
-211 
+213 
 r
  = 
 	`sqπ
@@ -8225,7 +8323,7 @@ r
 r2
 );
 
-213 
+215 
 r
  = 
 	`sqπf
@@ -8233,11 +8331,11 @@ r
 r2
 );
 
-215 i‡(
+217 i‡(
 r
  != 0)
 
-216 
+218 
 m©
 [
 j
@@ -8251,11 +8349,11 @@ OOFP_R
 r
 ;
 
-220 
+222 
 	}
 }
 
-225 
+227 
 	$compuã_f·_§c
  (
 AŒNodes
@@ -8267,39 +8365,39 @@ FFT_PLAN
 f‹∂™
 )
 
-227 
+229 
 i
  = 0;
 
-228 
+230 
 eff_size
-;
-
-229 
-ªÆ_t
-* 
-edí
-;
-
-230 
-ªÆ_t
-* 
-udí
 ;
 
 231 
 ªÆ_t
 * 
-rdí
+edí
 ;
 
 232 
 ªÆ_t
 * 
-tdí
+udí
 ;
 
 233 
+ªÆ_t
+* 
+rdí
+;
+
+234 
+ªÆ_t
+* 
+tdí
+;
+
+235 
 ve˘‹
 <
 NodeTªe
@@ -8311,7 +8409,7 @@ AŒ_N
 N
 ;
 
-234 
+236 
 eff_size
  = 
 	`eff_d©a_size
@@ -8319,7 +8417,7 @@ eff_size
 UE
 );
 
-235 
+237 
 Pos
 * 
 SP
@@ -8327,7 +8425,7 @@ SP
 AŒ_N
 ->SP;
 
-236 
+238 
 Pos
 * 
 RP
@@ -8335,7 +8433,7 @@ RP
 AŒ_N
 ->RP;
 
-237 
+239 
 rdí
  = 
 	`ªÆs_Æloc__Æig√d
@@ -8345,7 +8443,7 @@ RP
 n
 );
 
-238 
+240 
 tdí
  = 
 	`ªÆs_Æloc__Æig√d
@@ -8357,7 +8455,7 @@ UE
 n
 );
 
-240 i‡(
+242 i‡(
 nodeVec
 [
 i
@@ -8367,7 +8465,7 @@ i
 LET_SRCNODE
 ) {
 
-241 
+243 
 edí
  = &
 AŒ_N
@@ -8379,7 +8477,7 @@ i
 eff_size
 ];
 
-242 
+244 
 udí
  = &
 AŒ_N
@@ -8395,7 +8493,7 @@ UE
 SP
 )];
 
-243 
+245 
 	`∂nDí2EffDíöô
 (
 nodeVec
@@ -8413,7 +8511,7 @@ f‹∂™
 AŒ_N
 );
 
-246 
+248 
 i
  = 1; i<
 nodeVec
@@ -8421,7 +8519,7 @@ nodeVec
 	`size
 (); i++) {
 
-247 i‡(
+249 i‡(
 nodeVec
 [
 i
@@ -8431,7 +8529,7 @@ i
 LET_SRCNODE
 ) {
 
-248 
+250 
 edí
  = &
 AŒ_N
@@ -8443,7 +8541,7 @@ i
 eff_size
 ];
 
-249 
+251 
 udí
  = &
 AŒ_N
@@ -8459,7 +8557,7 @@ UE
 SP
 )];
 
-250 
+252 
 	`∂nDí2EffDí
 (
 nodeVec
@@ -8481,11 +8579,11 @@ f‹∂™
 AŒ_N
 );
 
-255 
+257 
 	}
 }
 
-260 
+262 
 	$compuã_f·_å™s
  (
 AŒNodes
@@ -8497,19 +8595,19 @@ FFT_PLAN
 f‹∂™
 )
 
-262 
+264 
 idx
 ;
 
-263 
+265 
 §cDOF
 ;
 
-264 
+266 
 ågDOF
 ;
 
-265 
+267 
 effNum
  = 
 	`eff_d©a_size
@@ -8517,13 +8615,13 @@ effNum
 UE
 );
 
-266 
+268 
 ªÆ_t
  
 R
  = 1;
 
-267 
+269 
 Pos
 * 
 RP
@@ -8531,7 +8629,7 @@ RP
 AŒ_N
 ->RP;
 
-268 
+270 
 Tøns_m©rix
 * 
 TM
@@ -8539,7 +8637,7 @@ TM
 AŒ_N
 ->TM;
 
-271 
+273 
 TM
 ->
 UE2DC
@@ -8549,19 +8647,19 @@ UE2DC
 	`mÆloc
  ((real_t*) * 7*7*7);
 
-273 
+275 
 i1
 =-3; i1<=3; i1++)
 
-274 
+276 
 i2
 =-3; i2<=3; i2++)
 
-275 
+277 
 i3
 =-3; i3<=3; i3++)
 
-276 i‡(
+278 i‡(
 	`abs
 (
 i1
@@ -8571,7 +8669,7 @@ i2
 i3
 )>1 ) {
 
-278 
+280 
 idx
  = (
 i1
@@ -8581,33 +8679,33 @@ i2
 i3
 +3)*7*7;
 
-279 
+281 
 §cDOF
  = 1;
 
-280 
+282 
 ågDOF
  = 1;
 
-281 
+283 
 ªÆ_t
  
 díPosX
 [1];
 
-282 
+284 
 ªÆ_t
  
 díPosY
 [1];
 
-283 
+285 
 ªÆ_t
  
 díPosZ
 [1];
 
-284 
+286 
 díPosX
 [0] = (
 ªÆ_t
@@ -8617,7 +8715,7 @@ i1
 R
 ;
 
-285 
+287 
 díPosY
 [0] = (
 ªÆ_t
@@ -8627,7 +8725,7 @@ i2
 R
 ;
 
-286 
+288 
 díPosZ
 [0] = (
 ªÆ_t
@@ -8637,7 +8735,7 @@ i3
 R
 ;
 
-288 
+290 
 ªÆ_t
  
 chkPosX
@@ -8655,7 +8753,7 @@ R
 x
 , chkPosX) ;
 
-289 
+291 
 ªÆ_t
  
 chkPosY
@@ -8673,7 +8771,7 @@ R
 y
 , chkPosY) ;
 
-290 
+292 
 ªÆ_t
  
 chkPosZ
@@ -8691,7 +8789,7 @@ R
 z
 , chkPosZ) ;
 
-291 
+293 
 ªÆ_t
 * 
 â
@@ -8707,7 +8805,7 @@ n
 §cDOF
 );
 
-292 
+294 
 	`kî√l
 (1, 
 RP
@@ -8729,7 +8827,7 @@ chkPosZ
 â
 );
 
-295 
+297 
 ªÆ_t
 * 
 tmp
@@ -8745,7 +8843,7 @@ n
 §cDOF
 );
 
-296 
+298 
 k
 =0; k<
 RP
@@ -8753,7 +8851,7 @@ RP
 n
 ;k++) {
 
-297 
+299 
 tmp
 [
 k
@@ -8761,7 +8859,7 @@ k
 â
 [k];
 
-299 
+301 
 ªÆ_t
  *
 UpwEqu2DwnChkii
@@ -8775,7 +8873,7 @@ UpwEqu2DwnChkii
 effNum
 );
 
-300 
+302 
 	`FFT_RE_EXECUTE
 (
 f‹∂™
@@ -8787,7 +8885,7 @@ FFT_COMPLEX
 UpwEqu2DwnChkii
 ));
 
-301 
+303 
 TM
 ->
 UE2DC
@@ -8797,11 +8895,11 @@ idx
 UpwEqu2DwnChkii
 ;
 
-304 
+306 
 	}
 }
 
-310 
+312 
 	$compuã_if·_åg
  (
 AŒNodes
@@ -8809,43 +8907,43 @@ AŒNodes
 AŒ_N
 )
 
-312 
+314 
 i
  = 0;
 
-313 
+315 
 öv£t
  = 0;
 
-314 
+316 
 eff_size
-;
-
-315 
-ªÆ_t
- *
-evÆ
-;
-
-316 
-ªÆ_t
- *
-tvÆ
 ;
 
 317 
 ªÆ_t
  *
-rvÆ
+evÆ
 ;
 
 318 
+ªÆ_t
+ *
+tvÆ
+;
+
+319 
+ªÆ_t
+ *
+rvÆ
+;
+
+320 
 FFT_PLAN
  
 öv∂™
 ;
 
-319 
+321 
 ve˘‹
 <
 NodeTªe
@@ -8857,7 +8955,7 @@ AŒ_N
 N
 ;
 
-320 
+322 
 Pos
 * 
 SP
@@ -8865,7 +8963,7 @@ SP
 AŒ_N
 ->SP;
 
-321 
+323 
 Pos
 * 
 RP
@@ -8873,7 +8971,7 @@ RP
 AŒ_N
 ->RP;
 
-323 
+325 
 eff_size
  = 
 	`eff_d©a_size
@@ -8881,7 +8979,7 @@ eff_size
 DC
 );
 
-324 
+326 
 rvÆ
  = 
 	`ªÆs_Æloc__Æig√d
@@ -8891,11 +8989,11 @@ RP
 n
 );
 
-326 
+328 
 öv£t
  == 0) {
 
-327 if–
+329 if–
 nodeVec
 [
 i
@@ -8909,7 +9007,7 @@ Vnodes
 	`size
 ()>0) {
 
-328 
+330 
 tvÆ
  = &
 AŒ_N
@@ -8925,7 +9023,7 @@ DC
 SP
 )];
 
-329 
+331 
 evÆ
  = &
 AŒ_N
@@ -8937,7 +9035,7 @@ i
 eff_size
 ];
 
-330 
+332 
 ªÆ_t
  
 ƒmfc
@@ -8949,13 +9047,13 @@ RP
 n
 );
 
-331 
+333 
 k
 =0; k<
 eff_size
 ; k++)
 
-332 
+334 
 evÆ
 [
 k
@@ -8963,7 +9061,7 @@ k
 ƒmfc
 ;
 
-333 
+335 
 	`effVÆ2P VÆöô
 (
 nodeVec
@@ -8981,15 +9079,15 @@ tvÆ
 AŒ_N
 );
 
-334 
+336 
 öv£t
  = 1;
 
-336 
+338 
 i
 ++;
 
-339 
+341 
 j
 =
 i
@@ -8999,7 +9097,7 @@ nodeVec
 	`size
 (); j++) {
 
-340 if–
+342 if–
 nodeVec
 [
 j
@@ -9013,7 +9111,7 @@ Vnodes
 	`size
 ()>0) {
 
-341 
+343 
 tvÆ
  = &
 AŒ_N
@@ -9029,7 +9127,7 @@ DC
 SP
 )];
 
-342 
+344 
 evÆ
  = &
 AŒ_N
@@ -9041,7 +9139,7 @@ j
 eff_size
 ];
 
-343 
+345 
 ªÆ_t
  
 ƒmfc
@@ -9053,13 +9151,13 @@ RP
 n
 );
 
-344 
+346 
 k
 =0; k<
 eff_size
 ; k++)
 
-345 
+347 
 evÆ
 [
 k
@@ -9067,7 +9165,7 @@ k
 ƒmfc
 ;
 
-346 
+348 
 	`effVÆ2P VÆ
 (
 nodeVec
@@ -9087,17 +9185,17 @@ rvÆ
 AŒ_N
 );
 
-349 
+351 
 	`FFT_DESTROY
  (
 öv∂™
 );
 
-352 
+354 
 	}
 }
 
-358 
+360 
 	$vli°_ˇlc__˝u
  (
 FMMWøµî_t
@@ -9105,7 +9203,7 @@ FMMWøµî_t
 F
 )
 
-360 
+362 
 AŒNodes
  *
 AŒ_N
@@ -9115,11 +9213,11 @@ F
 AN
 ;
 
-361 i‡(
+363 i‡(
 AŒ_N
 ) {
 
-363 
+365 
 i
 , 
 j
@@ -9127,49 +9225,49 @@ j
 id
 ;
 
-364 
+366 
 eff_§c_size
 ;
 
-365 
+367 
 eff_åg_size
 ;
 
-366 
+368 
 effNum
 ;
 
-367 
+369 
 dim
  = 3;
 
-368 
+370 
 §cDOF
  = 1;
 
-369 
+371 
 ågDOF
  = 1;
 
-370 
+372 
 ªÆ_t
  *
 edí
 ;
 
-371 
+373 
 ªÆ_t
  *
 evÆ
 ;
 
-372 
+374 
 ªÆ_t
  *
 UpwEqu2DwnChkii
 ;
 
-373 
+375 
 ve˘‹
 <
 NodeTªe
@@ -9181,7 +9279,7 @@ AŒ_N
 N
 ;
 
-374 
+376 
 Pos
 * 
 SP
@@ -9189,7 +9287,7 @@ SP
 AŒ_N
 ->SP;
 
-375 
+377 
 Pos
 * 
 RP
@@ -9197,7 +9295,7 @@ RP
 AŒ_N
 ->RP;
 
-376 
+378 
 Tøns_m©rix
 * 
 TM
@@ -9205,13 +9303,13 @@ TM
 AŒ_N
 ->TM;
 
-378 
+380 
 FFT_PLAN
  
 f‹∂™
 ;
 
-379 
+381 
 	`compuã_f·_§c
  (
 AŒ_N
@@ -9219,7 +9317,7 @@ AŒ_N
 f‹∂™
 );
 
-380 
+382 
 	`compuã_f·_å™s
  (
 AŒ_N
@@ -9227,7 +9325,7 @@ AŒ_N
 f‹∂™
 );
 
-383 
+385 
 eff_åg_size
  = 
 	`eff_d©a_size
@@ -9235,7 +9333,7 @@ eff_åg_size
 DC
 );
 
-384 
+386 
 eff_§c_size
  = 
 	`eff_d©a_size
@@ -9243,13 +9341,13 @@ eff_§c_size
 UE
 );
 
-385 
+387 
 effNum
  = 
 eff_§c_size
 ;
 
-386 
+388 
 i
  = 0; i < 
 nodeVec
@@ -9257,7 +9355,7 @@ nodeVec
 	`size
 (); i++) {
 
-387 if–
+389 if–
 nodeVec
 [
 i
@@ -9271,7 +9369,7 @@ Vnodes
 	`size
 ()>0) {
 
-388 
+390 
 evÆ
  = &
 AŒ_N
@@ -9283,7 +9381,7 @@ i
 eff_åg_size
 ];
 
-389 
+391 
 Poöt3
  
 	`gNodeIdxCå
@@ -9295,7 +9393,7 @@ i
 nodeVec
 ));
 
-390 
+392 
 ªÆ_t
  
 D
@@ -9307,7 +9405,7 @@ i
 nodeVec
 );
 
-391 
+393 
 j
  = 0; j < 
 nodeVec
@@ -9319,7 +9417,7 @@ Vnodes
 	`size
 (); j++) {
 
-392 
+394 
 §c
  = 
 nodeVec
@@ -9331,7 +9429,7 @@ Vnodes
 j
 ];
 
-393 
+395 
 Poöt3
  
 	`viCå
@@ -9343,19 +9441,19 @@ Poöt3
 nodeVec
 ));
 
-394 
+396 
 Index3
  
 idx
 ;
 
-395 
+397 
 d
 =0; d<
 dim
 ; d++) {
 
-396 
+398 
 	`idx
 (
 d
@@ -9369,7 +9467,7 @@ gNodeIdxCå
 D
  ));
 
-398 
+400 
 edí
  = &
 AŒ_N
@@ -9381,13 +9479,13 @@ eff_dí
 eff_§c_size
 ];
 
-400 
+402 
 id
  = (
 	`idx
 (0)+3) + (idx(1)+3)*7 + (idx(2)+3)*7*7;
 
-401 
+403 
 UpwEqu2DwnChkii
  = 
 TM
@@ -9397,7 +9495,7 @@ UE2DC
 id
 ];
 
-402 
+404 
 ªÆ_t
  
 ƒmfc
@@ -9409,7 +9507,7 @@ RP
 n
 );
 
-403 
+405 
 FFT_COMPLEX
 * 
 m©På
@@ -9417,7 +9515,7 @@ m©På
 UpwEqu2DwnChkii
 );
 
-404 
+406 
 FFT_COMPLEX
 * 
 díPå
@@ -9425,7 +9523,7 @@ díPå
 edí
 );
 
-405 
+407 
 FFT_COMPLEX
 * 
 chkPå
@@ -9433,7 +9531,7 @@ chkPå
 evÆ
 );
 
-406 
+408 
 m©Sç
  = 
 §cDOF
@@ -9441,19 +9539,19 @@ m©Sç
 ågDOF
 ;
 
-407 
+409 
 díSç
  = 
 §cDOF
 ;
 
-408 
+410 
 chkSç
  = 
 ågDOF
 ;
 
-410 
+412 
 ªÆ_t
  
 √wÆpha
@@ -9461,19 +9559,19 @@ chkSç
 ƒmfc
 ;
 
-411 
+413 
 i
 =0; i<
 ågDOF
 ; i++)
 
-412 
+414 
 k
 =0; k<
 §cDOF
 ; k++) {
 
-413 
+415 
 m©Off
  = 
 k
@@ -9483,19 +9581,19 @@ k
 i
 ;
 
-414 
+416 
 díOff
  = 
 k
 ;
 
-415 
+417 
 chkOff
  = 
 i
 ;
 
-416 
+418 
 	`poötwi£_mu…
  (
 effNum
@@ -9519,17 +9617,17 @@ chkOff
 chkSç
 );
 
-422 
+424 
 	`compuã_if·_åg
  (
 AŒ_N
 );
 
-426 
+428 
 	}
 }
 
-429 
+431 
 	$poötwi£_mu…
  (
 n
@@ -9549,17 +9647,17 @@ z
 iz
 )
 
-431 
+433 
 i
 ;
 
-433 
+435 
 i
  = 0; i < 
 n
 ; i++) {
 
-434 (*
+436 (*
 z
 )[0] +–(*
 x
@@ -9567,7 +9665,7 @@ x
 y
 )[0] - (*x)[1] * (*y)[1]);
 
-435 (*
+437 (*
 z
 )[1] +–(*
 x
@@ -9575,29 +9673,29 @@ x
 y
 )[1] + (*x)[1] * (*y)[0]);
 
-436 
+438 
 x
  = x + 
 ix
 ;
 
-437 
+439 
 y
  = y + 
 iy
 ;
 
-438 
+440 
 z
  = z + 
 iz
 ;
 
-441 
+443 
 	}
 }
 
-447 
+449 
 	$wli°_ˇlc__˝u
  (
 FMMWøµî_t
@@ -9605,35 +9703,35 @@ FMMWøµî_t
 F
 )
 
-449 
+451 
 i
 , 
 j
 ;
 
-450 
+452 
 §cDOF
  = 1;
 
-451 
+453 
 ªÆ_t
  
 r
 ;
 
-452 
+454 
 Poöt3
  
 c
 ;
 
-453 
+455 
 Node
 * 
 ¶_pos
 ;
 
-454 
+456 
 AŒNodes
  *
 AŒ_N
@@ -9643,7 +9741,7 @@ F
 AN
 ;
 
-455 
+457 
 Pos
 * 
 SP
@@ -9651,7 +9749,7 @@ SP
 AŒ_N
 ->SP;
 
-456 
+458 
 ve˘‹
 <
 NodeTªe
@@ -9663,7 +9761,7 @@ AŒ_N
 N
 ;
 
-458 
+460 
 ¶_pos
  = (
 Node
@@ -9673,42 +9771,10 @@ Node
 IDEAL_ALIGNMENT
 );
 
-460 
-¶_pos
-->
-x
- = (
-ªÆ_t
- *Ë
-	`ªÆs_Æloc__Æig√d
- (
-SP
-[
-UE
-].
-n
-);
-
-461 
-¶_pos
-->
-y
- = (
-ªÆ_t
- *Ë
-	`ªÆs_Æloc__Æig√d
- (
-SP
-[
-UE
-].
-n
-);
-
 462 
 ¶_pos
 ->
-z
+x
  = (
 ªÆ_t
  *Ë
@@ -9724,6 +9790,38 @@ n
 463 
 ¶_pos
 ->
+y
+ = (
+ªÆ_t
+ *Ë
+	`ªÆs_Æloc__Æig√d
+ (
+SP
+[
+UE
+].
+n
+);
+
+464 
+¶_pos
+->
+z
+ = (
+ªÆ_t
+ *Ë
+	`ªÆs_Æloc__Æig√d
+ (
+SP
+[
+UE
+].
+n
+);
+
+465 
+¶_pos
+->
 num_±s
  = 
 SP
@@ -9733,7 +9831,7 @@ UE
 n
 ;
 
-465 
+467 
 i
  = 0; i < 
 nodeVec
@@ -9741,7 +9839,7 @@ nodeVec
 	`size
 (); i++) {
 
-466 if–
+468 if–
 nodeVec
 [
 i
@@ -9751,7 +9849,7 @@ i
 LET_TRGNODE
 ) {
 
-467 if–
+469 if–
 nodeVec
 [
 i
@@ -9759,7 +9857,7 @@ i
 chûd
  == -1) {
 
-468 
+470 
 j
  = 0; j < 
 nodeVec
@@ -9771,7 +9869,7 @@ Wnodes
 	`size
 (); j++) {
 
-469 
+471 
 §c
  = 
 nodeVec
@@ -9783,7 +9881,7 @@ Wnodes
 j
 ];
 
-470 if(
+472 if(
 nodeVec
 [
 §c
@@ -9801,7 +9899,7 @@ UE
 SP
 )) {
 
-472 
+474 
 	`uli°__dúe˘_evÆu©i⁄
  (
 AŒ_N
@@ -9815,7 +9913,7 @@ Ns
 §c
 ]);
 
-476 
+478 
 c
  = 
 	`˚¡î
@@ -9825,7 +9923,7 @@ c
 nodeVec
 );
 
-477 
+479 
 r
  = 
 	`ødius
@@ -9835,7 +9933,7 @@ r
 nodeVec
 );
 
-478 
+480 
 	`compuã_loˇÕos
  (
 c
@@ -9849,7 +9947,7 @@ SP
 UE
 ]);
 
-479 
+481 
 ¶_pos
 ->
 dí_pŸ
@@ -9867,7 +9965,7 @@ UE
 SP
 )];
 
-480 
+482 
 	`uli°__dúe˘_evÆu©i⁄
  (
 AŒ_N
@@ -9879,11 +9977,11 @@ i
 ¶_pos
 );
 
-487 
+489 
 	}
 }
 
-493 
+495 
 	$xli°_ˇlc__˝u
  (
 FMMWøµî_t
@@ -9891,35 +9989,35 @@ FMMWøµî_t
 F
 )
 
-495 
+497 
 i
 , 
 j
 ;
 
-496 
+498 
 ågDOF
  = 1;
 
-497 
+499 
 Poöt3
  
 c
 ;
 
-498 
+500 
 ªÆ_t
  
 r
 ;
 
-499 
+501 
 Node
 * 
 é_pos
 ;
 
-500 
+502 
 AŒNodes
  *
 AŒ_N
@@ -9929,7 +10027,7 @@ F
 AN
 ;
 
-501 
+503 
 Pos
 * 
 SP
@@ -9937,7 +10035,7 @@ SP
 AŒ_N
 ->SP;
 
-502 
+504 
 ve˘‹
 <
 NodeTªe
@@ -9949,7 +10047,7 @@ AŒ_N
 N
 ;
 
-504 
+506 
 é_pos
  = (
 Node
@@ -9959,7 +10057,7 @@ Node
 IDEAL_ALIGNMENT
 );
 
-506 
+508 
 é_pos
 ->
 x
@@ -9975,7 +10073,7 @@ DC
 n
 );
 
-507 
+509 
 é_pos
 ->
 y
@@ -9991,7 +10089,7 @@ DC
 n
 );
 
-508 
+510 
 é_pos
 ->
 z
@@ -10007,7 +10105,7 @@ DC
 n
 );
 
-509 
+511 
 é_pos
 ->
 num_±s
@@ -10019,7 +10117,7 @@ DC
 n
 ;
 
-511 
+513 
 i
  = 0; i < 
 nodeVec
@@ -10027,7 +10125,7 @@ nodeVec
 	`size
 (); i++) {
 
-512 if–
+514 if–
 nodeVec
 [
 i
@@ -10037,7 +10135,7 @@ i
 LET_TRGNODE
 ) {
 
-513 
+515 
 j
  = 0; j < 
 nodeVec
@@ -10049,7 +10147,7 @@ Xnodes
 	`size
 (); j++) {
 
-514 
+516 
 §c
  = 
 nodeVec
@@ -10061,7 +10159,7 @@ Xnodes
 j
 ];
 
-515 if(
+517 if(
 nodeVec
 [
 i
@@ -10079,7 +10177,7 @@ DC
 SP
 )) {
 
-516 
+518 
 	`uli°__dúe˘_evÆu©i⁄
  (
 AŒ_N
@@ -10093,7 +10191,7 @@ Ns
 §c
 ]);
 
-520 
+522 
 c
  = 
 	`˚¡î
@@ -10103,7 +10201,7 @@ i
 nodeVec
 );
 
-521 
+523 
 r
  = 
 	`ødius
@@ -10113,7 +10211,7 @@ i
 nodeVec
 );
 
-522 
+524 
 	`compuã_loˇÕos
  (
 c
@@ -10127,7 +10225,7 @@ SP
 DC
 ]);
 
-523 
+525 
 é_pos
 ->
 dí_pŸ
@@ -10145,7 +10243,7 @@ DC
 SP
 )];
 
-525 
+527 
 	`uli°__dúe˘_evÆu©i⁄
  (*
 é_pos
@@ -10157,11 +10255,11 @@ Ns
 §c
 ]);
 
-531 
+533 
 	}
 }
 
-536 
+538 
 	$down_ˇlc__˝u
  (
 FMMWøµî_t
@@ -10169,37 +10267,37 @@ FMMWøµî_t
 F
 )
 
-538 
+540 
 ªÆ_t
  
 r
 ;
 
-539 
+541 
 Poöt3
  
 c
 ;
 
-540 
+542 
 ªÆ_t
  *
 tvÆ
 ;
 
-541 
+543 
 ªÆ_t
  *
 ddí
 ;
 
-542 
+544 
 Node
 * 
 ¶_pos
 ;
 
-543 
+545 
 AŒNodes
  *
 AŒ_N
@@ -10209,7 +10307,7 @@ F
 AN
 ;
 
-544 
+546 
 Pos
 * 
 SP
@@ -10217,7 +10315,7 @@ SP
 AŒ_N
 ->SP;
 
-545 
+547 
 Tøns_m©rix
 * 
 TM
@@ -10225,7 +10323,7 @@ TM
 AŒ_N
 ->TM;
 
-546 
+548 
 ve˘‹
 <
 NodeTªe
@@ -10237,7 +10335,7 @@ AŒ_N
 N
 ;
 
-549 
+551 
 	`compuã_DC2DE_m©
  (
 TM
@@ -10245,7 +10343,7 @@ TM
 SP
 );
 
-552 
+554 
 TM
 ->
 DE2DC
@@ -10255,19 +10353,19 @@ DE2DC
 	`mÆloc
  ((real_t*) * 2*2*2);
 
-554 
+556 
 a
 =0;á<2;á++) {
 
-555 
+557 
 b
 =0; b<2; b++) {
 
-556 
+558 
 c
 =0; c<2; c++) {
 
-557 
+559 
 Index3
  
 	`idx
@@ -10279,7 +10377,7 @@ b
 c
 );
 
-558 
+560 
 	`compuã_DE2DC_m©
  (
 idx
@@ -10289,7 +10387,7 @@ TM
 SP
 );
 
-564 
+566 
 i
  = 0; i < 
 nodeVec
@@ -10297,7 +10395,7 @@ nodeVec
 	`size
 (); i++) {
 
-565 i‡(
+567 i‡(
 nodeVec
 [
 i
@@ -10307,7 +10405,7 @@ i
 LET_TRGNODE
 ) {
 
-566 i‡(
+568 i‡(
 nodeVec
 [
 i
@@ -10315,7 +10413,7 @@ i
 dïth
  >= 3) {
 
-567 
+569 
 ∑ª¡
  = 
 nodeVec
@@ -10323,7 +10421,7 @@ nodeVec
 i
 ].parent;
 
-568 
+570 
 Index3
  
 	`cidx
@@ -10337,7 +10435,7 @@ i
 ∑ª¡
 ].path2Node);
 
-570 
+572 
 tvÆ
  = &
 AŒ_N
@@ -10353,7 +10451,7 @@ DC
 SP
 )];
 
-571 
+573 
 ddí
  = &
 AŒ_N
@@ -10369,11 +10467,11 @@ DE
 SP
 )];
 
-572 
+574 
 §cDOF
  = 1;
 
-573 
+575 
 ªÆ_t
  *
 tmpDí
@@ -10389,7 +10487,7 @@ DE
 n
 );
 
-574 
+576 
 	`ªÆs_zîo
  (
 SP
@@ -10401,7 +10499,7 @@ n
 tmpDí
 );
 
-575 
+577 
 l
  = 
 nodeVec
@@ -10411,13 +10509,13 @@ nodeVec
 dïth
 ;
 
-576 
+578 
 ªÆ_t
  
 degVec
 [1]; degVec[0] = 1;
 
-577 
+579 
 ªÆ_t
  
 s˛vec
@@ -10425,13 +10523,13 @@ s˛vec
 §cDOF
 ];
 
-578 
+580 
 s
 =0; s<
 §cDOF
 ; s++)
 
-579 
+581 
 s˛vec
 [
 s
@@ -10443,11 +10541,11 @@ l
 degVec
 [s]);
 
-580 
+582 
 ˙t
  = 0;
 
-581 
+583 
 j
 =0; j < 
 SP
@@ -10457,13 +10555,13 @@ DE
 n
 ; j++)
 
-582 
+584 
 s
 =0; s < 
 §cDOF
 ; s++) {
 
-583 
+585 
 tmpDí
 [
 ˙t
@@ -10475,11 +10573,11 @@ s˛vec
 s
 ];
 
-584 
+586 
 ˙t
 ++;
 
-586 
+588 
 ªÆ_t
  *
 DE2DCii
@@ -10491,7 +10589,7 @@ DE2DC
 	`cidx
 (2)+cidx(1)*2+cidx(0)*2*2];
 
-587 
+589 
 	`dgemv
 (
 TM
@@ -10507,7 +10605,7 @@ tmpDí
 tvÆ
 );
 
-590 i‡(
+592 i‡(
 nodeVec
 [
 i
@@ -10515,7 +10613,7 @@ i
 dïth
  >= 2) {
 
-592 
+594 
 tvÆ
  = &
 AŒ_N
@@ -10531,7 +10629,7 @@ DC
 SP
 )];
 
-593 
+595 
 ddí
  = &
 AŒ_N
@@ -10547,11 +10645,11 @@ DE
 SP
 )];
 
-594 
+596 
 §cDOF
  = 1;
 
-595 
+597 
 ªÆ_t
  *
 tmpDí
@@ -10567,7 +10665,7 @@ DE
 n
 );
 
-596 
+598 
 	`ªÆs_zîo
  (
 SP
@@ -10579,7 +10677,7 @@ n
 tmpDí
 );
 
-597 
+599 
 	`dgemv
 (
 TM
@@ -10595,7 +10693,7 @@ tvÆ
 tmpDí
 );
 
-600 
+602 
 l
  = 
 nodeVec
@@ -10605,13 +10703,13 @@ i
 dïth
 ;
 
-601 
+603 
 ªÆ_t
  
 degVec
 [1]; degVec[0] = 1;
 
-602 
+604 
 ªÆ_t
  
 s˛vec
@@ -10619,13 +10717,13 @@ s˛vec
 §cDOF
 ];
 
-603 
+605 
 s
 =0; s<
 §cDOF
 ; s++)
 
-604 
+606 
 s˛vec
 [
 s
@@ -10637,11 +10735,11 @@ l
 degVec
 [s]);
 
-605 
+607 
 ˙t
  = 0;
 
-606 
+608 
 j
 =0; j < 
 SP
@@ -10651,13 +10749,13 @@ DE
 n
 ; j++)
 
-607 
+609 
 s
 =0; s < 
 §cDOF
 ; s++) {
 
-608 
+610 
 ddí
 [
 ˙t
@@ -10669,11 +10767,11 @@ s˛vec
 s
 ];
 
-609 
+611 
 ˙t
 ++;
 
-615 
+617 
 ¶_pos
  = (
 Node
@@ -10683,7 +10781,7 @@ Node
 IDEAL_ALIGNMENT
 );
 
-617 
+619 
 ¶_pos
 ->
 x
@@ -10699,7 +10797,7 @@ DE
 n
 );
 
-618 
+620 
 ¶_pos
 ->
 y
@@ -10715,7 +10813,7 @@ DE
 n
 );
 
-619 
+621 
 ¶_pos
 ->
 z
@@ -10731,7 +10829,7 @@ DE
 n
 );
 
-620 
+622 
 ¶_pos
 ->
 num_±s
@@ -10743,7 +10841,7 @@ DE
 n
 ;
 
-623 
+625 
 i
  = 0; i < 
 nodeVec
@@ -10751,7 +10849,7 @@ nodeVec
 	`size
 (); i++) {
 
-624 i‡(
+626 i‡(
 nodeVec
 [
 i
@@ -10761,7 +10859,7 @@ i
 LET_TRGNODE
 ) {
 
-625 i‡(
+627 i‡(
 nodeVec
 [
 i
@@ -10769,7 +10867,7 @@ i
 chûd
  == -1) {
 
-627 
+629 
 c
  = 
 	`˚¡î
@@ -10779,7 +10877,7 @@ i
 nodeVec
 );
 
-628 
+630 
 r
  = 
 	`ødius
@@ -10789,7 +10887,7 @@ i
 nodeVec
 );
 
-629 
+631 
 	`compuã_loˇÕos
  (
 c
@@ -10803,7 +10901,7 @@ SP
 DE
 ]);
 
-630 
+632 
 ¶_pos
 ->
 dí_pŸ
@@ -10821,7 +10919,7 @@ DE
 SP
 )];
 
-632 
+634 
 	`uli°__dúe˘_evÆu©i⁄
  (
 AŒ_N
@@ -10833,11 +10931,11 @@ i
 ¶_pos
 );
 
-638 
+640 
 	}
 }
 
-644 
+646 
 	$c›y_åg_vÆ__˝u
  (
 FMMWøµî_t
@@ -10845,11 +10943,11 @@ FMMWøµî_t
 F
 )
 
-646 
+648 
 i
 ;
 
-647 
+649 
 AŒNodes
  *
 AŒ_N
@@ -10859,7 +10957,7 @@ F
 AN
 ;
 
-648 
+650 
 ve˘‹
 <
 NodeTªe
@@ -10871,7 +10969,7 @@ AŒ_N
 N
 ;
 
-650 
+652 
 i
  = 0; i < 
 nodeVec
@@ -10879,7 +10977,7 @@ nodeVec
 	`size
 (); i++)
 
-651 if–
+653 if–
 nodeVec
 [
 i
@@ -10889,7 +10987,7 @@ i
 LET_TRGNODE
 )
 
-652 i‡(
+654 i‡(
 nodeVec
 [
 i
@@ -10897,7 +10995,7 @@ i
 chûd
  == -1) {
 
-653 
+655 
 	`£t_vÆue
  (
 nodeVec
@@ -10917,7 +11015,7 @@ dí_pŸ
 ågOwnVecIdxs
 );
 
-657 
+659 
 	}
 }
 
@@ -13718,7 +13816,7 @@ td
 }
 
 290 
-	$kî√l
+	$mykî√l
  (
 ¢
 , 
@@ -13731,7 +13829,11 @@ x1
 x2
 ,Ñól_t* 
 x3
-,Ñól_t* 
+,
+
+291 
+ªÆ_t
+* 
 y1
 ,Ñól_t* 
 y2
@@ -13739,19 +13841,23 @@ y2
 y3
 ,
 
-291 
+292 
 ªÆ_t
 * 
 m©
+,Ñól_t* 
+ødii
+,Ñól_à*
+f‹˚_Ve˘‹
 )
 
-293 
+294 
 i
 , 
 j
 ;
 
-294 
+295 
 ªÆ_t
  
 x
@@ -13765,13 +13871,13 @@ r2
 r
 ;
 
-296 
+297 
 i
  = 0; i < 
 ¢
 ; i++) {
 
-297 
+298 
 ªÆ_t
  
 sx
@@ -13781,7 +13887,7 @@ x1
 i
 ];
 
-298 
+299 
 ªÆ_t
  
 sy
@@ -13791,7 +13897,7 @@ x2
 i
 ];
 
-299 
+300 
 ªÆ_t
  
 sz
@@ -13801,19 +13907,19 @@ x3
 i
 ];
 
-300 
+301 
 ªÆ_t
  
 td
  = 0.0;
 
-301 
+302 
 j
  = 0; j < 
 ä
 ; j++) {
 
-302 
+303 
 x
  = 
 sx
@@ -13823,7 +13929,7 @@ y1
 j
 ];
 
-303 
+304 
 y
  = 
 sy
@@ -13833,7 +13939,7 @@ y2
 j
 ];
 
-304 
+305 
 z
  = 
 sz
@@ -13843,7 +13949,7 @@ y3
 j
 ];
 
-305 
+306 
 r2
  = 
 x
@@ -13853,13 +13959,13 @@ y
 z
 *z;
 
-306 #i‡!
+307 #i‡!
 	`deföed
  (
 USE_FLOAT
 )
 
-307 
+308 
 r
  = 
 	`sqπ
@@ -13867,7 +13973,7 @@ r
 r2
 );
 
-309 
+310 
 r
  = 
 	`sqπf
@@ -13875,11 +13981,11 @@ r
 r2
 );
 
-311 i‡(
+312 i‡(
 r
  != 0)
 
-312 
+313 
 m©
 [
 j
@@ -13893,11 +13999,11 @@ OOFP_R
 r
 ;
 
-316 
+317 
 	}
 }
 
-321 
+322 
 	$compuã_f·_§c
  (
 AŒNodes
@@ -13909,43 +14015,43 @@ FFT_PLAN
 f‹∂™
 )
 
-323 
+324 
 i
  = 0;
 
-324 
+325 
 eff_size
 ;
 
-325 
+326 
 ¡hªads
-;
-
-326 
-ªÆ_t
-* 
-edí
 ;
 
 327 
 ªÆ_t
 * 
-udí
+edí
 ;
 
 328 
 ªÆ_t
 * 
-rdí
+udí
 ;
 
 329 
 ªÆ_t
 * 
+rdí
+;
+
+330 
+ªÆ_t
+* 
 tdí
 ;
 
-331 
+332 
 ve˘‹
 <
 NodeTªe
@@ -13957,7 +14063,7 @@ AŒ_N
 N
 ;
 
-332 
+333 
 eff_size
  = 
 	`eff_d©a_size
@@ -13965,7 +14071,7 @@ eff_size
 UE
 );
 
-333 
+334 
 Pos
 * 
 SP
@@ -13973,7 +14079,7 @@ SP
 AŒ_N
 ->SP;
 
-334 
+335 
 Pos
 * 
 RP
@@ -13981,19 +14087,19 @@ RP
 AŒ_N
 ->RP;
 
-336 #¥agm®
+337 #¥agm®
 omp
  
 ∑øŒñ
 
 
-338 
+339 
 ¡hªads
  = 
 	`omp_gë_num_thªads
 ();
 
-340 
+341 
 ªÆ_t
 * 
 ªg_dí
@@ -14007,7 +14113,7 @@ n
 ¡hªads
 );
 
-341 
+342 
 ªÆ_t
 * 
 tmp_dí
@@ -14023,7 +14129,7 @@ n
 ¡hªads
 );
 
-343 i‡(
+344 i‡(
 nodeVec
 [
 i
@@ -14033,7 +14139,7 @@ i
 LET_SRCNODE
 ) {
 
-344 
+345 
 edí
  = &
 AŒ_N
@@ -14045,7 +14151,7 @@ i
 eff_size
 ];
 
-345 
+346 
 udí
  = &
 AŒ_N
@@ -14061,7 +14167,7 @@ UE
 SP
 )];
 
-346 
+347 
 	`∂nDí2EffDíöô
 (
 nodeVec
@@ -14079,7 +14185,7 @@ f‹∂™
 AŒ_N
 );
 
-349 #¥agm®
+350 #¥agm®
 omp
  
 ∑øŒñ
@@ -14099,7 +14205,7 @@ rdí
 tdí
 )
 
-350 
+351 
 i
  = 1; i<
 nodeVec
@@ -14107,13 +14213,13 @@ nodeVec
 	`size
 (); i++) {
 
-351 
+352 
 tid
  = 
 	`omp_gë_thªad_num
 ();
 
-352 i‡(
+353 i‡(
 nodeVec
 [
 i
@@ -14123,7 +14229,7 @@ i
 LET_SRCNODE
 ) {
 
-353 
+354 
 edí
  = &
 AŒ_N
@@ -14135,7 +14241,7 @@ i
 eff_size
 ];
 
-354 
+355 
 udí
  = &
 AŒ_N
@@ -14151,7 +14257,7 @@ UE
 SP
 )];
 
-355 
+356 
 rdí
  = &
 ªg_dí
@@ -14163,7 +14269,7 @@ RP
 n
 ];
 
-356 
+357 
 tdí
  = &
 tmp_dí
@@ -14177,7 +14283,7 @@ UE
 n
 ];
 
-357 
+358 
 	`∂nDí2EffDí
 (
 nodeVec
@@ -14199,11 +14305,11 @@ f‹∂™
 AŒ_N
 );
 
-362 
+363 
 	}
 }
 
-367 
+368 
 	$compuã_f·_å™s
  (
 AŒNodes
@@ -14215,15 +14321,15 @@ FFT_PLAN
 f‹∂™
 )
 
-369 
+370 
 §cDOF
 ;
 
-370 
+371 
 ågDOF
 ;
 
-371 
+372 
 effNum
  = 
 	`eff_d©a_size
@@ -14231,13 +14337,13 @@ effNum
 UE
 );
 
-372 
+373 
 ªÆ_t
  
 R
  = 1;
 
-373 
+374 
 Pos
 * 
 RP
@@ -14245,7 +14351,7 @@ RP
 AŒ_N
 ->RP;
 
-374 
+375 
 Tøns_m©rix
 * 
 TM
@@ -14253,15 +14359,15 @@ TM
 AŒ_N
 ->TM;
 
-375 
+376 
 §cDOF
  = 1;
 
-376 
+377 
 ågDOF
  = 1;
 
-379 
+380 
 TM
 ->
 UE2DC
@@ -14271,7 +14377,7 @@ UE2DC
 	`mÆloc
  ((real_t*) * 7*7*7);
 
-381 #¥agm®
+382 #¥agm®
 omp
  
 ∑øŒñ
@@ -14283,19 +14389,19 @@ omp
 AŒ_N
 )
 
-382 
+383 
 i1
 =-3; i1<=3; i1++)
 
-383 
+384 
 i2
 =-3; i2<=3; i2++)
 
-384 
+385 
 i3
 =-3; i3<=3; i3++)
 
-385 i‡(
+386 i‡(
 	`abs
 (
 i1
@@ -14305,11 +14411,11 @@ i2
 i3
 )>1 ) {
 
-387 
+388 
 idx
 ;
 
-388 
+389 
 idx
  = (
 i1
@@ -14319,25 +14425,25 @@ i2
 i3
 +3)*7*7;
 
-389 
+390 
 ªÆ_t
  
 díPosX
 [1];
 
-390 
+391 
 ªÆ_t
  
 díPosY
 [1];
 
-391 
+392 
 ªÆ_t
  
 díPosZ
 [1];
 
-392 
+393 
 díPosX
 [0] = (
 ªÆ_t
@@ -14347,7 +14453,7 @@ i1
 R
 ;
 
-393 
+394 
 díPosY
 [0] = (
 ªÆ_t
@@ -14357,7 +14463,7 @@ i2
 R
 ;
 
-394 
+395 
 díPosZ
 [0] = (
 ªÆ_t
@@ -14367,7 +14473,7 @@ i3
 R
 ;
 
-396 
+397 
 ªÆ_t
  
 chkPosX
@@ -14385,7 +14491,7 @@ R
 x
 , chkPosX) ;
 
-397 
+398 
 ªÆ_t
  
 chkPosY
@@ -14403,7 +14509,7 @@ R
 y
 , chkPosY) ;
 
-398 
+399 
 ªÆ_t
  
 chkPosZ
@@ -14421,7 +14527,7 @@ R
 z
 , chkPosZ) ;
 
-399 
+400 
 ªÆ_t
 * 
 â
@@ -14437,7 +14543,7 @@ n
 §cDOF
 );
 
-400 
+401 
 	`kî√l
 (1, 
 RP
@@ -14459,7 +14565,7 @@ chkPosZ
 â
 );
 
-403 
+404 
 ªÆ_t
 * 
 tmp
@@ -14475,7 +14581,7 @@ n
 §cDOF
 );
 
-404 
+405 
 k
 =0; k<
 RP
@@ -14483,7 +14589,7 @@ RP
 n
 ;k++) {
 
-405 
+406 
 tmp
 [
 k
@@ -14491,7 +14597,7 @@ k
 â
 [k];
 
-407 
+408 
 ªÆ_t
  *
 UpwEqu2DwnChkii
@@ -14505,7 +14611,7 @@ UpwEqu2DwnChkii
 effNum
 );
 
-408 
+409 
 	`FFT_RE_EXECUTE
 (
 f‹∂™
@@ -14517,7 +14623,7 @@ FFT_COMPLEX
 UpwEqu2DwnChkii
 ));
 
-409 
+410 
 TM
 ->
 UE2DC
@@ -14527,11 +14633,11 @@ idx
 UpwEqu2DwnChkii
 ;
 
-412 
+413 
 	}
 }
 
-417 
+418 
 	$compuã_if·_åg
  (
 AŒNodes
@@ -14539,47 +14645,47 @@ AŒNodes
 AŒ_N
 )
 
-419 
+420 
 i
  = 0;
 
-420 
+421 
 öv£t
  = 0;
 
-421 
+422 
 eff_size
 ;
 
-422 
+423 
 ¡hªads
-;
-
-423 
-ªÆ_t
- *
-evÆ
 ;
 
 424 
 ªÆ_t
  *
-tvÆ
+evÆ
 ;
 
 425 
 ªÆ_t
  *
-rvÆ
+tvÆ
 ;
 
 426 
+ªÆ_t
+ *
+rvÆ
+;
+
+427 
 FFT_PLAN
  
 öv∂™
 ;
 
-427 
+428 
 ve˘‹
 <
 NodeTªe
@@ -14591,7 +14697,7 @@ AŒ_N
 N
 ;
 
-428 
+429 
 Pos
 * 
 SP
@@ -14599,7 +14705,7 @@ SP
 AŒ_N
 ->SP;
 
-429 
+430 
 Pos
 * 
 RP
@@ -14607,7 +14713,7 @@ RP
 AŒ_N
 ->RP;
 
-431 
+432 
 eff_size
  = 
 	`eff_d©a_size
@@ -14615,11 +14721,11 @@ eff_size
 DC
 );
 
-432 
+433 
 öv£t
  == 0) {
 
-433 if–
+434 if–
 nodeVec
 [
 i
@@ -14633,7 +14739,7 @@ Vnodes
 	`size
 ()>0) {
 
-434 
+435 
 tvÆ
  = &
 AŒ_N
@@ -14649,7 +14755,7 @@ DC
 SP
 )];
 
-435 
+436 
 evÆ
  = &
 AŒ_N
@@ -14661,7 +14767,7 @@ i
 eff_size
 ];
 
-436 
+437 
 ªÆ_t
  
 ƒmfc
@@ -14673,13 +14779,13 @@ RP
 n
 );
 
-437 
+438 
 k
 =0; k<
 eff_size
 ; k++)
 
-438 
+439 
 evÆ
 [
 k
@@ -14687,7 +14793,7 @@ k
 ƒmfc
 ;
 
-439 
+440 
 	`effVÆ2P VÆöô
 (
 nodeVec
@@ -14705,27 +14811,27 @@ tvÆ
 AŒ_N
 );
 
-440 
+441 
 öv£t
  = 1;
 
-442 
+443 
 i
 ++;
 
-445 #¥agm®
+446 #¥agm®
 omp
  
 ∑øŒñ
 
 
-447 
+448 
 ¡hªads
  = 
 	`omp_gë_num_thªads
 ();
 
-449 
+450 
 ªÆ_t
 * 
 ªg_vÆ
@@ -14739,7 +14845,7 @@ n
 ¡hªads
 );
 
-451 #¥agm®
+452 #¥agm®
 omp
  
 ∑øŒñ
@@ -14755,7 +14861,7 @@ evÆ
 rvÆ
 )
 
-452 
+453 
 j
 =
 i
@@ -14765,13 +14871,13 @@ nodeVec
 	`size
 (); j++) {
 
-453 
+454 
 tid
  = 
 	`omp_gë_thªad_num
 ();
 
-454 if–
+455 if–
 nodeVec
 [
 j
@@ -14785,7 +14891,7 @@ Vnodes
 	`size
 ()>0) {
 
-455 
+456 
 tvÆ
  = &
 AŒ_N
@@ -14801,7 +14907,7 @@ DC
 SP
 )];
 
-456 
+457 
 evÆ
  = &
 AŒ_N
@@ -14813,7 +14919,7 @@ j
 eff_size
 ];
 
-457 
+458 
 rvÆ
  = &
 ªg_vÆ
@@ -14825,7 +14931,7 @@ RP
 n
 ];
 
-458 
+459 
 ªÆ_t
  
 ƒmfc
@@ -14837,13 +14943,13 @@ RP
 n
 );
 
-459 
+460 
 k
 =0; k<
 eff_size
 ; k++)
 
-460 
+461 
 evÆ
 [
 k
@@ -14851,7 +14957,7 @@ k
 ƒmfc
 ;
 
-461 
+462 
 	`effVÆ2P VÆ
 (
 nodeVec
@@ -14871,17 +14977,17 @@ rvÆ
 AŒ_N
 );
 
-465 
+466 
 	`FFT_DESTROY
 (
 öv∂™
 );
 
-467 
+468 
 	}
 }
 
-472 
+473 
 	$vli°_ˇlc__˝u
  (
 FMMWøµî_t
@@ -14889,7 +14995,7 @@ FMMWøµî_t
 F
 )
 
-474 
+475 
 AŒNodes
  *
 AŒ_N
@@ -14899,53 +15005,53 @@ F
 AN
 ;
 
-475 i‡(
+476 i‡(
 AŒ_N
 ) {
 
-476 
+477 
 eff_§c_size
 ;
 
-477 
+478 
 eff_åg_size
 ;
 
-478 
+479 
 effNum
 ;
 
-479 
+480 
 dim
  = 3;
 
-480 
+481 
 §cDOF
  = 1;
 
-481 
+482 
 ågDOF
  = 1;
 
-482 
+483 
 ªÆ_t
  *
 edí
 ;
 
-483 
+484 
 ªÆ_t
  *
 evÆ
 ;
 
-484 
+485 
 ªÆ_t
  *
 UpwEqu2DwnChkii
 ;
 
-485 
+486 
 ve˘‹
 <
 NodeTªe
@@ -14957,7 +15063,7 @@ AŒ_N
 N
 ;
 
-486 
+487 
 Pos
 * 
 SP
@@ -14965,7 +15071,7 @@ SP
 AŒ_N
 ->SP;
 
-487 
+488 
 Pos
 * 
 RP
@@ -14973,7 +15079,7 @@ RP
 AŒ_N
 ->RP;
 
-488 
+489 
 Tøns_m©rix
 * 
 TM
@@ -14981,7 +15087,7 @@ TM
 AŒ_N
 ->TM;
 
-489 * 
+490 * 
 Ti
  = 
 AŒ_N
@@ -14989,13 +15095,13 @@ AŒ_N
 Tv
 ;
 
-491 
+492 
 FFT_PLAN
  
 f‹∂™
 ;
 
-492 
+493 
 	`compuã_f·_§c
  (
 AŒ_N
@@ -15003,7 +15109,7 @@ AŒ_N
 f‹∂™
 );
 
-493 
+494 
 	`compuã_f·_å™s
  (
 AŒ_N
@@ -15011,7 +15117,7 @@ AŒ_N
 f‹∂™
 );
 
-496 
+497 
 eff_åg_size
  = 
 	`eff_d©a_size
@@ -15019,7 +15125,7 @@ eff_åg_size
 DC
 );
 
-497 
+498 
 eff_§c_size
  = 
 	`eff_d©a_size
@@ -15027,13 +15133,13 @@ eff_§c_size
 UE
 );
 
-498 
+499 
 effNum
  = 
 eff_§c_size
 ;
 
-499 #¥agm®
+500 #¥agm®
 omp
  
 ∑øŒñ
@@ -15047,19 +15153,19 @@ evÆ
 UpwEqu2DwnChkii
 )
 
-501 
+502 
 i
 , 
 j
 ;
 
-502 
+503 
 tid
  = 
 	`omp_gë_thªad_num
 ();
 
-503 
+504 
 i
  = 
 Ti
@@ -15067,7 +15173,7 @@ Ti
 tid
 ]; i < Ti[tid+1]; i++) {
 
-504 if–
+505 if–
 nodeVec
 [
 i
@@ -15081,7 +15187,7 @@ Vnodes
 	`size
 ()>0) {
 
-505 
+506 
 evÆ
  = &
 AŒ_N
@@ -15093,7 +15199,7 @@ i
 eff_åg_size
 ];
 
-506 
+507 
 Poöt3
  
 	`gNodeIdxCå
@@ -15105,7 +15211,7 @@ i
 nodeVec
 ));
 
-507 
+508 
 ªÆ_t
  
 D
@@ -15117,7 +15223,7 @@ i
 nodeVec
 );
 
-508 
+509 
 j
  = 0; j < 
 nodeVec
@@ -15129,7 +15235,7 @@ Vnodes
 	`size
 (); j++) {
 
-509 
+510 
 §c
  = 
 nodeVec
@@ -15141,7 +15247,7 @@ Vnodes
 j
 ];
 
-510 
+511 
 Poöt3
  
 	`viCå
@@ -15153,19 +15259,19 @@ Poöt3
 nodeVec
 ));
 
-511 
+512 
 Index3
  
 idx
 ;
 
-512 
+513 
 d
 =0; d<
 dim
 ; d++) {
 
-513 
+514 
 	`idx
 (
 d
@@ -15179,7 +15285,7 @@ gNodeIdxCå
 D
  ));
 
-515 
+516 
 edí
  = &
 AŒ_N
@@ -15191,13 +15297,13 @@ eff_dí
 eff_§c_size
 ];
 
-517 
+518 
 id
  = (
 	`idx
 (0)+3) + (idx(1)+3)*7 + (idx(2)+3)*7*7;
 
-518 
+519 
 UpwEqu2DwnChkii
  = 
 TM
@@ -15207,7 +15313,7 @@ UE2DC
 id
 ];
 
-519 
+520 
 ªÆ_t
  
 ƒmfc
@@ -15219,7 +15325,7 @@ RP
 n
 );
 
-520 
+521 
 FFT_COMPLEX
 * 
 m©På
@@ -15227,7 +15333,7 @@ m©På
 UpwEqu2DwnChkii
 );
 
-521 
+522 
 FFT_COMPLEX
 * 
 díPå
@@ -15235,7 +15341,7 @@ díPå
 edí
 );
 
-522 
+523 
 FFT_COMPLEX
 * 
 chkPå
@@ -15243,7 +15349,7 @@ chkPå
 evÆ
 );
 
-523 
+524 
 m©Sç
  = 
 §cDOF
@@ -15251,19 +15357,19 @@ m©Sç
 ågDOF
 ;
 
-524 
+525 
 díSç
  = 
 §cDOF
 ;
 
-525 
+526 
 chkSç
  = 
 ågDOF
 ;
 
-527 
+528 
 ªÆ_t
  
 √wÆpha
@@ -15271,19 +15377,19 @@ chkSç
 ƒmfc
 ;
 
-528 
+529 
 i
 =0; i<
 ågDOF
 ; i++)
 
-529 
+530 
 k
 =0; k<
 §cDOF
 ; k++) {
 
-530 
+531 
 m©Off
  = 
 k
@@ -15293,19 +15399,19 @@ k
 i
 ;
 
-531 
+532 
 díOff
  = 
 k
 ;
 
-532 
+533 
 chkOff
  = 
 i
 ;
 
-533 
+534 
 	`poötwi£_mu…
  (
 effNum
@@ -15329,17 +15435,17 @@ chkOff
 chkSç
 );
 
-540 
+541 
 	`compuã_if·_åg
  (
 AŒ_N
 );
 
-544 
+545 
 	}
 }
 
-551 
+552 
 	$poötwi£_mu…
  (
 n
@@ -15359,17 +15465,17 @@ z
 iz
 )
 
-553 
+554 
 i
 ;
 
-555 
+556 
 i
  = 0; i < 
 n
 ; i++) {
 
-556 (*
+557 (*
 z
 )[0] +–(*
 x
@@ -15377,7 +15483,7 @@ x
 y
 )[0] - (*x)[1] * (*y)[1]);
 
-557 (*
+558 (*
 z
 )[1] +–(*
 x
@@ -15385,29 +15491,29 @@ x
 y
 )[1] + (*x)[1] * (*y)[0]);
 
-558 
+559 
 x
  = x + 
 ix
 ;
 
-559 
+560 
 y
  = y + 
 iy
 ;
 
-560 
+561 
 z
  = z + 
 iz
 ;
 
-563 
+564 
 	}
 }
 
-569 
+570 
 	$wli°_ˇlc__˝u
  (
 FMMWøµî_t
@@ -15415,23 +15521,23 @@ FMMWøµî_t
 F
 )
 
-571 
+572 
 §cDOF
  = 1;
 
-572 
+573 
 ªÆ_t
  
 r
 ;
 
-573 
+574 
 Poöt3
  
 c
 ;
 
-574 
+575 
 AŒNodes
  *
 AŒ_N
@@ -15441,7 +15547,7 @@ F
 AN
 ;
 
-575 
+576 
 Pos
 * 
 SP
@@ -15449,7 +15555,7 @@ SP
 AŒ_N
 ->SP;
 
-576 
+577 
 ve˘‹
 <
 NodeTªe
@@ -15461,7 +15567,7 @@ AŒ_N
 N
 ;
 
-578 #¥agm®
+579 #¥agm®
 omp
  
 ∑øŒñ
@@ -15475,7 +15581,7 @@ c
 r
 )
 
-579 
+580 
 i
  = 0; i < 
 nodeVec
@@ -15483,7 +15589,7 @@ nodeVec
 	`size
 (); i++) {
 
-580 if–
+581 if–
 nodeVec
 [
 i
@@ -15493,7 +15599,7 @@ i
 LET_TRGNODE
 ) {
 
-581 if–
+582 if–
 nodeVec
 [
 i
@@ -15501,7 +15607,7 @@ i
 chûd
  == -1) {
 
-582 
+583 
 j
  = 0; j < 
 nodeVec
@@ -15513,7 +15619,7 @@ Wnodes
 	`size
 (); j++) {
 
-583 
+584 
 §c
  = 
 nodeVec
@@ -15525,7 +15631,7 @@ Wnodes
 j
 ];
 
-584 if(
+585 if(
 nodeVec
 [
 §c
@@ -15543,7 +15649,7 @@ UE
 SP
 )) {
 
-586 
+587 
 	`uli°__dúe˘_evÆu©i⁄
  (
 AŒ_N
@@ -15557,7 +15663,7 @@ Ns
 §c
 ]);
 
-590 
+591 
 c
  = 
 	`˚¡î
@@ -15567,7 +15673,7 @@ c
 nodeVec
 );
 
-591 
+592 
 r
  = 
 	`ødius
@@ -15577,13 +15683,13 @@ r
 nodeVec
 );
 
-592 
+593 
 Node
 * 
 ¶_pos
 ;
 
-593 
+594 
 ¶_pos
  = (
 Node
@@ -15593,7 +15699,7 @@ Node
 IDEAL_ALIGNMENT
 );
 
-595 
+596 
 ¶_pos
 ->
 x
@@ -15609,7 +15715,7 @@ UE
 n
 );
 
-596 
+597 
 ¶_pos
 ->
 y
@@ -15625,7 +15731,7 @@ UE
 n
 );
 
-597 
+598 
 ¶_pos
 ->
 z
@@ -15641,7 +15747,7 @@ UE
 n
 );
 
-598 
+599 
 ¶_pos
 ->
 num_±s
@@ -15653,7 +15759,7 @@ UE
 n
 ;
 
-600 
+601 
 	`compuã_loˇÕos
  (
 c
@@ -15667,7 +15773,7 @@ SP
 UE
 ]);
 
-601 
+602 
 ¶_pos
 ->
 dí_pŸ
@@ -15685,7 +15791,7 @@ UE
 SP
 )];
 
-602 
+603 
 	`uli°__dúe˘_evÆu©i⁄
  (
 AŒ_N
@@ -15697,11 +15803,11 @@ i
 ¶_pos
 );
 
-609 
+610 
 	}
 }
 
-615 
+616 
 	$xli°_ˇlc__˝u
  (
 FMMWøµî_t
@@ -15709,23 +15815,23 @@ FMMWøµî_t
 F
 )
 
-617 
+618 
 ågDOF
  = 1;
 
-618 
+619 
 Poöt3
  
 c
 ;
 
-619 
+620 
 ªÆ_t
  
 r
 ;
 
-620 
+621 
 AŒNodes
  *
 AŒ_N
@@ -15735,7 +15841,7 @@ F
 AN
 ;
 
-621 
+622 
 Pos
 * 
 SP
@@ -15743,7 +15849,7 @@ SP
 AŒ_N
 ->SP;
 
-622 
+623 
 ve˘‹
 <
 NodeTªe
@@ -15755,7 +15861,7 @@ AŒ_N
 N
 ;
 
-624 #¥agm®
+625 #¥agm®
 omp
  
 ∑øŒñ
@@ -15769,7 +15875,7 @@ c
 r
 )
 
-625 
+626 
 i
  = 0; i < 
 nodeVec
@@ -15777,7 +15883,7 @@ nodeVec
 	`size
 (); i++) {
 
-626 if–
+627 if–
 nodeVec
 [
 i
@@ -15787,7 +15893,7 @@ i
 LET_TRGNODE
 ) {
 
-627 
+628 
 j
  = 0; j < 
 nodeVec
@@ -15799,7 +15905,7 @@ Xnodes
 	`size
 (); j++) {
 
-628 
+629 
 §c
  = 
 nodeVec
@@ -15811,7 +15917,7 @@ Xnodes
 j
 ];
 
-629 if(
+630 if(
 nodeVec
 [
 i
@@ -15829,7 +15935,7 @@ DC
 SP
 )) {
 
-630 
+631 
 	`uli°__dúe˘_evÆu©i⁄
  (
 AŒ_N
@@ -15843,7 +15949,7 @@ Ns
 §c
 ]);
 
-634 
+635 
 c
  = 
 	`˚¡î
@@ -15853,7 +15959,7 @@ i
 nodeVec
 );
 
-635 
+636 
 r
  = 
 	`ødius
@@ -15863,13 +15969,13 @@ i
 nodeVec
 );
 
-636 
+637 
 Node
 * 
 é_pos
 ;
 
-637 
+638 
 é_pos
  = (
 Node
@@ -15879,7 +15985,7 @@ Node
 IDEAL_ALIGNMENT
 );
 
-639 
+640 
 é_pos
 ->
 x
@@ -15895,7 +16001,7 @@ DC
 n
 );
 
-640 
+641 
 é_pos
 ->
 y
@@ -15911,7 +16017,7 @@ DC
 n
 );
 
-641 
+642 
 é_pos
 ->
 z
@@ -15927,7 +16033,7 @@ DC
 n
 );
 
-642 
+643 
 é_pos
 ->
 num_±s
@@ -15939,7 +16045,7 @@ DC
 n
 ;
 
-644 
+645 
 	`compuã_loˇÕos
  (
 c
@@ -15953,7 +16059,7 @@ SP
 DC
 ]);
 
-645 
+646 
 é_pos
 ->
 dí_pŸ
@@ -15971,7 +16077,7 @@ DC
 SP
 )];
 
-647 
+648 
 	`uli°__dúe˘_evÆu©i⁄
  (*
 é_pos
@@ -15983,11 +16089,11 @@ Ns
 §c
 ]);
 
-653 
+654 
 	}
 }
 
-658 
+659 
 	$down_ˇlc__˝u
  (
 FMMWøµî_t
@@ -15995,35 +16101,35 @@ FMMWøµî_t
 F
 )
 
-660 
+661 
 i
 ;
 
-661 
+662 
 ªÆ_t
  
 r
 ;
 
-662 
+663 
 Poöt3
  
 c
 ;
 
-663 
+664 
 ªÆ_t
  *
 tvÆ
 ;
 
-664 
+665 
 ªÆ_t
  *
 ddí
 ;
 
-665 
+666 
 AŒNodes
  *
 AŒ_N
@@ -16033,7 +16139,7 @@ F
 AN
 ;
 
-666 
+667 
 Pos
 * 
 SP
@@ -16041,7 +16147,7 @@ SP
 AŒ_N
 ->SP;
 
-667 
+668 
 Tøns_m©rix
 * 
 TM
@@ -16049,7 +16155,7 @@ TM
 AŒ_N
 ->TM;
 
-668 
+669 
 ve˘‹
 <
 NodeTªe
@@ -16061,7 +16167,7 @@ AŒ_N
 N
 ;
 
-669 
+670 
 ve˘‹
 <>& 
 nodeLevñ
@@ -16069,7 +16175,7 @@ nodeLevñ
 AŒ_N
 ->nodeLevel;
 
-672 
+673 
 	`compuã_DC2DE_m©
  (
 TM
@@ -16077,7 +16183,7 @@ TM
 SP
 );
 
-675 
+676 
 TM
 ->
 DE2DC
@@ -16087,19 +16193,19 @@ DE2DC
 	`mÆloc
  ((real_t*) * 2*2*2);
 
-677 
+678 
 a
 =0;á<2;á++) {
 
-678 
+679 
 b
 =0; b<2; b++) {
 
-679 
+680 
 c
 =0; c<2; c++) {
 
-680 
+681 
 Index3
  
 	`idx
@@ -16111,7 +16217,7 @@ b
 c
 );
 
-681 
+682 
 	`compuã_DE2DC_m©
  (
 idx
@@ -16121,13 +16227,13 @@ TM
 SP
 );
 
-686 
+687 
 ¡hªads
  = 
 	`gë_num_thªads
 ();
 
-687 
+688 
 Node
 * 
 ¶_pos
@@ -16135,13 +16241,13 @@ Node
 ¡hªads
 ];
 
-688 
+689 
 i
  = 0; i < 
 ¡hªads
 ; i++) {
 
-689 
+690 
 ¶_pos
 [
 i
@@ -16153,7 +16259,7 @@ Node
 IDEAL_ALIGNMENT
 );
 
-691 
+692 
 ¶_pos
 [
 i
@@ -16171,7 +16277,7 @@ DE
 n
 );
 
-692 
+693 
 ¶_pos
 [
 i
@@ -16189,7 +16295,7 @@ DE
 n
 );
 
-693 
+694 
 ¶_pos
 [
 i
@@ -16207,7 +16313,7 @@ DE
 n
 );
 
-694 
+695 
 ¶_pos
 [
 i
@@ -16221,7 +16327,7 @@ DE
 n
 ;
 
-698 
+699 
 j
  = 0; j < 
 nodeLevñ
@@ -16229,7 +16335,7 @@ nodeLevñ
 	`size
 ()-1; j++) {
 
-699 #¥agm®
+700 #¥agm®
 omp
  
 ∑øŒñ
@@ -16251,7 +16357,7 @@ tvÆ
 ddí
 )
 
-700 
+701 
 i
  = 
 nodeLevñ
@@ -16259,7 +16365,7 @@ nodeLevñ
 j
 ]; i <ÇodeLevel[j+1]; i++) {
 
-701 i‡(
+702 i‡(
 nodeVec
 [
 i
@@ -16269,7 +16375,7 @@ i
 LET_TRGNODE
 ) {
 
-702 i‡(
+703 i‡(
 nodeVec
 [
 i
@@ -16277,7 +16383,7 @@ i
 dïth
  >= 3) {
 
-703 
+704 
 ∑ª¡
  = 
 nodeVec
@@ -16285,7 +16391,7 @@ nodeVec
 i
 ].parent;
 
-704 
+705 
 Index3
  
 	`cidx
@@ -16299,7 +16405,7 @@ i
 ∑ª¡
 ].path2Node);
 
-706 
+707 
 tvÆ
  = &
 AŒ_N
@@ -16315,7 +16421,7 @@ DC
 SP
 )];
 
-707 
+708 
 ddí
  = &
 AŒ_N
@@ -16331,11 +16437,11 @@ DE
 SP
 )];
 
-708 
+709 
 §cDOF
  = 1;
 
-709 
+710 
 ªÆ_t
  *
 tmpDí
@@ -16351,7 +16457,7 @@ DE
 n
 );
 
-710 
+711 
 	`ªÆs_zîo
  (
 SP
@@ -16363,7 +16469,7 @@ n
 tmpDí
 );
 
-711 
+712 
 l
  = 
 nodeVec
@@ -16373,13 +16479,13 @@ nodeVec
 dïth
 ;
 
-712 
+713 
 ªÆ_t
  
 degVec
 [1]; degVec[0] = 1;
 
-713 
+714 
 ªÆ_t
  
 s˛vec
@@ -16387,13 +16493,13 @@ s˛vec
 §cDOF
 ];
 
-714 
+715 
 s
 =0; s<
 §cDOF
 ; s++)
 
-715 
+716 
 s˛vec
 [
 s
@@ -16405,11 +16511,11 @@ l
 degVec
 [s]);
 
-716 
+717 
 ˙t
  = 0;
 
-717 
+718 
 j
 =0; j < 
 SP
@@ -16419,13 +16525,13 @@ DE
 n
 ; j++)
 
-718 
+719 
 s
 =0; s < 
 §cDOF
 ; s++) {
 
-719 
+720 
 tmpDí
 [
 ˙t
@@ -16437,11 +16543,11 @@ s˛vec
 s
 ];
 
-720 
+721 
 ˙t
 ++;
 
-722 
+723 
 ªÆ_t
  *
 DE2DCii
@@ -16453,7 +16559,7 @@ DE2DC
 	`cidx
 (2)+cidx(1)*2+cidx(0)*2*2];
 
-723 
+724 
 	`dgemv
 (
 TM
@@ -16469,7 +16575,7 @@ tmpDí
 tvÆ
 );
 
-726 i‡(
+727 i‡(
 nodeVec
 [
 i
@@ -16477,7 +16583,7 @@ i
 dïth
  >= 2) {
 
-728 
+729 
 tvÆ
  = &
 AŒ_N
@@ -16493,7 +16599,7 @@ DC
 SP
 )];
 
-729 
+730 
 ddí
  = &
 AŒ_N
@@ -16509,11 +16615,11 @@ DE
 SP
 )];
 
-730 
+731 
 §cDOF
  = 1;
 
-731 
+732 
 ªÆ_t
  *
 tmpDí
@@ -16529,7 +16635,7 @@ DE
 n
 );
 
-732 
+733 
 	`ªÆs_zîo
  (
 SP
@@ -16541,7 +16647,7 @@ n
 tmpDí
 );
 
-733 
+734 
 	`dgemv
 (
 TM
@@ -16557,7 +16663,7 @@ tvÆ
 tmpDí
 );
 
-736 
+737 
 l
  = 
 nodeVec
@@ -16567,13 +16673,13 @@ i
 dïth
 ;
 
-737 
+738 
 ªÆ_t
  
 degVec
 [1]; degVec[0] = 1;
 
-738 
+739 
 ªÆ_t
  
 s˛vec
@@ -16581,13 +16687,13 @@ s˛vec
 §cDOF
 ];
 
-739 
+740 
 s
 =0; s<
 §cDOF
 ; s++)
 
-740 
+741 
 s˛vec
 [
 s
@@ -16599,11 +16705,11 @@ l
 degVec
 [s]);
 
-741 
+742 
 ˙t
  = 0;
 
-742 
+743 
 j
 =0; j < 
 SP
@@ -16613,13 +16719,13 @@ DE
 n
 ; j++)
 
-743 
+744 
 s
 =0; s < 
 §cDOF
 ; s++) {
 
-744 
+745 
 ddí
 [
 ˙t
@@ -16631,11 +16737,11 @@ s˛vec
 s
 ];
 
-745 
+746 
 ˙t
 ++;
 
-749 i‡(
+750 i‡(
 nodeVec
 [
 i
@@ -16643,7 +16749,7 @@ i
 chûd
  == -1) {
 
-751 
+752 
 c
  = 
 	`˚¡î
@@ -16653,7 +16759,7 @@ i
 nodeVec
 );
 
-752 
+753 
 r
  = 
 	`ødius
@@ -16663,13 +16769,13 @@ i
 nodeVec
 );
 
-753 
+754 
 tid
  = 
 	`omp_gë_thªad_num
 ();
 
-754 
+755 
 	`compuã_loˇÕos
  (
 c
@@ -16685,7 +16791,7 @@ SP
 DE
 ]);
 
-755 
+756 
 ¶_pos
 [
 tid
@@ -16705,7 +16811,7 @@ DE
 SP
 )];
 
-757 
+758 
 	`uli°__dúe˘_evÆu©i⁄
  (
 AŒ_N
@@ -16719,11 +16825,11 @@ i
 tid
 ]);
 
-763 
+764 
 	}
 }
 
-769 
+770 
 	$c›y_åg_vÆ__˝u
  (
 FMMWøµî_t
@@ -16731,11 +16837,11 @@ FMMWøµî_t
 F
 )
 
-771 
+772 
 i
 ;
 
-772 
+773 
 AŒNodes
  *
 AŒ_N
@@ -16745,7 +16851,7 @@ F
 AN
 ;
 
-773 
+774 
 ve˘‹
 <
 NodeTªe
@@ -16757,7 +16863,7 @@ AŒ_N
 N
 ;
 
-775 
+776 
 i
  = 0; i < 
 nodeVec
@@ -16765,7 +16871,7 @@ nodeVec
 	`size
 (); i++)
 
-776 if–
+777 if–
 nodeVec
 [
 i
@@ -16775,7 +16881,7 @@ i
 LET_TRGNODE
 )
 
-777 i‡(
+778 i‡(
 nodeVec
 [
 i
@@ -16783,7 +16889,7 @@ i
 chûd
  == -1) {
 
-778 
+779 
 	`£t_vÆue
  (
 nodeVec
@@ -16803,7 +16909,7 @@ dí_pŸ
 ågOwnVecIdxs
 );
 
-782 
+783 
 	}
 }
 
@@ -18721,8 +18827,8 @@ i
 	}
 }
 
-328 
-	$kî√l
+330 
+	$mykî√l
  (
 ¢
 , 
@@ -18735,7 +18841,11 @@ x1
 x2
 ,Ñól_t* 
 x3
-,Ñól_t* 
+,
+
+331 
+ªÆ_t
+* 
 y1
 ,Ñól_t* 
 y2
@@ -18743,17 +18853,21 @@ y2
 y3
 ,
 
-329 
+332 
 ªÆ_t
 * 
 m©
+,Ñól_t* 
+ødii
+,Ñól_à*
+f‹˚_Ve˘‹
 )
 
-331 
+334 
 i
 ;
 
-332 
+335 
 SIMD_REG
  
 OOFP_R__
@@ -18763,13 +18877,13 @@ OOFP_R__
 OOFP_R
 );
 
-334 
+337 
 i
  = 0; i < 
 ¢
 ; i++) {
 
-335 
+338 
 SIMD_REG
  
 SX__
@@ -18781,7 +18895,7 @@ x1
 i
 ]);
 
-336 
+339 
 SIMD_REG
  
 SY__
@@ -18793,7 +18907,7 @@ x2
 i
 ]);
 
-337 
+340 
 SIMD_REG
  
 SZ__
@@ -18805,11 +18919,11 @@ x3
 i
 ]);
 
-338 
+341 
 j
 ;
 
-339 
+342 
 j
  = 0; (j+
 SIMD_LEN
@@ -18817,7 +18931,7 @@ SIMD_LEN
 ä
 ; j+=SIMD_LEN) {
 
-340 
+343 
 SIMD_REG
  
 TX1__
@@ -18833,7 +18947,7 @@ y1
 j
 ]));
 
-341 
+344 
 SIMD_REG
  
 TY1__
@@ -18849,7 +18963,7 @@ y2
 j
 ]));
 
-342 
+345 
 SIMD_REG
  
 TZ1__
@@ -18865,7 +18979,7 @@ y3
 j
 ]));
 
-343 
+346 
 SIMD_REG
  
 R__
@@ -18875,7 +18989,7 @@ R__
 TX1__
 , TX1__);
 
-344 
+347 
 R__
  = 
 	`SIMD_ADD
@@ -18885,7 +18999,7 @@ R__
 TY1__
 , TY1__));
 
-345 
+348 
 R__
  = 
 	`SIMD_ADD
@@ -18895,7 +19009,7 @@ R__
 TZ1__
 , TZ1__));
 
-346 
+349 
 SIMD_REG
  
 TEMP__
@@ -18907,13 +19021,13 @@ R__
 SIMD_ZERO
 );
 
-347 #i‡!
+350 #i‡!
 	`deföed
  (
 USE_FLOAT
 )
 
-348 
+351 
 SIMD_REG
  
 XHALF__
@@ -18925,13 +19039,13 @@ XHALF__
 R__
 );
 
-349 
+352 
 R__
  = 
 	`SIMD_INV_SQRT_S
  (R__);
 
-350 
+353 
 SIMD_REG
  
 RNR__
@@ -18941,7 +19055,7 @@ RNR__
 R__
 , R__);
 
-351 
+354 
 RNR__
  = 
 	`SIMD_MUL
@@ -18949,7 +19063,7 @@ RNR__
 XHALF__
 );
 
-352 
+355 
 RNR__
  = 
 	`SIMD_SUB
@@ -18957,7 +19071,7 @@ RNR__
 	`SIMD_SET1
  (1.5), RNR__);
 
-353 
+356 
 R__
  = 
 	`SIMD_MUL
@@ -18965,13 +19079,13 @@ R__
 RNR__
 , R__);
 
-355 
+358 
 R__
  = 
 	`SIMD_INV_SQRT
  (R__);
 
-357 
+360 
 R__
  = 
 	`SIMD_ANDNOT
@@ -18979,7 +19093,7 @@ R__
 TEMP__
 , R__);
 
-358 
+361 
 R__
  = 
 	`SIMD_MUL
@@ -18987,7 +19101,7 @@ R__
 OOFP_R__
 );
 
-359 
+362 
 	`SIMD_STORE_U
  (&
 m©
@@ -19001,13 +19115,13 @@ j
 R__
 );
 
-362 ; 
+365 ; 
 j
  < 
 ä
 ; j++) {
 
-363 
+366 
 dx
 , 
 dy
@@ -19015,15 +19129,15 @@ dy
 dz
 ;
 
-364 
+367 
 dr2
 ;
 
-365 
+368 
 dr
 ;
 
-366 
+369 
 dx
  = 
 x1
@@ -19035,7 +19149,7 @@ y1
 j
 ];
 
-367 
+370 
 dy
  = 
 x2
@@ -19047,7 +19161,7 @@ y2
 j
 ];
 
-368 
+371 
 dz
  = 
 x3
@@ -19059,7 +19173,7 @@ y3
 j
 ];
 
-369 
+372 
 dr2
  = 
 dx
@@ -19069,13 +19183,13 @@ dy
 dz
 *dz;
 
-370 #i‡!
+373 #i‡!
 	`deföed
  (
 USE_FLOAT
 )
 
-371 
+374 
 dr
  = 
 	`sqπ
@@ -19083,7 +19197,7 @@ dr
 dr2
 );
 
-373 
+376 
 dr
  = 
 	`sqπf
@@ -19091,11 +19205,11 @@ dr
 dr2
 );
 
-375 i‡(
+378 i‡(
 dr
  != 0)
 
-376 
+379 
 m©
 [
 i
@@ -19109,11 +19223,11 @@ OOFP_R
 dr
 ;
 
-380 
+383 
 	}
 }
 
-385 
+388 
 	$compuã_f·_§c
  (
 AŒNodes
@@ -19125,43 +19239,43 @@ FFT_PLAN
 f‹∂™
 )
 
-387 
+390 
 i
  = 0;
 
-388 
+391 
 eff_size
 ;
 
-389 
+392 
 ¡hªads
-;
-
-390 
-ªÆ_t
-* 
-edí
-;
-
-391 
-ªÆ_t
-* 
-udí
-;
-
-392 
-ªÆ_t
-* 
-rdí
 ;
 
 393 
 ªÆ_t
 * 
-tdí
+edí
+;
+
+394 
+ªÆ_t
+* 
+udí
 ;
 
 395 
+ªÆ_t
+* 
+rdí
+;
+
+396 
+ªÆ_t
+* 
+tdí
+;
+
+398 
 ve˘‹
 <
 NodeTªe
@@ -19173,7 +19287,7 @@ AŒ_N
 N
 ;
 
-396 
+399 
 eff_size
  = 
 	`eff_d©a_size
@@ -19181,7 +19295,7 @@ eff_size
 UE
 );
 
-397 
+400 
 Pos
 * 
 SP
@@ -19189,7 +19303,7 @@ SP
 AŒ_N
 ->SP;
 
-398 
+401 
 Pos
 * 
 RP
@@ -19197,19 +19311,19 @@ RP
 AŒ_N
 ->RP;
 
-400 #¥agm®
+403 #¥agm®
 omp
  
 ∑øŒñ
 
 
-402 
+405 
 ¡hªads
  = 
 	`omp_gë_num_thªads
 ();
 
-404 
+407 
 ªÆ_t
 * 
 ªg_dí
@@ -19223,7 +19337,7 @@ n
 ¡hªads
 );
 
-405 
+408 
 ªÆ_t
 * 
 tmp_dí
@@ -19239,7 +19353,7 @@ n
 ¡hªads
 );
 
-407 i‡(
+410 i‡(
 nodeVec
 [
 i
@@ -19249,7 +19363,7 @@ i
 LET_SRCNODE
 ) {
 
-408 
+411 
 edí
  = &
 AŒ_N
@@ -19261,7 +19375,7 @@ i
 eff_size
 ];
 
-409 
+412 
 udí
  = &
 AŒ_N
@@ -19277,7 +19391,7 @@ UE
 SP
 )];
 
-410 
+413 
 	`∂nDí2EffDíöô
 (
 nodeVec
@@ -19295,7 +19409,7 @@ f‹∂™
 AŒ_N
 );
 
-414 #¥agm®
+417 #¥agm®
 omp
  
 ∑øŒñ
@@ -19315,7 +19429,7 @@ rdí
 tdí
 )
 
-415 
+418 
 i
  = 1; i<
 nodeVec
@@ -19323,13 +19437,13 @@ nodeVec
 	`size
 (); i++) {
 
-416 
+419 
 tid
  = 
 	`omp_gë_thªad_num
 ();
 
-417 i‡(
+420 i‡(
 nodeVec
 [
 i
@@ -19339,7 +19453,7 @@ i
 LET_SRCNODE
 ) {
 
-418 
+421 
 edí
  = &
 AŒ_N
@@ -19351,7 +19465,7 @@ i
 eff_size
 ];
 
-419 
+422 
 udí
  = &
 AŒ_N
@@ -19367,7 +19481,7 @@ UE
 SP
 )];
 
-420 
+423 
 rdí
  = &
 ªg_dí
@@ -19379,7 +19493,7 @@ RP
 n
 ];
 
-421 
+424 
 tdí
  = &
 tmp_dí
@@ -19393,7 +19507,7 @@ UE
 n
 ];
 
-422 
+425 
 	`∂nDí2EffDí
 (
 nodeVec
@@ -19415,11 +19529,11 @@ f‹∂™
 AŒ_N
 );
 
-427 
+430 
 	}
 }
 
-432 
+435 
 	$compuã_f·_å™s
  (
 AŒNodes
@@ -19431,15 +19545,15 @@ FFT_PLAN
 f‹∂™
 )
 
-434 
+437 
 §cDOF
 ;
 
-435 
+438 
 ågDOF
 ;
 
-436 
+439 
 effNum
  = 
 	`eff_d©a_size
@@ -19447,13 +19561,13 @@ effNum
 UE
 );
 
-437 
+440 
 ªÆ_t
  
 R
  = 1;
 
-438 
+441 
 Pos
 * 
 RP
@@ -19461,7 +19575,7 @@ RP
 AŒ_N
 ->RP;
 
-439 
+442 
 Tøns_m©rix
 * 
 TM
@@ -19469,15 +19583,15 @@ TM
 AŒ_N
 ->TM;
 
-440 
+443 
 §cDOF
  = 1;
 
-441 
+444 
 ågDOF
  = 1;
 
-444 
+447 
 TM
 ->
 UE2DC
@@ -19487,7 +19601,7 @@ UE2DC
 	`mÆloc
  ((real_t*) * 7*7*7);
 
-446 #¥agm®
+449 #¥agm®
 omp
  
 ∑øŒñ
@@ -19495,19 +19609,19 @@ omp
 	`scheduÀ
 ()
 
-447 
+450 
 i1
 =-3; i1<=3; i1++)
 
-448 
+451 
 i2
 =-3; i2<=3; i2++)
 
-449 
+452 
 i3
 =-3; i3<=3; i3++)
 
-450 i‡(
+453 i‡(
 	`abs
 (
 i1
@@ -19517,11 +19631,11 @@ i2
 i3
 )>1 ) {
 
-452 
+455 
 idx
 ;
 
-453 
+456 
 idx
  = (
 i1
@@ -19531,25 +19645,25 @@ i2
 i3
 +3)*7*7;
 
-454 
+457 
 ªÆ_t
  
 díPosX
 [1];
 
-455 
+458 
 ªÆ_t
  
 díPosY
 [1];
 
-456 
+459 
 ªÆ_t
  
 díPosZ
 [1];
 
-457 
+460 
 díPosX
 [0] = (
 ªÆ_t
@@ -19559,7 +19673,7 @@ i1
 R
 ;
 
-458 
+461 
 díPosY
 [0] = (
 ªÆ_t
@@ -19569,7 +19683,7 @@ i2
 R
 ;
 
-459 
+462 
 díPosZ
 [0] = (
 ªÆ_t
@@ -19579,7 +19693,7 @@ i3
 R
 ;
 
-461 
+464 
 ªÆ_t
  
 chkPosX
@@ -19597,7 +19711,7 @@ R
 x
 , chkPosX) ;
 
-462 
+465 
 ªÆ_t
  
 chkPosY
@@ -19615,7 +19729,7 @@ R
 y
 , chkPosY) ;
 
-463 
+466 
 ªÆ_t
  
 chkPosZ
@@ -19633,7 +19747,7 @@ R
 z
 , chkPosZ) ;
 
-464 
+467 
 ªÆ_t
 * 
 â
@@ -19649,7 +19763,7 @@ n
 §cDOF
 );
 
-465 
+468 
 	`kî√l
 (1, 
 RP
@@ -19671,7 +19785,7 @@ chkPosZ
 â
 );
 
-468 
+471 
 ªÆ_t
 * 
 tmp
@@ -19687,7 +19801,7 @@ n
 §cDOF
 );
 
-469 
+472 
 k
 =0; k<
 RP
@@ -19695,7 +19809,7 @@ RP
 n
 ;k++) {
 
-470 
+473 
 tmp
 [
 k
@@ -19703,7 +19817,7 @@ k
 â
 [k];
 
-472 
+475 
 ªÆ_t
  *
 UpwEqu2DwnChkii
@@ -19717,7 +19831,7 @@ UpwEqu2DwnChkii
 effNum
 );
 
-473 
+476 
 	`FFT_RE_EXECUTE
 (
 f‹∂™
@@ -19729,7 +19843,7 @@ FFT_COMPLEX
 UpwEqu2DwnChkii
 ));
 
-474 
+477 
 TM
 ->
 UE2DC
@@ -19739,11 +19853,11 @@ idx
 UpwEqu2DwnChkii
 ;
 
-477 
+480 
 	}
 }
 
-482 
+485 
 	$compuã_if·_åg
  (
 AŒNodes
@@ -19751,47 +19865,47 @@ AŒNodes
 AŒ_N
 )
 
-484 
+487 
 i
  = 0;
 
-485 
+488 
 öv£t
  = 0;
 
-486 
+489 
 eff_size
 ;
 
-487 
+490 
 ¡hªads
 ;
 
-488 
+491 
 ªÆ_t
  *
 evÆ
 ;
 
-489 
+492 
 ªÆ_t
  *
 tvÆ
 ;
 
-490 
+493 
 ªÆ_t
  *
 rvÆ
 ;
 
-491 
+494 
 FFT_PLAN
  
 öv∂™
 ;
 
-492 
+495 
 ve˘‹
 <
 NodeTªe
@@ -19803,7 +19917,7 @@ AŒ_N
 N
 ;
 
-493 
+496 
 Pos
 * 
 SP
@@ -19811,7 +19925,7 @@ SP
 AŒ_N
 ->SP;
 
-494 
+497 
 Pos
 * 
 RP
@@ -19819,7 +19933,7 @@ RP
 AŒ_N
 ->RP;
 
-496 
+499 
 eff_size
  = 
 	`eff_d©a_size
@@ -19827,11 +19941,11 @@ eff_size
 DC
 );
 
-497 
+500 
 öv£t
  == 0) {
 
-498 if–
+501 if–
 nodeVec
 [
 i
@@ -19845,7 +19959,7 @@ Vnodes
 	`size
 ()>0) {
 
-499 
+502 
 tvÆ
  = &
 AŒ_N
@@ -19861,7 +19975,7 @@ DC
 SP
 )];
 
-500 
+503 
 evÆ
  = &
 AŒ_N
@@ -19873,7 +19987,7 @@ i
 eff_size
 ];
 
-501 
+504 
 ªÆ_t
  
 ƒmfc
@@ -19885,13 +19999,13 @@ RP
 n
 );
 
-502 
+505 
 k
 =0; k<
 eff_size
 ; k++)
 
-503 
+506 
 evÆ
 [
 k
@@ -19899,7 +20013,7 @@ k
 ƒmfc
 ;
 
-504 
+507 
 	`effVÆ2P VÆöô
 (
 nodeVec
@@ -19917,27 +20031,27 @@ tvÆ
 AŒ_N
 );
 
-505 
+508 
 öv£t
  = 1;
 
-507 
+510 
 i
 ++;
 
-510 #¥agm®
+513 #¥agm®
 omp
  
 ∑øŒñ
 
 
-512 
+515 
 ¡hªads
  = 
 	`omp_gë_num_thªads
 ();
 
-514 
+517 
 ªÆ_t
 * 
 ªg_vÆ
@@ -19951,7 +20065,7 @@ n
 ¡hªads
 );
 
-516 #¥agm®
+519 #¥agm®
 omp
  
 ∑øŒñ
@@ -19967,7 +20081,7 @@ evÆ
 rvÆ
 )
 
-517 
+520 
 j
 =
 i
@@ -19977,13 +20091,13 @@ nodeVec
 	`size
 (); j++) {
 
-518 
+521 
 tid
  = 
 	`omp_gë_thªad_num
 ();
 
-519 if–
+522 if–
 nodeVec
 [
 j
@@ -19997,7 +20111,7 @@ Vnodes
 	`size
 ()>0) {
 
-520 
+523 
 tvÆ
  = &
 AŒ_N
@@ -20013,7 +20127,7 @@ DC
 SP
 )];
 
-521 
+524 
 evÆ
  = &
 AŒ_N
@@ -20025,7 +20139,7 @@ j
 eff_size
 ];
 
-522 
+525 
 rvÆ
  = &
 ªg_vÆ
@@ -20037,7 +20151,7 @@ RP
 n
 ];
 
-523 
+526 
 ªÆ_t
  
 ƒmfc
@@ -20049,13 +20163,13 @@ RP
 n
 );
 
-524 
+527 
 k
 =0; k<
 eff_size
 ; k++)
 
-525 
+528 
 evÆ
 [
 k
@@ -20063,7 +20177,7 @@ k
 ƒmfc
 ;
 
-526 
+529 
 	`effVÆ2P VÆ
 (
 nodeVec
@@ -20083,17 +20197,17 @@ rvÆ
 AŒ_N
 );
 
-530 
+533 
 	`FFT_DESTROY
 (
 öv∂™
 );
 
-532 
+535 
 	}
 }
 
-537 
+540 
 	$vli°_ˇlc__˝u
  (
 FMMWøµî_t
@@ -20101,7 +20215,7 @@ FMMWøµî_t
 F
 )
 
-539 
+542 
 AŒNodes
  *
 AŒ_N
@@ -20111,53 +20225,53 @@ F
 AN
 ;
 
-540 i‡(
+543 i‡(
 AŒ_N
 ) {
 
-542 
+545 
 eff_§c_size
 ;
 
-543 
+546 
 eff_åg_size
 ;
 
-544 
+547 
 effNum
 ;
 
-545 
+548 
 dim
  = 3;
 
-546 
+549 
 §cDOF
  = 1;
 
-547 
+550 
 ågDOF
  = 1;
 
-548 
+551 
 ªÆ_t
  *
 edí
 ;
 
-549 
+552 
 ªÆ_t
  *
 evÆ
 ;
 
-550 
+553 
 ªÆ_t
  *
 UpwEqu2DwnChkii
 ;
 
-551 
+554 
 ve˘‹
 <
 NodeTªe
@@ -20169,7 +20283,7 @@ AŒ_N
 N
 ;
 
-552 
+555 
 Pos
 * 
 SP
@@ -20177,7 +20291,7 @@ SP
 AŒ_N
 ->SP;
 
-553 
+556 
 Pos
 * 
 RP
@@ -20185,7 +20299,7 @@ RP
 AŒ_N
 ->RP;
 
-554 
+557 
 Tøns_m©rix
 * 
 TM
@@ -20193,7 +20307,7 @@ TM
 AŒ_N
 ->TM;
 
-555 * 
+558 * 
 Ti
  = 
 AŒ_N
@@ -20201,13 +20315,13 @@ AŒ_N
 Tv
 ;
 
-557 
+560 
 FFT_PLAN
  
 f‹∂™
 ;
 
-558 
+561 
 	`compuã_f·_§c
  (
 AŒ_N
@@ -20215,7 +20329,7 @@ AŒ_N
 f‹∂™
 );
 
-559 
+562 
 	`compuã_f·_å™s
  (
 AŒ_N
@@ -20223,7 +20337,7 @@ AŒ_N
 f‹∂™
 );
 
-562 
+565 
 eff_åg_size
  = 
 	`eff_d©a_size
@@ -20231,7 +20345,7 @@ eff_åg_size
 DC
 );
 
-563 
+566 
 eff_§c_size
  = 
 	`eff_d©a_size
@@ -20239,13 +20353,13 @@ eff_§c_size
 UE
 );
 
-564 
+567 
 effNum
  = 
 eff_§c_size
 ;
 
-565 #¥agm®
+568 #¥agm®
 omp
  
 ∑øŒñ
@@ -20259,19 +20373,19 @@ evÆ
 UpwEqu2DwnChkii
 )
 
-567 
+570 
 i
 , 
 j
 ;
 
-568 
+571 
 tid
  = 
 	`omp_gë_thªad_num
 ();
 
-569 
+572 
 i
  = 
 Ti
@@ -20279,7 +20393,7 @@ Ti
 tid
 ]; i < Ti[tid+1]; i++) {
 
-570 if–
+573 if–
 nodeVec
 [
 i
@@ -20293,7 +20407,7 @@ Vnodes
 	`size
 ()>0) {
 
-571 
+574 
 evÆ
  = &
 AŒ_N
@@ -20305,7 +20419,7 @@ i
 eff_åg_size
 ];
 
-572 
+575 
 Poöt3
  
 	`gNodeIdxCå
@@ -20317,7 +20431,7 @@ i
 nodeVec
 ));
 
-573 
+576 
 ªÆ_t
  
 D
@@ -20329,7 +20443,7 @@ i
 nodeVec
 );
 
-574 
+577 
 j
  = 0; j < 
 nodeVec
@@ -20341,7 +20455,7 @@ Vnodes
 	`size
 (); j++) {
 
-575 
+578 
 §c
  = 
 nodeVec
@@ -20353,7 +20467,7 @@ Vnodes
 j
 ];
 
-576 
+579 
 Poöt3
  
 	`viCå
@@ -20365,19 +20479,19 @@ Poöt3
 nodeVec
 ));
 
-577 
+580 
 Index3
  
 idx
 ;
 
-578 
+581 
 d
 =0; d<
 dim
 ; d++) {
 
-579 
+582 
 	`idx
 (
 d
@@ -20391,7 +20505,7 @@ gNodeIdxCå
 D
  ));
 
-581 
+584 
 edí
  = &
 AŒ_N
@@ -20403,13 +20517,13 @@ eff_dí
 eff_§c_size
 ];
 
-583 
+586 
 id
  = (
 	`idx
 (0)+3) + (idx(1)+3)*7 + (idx(2)+3)*7*7;
 
-584 
+587 
 UpwEqu2DwnChkii
  = 
 TM
@@ -20419,7 +20533,7 @@ UE2DC
 id
 ];
 
-585 
+588 
 ªÆ_t
  
 ƒmfc
@@ -20431,7 +20545,7 @@ RP
 n
 );
 
-586 
+589 
 FFT_COMPLEX
 * 
 m©På
@@ -20439,7 +20553,7 @@ m©På
 UpwEqu2DwnChkii
 );
 
-587 
+590 
 FFT_COMPLEX
 * 
 díPå
@@ -20447,7 +20561,7 @@ díPå
 edí
 );
 
-588 
+591 
 FFT_COMPLEX
 * 
 chkPå
@@ -20455,7 +20569,7 @@ chkPå
 evÆ
 );
 
-589 
+592 
 m©Sç
  = 
 §cDOF
@@ -20463,19 +20577,19 @@ m©Sç
 ågDOF
 ;
 
-590 
+593 
 díSç
  = 
 §cDOF
 ;
 
-591 
+594 
 chkSç
  = 
 ågDOF
 ;
 
-593 
+596 
 ªÆ_t
  
 √wÆpha
@@ -20483,19 +20597,19 @@ chkSç
 ƒmfc
 ;
 
-594 
+597 
 i
 =0; i<
 ågDOF
 ; i++)
 
-595 
+598 
 k
 =0; k<
 §cDOF
 ; k++) {
 
-596 
+599 
 m©Off
  = 
 k
@@ -20505,19 +20619,19 @@ k
 i
 ;
 
-597 
+600 
 díOff
  = 
 k
 ;
 
-598 
+601 
 chkOff
  = 
 i
 ;
 
-599 
+602 
 	`poötwi£_mu…
  (
 effNum
@@ -20541,17 +20655,17 @@ chkOff
 chkSç
 );
 
-606 
+609 
 	`compuã_if·_åg
  (
 AŒ_N
 );
 
-610 
+613 
 	}
 }
 
-617 
+620 
 	$poötwi£_mu…
  (
 n
@@ -20571,11 +20685,11 @@ z
 iz
 )
 
-619 
+622 
 i
 ;
 
-620 
+623 
 SIMD_REG
  
 tmp
@@ -20583,7 +20697,7 @@ tmp
 SIMD_SET_1
 ;
 
-621 
+624 
 i
  = 0; i + 
 SIMD_LEN
@@ -20591,7 +20705,7 @@ SIMD_LEN
 n
  * 2); i+=SIMD_LEN) {
 
-622 
+625 
 SIMD_REG
  
 Z
@@ -20603,7 +20717,7 @@ z
 i
 ]);
 
-623 
+626 
 SIMD_REG
  
 X
@@ -20615,7 +20729,7 @@ x
 i
 ]);
 
-624 
+627 
 SIMD_REG
  
 Y
@@ -20627,7 +20741,7 @@ y
 i
 ]);
 
-626 
+629 
 SIMD_REG
  
 x0
@@ -20639,7 +20753,7 @@ X
 SHUFFLE_0
 );
 
-627 
+630 
 SIMD_REG
  
 p0
@@ -20651,7 +20765,7 @@ x0
 Y
 );
 
-628 
+631 
 Z
  = 
 	`SIMD_ADD
@@ -20659,7 +20773,7 @@ Z
 p0
 );
 
-630 
+633 
 x0
  = 
 	`SIMD_SHUFFLE
@@ -20669,7 +20783,7 @@ X
 SHUFFLE_1
 );
 
-631 
+634 
 SIMD_REG
  
 y0
@@ -20681,7 +20795,7 @@ Y
 SHUFFLE_2
 );
 
-632 
+635 
 p0
  = 
 	`SIMD_MUL
@@ -20691,7 +20805,7 @@ x0
 y0
 );
 
-633 
+636 
 p0
  = 
 	`SIMD_MUL
@@ -20699,7 +20813,7 @@ p0
 tmp
 );
 
-634 
+637 
 Z
  = 
 	`SIMD_ADD
@@ -20707,7 +20821,7 @@ Z
 p0
 );
 
-636 
+639 
 	`SIMD_STORE
  (&(*
 z
@@ -20717,13 +20831,13 @@ i
 Z
 );
 
-639 ; 
+642 ; 
 i
  < (
 n
  * 2); i+=2) {
 
-640 (*
+643 (*
 z
 )[0] +–(*
 x
@@ -20731,7 +20845,7 @@ x
 y
 )[0] - (*x)[1] * (*y)[1]);
 
-641 (*
+644 (*
 z
 )[1] +–(*
 x
@@ -20739,23 +20853,23 @@ x
 y
 )[1] + (*x)[1] * (*y)[0]);
 
-642 
+645 
 x
  = x + 1;
 
-643 
+646 
 y
  = y + 1;
 
-644 
+647 
 z
  = z + 1;
 
-647 
+650 
 	}
 }
 
-653 
+656 
 	$wli°_ˇlc__˝u
  (
 FMMWøµî_t
@@ -20763,23 +20877,23 @@ FMMWøµî_t
 F
 )
 
-655 
+658 
 §cDOF
  = 1;
 
-656 
+659 
 ªÆ_t
  
 r
 ;
 
-657 
+660 
 Poöt3
  
 c
 ;
 
-658 
+661 
 AŒNodes
  *
 AŒ_N
@@ -20789,7 +20903,7 @@ F
 AN
 ;
 
-659 
+662 
 Pos
 * 
 SP
@@ -20797,7 +20911,7 @@ SP
 AŒ_N
 ->SP;
 
-660 
+663 
 ve˘‹
 <
 NodeTªe
@@ -20809,7 +20923,7 @@ AŒ_N
 N
 ;
 
-662 #¥agm®
+665 #¥agm®
 omp
  
 ∑øŒñ
@@ -20823,7 +20937,7 @@ c
 r
 )
 
-663 
+666 
 i
  = 0; i < 
 nodeVec
@@ -20831,7 +20945,7 @@ nodeVec
 	`size
 (); i++) {
 
-664 if–
+667 if–
 nodeVec
 [
 i
@@ -20841,7 +20955,7 @@ i
 LET_TRGNODE
 ) {
 
-665 if–
+668 if–
 nodeVec
 [
 i
@@ -20849,7 +20963,7 @@ i
 chûd
  == -1) {
 
-666 
+669 
 j
  = 0; j < 
 nodeVec
@@ -20861,7 +20975,7 @@ Wnodes
 	`size
 (); j++) {
 
-667 
+670 
 §c
  = 
 nodeVec
@@ -20873,7 +20987,7 @@ Wnodes
 j
 ];
 
-668 if(
+671 if(
 nodeVec
 [
 §c
@@ -20891,7 +21005,7 @@ UE
 SP
 )) {
 
-670 
+673 
 	`uli°__dúe˘_evÆu©i⁄
  (
 AŒ_N
@@ -20905,7 +21019,7 @@ Ns
 §c
 ]);
 
-674 
+677 
 c
  = 
 	`˚¡î
@@ -20915,7 +21029,7 @@ c
 nodeVec
 );
 
-675 
+678 
 r
  = 
 	`ødius
@@ -20925,13 +21039,13 @@ r
 nodeVec
 );
 
-676 
+679 
 Node
 * 
 ¶_pos
 ;
 
-677 
+680 
 ¶_pos
  = (
 Node
@@ -20941,7 +21055,7 @@ Node
 IDEAL_ALIGNMENT
 );
 
-679 
+682 
 ¶_pos
 ->
 x
@@ -20957,7 +21071,7 @@ UE
 n
 );
 
-680 
+683 
 ¶_pos
 ->
 y
@@ -20973,7 +21087,7 @@ UE
 n
 );
 
-681 
+684 
 ¶_pos
 ->
 z
@@ -20989,7 +21103,7 @@ UE
 n
 );
 
-682 
+685 
 ¶_pos
 ->
 num_±s
@@ -21001,7 +21115,7 @@ UE
 n
 ;
 
-684 
+687 
 	`compuã_loˇÕos
  (
 c
@@ -21015,7 +21129,7 @@ SP
 UE
 ]);
 
-685 
+688 
 ¶_pos
 ->
 dí_pŸ
@@ -21033,7 +21147,7 @@ UE
 SP
 )];
 
-686 
+689 
 	`uli°__dúe˘_evÆu©i⁄
  (
 AŒ_N
@@ -21045,11 +21159,11 @@ i
 ¶_pos
 );
 
-693 
+696 
 	}
 }
 
-699 
+702 
 	$xli°_ˇlc__˝u
  (
 FMMWøµî_t
@@ -21057,23 +21171,23 @@ FMMWøµî_t
 F
 )
 
-701 
+704 
 ågDOF
  = 1;
 
-702 
+705 
 Poöt3
  
 c
 ;
 
-703 
+706 
 ªÆ_t
  
 r
 ;
 
-704 
+707 
 AŒNodes
  *
 AŒ_N
@@ -21083,7 +21197,7 @@ F
 AN
 ;
 
-705 
+708 
 Pos
 * 
 SP
@@ -21091,7 +21205,7 @@ SP
 AŒ_N
 ->SP;
 
-706 
+709 
 ve˘‹
 <
 NodeTªe
@@ -21103,7 +21217,7 @@ AŒ_N
 N
 ;
 
-708 #¥agm®
+711 #¥agm®
 omp
  
 ∑øŒñ
@@ -21117,7 +21231,7 @@ c
 r
 )
 
-709 
+712 
 i
  = 0; i < 
 nodeVec
@@ -21125,7 +21239,7 @@ nodeVec
 	`size
 (); i++) {
 
-710 if–
+713 if–
 nodeVec
 [
 i
@@ -21135,7 +21249,7 @@ i
 LET_TRGNODE
 ) {
 
-711 
+714 
 j
  = 0; j < 
 nodeVec
@@ -21147,7 +21261,7 @@ Xnodes
 	`size
 (); j++) {
 
-712 
+715 
 §c
  = 
 nodeVec
@@ -21159,7 +21273,7 @@ Xnodes
 j
 ];
 
-713 if(
+716 if(
 nodeVec
 [
 i
@@ -21177,7 +21291,7 @@ DC
 SP
 )) {
 
-714 
+717 
 	`uli°__dúe˘_evÆu©i⁄
  (
 AŒ_N
@@ -21191,7 +21305,7 @@ Ns
 §c
 ]);
 
-718 
+721 
 c
  = 
 	`˚¡î
@@ -21201,7 +21315,7 @@ i
 nodeVec
 );
 
-719 
+722 
 r
  = 
 	`ødius
@@ -21211,13 +21325,13 @@ i
 nodeVec
 );
 
-720 
+723 
 Node
 * 
 é_pos
 ;
 
-721 
+724 
 é_pos
  = (
 Node
@@ -21227,7 +21341,7 @@ Node
 IDEAL_ALIGNMENT
 );
 
-723 
+726 
 é_pos
 ->
 x
@@ -21243,7 +21357,7 @@ DC
 n
 );
 
-724 
+727 
 é_pos
 ->
 y
@@ -21259,7 +21373,7 @@ DC
 n
 );
 
-725 
+728 
 é_pos
 ->
 z
@@ -21275,7 +21389,7 @@ DC
 n
 );
 
-726 
+729 
 é_pos
 ->
 num_±s
@@ -21287,7 +21401,7 @@ DC
 n
 ;
 
-728 
+731 
 	`compuã_loˇÕos
  (
 c
@@ -21301,7 +21415,7 @@ SP
 DC
 ]);
 
-729 
+732 
 é_pos
 ->
 dí_pŸ
@@ -21319,7 +21433,7 @@ DC
 SP
 )];
 
-731 
+734 
 	`uli°__dúe˘_evÆu©i⁄
  (*
 é_pos
@@ -21331,11 +21445,11 @@ Ns
 §c
 ]);
 
-737 
+740 
 	}
 }
 
-743 
+746 
 	$down_ˇlc__˝u
  (
 FMMWøµî_t
@@ -21343,35 +21457,35 @@ FMMWøµî_t
 F
 )
 
-745 
+748 
 i
 ;
 
-746 
+749 
 ªÆ_t
  
 r
 ;
 
-747 
+750 
 Poöt3
  
 c
 ;
 
-748 
+751 
 ªÆ_t
  *
 tvÆ
 ;
 
-749 
+752 
 ªÆ_t
  *
 ddí
 ;
 
-750 
+753 
 AŒNodes
  *
 AŒ_N
@@ -21381,7 +21495,7 @@ F
 AN
 ;
 
-751 
+754 
 Pos
 * 
 SP
@@ -21389,7 +21503,7 @@ SP
 AŒ_N
 ->SP;
 
-752 
+755 
 Tøns_m©rix
 * 
 TM
@@ -21397,7 +21511,7 @@ TM
 AŒ_N
 ->TM;
 
-753 
+756 
 ve˘‹
 <
 NodeTªe
@@ -21409,7 +21523,7 @@ AŒ_N
 N
 ;
 
-754 
+757 
 ve˘‹
 <>& 
 nodeLevñ
@@ -21417,7 +21531,7 @@ nodeLevñ
 AŒ_N
 ->nodeLevel;
 
-757 
+760 
 	`compuã_DC2DE_m©
  (
 TM
@@ -21425,7 +21539,7 @@ TM
 SP
 );
 
-760 
+763 
 TM
 ->
 DE2DC
@@ -21435,19 +21549,19 @@ DE2DC
 	`mÆloc
  ((real_t*) * 2*2*2);
 
-762 
+765 
 a
 =0;á<2;á++) {
 
-763 
+766 
 b
 =0; b<2; b++) {
 
-764 
+767 
 c
 =0; c<2; c++) {
 
-765 
+768 
 Index3
  
 	`idx
@@ -21459,7 +21573,7 @@ b
 c
 );
 
-766 
+769 
 	`compuã_DE2DC_m©
  (
 idx
@@ -21469,13 +21583,13 @@ TM
 SP
 );
 
-771 
+774 
 ¡hªads
  = 
 	`gë_num_thªads
 ();
 
-772 
+775 
 Node
 * 
 ¶_pos
@@ -21483,13 +21597,13 @@ Node
 ¡hªads
 ];
 
-773 
+776 
 i
  = 0; i < 
 ¡hªads
 ; i++) {
 
-774 
+777 
 ¶_pos
 [
 i
@@ -21501,7 +21615,7 @@ Node
 IDEAL_ALIGNMENT
 );
 
-776 
+779 
 ¶_pos
 [
 i
@@ -21519,7 +21633,7 @@ DE
 n
 );
 
-777 
+780 
 ¶_pos
 [
 i
@@ -21537,7 +21651,7 @@ DE
 n
 );
 
-778 
+781 
 ¶_pos
 [
 i
@@ -21555,7 +21669,7 @@ DE
 n
 );
 
-779 
+782 
 ¶_pos
 [
 i
@@ -21569,7 +21683,7 @@ DE
 n
 ;
 
-783 
+786 
 j
  = 0; j < 
 nodeLevñ
@@ -21577,7 +21691,7 @@ nodeLevñ
 	`size
 ()-1; j++) {
 
-784 #¥agm®
+787 #¥agm®
 omp
  
 ∑øŒñ
@@ -21599,7 +21713,7 @@ tvÆ
 ddí
 )
 
-785 
+788 
 i
  = 
 nodeLevñ
@@ -21607,7 +21721,7 @@ nodeLevñ
 j
 ]; i <ÇodeLevel[j+1]; i++) {
 
-786 i‡(
+789 i‡(
 nodeVec
 [
 i
@@ -21615,7 +21729,7 @@ i
 dïth
  >= 3) {
 
-787 
+790 
 ∑ª¡
  = 
 nodeVec
@@ -21623,7 +21737,7 @@ nodeVec
 i
 ].parent;
 
-788 
+791 
 Index3
  
 	`cidx
@@ -21637,7 +21751,7 @@ i
 ∑ª¡
 ].path2Node);
 
-790 
+793 
 tvÆ
  = &
 AŒ_N
@@ -21653,7 +21767,7 @@ DC
 SP
 )];
 
-791 
+794 
 ddí
  = &
 AŒ_N
@@ -21669,11 +21783,11 @@ DE
 SP
 )];
 
-792 
+795 
 §cDOF
  = 1;
 
-793 
+796 
 ªÆ_t
  *
 tmpDí
@@ -21689,7 +21803,7 @@ DE
 n
 );
 
-794 
+797 
 	`ªÆs_zîo
  (
 SP
@@ -21701,7 +21815,7 @@ n
 tmpDí
 );
 
-795 
+798 
 l
  = 
 nodeVec
@@ -21711,13 +21825,13 @@ nodeVec
 dïth
 ;
 
-796 
+799 
 ªÆ_t
  
 degVec
 [1]; degVec[0] = 1;
 
-797 
+800 
 ªÆ_t
  
 s˛vec
@@ -21725,13 +21839,13 @@ s˛vec
 §cDOF
 ];
 
-798 
+801 
 s
 =0; s<
 §cDOF
 ; s++)
 
-799 
+802 
 s˛vec
 [
 s
@@ -21743,11 +21857,11 @@ l
 degVec
 [s]);
 
-800 
+803 
 ˙t
  = 0;
 
-801 
+804 
 j
 =0; j < 
 SP
@@ -21757,13 +21871,13 @@ DE
 n
 ; j++)
 
-802 
+805 
 s
 =0; s < 
 §cDOF
 ; s++) {
 
-803 
+806 
 tmpDí
 [
 ˙t
@@ -21775,11 +21889,11 @@ s˛vec
 s
 ];
 
-804 
+807 
 ˙t
 ++;
 
-806 
+809 
 ªÆ_t
  *
 DE2DCii
@@ -21791,7 +21905,7 @@ DE2DC
 	`cidx
 (2)+cidx(1)*2+cidx(0)*2*2];
 
-807 
+810 
 	`dgemv
 (
 TM
@@ -21807,7 +21921,7 @@ tmpDí
 tvÆ
 );
 
-810 i‡(
+813 i‡(
 nodeVec
 [
 i
@@ -21815,7 +21929,7 @@ i
 dïth
  >= 2) {
 
-812 
+815 
 tvÆ
  = &
 AŒ_N
@@ -21831,7 +21945,7 @@ DC
 SP
 )];
 
-813 
+816 
 ddí
  = &
 AŒ_N
@@ -21847,11 +21961,11 @@ DE
 SP
 )];
 
-814 
+817 
 §cDOF
  = 1;
 
-815 
+818 
 ªÆ_t
  *
 tmpDí
@@ -21867,7 +21981,7 @@ DE
 n
 );
 
-816 
+819 
 	`ªÆs_zîo
  (
 SP
@@ -21879,7 +21993,7 @@ n
 tmpDí
 );
 
-817 
+820 
 	`dgemv
 (
 TM
@@ -21895,7 +22009,7 @@ tvÆ
 tmpDí
 );
 
-820 
+823 
 l
  = 
 nodeVec
@@ -21905,13 +22019,13 @@ i
 dïth
 ;
 
-821 
+824 
 ªÆ_t
  
 degVec
 [1]; degVec[0] = 1;
 
-822 
+825 
 ªÆ_t
  
 s˛vec
@@ -21919,13 +22033,13 @@ s˛vec
 §cDOF
 ];
 
-823 
+826 
 s
 =0; s<
 §cDOF
 ; s++)
 
-824 
+827 
 s˛vec
 [
 s
@@ -21937,11 +22051,11 @@ l
 degVec
 [s]);
 
-825 
+828 
 ˙t
  = 0;
 
-826 
+829 
 j
 =0; j < 
 SP
@@ -21951,13 +22065,13 @@ DE
 n
 ; j++)
 
-827 
+830 
 s
 =0; s < 
 §cDOF
 ; s++) {
 
-828 
+831 
 ddí
 [
 ˙t
@@ -21969,11 +22083,11 @@ s˛vec
 s
 ];
 
-829 
+832 
 ˙t
 ++;
 
-834 i‡(
+837 i‡(
 nodeVec
 [
 i
@@ -21981,7 +22095,7 @@ i
 chûd
  == -1) {
 
-836 
+839 
 c
  = 
 	`˚¡î
@@ -21991,7 +22105,7 @@ i
 nodeVec
 );
 
-837 
+840 
 r
  = 
 	`ødius
@@ -22001,13 +22115,13 @@ i
 nodeVec
 );
 
-838 
+841 
 tid
  = 
 	`omp_gë_thªad_num
 ();
 
-839 
+842 
 	`compuã_loˇÕos
  (
 c
@@ -22023,7 +22137,7 @@ SP
 DE
 ]);
 
-840 
+843 
 ¶_pos
 [
 tid
@@ -22043,7 +22157,7 @@ DE
 SP
 )];
 
-842 
+845 
 	`uli°__dúe˘_evÆu©i⁄
  (
 AŒ_N
@@ -22057,11 +22171,11 @@ i
 tid
 ]);
 
-847 
+850 
 	}
 }
 
-853 
+856 
 	$c›y_åg_vÆ__˝u
  (
 FMMWøµî_t
@@ -22069,11 +22183,11 @@ FMMWøµî_t
 F
 )
 
-855 
+858 
 i
 ;
 
-856 
+859 
 AŒNodes
  *
 AŒ_N
@@ -22083,7 +22197,7 @@ F
 AN
 ;
 
-857 
+860 
 ve˘‹
 <
 NodeTªe
@@ -22095,7 +22209,7 @@ AŒ_N
 N
 ;
 
-859 
+862 
 i
  = 0; i < 
 nodeVec
@@ -22103,7 +22217,7 @@ nodeVec
 	`size
 (); i++)
 
-860 if–
+863 if–
 nodeVec
 [
 i
@@ -22113,7 +22227,7 @@ i
 LET_TRGNODE
 )
 
-861 i‡(
+864 i‡(
 nodeVec
 [
 i
@@ -22121,7 +22235,7 @@ i
 chûd
  == -1) {
 
-862 
+865 
 	`£t_vÆue
  (
 nodeVec
@@ -22141,7 +22255,7 @@ dí_pŸ
 ågOwnVecIdxs
 );
 
-866 
+869 
 	}
 }
 
@@ -24073,8 +24187,8 @@ i
 	}
 }
 
-330 
-	$kî√l
+332 
+	$mykî√l
  (
 ¢
 , 
@@ -24087,7 +24201,11 @@ x1
 x2
 ,Ñól_t* 
 x3
-,Ñól_t* 
+,
+
+333 
+ªÆ_t
+* 
 y1
 ,Ñól_t* 
 y2
@@ -24095,17 +24213,21 @@ y2
 y3
 ,
 
-331 
+334 
 ªÆ_t
 * 
 m©
+,Ñól_t* 
+ødii
+,Ñól_à*
+f‹˚_Ve˘‹
 )
 
-333 
+336 
 i
 ;
 
-334 
+337 
 SIMD_REG
  
 OOFP_R__
@@ -24115,13 +24237,13 @@ OOFP_R__
 OOFP_R
 );
 
-336 
+339 
 i
  = 0; i < 
 ¢
 ; i++) {
 
-337 
+340 
 SIMD_REG
  
 SX__
@@ -24133,7 +24255,7 @@ x1
 i
 ]);
 
-338 
+341 
 SIMD_REG
  
 SY__
@@ -24145,7 +24267,7 @@ x2
 i
 ]);
 
-339 
+342 
 SIMD_REG
  
 SZ__
@@ -24157,11 +24279,11 @@ x3
 i
 ]);
 
-340 
+343 
 j
 ;
 
-341 
+344 
 j
  = 0; (j+
 SIMD_LEN
@@ -24169,7 +24291,7 @@ SIMD_LEN
 ä
 ; j+=SIMD_LEN) {
 
-342 
+345 
 SIMD_REG
  
 TX1__
@@ -24185,7 +24307,7 @@ y1
 j
 ]));
 
-343 
+346 
 SIMD_REG
  
 TY1__
@@ -24201,7 +24323,7 @@ y2
 j
 ]));
 
-344 
+347 
 SIMD_REG
  
 TZ1__
@@ -24217,7 +24339,7 @@ y3
 j
 ]));
 
-345 
+348 
 SIMD_REG
  
 R__
@@ -24227,7 +24349,7 @@ R__
 TX1__
 , TX1__);
 
-346 
+349 
 R__
  = 
 	`SIMD_ADD
@@ -24237,7 +24359,7 @@ R__
 TY1__
 , TY1__));
 
-347 
+350 
 R__
  = 
 	`SIMD_ADD
@@ -24247,7 +24369,7 @@ R__
 TZ1__
 , TZ1__));
 
-348 
+351 
 SIMD_REG
  
 TEMP__
@@ -24259,13 +24381,13 @@ R__
 SIMD_ZERO
 );
 
-349 #i‡!
+352 #i‡!
 	`deföed
  (
 USE_FLOAT
 )
 
-350 
+353 
 SIMD_REG
  
 XHALF__
@@ -24277,13 +24399,13 @@ XHALF__
 R__
 );
 
-351 
+354 
 R__
  = 
 	`SIMD_INV_SQRT_S
  (R__);
 
-352 
+355 
 SIMD_REG
  
 RNR__
@@ -24293,7 +24415,7 @@ RNR__
 R__
 , R__);
 
-353 
+356 
 RNR__
  = 
 	`SIMD_MUL
@@ -24301,7 +24423,7 @@ RNR__
 XHALF__
 );
 
-354 
+357 
 RNR__
  = 
 	`SIMD_SUB
@@ -24309,7 +24431,7 @@ RNR__
 	`SIMD_SET1
  (1.5), RNR__);
 
-355 
+358 
 R__
  = 
 	`SIMD_MUL
@@ -24317,13 +24439,13 @@ R__
 RNR__
 , R__);
 
-357 
+360 
 R__
  = 
 	`SIMD_INV_SQRT
  (R__);
 
-360 
+363 
 R__
  = 
 	`SIMD_MUL
@@ -24331,7 +24453,7 @@ R__
 OOFP_R__
 );
 
-361 
+364 
 	`SIMD_STORE_U
  (&
 m©
@@ -24345,13 +24467,13 @@ j
 R__
 );
 
-364 ; 
+367 ; 
 j
  < 
 ä
 ; j++) {
 
-365 
+368 
 dx
 , 
 dy
@@ -24359,15 +24481,15 @@ dy
 dz
 ;
 
-366 
+369 
 dr2
 ;
 
-367 
+370 
 dr
 ;
 
-368 
+371 
 dx
  = 
 x1
@@ -24379,7 +24501,7 @@ y1
 j
 ];
 
-369 
+372 
 dy
  = 
 x2
@@ -24391,7 +24513,7 @@ y2
 j
 ];
 
-370 
+373 
 dz
  = 
 x3
@@ -24403,7 +24525,7 @@ y3
 j
 ];
 
-371 
+374 
 dr2
  = 
 dx
@@ -24413,13 +24535,13 @@ dy
 dz
 *dz;
 
-372 #i‡!
+375 #i‡!
 	`deföed
  (
 USE_FLOAT
 )
 
-373 
+376 
 dr
  = 
 	`sqπ
@@ -24427,7 +24549,7 @@ dr
 dr2
 );
 
-375 
+378 
 dr
  = 
 	`sqπf
@@ -24435,7 +24557,7 @@ dr
 dr2
 );
 
-378 
+381 
 m©
 [
 i
@@ -24449,11 +24571,11 @@ OOFP_R
 dr
 ;
 
-382 
+385 
 	}
 }
 
-387 
+390 
 	$compuã_f·_§c
  (
 AŒNodes
@@ -24465,43 +24587,43 @@ FFT_PLAN
 f‹∂™
 )
 
-389 
+392 
 i
  = 0;
 
-390 
+393 
 eff_size
 ;
 
-391 
+394 
 ¡hªads
-;
-
-392 
-ªÆ_t
-* 
-edí
-;
-
-393 
-ªÆ_t
-* 
-udí
-;
-
-394 
-ªÆ_t
-* 
-rdí
 ;
 
 395 
 ªÆ_t
 * 
-tdí
+edí
+;
+
+396 
+ªÆ_t
+* 
+udí
 ;
 
 397 
+ªÆ_t
+* 
+rdí
+;
+
+398 
+ªÆ_t
+* 
+tdí
+;
+
+400 
 ve˘‹
 <
 NodeTªe
@@ -24513,7 +24635,7 @@ AŒ_N
 N
 ;
 
-398 
+401 
 eff_size
  = 
 	`eff_d©a_size
@@ -24521,7 +24643,7 @@ eff_size
 UE
 );
 
-399 
+402 
 Pos
 * 
 SP
@@ -24529,7 +24651,7 @@ SP
 AŒ_N
 ->SP;
 
-400 
+403 
 Pos
 * 
 RP
@@ -24537,19 +24659,19 @@ RP
 AŒ_N
 ->RP;
 
-402 #¥agm®
+405 #¥agm®
 omp
  
 ∑øŒñ
 
 
-404 
+407 
 ¡hªads
  = 
 	`omp_gë_num_thªads
 ();
 
-406 
+409 
 ªÆ_t
 * 
 ªg_dí
@@ -24563,7 +24685,7 @@ n
 ¡hªads
 );
 
-407 
+410 
 ªÆ_t
 * 
 tmp_dí
@@ -24579,7 +24701,7 @@ n
 ¡hªads
 );
 
-409 i‡(
+412 i‡(
 nodeVec
 [
 i
@@ -24589,7 +24711,7 @@ i
 LET_SRCNODE
 ) {
 
-410 
+413 
 edí
  = &
 AŒ_N
@@ -24601,7 +24723,7 @@ i
 eff_size
 ];
 
-411 
+414 
 udí
  = &
 AŒ_N
@@ -24617,7 +24739,7 @@ UE
 SP
 )];
 
-412 
+415 
 	`∂nDí2EffDíöô
 (
 nodeVec
@@ -24635,7 +24757,7 @@ f‹∂™
 AŒ_N
 );
 
-415 #¥agm®
+418 #¥agm®
 omp
  
 ∑øŒñ
@@ -24655,7 +24777,7 @@ rdí
 tdí
 )
 
-416 
+419 
 i
  = 1; i<
 nodeVec
@@ -24663,13 +24785,13 @@ nodeVec
 	`size
 (); i++) {
 
-417 
+420 
 tid
  = 
 	`omp_gë_thªad_num
 ();
 
-418 i‡(
+421 i‡(
 nodeVec
 [
 i
@@ -24679,7 +24801,7 @@ i
 LET_SRCNODE
 ) {
 
-419 
+422 
 edí
  = &
 AŒ_N
@@ -24691,7 +24813,7 @@ i
 eff_size
 ];
 
-420 
+423 
 udí
  = &
 AŒ_N
@@ -24707,7 +24829,7 @@ UE
 SP
 )];
 
-421 
+424 
 rdí
  = &
 ªg_dí
@@ -24719,7 +24841,7 @@ RP
 n
 ];
 
-422 
+425 
 tdí
  = &
 tmp_dí
@@ -24733,7 +24855,7 @@ UE
 n
 ];
 
-423 
+426 
 	`∂nDí2EffDí
 (
 nodeVec
@@ -24755,11 +24877,11 @@ f‹∂™
 AŒ_N
 );
 
-428 
+431 
 	}
 }
 
-433 
+436 
 	$compuã_f·_å™s
  (
 AŒNodes
@@ -24771,15 +24893,15 @@ FFT_PLAN
 f‹∂™
 )
 
-435 
+438 
 §cDOF
 ;
 
-436 
+439 
 ågDOF
 ;
 
-437 
+440 
 effNum
  = 
 	`eff_d©a_size
@@ -24787,13 +24909,13 @@ effNum
 UE
 );
 
-438 
+441 
 ªÆ_t
  
 R
  = 1;
 
-439 
+442 
 Pos
 * 
 RP
@@ -24801,7 +24923,7 @@ RP
 AŒ_N
 ->RP;
 
-440 
+443 
 Tøns_m©rix
 * 
 TM
@@ -24809,15 +24931,15 @@ TM
 AŒ_N
 ->TM;
 
-441 
+444 
 §cDOF
  = 1;
 
-442 
+445 
 ågDOF
  = 1;
 
-445 
+448 
 TM
 ->
 UE2DC
@@ -24827,7 +24949,7 @@ UE2DC
 	`mÆloc
  ((real_t*) * 7*7*7);
 
-447 #¥agm®
+450 #¥agm®
 omp
  
 ∑øŒñ
@@ -24835,19 +24957,19 @@ omp
 	`scheduÀ
 ()
 
-448 
+451 
 i1
 =-3; i1<=3; i1++)
 
-449 
+452 
 i2
 =-3; i2<=3; i2++)
 
-450 
+453 
 i3
 =-3; i3<=3; i3++)
 
-451 i‡(
+454 i‡(
 	`abs
 (
 i1
@@ -24857,11 +24979,11 @@ i2
 i3
 )>1 ) {
 
-453 
+456 
 idx
 ;
 
-454 
+457 
 idx
  = (
 i1
@@ -24871,25 +24993,25 @@ i2
 i3
 +3)*7*7;
 
-455 
+458 
 ªÆ_t
  
 díPosX
 [1];
 
-456 
+459 
 ªÆ_t
  
 díPosY
 [1];
 
-457 
+460 
 ªÆ_t
  
 díPosZ
 [1];
 
-458 
+461 
 díPosX
 [0] = (
 ªÆ_t
@@ -24899,7 +25021,7 @@ i1
 R
 ;
 
-459 
+462 
 díPosY
 [0] = (
 ªÆ_t
@@ -24909,7 +25031,7 @@ i2
 R
 ;
 
-460 
+463 
 díPosZ
 [0] = (
 ªÆ_t
@@ -24919,7 +25041,7 @@ i3
 R
 ;
 
-462 
+465 
 ªÆ_t
  
 chkPosX
@@ -24937,7 +25059,7 @@ R
 x
 , chkPosX) ;
 
-463 
+466 
 ªÆ_t
  
 chkPosY
@@ -24955,7 +25077,7 @@ R
 y
 , chkPosY) ;
 
-464 
+467 
 ªÆ_t
  
 chkPosZ
@@ -24973,7 +25095,7 @@ R
 z
 , chkPosZ) ;
 
-465 
+468 
 ªÆ_t
 * 
 â
@@ -24989,7 +25111,7 @@ n
 §cDOF
 );
 
-466 
+469 
 	`kî√l
 (1, 
 RP
@@ -25011,7 +25133,7 @@ chkPosZ
 â
 );
 
-469 
+472 
 ªÆ_t
 * 
 tmp
@@ -25027,7 +25149,7 @@ n
 §cDOF
 );
 
-470 
+473 
 k
 =0; k<
 RP
@@ -25035,7 +25157,7 @@ RP
 n
 ;k++) {
 
-471 
+474 
 tmp
 [
 k
@@ -25043,7 +25165,7 @@ k
 â
 [k];
 
-473 
+476 
 ªÆ_t
  *
 UpwEqu2DwnChkii
@@ -25057,7 +25179,7 @@ UpwEqu2DwnChkii
 effNum
 );
 
-474 
+477 
 	`FFT_RE_EXECUTE
 (
 f‹∂™
@@ -25069,7 +25191,7 @@ FFT_COMPLEX
 UpwEqu2DwnChkii
 ));
 
-475 
+478 
 TM
 ->
 UE2DC
@@ -25079,11 +25201,11 @@ idx
 UpwEqu2DwnChkii
 ;
 
-478 
+481 
 	}
 }
 
-483 
+486 
 	$compuã_if·_åg
  (
 AŒNodes
@@ -25091,47 +25213,47 @@ AŒNodes
 AŒ_N
 )
 
-485 
+488 
 i
  = 0;
 
-486 
+489 
 öv£t
  = 0;
 
-487 
+490 
 eff_size
 ;
 
-488 
+491 
 ¡hªads
 ;
 
-489 
+492 
 ªÆ_t
  *
 evÆ
 ;
 
-490 
+493 
 ªÆ_t
  *
 tvÆ
 ;
 
-491 
+494 
 ªÆ_t
  *
 rvÆ
 ;
 
-492 
+495 
 FFT_PLAN
  
 öv∂™
 ;
 
-493 
+496 
 ve˘‹
 <
 NodeTªe
@@ -25143,7 +25265,7 @@ AŒ_N
 N
 ;
 
-494 
+497 
 Pos
 * 
 SP
@@ -25151,7 +25273,7 @@ SP
 AŒ_N
 ->SP;
 
-495 
+498 
 Pos
 * 
 RP
@@ -25159,7 +25281,7 @@ RP
 AŒ_N
 ->RP;
 
-497 
+500 
 eff_size
  = 
 	`eff_d©a_size
@@ -25167,11 +25289,11 @@ eff_size
 DC
 );
 
-498 
+501 
 öv£t
  == 0) {
 
-499 if–
+502 if–
 nodeVec
 [
 i
@@ -25185,7 +25307,7 @@ Vnodes
 	`size
 ()>0) {
 
-500 
+503 
 tvÆ
  = &
 AŒ_N
@@ -25201,7 +25323,7 @@ DC
 SP
 )];
 
-501 
+504 
 evÆ
  = &
 AŒ_N
@@ -25213,7 +25335,7 @@ i
 eff_size
 ];
 
-502 
+505 
 ªÆ_t
  
 ƒmfc
@@ -25225,13 +25347,13 @@ RP
 n
 );
 
-503 
+506 
 k
 =0; k<
 eff_size
 ; k++)
 
-504 
+507 
 evÆ
 [
 k
@@ -25239,7 +25361,7 @@ k
 ƒmfc
 ;
 
-505 
+508 
 	`effVÆ2P VÆöô
 (
 nodeVec
@@ -25257,27 +25379,27 @@ tvÆ
 AŒ_N
 );
 
-506 
+509 
 öv£t
  = 1;
 
-508 
+511 
 i
 ++;
 
-511 #¥agm®
+514 #¥agm®
 omp
  
 ∑øŒñ
 
 
-513 
+516 
 ¡hªads
  = 
 	`omp_gë_num_thªads
 ();
 
-515 
+518 
 ªÆ_t
 * 
 ªg_vÆ
@@ -25291,7 +25413,7 @@ n
 ¡hªads
 );
 
-517 #¥agm®
+520 #¥agm®
 omp
  
 ∑øŒñ
@@ -25307,7 +25429,7 @@ evÆ
 rvÆ
 )
 
-518 
+521 
 j
 =
 i
@@ -25317,13 +25439,13 @@ nodeVec
 	`size
 (); j++) {
 
-519 
+522 
 tid
  = 
 	`omp_gë_thªad_num
 ();
 
-520 if–
+523 if–
 nodeVec
 [
 j
@@ -25337,7 +25459,7 @@ Vnodes
 	`size
 ()>0) {
 
-521 
+524 
 tvÆ
  = &
 AŒ_N
@@ -25353,7 +25475,7 @@ DC
 SP
 )];
 
-522 
+525 
 evÆ
  = &
 AŒ_N
@@ -25365,7 +25487,7 @@ j
 eff_size
 ];
 
-523 
+526 
 rvÆ
  = &
 ªg_vÆ
@@ -25377,7 +25499,7 @@ RP
 n
 ];
 
-524 
+527 
 ªÆ_t
  
 ƒmfc
@@ -25389,13 +25511,13 @@ RP
 n
 );
 
-525 
+528 
 k
 =0; k<
 eff_size
 ; k++)
 
-526 
+529 
 evÆ
 [
 k
@@ -25403,7 +25525,7 @@ k
 ƒmfc
 ;
 
-527 
+530 
 	`effVÆ2P VÆ
 (
 nodeVec
@@ -25423,17 +25545,17 @@ rvÆ
 AŒ_N
 );
 
-531 
+534 
 	`FFT_DESTROY
 (
 öv∂™
 );
 
-533 
+536 
 	}
 }
 
-538 
+541 
 	$vli°_ˇlc__˝u
  (
 FMMWøµî_t
@@ -25441,7 +25563,7 @@ FMMWøµî_t
 F
 )
 
-540 
+543 
 AŒNodes
  *
 AŒ_N
@@ -25451,53 +25573,53 @@ F
 AN
 ;
 
-541 i‡(
+544 i‡(
 AŒ_N
 ) {
 
-542 
+545 
 eff_§c_size
 ;
 
-543 
+546 
 eff_åg_size
 ;
 
-544 
+547 
 effNum
 ;
 
-545 
+548 
 dim
  = 3;
 
-546 
+549 
 §cDOF
  = 1;
 
-547 
+550 
 ågDOF
  = 1;
 
-548 
+551 
 ªÆ_t
  *
 edí
 ;
 
-549 
+552 
 ªÆ_t
  *
 evÆ
 ;
 
-550 
+553 
 ªÆ_t
  *
 UpwEqu2DwnChkii
 ;
 
-551 
+554 
 ve˘‹
 <
 NodeTªe
@@ -25509,7 +25631,7 @@ AŒ_N
 N
 ;
 
-552 
+555 
 Pos
 * 
 SP
@@ -25517,7 +25639,7 @@ SP
 AŒ_N
 ->SP;
 
-553 
+556 
 Pos
 * 
 RP
@@ -25525,7 +25647,7 @@ RP
 AŒ_N
 ->RP;
 
-554 
+557 
 Tøns_m©rix
 * 
 TM
@@ -25533,7 +25655,7 @@ TM
 AŒ_N
 ->TM;
 
-555 * 
+558 * 
 Ti
  = 
 AŒ_N
@@ -25541,13 +25663,13 @@ AŒ_N
 Tv
 ;
 
-557 
+560 
 FFT_PLAN
  
 f‹∂™
 ;
 
-559 
+562 
 	`compuã_f·_§c
  (
 AŒ_N
@@ -25555,7 +25677,7 @@ AŒ_N
 f‹∂™
 );
 
-560 
+563 
 	`compuã_f·_å™s
  (
 AŒ_N
@@ -25563,7 +25685,7 @@ AŒ_N
 f‹∂™
 );
 
-563 
+566 
 eff_åg_size
  = 
 	`eff_d©a_size
@@ -25571,7 +25693,7 @@ eff_åg_size
 DC
 );
 
-564 
+567 
 eff_§c_size
  = 
 	`eff_d©a_size
@@ -25579,13 +25701,13 @@ eff_§c_size
 UE
 );
 
-565 
+568 
 effNum
  = 
 eff_§c_size
 ;
 
-567 #¥agm®
+570 #¥agm®
 omp
  
 ∑øŒñ
@@ -25599,7 +25721,7 @@ evÆ
 UpwEqu2DwnChkii
 )
 
-569 
+572 
 i
 , 
 j
@@ -25607,23 +25729,23 @@ j
 b
 ;
 
-570 
+573 
 °_blk
 , 
 íd_blk
 ;
 
-571 
+574 
 bs
  = 
 	`gëív__block_size
  ();
 
-572 
+575 
 å™s_vec_cou¡
  = 7*7*7;
 
-573 
+576 
 nb
  = 
 å™s_vec_cou¡
@@ -25631,19 +25753,19 @@ nb
 bs
 ;
 
-574 
+577 
 tid
  = 
 	`omp_gë_thªad_num
 ();
 
-575 
+578 
 b
  = 0; b < 
 nb
 ; b++) {
 
-576 
+579 
 °_blk
  = 
 b
@@ -25651,7 +25773,7 @@ b
 bs
 ;
 
-577 
+580 
 íd_blk
  = (
 b
@@ -25663,7 +25785,7 @@ nb
 bs
 ;
 
-578 
+581 
 i
  = 
 Ti
@@ -25671,7 +25793,7 @@ Ti
 tid
 ]; i < Ti[tid+1]; i++) {
 
-579 if–
+582 if–
 nodeVec
 [
 i
@@ -25685,7 +25807,7 @@ Vnodes
 	`size
 ()>0) {
 
-580 
+583 
 evÆ
  = &
 AŒ_N
@@ -25697,7 +25819,7 @@ i
 eff_åg_size
 ];
 
-581 
+584 
 Poöt3
  
 	`gNodeIdxCå
@@ -25709,7 +25831,7 @@ i
 nodeVec
 ));
 
-582 
+585 
 ªÆ_t
  
 D
@@ -25721,7 +25843,7 @@ i
 nodeVec
 );
 
-583 
+586 
 j
  = 0; j < 
 nodeVec
@@ -25733,7 +25855,7 @@ Vnodes
 	`size
 (); j++) {
 
-584 
+587 
 §c
  = 
 nodeVec
@@ -25745,7 +25867,7 @@ Vnodes
 j
 ];
 
-585 
+588 
 Poöt3
  
 	`viCå
@@ -25757,19 +25879,19 @@ Poöt3
 nodeVec
 ));
 
-586 
+589 
 Index3
  
 idx
 ;
 
-587 
+590 
 d
 =0; d<
 dim
 ; d++) {
 
-588 
+591 
 	`idx
 (
 d
@@ -25783,7 +25905,7 @@ gNodeIdxCå
 D
  ));
 
-590 
+593 
 edí
  = &
 AŒ_N
@@ -25795,13 +25917,13 @@ eff_dí
 eff_§c_size
 ];
 
-592 
+595 
 id
  = (
 	`idx
 (0)+3) + (idx(1)+3)*7 + (idx(2)+3)*7*7;
 
-593 
+596 
 UpwEqu2DwnChkii
  = 
 TM
@@ -25811,7 +25933,7 @@ UE2DC
 id
 ];
 
-594 i‡(
+597 i‡(
 id
  >
 °_blk
@@ -25819,7 +25941,7 @@ id
 íd_blk
 ) {
 
-595 
+598 
 ªÆ_t
  
 ƒmfc
@@ -25831,7 +25953,7 @@ RP
 n
 );
 
-596 
+599 
 FFT_COMPLEX
 * 
 m©På
@@ -25839,7 +25961,7 @@ m©På
 UpwEqu2DwnChkii
 );
 
-597 
+600 
 FFT_COMPLEX
 * 
 díPå
@@ -25847,7 +25969,7 @@ díPå
 edí
 );
 
-598 
+601 
 FFT_COMPLEX
 * 
 chkPå
@@ -25855,7 +25977,7 @@ chkPå
 evÆ
 );
 
-599 
+602 
 m©Sç
  = 
 §cDOF
@@ -25863,19 +25985,19 @@ m©Sç
 ågDOF
 ;
 
-600 
+603 
 díSç
  = 
 §cDOF
 ;
 
-601 
+604 
 chkSç
  = 
 ågDOF
 ;
 
-603 
+606 
 ªÆ_t
  
 √wÆpha
@@ -25883,19 +26005,19 @@ chkSç
 ƒmfc
 ;
 
-604 
+607 
 i
 =0; i<
 ågDOF
 ; i++)
 
-605 
+608 
 k
 =0; k<
 §cDOF
 ; k++) {
 
-606 
+609 
 m©Off
  = 
 k
@@ -25905,19 +26027,19 @@ k
 i
 ;
 
-607 
+610 
 díOff
  = 
 k
 ;
 
-608 
+611 
 chkOff
  = 
 i
 ;
 
-609 
+612 
 	`poötwi£_mu…
  (
 effNum
@@ -25941,17 +26063,17 @@ chkOff
 chkSç
 );
 
-618 
+621 
 	`compuã_if·_åg
  (
 AŒ_N
 );
 
-621 
+624 
 	}
 }
 
-628 
+631 
 	$poötwi£_mu…
  (
 n
@@ -25971,11 +26093,11 @@ z
 iz
 )
 
-630 
+633 
 i
 ;
 
-631 
+634 
 SIMD_REG
  
 tmp
@@ -25983,7 +26105,7 @@ tmp
 SIMD_SET_1
 ;
 
-632 
+635 
 i
  = 0; i + 
 SIMD_LEN
@@ -25991,7 +26113,7 @@ SIMD_LEN
 n
  * 2); i+=SIMD_LEN) {
 
-633 
+636 
 SIMD_REG
  
 Z
@@ -26003,7 +26125,7 @@ z
 i
 ]);
 
-634 
+637 
 SIMD_REG
  
 X
@@ -26015,7 +26137,7 @@ x
 i
 ]);
 
-635 
+638 
 SIMD_REG
  
 Y
@@ -26027,7 +26149,7 @@ y
 i
 ]);
 
-637 
+640 
 SIMD_REG
  
 x0
@@ -26039,7 +26161,7 @@ X
 SHUFFLE_0
 );
 
-638 
+641 
 SIMD_REG
  
 p0
@@ -26051,7 +26173,7 @@ x0
 Y
 );
 
-639 
+642 
 Z
  = 
 	`SIMD_ADD
@@ -26059,7 +26181,7 @@ Z
 p0
 );
 
-641 
+644 
 x0
  = 
 	`SIMD_SHUFFLE
@@ -26069,7 +26191,7 @@ X
 SHUFFLE_1
 );
 
-642 
+645 
 SIMD_REG
  
 y0
@@ -26081,7 +26203,7 @@ Y
 SHUFFLE_2
 );
 
-643 
+646 
 p0
  = 
 	`SIMD_MUL
@@ -26091,7 +26213,7 @@ x0
 y0
 );
 
-644 
+647 
 p0
  = 
 	`SIMD_MUL
@@ -26099,7 +26221,7 @@ p0
 tmp
 );
 
-645 
+648 
 Z
  = 
 	`SIMD_ADD
@@ -26107,7 +26229,7 @@ Z
 p0
 );
 
-647 
+650 
 	`SIMD_STORE
  (&(*
 z
@@ -26117,13 +26239,13 @@ i
 Z
 );
 
-650 ; 
+653 ; 
 i
  < (
 n
  * 2); i+=2) {
 
-651 (*
+654 (*
 z
 )[0] +–(*
 x
@@ -26131,7 +26253,7 @@ x
 y
 )[0] - (*x)[1] * (*y)[1]);
 
-652 (*
+655 (*
 z
 )[1] +–(*
 x
@@ -26139,23 +26261,23 @@ x
 y
 )[1] + (*x)[1] * (*y)[0]);
 
-653 
+656 
 x
  = x + 1;
 
-654 
+657 
 y
  = y + 1;
 
-655 
+658 
 z
  = z + 1;
 
-658 
+661 
 	}
 }
 
-664 
+667 
 	$wli°_ˇlc__˝u
  (
 FMMWøµî_t
@@ -26163,23 +26285,23 @@ FMMWøµî_t
 F
 )
 
-666 
+669 
 §cDOF
  = 1;
 
-667 
+670 
 ªÆ_t
  
 r
 ;
 
-668 
+671 
 Poöt3
  
 c
 ;
 
-669 
+672 
 AŒNodes
  *
 AŒ_N
@@ -26189,7 +26311,7 @@ F
 AN
 ;
 
-670 
+673 
 Pos
 * 
 SP
@@ -26197,7 +26319,7 @@ SP
 AŒ_N
 ->SP;
 
-671 
+674 
 ve˘‹
 <
 NodeTªe
@@ -26209,13 +26331,13 @@ AŒ_N
 N
 ;
 
-673 
+676 
 ¡hªads
  = 
 	`gë_num_thªads
 ();
 
-674 
+677 
 Node
 * 
 ¶_pos
@@ -26223,13 +26345,13 @@ Node
 ¡hªads
 ];
 
-675 
+678 
 i
  = 0; i < 
 ¡hªads
 ; i++) {
 
-676 
+679 
 ¶_pos
 [
 i
@@ -26241,7 +26363,7 @@ Node
 IDEAL_ALIGNMENT
 );
 
-678 
+681 
 ¶_pos
 [
 i
@@ -26259,7 +26381,7 @@ UE
 n
 );
 
-679 
+682 
 ¶_pos
 [
 i
@@ -26277,7 +26399,7 @@ UE
 n
 );
 
-680 
+683 
 ¶_pos
 [
 i
@@ -26295,7 +26417,7 @@ UE
 n
 );
 
-681 
+684 
 ¶_pos
 [
 i
@@ -26309,7 +26431,7 @@ UE
 n
 ;
 
-683 #¥agm®
+686 #¥agm®
 omp
  
 ∑øŒñ
@@ -26325,7 +26447,7 @@ c
 r
 )
 
-684 
+687 
 i
  = 0; i < 
 nodeVec
@@ -26333,7 +26455,7 @@ nodeVec
 	`size
 (); i++) {
 
-685 if–
+688 if–
 nodeVec
 [
 i
@@ -26343,7 +26465,7 @@ i
 LET_TRGNODE
 ) {
 
-686 if–
+689 if–
 nodeVec
 [
 i
@@ -26351,7 +26473,7 @@ i
 chûd
  == -1) {
 
-687 
+690 
 j
  = 0; j < 
 nodeVec
@@ -26363,7 +26485,7 @@ Wnodes
 	`size
 (); j++) {
 
-688 
+691 
 §c
  = 
 nodeVec
@@ -26375,7 +26497,7 @@ Wnodes
 j
 ];
 
-689 if(
+692 if(
 nodeVec
 [
 §c
@@ -26393,7 +26515,7 @@ UE
 SP
 )) {
 
-691 
+694 
 	`uli°__dúe˘_evÆu©i⁄
  (
 AŒ_N
@@ -26407,7 +26529,7 @@ Ns
 §c
 ]);
 
-695 
+698 
 c
  = 
 	`˚¡î
@@ -26417,7 +26539,7 @@ c
 nodeVec
 );
 
-696 
+699 
 r
  = 
 	`ødius
@@ -26427,13 +26549,13 @@ r
 nodeVec
 );
 
-697 
+700 
 tid
  = 
 	`omp_gë_thªad_num
 ();
 
-698 
+701 
 	`compuã_loˇÕos
  (
 c
@@ -26449,7 +26571,7 @@ SP
 UE
 ]);
 
-699 
+702 
 ¶_pos
 [
 tid
@@ -26469,7 +26591,7 @@ UE
 SP
 )];
 
-700 
+703 
 	`uli°__dúe˘_evÆu©i⁄
  (
 AŒ_N
@@ -26483,11 +26605,11 @@ i
 tid
 ]);
 
-707 
+710 
 	}
 }
 
-713 
+716 
 	$xli°_ˇlc__˝u
  (
 FMMWøµî_t
@@ -26495,23 +26617,23 @@ FMMWøµî_t
 F
 )
 
-715 
+718 
 ågDOF
  = 1;
 
-716 
+719 
 Poöt3
  
 c
 ;
 
-717 
+720 
 ªÆ_t
  
 r
 ;
 
-718 
+721 
 AŒNodes
  *
 AŒ_N
@@ -26521,7 +26643,7 @@ F
 AN
 ;
 
-719 
+722 
 Pos
 * 
 SP
@@ -26529,7 +26651,7 @@ SP
 AŒ_N
 ->SP;
 
-720 
+723 
 ve˘‹
 <
 NodeTªe
@@ -26541,13 +26663,13 @@ AŒ_N
 N
 ;
 
-722 
+725 
 ¡hªads
  = 
 	`gë_num_thªads
  ();
 
-724 
+727 
 Node
 * 
 é_pos
@@ -26555,13 +26677,13 @@ Node
 ¡hªads
 ];
 
-725 
+728 
 i
  = 0; i < 
 ¡hªads
 ; i++) {
 
-726 
+729 
 é_pos
 [
 i
@@ -26573,7 +26695,7 @@ Node
 IDEAL_ALIGNMENT
 );
 
-728 
+731 
 é_pos
 [
 i
@@ -26591,7 +26713,7 @@ DC
 n
 );
 
-729 
+732 
 é_pos
 [
 i
@@ -26609,7 +26731,7 @@ DC
 n
 );
 
-730 
+733 
 é_pos
 [
 i
@@ -26627,7 +26749,7 @@ DC
 n
 );
 
-731 
+734 
 é_pos
 [
 i
@@ -26641,7 +26763,7 @@ DC
 n
 ;
 
-734 #¥agm®
+737 #¥agm®
 omp
  
 ∑øŒñ
@@ -26655,7 +26777,7 @@ c
 r
 )
 
-735 
+738 
 i
  = 0; i < 
 nodeVec
@@ -26663,7 +26785,7 @@ nodeVec
 	`size
 (); i++) {
 
-736 if–
+739 if–
 nodeVec
 [
 i
@@ -26673,7 +26795,7 @@ i
 LET_TRGNODE
 ) {
 
-737 
+740 
 j
  = 0; j < 
 nodeVec
@@ -26685,7 +26807,7 @@ Xnodes
 	`size
 (); j++) {
 
-738 
+741 
 §c
  = 
 nodeVec
@@ -26697,7 +26819,7 @@ Xnodes
 j
 ];
 
-739 if(
+742 if(
 nodeVec
 [
 i
@@ -26715,7 +26837,7 @@ DC
 SP
 )) {
 
-740 
+743 
 	`uli°__dúe˘_evÆu©i⁄
  (
 AŒ_N
@@ -26729,7 +26851,7 @@ Ns
 §c
 ]);
 
-744 
+747 
 c
  = 
 	`˚¡î
@@ -26739,7 +26861,7 @@ i
 nodeVec
 );
 
-745 
+748 
 r
  = 
 	`ødius
@@ -26749,13 +26871,13 @@ i
 nodeVec
 );
 
-746 
+749 
 tid
  = 
 	`omp_gë_thªad_num
 ();
 
-747 
+750 
 	`compuã_loˇÕos
  (
 c
@@ -26771,7 +26893,7 @@ SP
 DC
 ]);
 
-748 
+751 
 é_pos
 [
 tid
@@ -26791,7 +26913,7 @@ DC
 SP
 )];
 
-750 
+753 
 	`uli°__dúe˘_evÆu©i⁄
  (*
 é_pos
@@ -26805,11 +26927,11 @@ Ns
 §c
 ]);
 
-756 
+759 
 	}
 }
 
-762 
+765 
 	$down_ˇlc__˝u
  (
 FMMWøµî_t
@@ -26817,35 +26939,35 @@ FMMWøµî_t
 F
 )
 
-764 
+767 
 i
 ;
 
-765 
+768 
 ªÆ_t
  
 r
 ;
 
-766 
+769 
 Poöt3
  
 c
 ;
 
-767 
+770 
 ªÆ_t
  *
 tvÆ
 ;
 
-768 
+771 
 ªÆ_t
  *
 ddí
 ;
 
-769 
+772 
 AŒNodes
  *
 AŒ_N
@@ -26855,7 +26977,7 @@ F
 AN
 ;
 
-770 
+773 
 Pos
 * 
 SP
@@ -26863,7 +26985,7 @@ SP
 AŒ_N
 ->SP;
 
-771 
+774 
 Tøns_m©rix
 * 
 TM
@@ -26871,7 +26993,7 @@ TM
 AŒ_N
 ->TM;
 
-772 
+775 
 ve˘‹
 <
 NodeTªe
@@ -26883,7 +27005,7 @@ AŒ_N
 N
 ;
 
-773 
+776 
 ve˘‹
 <>& 
 nodeLevñ
@@ -26891,7 +27013,7 @@ nodeLevñ
 AŒ_N
 ->nodeLevel;
 
-776 
+779 
 	`compuã_DC2DE_m©
  (
 TM
@@ -26899,7 +27021,7 @@ TM
 SP
 );
 
-779 
+782 
 TM
 ->
 DE2DC
@@ -26909,19 +27031,19 @@ DE2DC
 	`mÆloc
  ((real_t*) * 2*2*2);
 
-781 
+784 
 a
 =0;á<2;á++) {
 
-782 
+785 
 b
 =0; b<2; b++) {
 
-783 
+786 
 c
 =0; c<2; c++) {
 
-784 
+787 
 Index3
  
 	`idx
@@ -26933,7 +27055,7 @@ b
 c
 );
 
-785 
+788 
 	`compuã_DE2DC_m©
  (
 idx
@@ -26943,13 +27065,13 @@ TM
 SP
 );
 
-790 
+793 
 ¡hªads
  = 
 	`gë_num_thªads
 ();
 
-791 
+794 
 Node
 * 
 ¶_pos
@@ -26957,13 +27079,13 @@ Node
 ¡hªads
 ];
 
-792 
+795 
 i
  = 0; i < 
 ¡hªads
 ; i++) {
 
-793 
+796 
 ¶_pos
 [
 i
@@ -26975,7 +27097,7 @@ Node
 IDEAL_ALIGNMENT
 );
 
-795 
+798 
 ¶_pos
 [
 i
@@ -26993,7 +27115,7 @@ DE
 n
 );
 
-796 
+799 
 ¶_pos
 [
 i
@@ -27011,7 +27133,7 @@ DE
 n
 );
 
-797 
+800 
 ¶_pos
 [
 i
@@ -27029,7 +27151,7 @@ DE
 n
 );
 
-798 
+801 
 ¶_pos
 [
 i
@@ -27043,7 +27165,7 @@ DE
 n
 ;
 
-802 
+805 
 j
  = 0; j < 
 nodeLevñ
@@ -27051,7 +27173,7 @@ nodeLevñ
 	`size
 ()-1; j++) {
 
-803 #¥agm®
+806 #¥agm®
 omp
  
 ∑øŒñ
@@ -27073,7 +27195,7 @@ tvÆ
 ddí
 )
 
-804 
+807 
 i
  = 
 nodeLevñ
@@ -27081,7 +27203,7 @@ nodeLevñ
 j
 ]; i <ÇodeLevel[j+1]; i++) {
 
-805 i‡(
+808 i‡(
 nodeVec
 [
 i
@@ -27091,7 +27213,7 @@ i
 LET_TRGNODE
 ) {
 
-806 i‡(
+809 i‡(
 nodeVec
 [
 i
@@ -27099,7 +27221,7 @@ i
 dïth
  >= 3) {
 
-807 
+810 
 ∑ª¡
  = 
 nodeVec
@@ -27107,7 +27229,7 @@ nodeVec
 i
 ].parent;
 
-808 
+811 
 Index3
  
 	`cidx
@@ -27121,7 +27243,7 @@ i
 ∑ª¡
 ].path2Node);
 
-810 
+813 
 tvÆ
  = &
 AŒ_N
@@ -27137,7 +27259,7 @@ DC
 SP
 )];
 
-811 
+814 
 ddí
  = &
 AŒ_N
@@ -27153,11 +27275,11 @@ DE
 SP
 )];
 
-812 
+815 
 §cDOF
  = 1;
 
-813 
+816 
 ªÆ_t
  *
 tmpDí
@@ -27173,7 +27295,7 @@ DE
 n
 );
 
-814 
+817 
 	`ªÆs_zîo
  (
 SP
@@ -27185,7 +27307,7 @@ n
 tmpDí
 );
 
-815 
+818 
 l
  = 
 nodeVec
@@ -27195,13 +27317,13 @@ nodeVec
 dïth
 ;
 
-816 
+819 
 ªÆ_t
  
 degVec
 [1]; degVec[0] = 1;
 
-817 
+820 
 ªÆ_t
  
 s˛vec
@@ -27209,13 +27331,13 @@ s˛vec
 §cDOF
 ];
 
-818 
+821 
 s
 =0; s<
 §cDOF
 ; s++)
 
-819 
+822 
 s˛vec
 [
 s
@@ -27227,11 +27349,11 @@ l
 degVec
 [s]);
 
-820 
+823 
 ˙t
  = 0;
 
-821 
+824 
 j
 =0; j < 
 SP
@@ -27241,13 +27363,13 @@ DE
 n
 ; j++)
 
-822 
+825 
 s
 =0; s < 
 §cDOF
 ; s++) {
 
-823 
+826 
 tmpDí
 [
 ˙t
@@ -27259,11 +27381,11 @@ s˛vec
 s
 ];
 
-824 
+827 
 ˙t
 ++;
 
-826 
+829 
 ªÆ_t
  *
 DE2DCii
@@ -27275,7 +27397,7 @@ DE2DC
 	`cidx
 (2)+cidx(1)*2+cidx(0)*2*2];
 
-827 
+830 
 	`dgemv
 (
 TM
@@ -27291,7 +27413,7 @@ tmpDí
 tvÆ
 );
 
-830 i‡(
+833 i‡(
 nodeVec
 [
 i
@@ -27299,7 +27421,7 @@ i
 dïth
  >= 2) {
 
-832 
+835 
 tvÆ
  = &
 AŒ_N
@@ -27315,7 +27437,7 @@ DC
 SP
 )];
 
-833 
+836 
 ddí
  = &
 AŒ_N
@@ -27331,11 +27453,11 @@ DE
 SP
 )];
 
-834 
+837 
 §cDOF
  = 1;
 
-835 
+838 
 ªÆ_t
  *
 tmpDí
@@ -27351,7 +27473,7 @@ DE
 n
 );
 
-836 
+839 
 	`ªÆs_zîo
  (
 SP
@@ -27363,7 +27485,7 @@ n
 tmpDí
 );
 
-837 
+840 
 	`dgemv
 (
 TM
@@ -27379,7 +27501,7 @@ tvÆ
 tmpDí
 );
 
-840 
+843 
 l
  = 
 nodeVec
@@ -27389,13 +27511,13 @@ i
 dïth
 ;
 
-841 
+844 
 ªÆ_t
  
 degVec
 [1]; degVec[0] = 1;
 
-842 
+845 
 ªÆ_t
  
 s˛vec
@@ -27403,13 +27525,13 @@ s˛vec
 §cDOF
 ];
 
-843 
+846 
 s
 =0; s<
 §cDOF
 ; s++)
 
-844 
+847 
 s˛vec
 [
 s
@@ -27421,11 +27543,11 @@ l
 degVec
 [s]);
 
-845 
+848 
 ˙t
  = 0;
 
-846 
+849 
 j
 =0; j < 
 SP
@@ -27435,13 +27557,13 @@ DE
 n
 ; j++)
 
-847 
+850 
 s
 =0; s < 
 §cDOF
 ; s++) {
 
-848 
+851 
 ddí
 [
 ˙t
@@ -27453,11 +27575,11 @@ s˛vec
 s
 ];
 
-849 
+852 
 ˙t
 ++;
 
-854 i‡(
+857 i‡(
 nodeVec
 [
 i
@@ -27465,7 +27587,7 @@ i
 chûd
  == -1) {
 
-856 
+859 
 c
  = 
 	`˚¡î
@@ -27475,7 +27597,7 @@ i
 nodeVec
 );
 
-857 
+860 
 r
  = 
 	`ødius
@@ -27485,13 +27607,13 @@ i
 nodeVec
 );
 
-858 
+861 
 tid
  = 
 	`omp_gë_thªad_num
 ();
 
-859 
+862 
 	`compuã_loˇÕos
  (
 c
@@ -27507,7 +27629,7 @@ SP
 DE
 ]);
 
-860 
+863 
 ¶_pos
 [
 tid
@@ -27527,7 +27649,7 @@ DE
 SP
 )];
 
-862 
+865 
 	`uli°__dúe˘_evÆu©i⁄
  (
 AŒ_N
@@ -27541,11 +27663,11 @@ i
 tid
 ]);
 
-868 
+871 
 	}
 }
 
-874 
+877 
 	$c›y_åg_vÆ__˝u
  (
 FMMWøµî_t
@@ -27553,11 +27675,11 @@ FMMWøµî_t
 F
 )
 
-876 
+879 
 i
 ;
 
-877 
+880 
 AŒNodes
  *
 AŒ_N
@@ -27567,7 +27689,7 @@ F
 AN
 ;
 
-878 
+881 
 ve˘‹
 <
 NodeTªe
@@ -27579,7 +27701,7 @@ AŒ_N
 N
 ;
 
-880 
+883 
 i
  = 0; i < 
 nodeVec
@@ -27587,7 +27709,7 @@ nodeVec
 	`size
 (); i++)
 
-881 if–
+884 if–
 nodeVec
 [
 i
@@ -27597,7 +27719,7 @@ i
 LET_TRGNODE
 )
 
-882 i‡(
+885 i‡(
 nodeVec
 [
 i
@@ -27605,7 +27727,7 @@ i
 chûd
  == -1) {
 
-883 
+886 
 	`£t_vÆue
  (
 nodeVec
@@ -27625,7 +27747,7 @@ dí_pŸ
 ågOwnVecIdxs
 );
 
-887 
+890 
 	}
 }
 
@@ -29256,7 +29378,7 @@ m©
 }
 
 281 
-	$kî√l
+	$mykî√l
  (
 ¢
 , 
@@ -29269,7 +29391,11 @@ x1
 x2
 ,Ñól_t* 
 x3
-,Ñól_t* 
+,
+
+282 
+ªÆ_t
+* 
 y1
 ,Ñól_t* 
 y2
@@ -29277,17 +29403,21 @@ y2
 y3
 ,
 
-282 
+283 
 ªÆ_t
 * 
 m©
+,Ñól_t* 
+ødii
+,Ñól_à*
+f‹˚_Ve˘‹
 )
 
-284 
+285 
 i
 ;
 
-285 
+286 
 SIMD_REG
  
 OOFP_R__
@@ -29297,13 +29427,13 @@ OOFP_R__
 OOFP_R
 );
 
-287 
+288 
 i
  = 0; i < 
 ¢
 ; i++) {
 
-288 
+289 
 SIMD_REG
  
 SX__
@@ -29315,7 +29445,7 @@ x1
 i
 ]);
 
-289 
+290 
 SIMD_REG
  
 SY__
@@ -29327,7 +29457,7 @@ x2
 i
 ]);
 
-290 
+291 
 SIMD_REG
  
 SZ__
@@ -29339,11 +29469,11 @@ x3
 i
 ]);
 
-291 
+292 
 j
 ;
 
-292 
+293 
 j
  = 0; (j+
 SIMD_LEN
@@ -29351,7 +29481,7 @@ SIMD_LEN
 ä
 ; j+=SIMD_LEN) {
 
-293 
+294 
 SIMD_REG
  
 TX1__
@@ -29367,7 +29497,7 @@ y1
 j
 ]));
 
-294 
+295 
 SIMD_REG
  
 TY1__
@@ -29383,7 +29513,7 @@ y2
 j
 ]));
 
-295 
+296 
 SIMD_REG
  
 TZ1__
@@ -29399,7 +29529,7 @@ y3
 j
 ]));
 
-296 
+297 
 SIMD_REG
  
 R__
@@ -29409,7 +29539,7 @@ R__
 TX1__
 , TX1__);
 
-297 
+298 
 R__
  = 
 	`SIMD_ADD
@@ -29419,7 +29549,7 @@ R__
 TY1__
 , TY1__));
 
-298 
+299 
 R__
  = 
 	`SIMD_ADD
@@ -29429,13 +29559,13 @@ R__
 TZ1__
 , TZ1__));
 
-299 #i‡!
+300 #i‡!
 	`deföed
  (
 USE_FLOAT
 )
 
-300 
+301 
 SIMD_REG
  
 XHALF__
@@ -29447,13 +29577,13 @@ XHALF__
 R__
 );
 
-301 
+302 
 R__
  = 
 	`SIMD_INV_SQRT_S
  (R__);
 
-302 
+303 
 SIMD_REG
  
 RNR__
@@ -29463,7 +29593,7 @@ RNR__
 R__
 , R__);
 
-303 
+304 
 RNR__
  = 
 	`SIMD_MUL
@@ -29471,7 +29601,7 @@ RNR__
 XHALF__
 );
 
-304 
+305 
 RNR__
  = 
 	`SIMD_SUB
@@ -29479,7 +29609,7 @@ RNR__
 	`SIMD_SET1
  (1.5), RNR__);
 
-305 
+306 
 R__
  = 
 	`SIMD_MUL
@@ -29487,13 +29617,13 @@ R__
 RNR__
 , R__);
 
-307 
+308 
 R__
  = 
 	`SIMD_INV_SQRT
  (R__);
 
-309 
+310 
 R__
  = 
 	`SIMD_MUL
@@ -29501,7 +29631,7 @@ R__
 OOFP_R__
 );
 
-310 
+311 
 	`SIMD_STORE_U
  (&
 m©
@@ -29515,13 +29645,13 @@ j
 R__
 );
 
-313 ; 
+314 ; 
 j
  < 
 ä
 ; j++) {
 
-314 
+315 
 dx
 , 
 dy
@@ -29529,15 +29659,15 @@ dy
 dz
 ;
 
-315 
+316 
 dr2
 ;
 
-316 
+317 
 dr
 ;
 
-317 
+318 
 dx
  = 
 x1
@@ -29549,7 +29679,7 @@ y1
 j
 ];
 
-318 
+319 
 dy
  = 
 x2
@@ -29561,7 +29691,7 @@ y2
 j
 ];
 
-319 
+320 
 dz
  = 
 x3
@@ -29573,7 +29703,7 @@ y3
 j
 ];
 
-320 
+321 
 dr2
  = 
 dx
@@ -29583,13 +29713,13 @@ dy
 dz
 *dz;
 
-321 #i‡!
+322 #i‡!
 	`deföed
  (
 USE_FLOAT
 )
 
-322 
+323 
 dr
  = 
 	`sqπ
@@ -29597,7 +29727,7 @@ dr
 dr2
 );
 
-324 
+325 
 dr
  = 
 	`sqπf
@@ -29605,7 +29735,7 @@ dr
 dr2
 );
 
-326 
+327 
 m©
 [
 i
@@ -29619,11 +29749,11 @@ OOFP_R
 dr
 ;
 
-330 
+331 
 	}
 }
 
-335 
+336 
 	$compuã_f·_§c
  (
 AŒNodes
@@ -29635,43 +29765,43 @@ FFT_PLAN
 f‹∂™
 )
 
-337 
+338 
 i
  = 0;
 
-338 
+339 
 eff_size
 ;
 
-339 
+340 
 ¡hªads
-;
-
-340 
-ªÆ_t
-* 
-edí
 ;
 
 341 
 ªÆ_t
 * 
-udí
+edí
 ;
 
 342 
 ªÆ_t
 * 
-rdí
+udí
 ;
 
 343 
 ªÆ_t
 * 
+rdí
+;
+
+344 
+ªÆ_t
+* 
 tdí
 ;
 
-345 
+346 
 ve˘‹
 <
 NodeTªe
@@ -29683,7 +29813,7 @@ AŒ_N
 N
 ;
 
-346 
+347 
 eff_size
  = 
 	`eff_d©a_size
@@ -29691,7 +29821,7 @@ eff_size
 UE
 );
 
-347 
+348 
 Pos
 * 
 SP
@@ -29699,7 +29829,7 @@ SP
 AŒ_N
 ->SP;
 
-348 
+349 
 Pos
 * 
 RP
@@ -29707,19 +29837,19 @@ RP
 AŒ_N
 ->RP;
 
-350 #¥agm®
+351 #¥agm®
 omp
  
 ∑øŒñ
 
 
-352 
+353 
 ¡hªads
  = 
 	`omp_gë_num_thªads
 ();
 
-354 
+355 
 ªÆ_t
 * 
 ªg_dí
@@ -29733,7 +29863,7 @@ n
 ¡hªads
 );
 
-355 
+356 
 ªÆ_t
 * 
 tmp_dí
@@ -29749,7 +29879,7 @@ n
 ¡hªads
 );
 
-357 i‡(
+358 i‡(
 nodeVec
 [
 i
@@ -29759,7 +29889,7 @@ i
 LET_SRCNODE
 ) {
 
-358 
+359 
 edí
  = &
 AŒ_N
@@ -29771,7 +29901,7 @@ i
 eff_size
 ];
 
-359 
+360 
 udí
  = &
 AŒ_N
@@ -29787,7 +29917,7 @@ UE
 SP
 )];
 
-360 
+361 
 	`∂nDí2EffDíöô
 (
 nodeVec
@@ -29805,7 +29935,7 @@ f‹∂™
 AŒ_N
 );
 
-364 #¥agm®
+365 #¥agm®
 omp
  
 ∑øŒñ
@@ -29825,7 +29955,7 @@ rdí
 tdí
 )
 
-365 
+366 
 i
  = 1; i<
 nodeVec
@@ -29833,13 +29963,13 @@ nodeVec
 	`size
 (); i++) {
 
-366 
+367 
 tid
  = 
 	`omp_gë_thªad_num
 ();
 
-367 i‡(
+368 i‡(
 nodeVec
 [
 i
@@ -29849,7 +29979,7 @@ i
 LET_SRCNODE
 ) {
 
-368 
+369 
 edí
  = &
 AŒ_N
@@ -29861,7 +29991,7 @@ i
 eff_size
 ];
 
-369 
+370 
 udí
  = &
 AŒ_N
@@ -29877,7 +30007,7 @@ UE
 SP
 )];
 
-370 
+371 
 rdí
  = &
 ªg_dí
@@ -29889,7 +30019,7 @@ RP
 n
 ];
 
-371 
+372 
 tdí
  = &
 tmp_dí
@@ -29903,7 +30033,7 @@ UE
 n
 ];
 
-372 
+373 
 	`∂nDí2EffDí
 (
 nodeVec
@@ -29925,11 +30055,11 @@ f‹∂™
 AŒ_N
 );
 
-377 
+378 
 	}
 }
 
-382 
+383 
 	$compuã_f·_å™s
  (
 AŒNodes
@@ -29941,15 +30071,15 @@ FFT_PLAN
 f‹∂™
 )
 
-384 
+385 
 §cDOF
 ;
 
-385 
+386 
 ågDOF
 ;
 
-386 
+387 
 effNum
  = 
 	`eff_d©a_size
@@ -29957,13 +30087,13 @@ effNum
 UE
 );
 
-387 
+388 
 ªÆ_t
  
 R
  = 1;
 
-388 
+389 
 Pos
 * 
 RP
@@ -29971,7 +30101,7 @@ RP
 AŒ_N
 ->RP;
 
-389 
+390 
 Tøns_m©rix
 * 
 TM
@@ -29979,15 +30109,15 @@ TM
 AŒ_N
 ->TM;
 
-390 
+391 
 §cDOF
  = 1;
 
-391 
+392 
 ågDOF
  = 1;
 
-394 
+395 
 TM
 ->
 UE2DC
@@ -29997,7 +30127,7 @@ UE2DC
 	`mÆloc
  ((real_t*) * 7*7*7);
 
-396 #¥agm®
+397 #¥agm®
 omp
  
 ∑øŒñ
@@ -30005,19 +30135,19 @@ omp
 	`scheduÀ
 ()
 
-397 
+398 
 i1
 =-3; i1<=3; i1++)
 
-398 
+399 
 i2
 =-3; i2<=3; i2++)
 
-399 
+400 
 i3
 =-3; i3<=3; i3++)
 
-400 i‡(
+401 i‡(
 	`abs
 (
 i1
@@ -30027,11 +30157,11 @@ i2
 i3
 )>1 ) {
 
-402 
+403 
 idx
 ;
 
-403 
+404 
 idx
  = (
 i1
@@ -30041,25 +30171,25 @@ i2
 i3
 +3)*7*7;
 
-404 
+405 
 ªÆ_t
  
 díPosX
 [1];
 
-405 
+406 
 ªÆ_t
  
 díPosY
 [1];
 
-406 
+407 
 ªÆ_t
  
 díPosZ
 [1];
 
-407 
+408 
 díPosX
 [0] = (
 ªÆ_t
@@ -30069,7 +30199,7 @@ i1
 R
 ;
 
-408 
+409 
 díPosY
 [0] = (
 ªÆ_t
@@ -30079,7 +30209,7 @@ i2
 R
 ;
 
-409 
+410 
 díPosZ
 [0] = (
 ªÆ_t
@@ -30089,7 +30219,7 @@ i3
 R
 ;
 
-411 
+412 
 ªÆ_t
  
 chkPosX
@@ -30107,7 +30237,7 @@ R
 x
 , chkPosX) ;
 
-412 
+413 
 ªÆ_t
  
 chkPosY
@@ -30125,7 +30255,7 @@ R
 y
 , chkPosY) ;
 
-413 
+414 
 ªÆ_t
  
 chkPosZ
@@ -30143,7 +30273,7 @@ R
 z
 , chkPosZ) ;
 
-414 
+415 
 ªÆ_t
 * 
 â
@@ -30159,7 +30289,7 @@ n
 §cDOF
 );
 
-415 
+416 
 	`kî√l
 (1, 
 RP
@@ -30181,7 +30311,7 @@ chkPosZ
 â
 );
 
-418 
+419 
 ªÆ_t
 * 
 tmp
@@ -30197,7 +30327,7 @@ n
 §cDOF
 );
 
-419 
+420 
 k
 =0; k<
 RP
@@ -30205,7 +30335,7 @@ RP
 n
 ;k++) {
 
-420 
+421 
 tmp
 [
 k
@@ -30213,7 +30343,7 @@ k
 â
 [k];
 
-422 
+423 
 ªÆ_t
  *
 UpwEqu2DwnChkii
@@ -30227,7 +30357,7 @@ UpwEqu2DwnChkii
 effNum
 );
 
-423 
+424 
 	`FFT_RE_EXECUTE
 (
 f‹∂™
@@ -30239,7 +30369,7 @@ FFT_COMPLEX
 UpwEqu2DwnChkii
 ));
 
-424 
+425 
 TM
 ->
 UE2DC
@@ -30249,11 +30379,11 @@ idx
 UpwEqu2DwnChkii
 ;
 
-427 
+428 
 	}
 }
 
-432 
+433 
 	$compuã_if·_åg
  (
 AŒNodes
@@ -30261,47 +30391,47 @@ AŒNodes
 AŒ_N
 )
 
-434 
+435 
 i
  = 0;
 
-435 
+436 
 öv£t
  = 0;
 
-436 
+437 
 eff_size
 ;
 
-437 
+438 
 ¡hªads
-;
-
-438 
-ªÆ_t
- *
-evÆ
 ;
 
 439 
 ªÆ_t
  *
-tvÆ
+evÆ
 ;
 
 440 
 ªÆ_t
  *
-rvÆ
+tvÆ
 ;
 
 441 
+ªÆ_t
+ *
+rvÆ
+;
+
+442 
 FFT_PLAN
  
 öv∂™
 ;
 
-442 
+443 
 ve˘‹
 <
 NodeTªe
@@ -30313,7 +30443,7 @@ AŒ_N
 N
 ;
 
-443 
+444 
 Pos
 * 
 SP
@@ -30321,7 +30451,7 @@ SP
 AŒ_N
 ->SP;
 
-444 
+445 
 Pos
 * 
 RP
@@ -30329,7 +30459,7 @@ RP
 AŒ_N
 ->RP;
 
-446 
+447 
 eff_size
  = 
 	`eff_d©a_size
@@ -30337,11 +30467,11 @@ eff_size
 DC
 );
 
-447 
+448 
 öv£t
  == 0) {
 
-448 if–
+449 if–
 nodeVec
 [
 i
@@ -30355,7 +30485,7 @@ Vnodes
 	`size
 ()>0) {
 
-449 
+450 
 tvÆ
  = &
 AŒ_N
@@ -30371,7 +30501,7 @@ DC
 SP
 )];
 
-450 
+451 
 evÆ
  = &
 AŒ_N
@@ -30383,7 +30513,7 @@ i
 eff_size
 ];
 
-451 
+452 
 ªÆ_t
  
 ƒmfc
@@ -30395,13 +30525,13 @@ RP
 n
 );
 
-452 
+453 
 k
 =0; k<
 eff_size
 ; k++)
 
-453 
+454 
 evÆ
 [
 k
@@ -30409,7 +30539,7 @@ k
 ƒmfc
 ;
 
-454 
+455 
 	`effVÆ2P VÆöô
 (
 nodeVec
@@ -30427,27 +30557,27 @@ tvÆ
 AŒ_N
 );
 
-455 
+456 
 öv£t
  = 1;
 
-457 
+458 
 i
 ++;
 
-460 #¥agm®
+461 #¥agm®
 omp
  
 ∑øŒñ
 
 
-462 
+463 
 ¡hªads
  = 
 	`omp_gë_num_thªads
 ();
 
-464 
+465 
 ªÆ_t
 * 
 ªg_vÆ
@@ -30461,7 +30591,7 @@ n
 ¡hªads
 );
 
-466 #¥agm®
+467 #¥agm®
 omp
  
 ∑øŒñ
@@ -30477,7 +30607,7 @@ evÆ
 rvÆ
 )
 
-467 
+468 
 j
 =
 i
@@ -30487,13 +30617,13 @@ nodeVec
 	`size
 (); j++) {
 
-468 
+469 
 tid
  = 
 	`omp_gë_thªad_num
 ();
 
-469 if–
+470 if–
 nodeVec
 [
 j
@@ -30507,7 +30637,7 @@ Vnodes
 	`size
 ()>0) {
 
-470 
+471 
 tvÆ
  = &
 AŒ_N
@@ -30523,7 +30653,7 @@ DC
 SP
 )];
 
-471 
+472 
 evÆ
  = &
 AŒ_N
@@ -30535,7 +30665,7 @@ j
 eff_size
 ];
 
-472 
+473 
 rvÆ
  = &
 ªg_vÆ
@@ -30547,7 +30677,7 @@ RP
 n
 ];
 
-473 
+474 
 ªÆ_t
  
 ƒmfc
@@ -30559,13 +30689,13 @@ RP
 n
 );
 
-474 
+475 
 k
 =0; k<
 eff_size
 ; k++)
 
-475 
+476 
 evÆ
 [
 k
@@ -30573,7 +30703,7 @@ k
 ƒmfc
 ;
 
-476 
+477 
 	`effVÆ2P VÆ
 (
 nodeVec
@@ -30593,17 +30723,17 @@ rvÆ
 AŒ_N
 );
 
-480 
+481 
 	`FFT_DESTROY
 (
 öv∂™
 );
 
-482 
+483 
 	}
 }
 
-487 
+488 
 	$vli°_ˇlc
  (
 AŒNodes
@@ -30611,53 +30741,53 @@ AŒNodes
 AŒ_N
 )
 
-489 i‡(
+490 i‡(
 AŒ_N
 ) {
 
-491 
+492 
 eff_§c_size
 ;
 
-492 
+493 
 eff_åg_size
 ;
 
-493 
+494 
 effNum
 ;
 
-494 
+495 
 dim
  = 3;
 
-495 
+496 
 §cDOF
  = 1;
 
-496 
+497 
 ågDOF
  = 1;
 
-497 
+498 
 ªÆ_t
  *
 edí
 ;
 
-498 
+499 
 ªÆ_t
  *
 evÆ
 ;
 
-499 
+500 
 ªÆ_t
  *
 UpwEqu2DwnChkii
 ;
 
-500 
+501 
 ve˘‹
 <
 NodeTªe
@@ -30669,7 +30799,7 @@ AŒ_N
 N
 ;
 
-501 
+502 
 Pos
 * 
 SP
@@ -30677,7 +30807,7 @@ SP
 AŒ_N
 ->SP;
 
-502 
+503 
 Pos
 * 
 RP
@@ -30685,7 +30815,7 @@ RP
 AŒ_N
 ->RP;
 
-503 
+504 
 Tøns_m©rix
 * 
 TM
@@ -30693,7 +30823,7 @@ TM
 AŒ_N
 ->TM;
 
-504 * 
+505 * 
 Ti
  = 
 AŒ_N
@@ -30701,13 +30831,13 @@ AŒ_N
 Tv
 ;
 
-506 
+507 
 FFT_PLAN
  
 f‹∂™
 ;
 
-507 
+508 
 	`compuã_f·_§c
  (
 AŒ_N
@@ -30715,7 +30845,7 @@ AŒ_N
 f‹∂™
 );
 
-508 
+509 
 	`compuã_f·_å™s
  (
 AŒ_N
@@ -30723,7 +30853,7 @@ AŒ_N
 f‹∂™
 );
 
-511 
+512 
 eff_åg_size
  = 
 	`eff_d©a_size
@@ -30731,7 +30861,7 @@ eff_åg_size
 DC
 );
 
-512 
+513 
 eff_§c_size
  = 
 	`eff_d©a_size
@@ -30739,13 +30869,13 @@ eff_§c_size
 UE
 );
 
-513 
+514 
 effNum
  = 
 eff_§c_size
 ;
 
-514 #¥agm®
+515 #¥agm®
 omp
  
 ∑øŒñ
@@ -30759,19 +30889,19 @@ evÆ
 UpwEqu2DwnChkii
 )
 
-516 
+517 
 i
 , 
 j
 ;
 
-517 
+518 
 tid
  = 
 	`omp_gë_thªad_num
 ();
 
-518 
+519 
 i
  = 
 Ti
@@ -30779,7 +30909,7 @@ Ti
 tid
 ]; i < Ti[tid+1]; i++) {
 
-519 if–
+520 if–
 nodeVec
 [
 i
@@ -30793,7 +30923,7 @@ Vnodes
 	`size
 ()>0) {
 
-520 
+521 
 evÆ
  = &
 AŒ_N
@@ -30805,7 +30935,7 @@ i
 eff_åg_size
 ];
 
-521 
+522 
 Poöt3
  
 	`gNodeIdxCå
@@ -30817,7 +30947,7 @@ i
 nodeVec
 ));
 
-522 
+523 
 ªÆ_t
  
 D
@@ -30829,7 +30959,7 @@ i
 nodeVec
 );
 
-523 
+524 
 j
  = 0; j < 
 nodeVec
@@ -30841,7 +30971,7 @@ Vnodes
 	`size
 (); j++) {
 
-524 
+525 
 §c
  = 
 nodeVec
@@ -30853,7 +30983,7 @@ Vnodes
 j
 ];
 
-525 
+526 
 Poöt3
  
 	`viCå
@@ -30865,19 +30995,19 @@ Poöt3
 nodeVec
 ));
 
-526 
+527 
 Index3
  
 idx
 ;
 
-527 
+528 
 d
 =0; d<
 dim
 ; d++) {
 
-528 
+529 
 	`idx
 (
 d
@@ -30891,7 +31021,7 @@ gNodeIdxCå
 D
  ));
 
-530 
+531 
 edí
  = &
 AŒ_N
@@ -30903,13 +31033,13 @@ eff_dí
 eff_§c_size
 ];
 
-532 
+533 
 id
  = (
 	`idx
 (0)+3) + (idx(1)+3)*7 + (idx(2)+3)*7*7;
 
-533 
+534 
 UpwEqu2DwnChkii
  = 
 TM
@@ -30919,7 +31049,7 @@ UE2DC
 id
 ];
 
-534 
+535 
 ªÆ_t
  
 ƒmfc
@@ -30931,7 +31061,7 @@ RP
 n
 );
 
-535 
+536 
 FFT_COMPLEX
 * 
 m©På
@@ -30939,7 +31069,7 @@ m©På
 UpwEqu2DwnChkii
 );
 
-536 
+537 
 FFT_COMPLEX
 * 
 díPå
@@ -30947,7 +31077,7 @@ díPå
 edí
 );
 
-537 
+538 
 FFT_COMPLEX
 * 
 chkPå
@@ -30955,7 +31085,7 @@ chkPå
 evÆ
 );
 
-538 
+539 
 m©Sç
  = 
 §cDOF
@@ -30963,19 +31093,19 @@ m©Sç
 ågDOF
 ;
 
-539 
+540 
 díSç
  = 
 §cDOF
 ;
 
-540 
+541 
 chkSç
  = 
 ågDOF
 ;
 
-542 
+543 
 ªÆ_t
  
 √wÆpha
@@ -30983,19 +31113,19 @@ chkSç
 ƒmfc
 ;
 
-543 
+544 
 i
 =0; i<
 ågDOF
 ; i++)
 
-544 
+545 
 k
 =0; k<
 §cDOF
 ; k++) {
 
-545 
+546 
 m©Off
  = 
 k
@@ -31005,19 +31135,19 @@ k
 i
 ;
 
-546 
+547 
 díOff
  = 
 k
 ;
 
-547 
+548 
 chkOff
  = 
 i
 ;
 
-548 
+549 
 	`poötwi£_mu…
  (
 effNum
@@ -31041,17 +31171,17 @@ chkOff
 chkSç
 );
 
-555 
+556 
 	`compuã_if·_åg
  (
 AŒ_N
 );
 
-559 
+560 
 	}
 }
 
-566 
+567 
 	$poötwi£_mu…
  (
 n
@@ -31071,11 +31201,11 @@ z
 iz
 )
 
-568 
+569 
 i
 ;
 
-569 
+570 
 SIMD_REG
  
 tmp
@@ -31083,7 +31213,7 @@ tmp
 SIMD_SET_1
 ;
 
-570 
+571 
 i
  = 0; i + 
 SIMD_LEN
@@ -31091,7 +31221,7 @@ SIMD_LEN
 n
  * 2); i+=SIMD_LEN) {
 
-571 
+572 
 SIMD_REG
  
 Z
@@ -31103,7 +31233,7 @@ z
 i
 ]);
 
-572 
+573 
 SIMD_REG
  
 X
@@ -31115,7 +31245,7 @@ x
 i
 ]);
 
-573 
+574 
 SIMD_REG
  
 Y
@@ -31127,7 +31257,7 @@ y
 i
 ]);
 
-575 
+576 
 SIMD_REG
  
 x0
@@ -31139,7 +31269,7 @@ X
 SHUFFLE_0
 );
 
-576 
+577 
 SIMD_REG
  
 p0
@@ -31151,7 +31281,7 @@ x0
 Y
 );
 
-577 
+578 
 Z
  = 
 	`SIMD_ADD
@@ -31159,7 +31289,7 @@ Z
 p0
 );
 
-579 
+580 
 x0
  = 
 	`SIMD_SHUFFLE
@@ -31169,7 +31299,7 @@ X
 SHUFFLE_1
 );
 
-580 
+581 
 SIMD_REG
  
 y0
@@ -31181,7 +31311,7 @@ Y
 SHUFFLE_2
 );
 
-581 
+582 
 p0
  = 
 	`SIMD_MUL
@@ -31191,7 +31321,7 @@ x0
 y0
 );
 
-582 
+583 
 p0
  = 
 	`SIMD_MUL
@@ -31199,7 +31329,7 @@ p0
 tmp
 );
 
-583 
+584 
 Z
  = 
 	`SIMD_ADD
@@ -31207,7 +31337,7 @@ Z
 p0
 );
 
-585 
+586 
 	`SIMD_STORE
  (&(*
 z
@@ -31217,13 +31347,13 @@ i
 Z
 );
 
-588 ; 
+589 ; 
 i
  < (
 n
  * 2); i+=2) {
 
-589 (*
+590 (*
 z
 )[0] +–(*
 x
@@ -31231,7 +31361,7 @@ x
 y
 )[0] - (*x)[1] * (*y)[1]);
 
-590 (*
+591 (*
 z
 )[1] +–(*
 x
@@ -31239,23 +31369,23 @@ x
 y
 )[1] + (*x)[1] * (*y)[0]);
 
-591 
+592 
 x
  = x + 1;
 
-592 
+593 
 y
  = y + 1;
 
-593 
+594 
 z
  = z + 1;
 
-596 
+597 
 	}
 }
 
-602 
+603 
 	$wli°_ˇlc
  (
 AŒNodes
@@ -31263,23 +31393,23 @@ AŒNodes
 AŒ_N
 )
 
-604 
+605 
 §cDOF
  = 1;
 
-605 
+606 
 ªÆ_t
  
 r
 ;
 
-606 
+607 
 Poöt3
  
 c
 ;
 
-607 
+608 
 Pos
 * 
 SP
@@ -31287,7 +31417,7 @@ SP
 AŒ_N
 ->SP;
 
-608 
+609 
 ve˘‹
 <
 NodeTªe
@@ -31299,7 +31429,7 @@ AŒ_N
 N
 ;
 
-610 #¥agm®
+611 #¥agm®
 omp
  
 ∑øŒñ
@@ -31313,7 +31443,7 @@ c
 r
 )
 
-611 
+612 
 i
  = 0; i < 
 nodeVec
@@ -31321,7 +31451,7 @@ nodeVec
 	`size
 (); i++) {
 
-612 if–
+613 if–
 nodeVec
 [
 i
@@ -31331,7 +31461,7 @@ i
 LET_TRGNODE
 ) {
 
-613 if–
+614 if–
 nodeVec
 [
 i
@@ -31339,7 +31469,7 @@ i
 chûd
  == -1) {
 
-614 
+615 
 j
  = 0; j < 
 nodeVec
@@ -31351,7 +31481,7 @@ Wnodes
 	`size
 (); j++) {
 
-615 
+616 
 §c
  = 
 nodeVec
@@ -31363,7 +31493,7 @@ Wnodes
 j
 ];
 
-616 if(
+617 if(
 nodeVec
 [
 §c
@@ -31381,7 +31511,7 @@ UE
 SP
 )) {
 
-618 
+619 
 	`uli°__dúe˘_evÆu©i⁄
  (
 AŒ_N
@@ -31395,7 +31525,7 @@ Ns
 §c
 ]);
 
-622 
+623 
 c
  = 
 	`˚¡î
@@ -31405,7 +31535,7 @@ c
 nodeVec
 );
 
-623 
+624 
 r
  = 
 	`ødius
@@ -31415,13 +31545,13 @@ r
 nodeVec
 );
 
-624 
+625 
 Node
 * 
 ¶_pos
 ;
 
-625 
+626 
 ¶_pos
  = (
 Node
@@ -31431,7 +31561,7 @@ Node
 IDEAL_ALIGNMENT
 );
 
-627 
+628 
 ¶_pos
 ->
 x
@@ -31447,7 +31577,7 @@ UE
 n
 );
 
-628 
+629 
 ¶_pos
 ->
 y
@@ -31463,7 +31593,7 @@ UE
 n
 );
 
-629 
+630 
 ¶_pos
 ->
 z
@@ -31479,7 +31609,7 @@ UE
 n
 );
 
-630 
+631 
 ¶_pos
 ->
 num_±s
@@ -31491,7 +31621,7 @@ UE
 n
 ;
 
-632 
+633 
 	`compuã_loˇÕos
  (
 c
@@ -31505,7 +31635,7 @@ SP
 UE
 ]);
 
-633 
+634 
 ¶_pos
 ->
 dí_pŸ
@@ -31523,7 +31653,7 @@ UE
 SP
 )];
 
-634 
+635 
 	`uli°__dúe˘_evÆu©i⁄
  (
 AŒ_N
@@ -31535,11 +31665,11 @@ i
 ¶_pos
 );
 
-641 
+642 
 	}
 }
 
-647 
+648 
 	$xli°_ˇlc
  (
 AŒNodes
@@ -31547,23 +31677,23 @@ AŒNodes
 AŒ_N
 )
 
-649 
+650 
 ågDOF
  = 1;
 
-650 
+651 
 Poöt3
  
 c
 ;
 
-651 
+652 
 ªÆ_t
  
 r
 ;
 
-652 
+653 
 Pos
 * 
 SP
@@ -31571,7 +31701,7 @@ SP
 AŒ_N
 ->SP;
 
-653 
+654 
 ve˘‹
 <
 NodeTªe
@@ -31583,7 +31713,7 @@ AŒ_N
 N
 ;
 
-655 #¥agm®
+656 #¥agm®
 omp
  
 ∑øŒñ
@@ -31597,7 +31727,7 @@ c
 r
 )
 
-656 
+657 
 i
  = 0; i < 
 nodeVec
@@ -31605,7 +31735,7 @@ nodeVec
 	`size
 (); i++) {
 
-657 if–
+658 if–
 nodeVec
 [
 i
@@ -31615,7 +31745,7 @@ i
 LET_TRGNODE
 ) {
 
-658 
+659 
 j
  = 0; j < 
 nodeVec
@@ -31627,7 +31757,7 @@ Xnodes
 	`size
 (); j++) {
 
-659 
+660 
 §c
  = 
 nodeVec
@@ -31639,7 +31769,7 @@ Xnodes
 j
 ];
 
-660 if(
+661 if(
 nodeVec
 [
 i
@@ -31657,7 +31787,7 @@ DC
 SP
 )) {
 
-661 
+662 
 	`uli°__dúe˘_evÆu©i⁄
  (
 AŒ_N
@@ -31671,7 +31801,7 @@ Ns
 §c
 ]);
 
-665 
+666 
 c
  = 
 	`˚¡î
@@ -31681,7 +31811,7 @@ i
 nodeVec
 );
 
-666 
+667 
 r
  = 
 	`ødius
@@ -31691,13 +31821,13 @@ i
 nodeVec
 );
 
-667 
+668 
 Node
 * 
 é_pos
 ;
 
-668 
+669 
 é_pos
  = (
 Node
@@ -31707,26 +31837,10 @@ Node
 IDEAL_ALIGNMENT
 );
 
-670 
-é_pos
-->
-x
- = (
-ªÆ_t
- *Ë
-	`ªÆs_Æloc__Æig√d
- (
-SP
-[
-DC
-].
-n
-);
-
 671 
 é_pos
 ->
-y
+x
  = (
 ªÆ_t
  *Ë
@@ -31742,7 +31856,7 @@ n
 672 
 é_pos
 ->
-z
+y
  = (
 ªÆ_t
  *Ë
@@ -31758,6 +31872,22 @@ n
 673 
 é_pos
 ->
+z
+ = (
+ªÆ_t
+ *Ë
+	`ªÆs_Æloc__Æig√d
+ (
+SP
+[
+DC
+].
+n
+);
+
+674 
+é_pos
+->
 num_±s
  = 
 SP
@@ -31767,7 +31897,7 @@ DC
 n
 ;
 
-675 
+676 
 	`compuã_loˇÕos
  (
 c
@@ -31781,7 +31911,7 @@ SP
 DC
 ]);
 
-676 
+677 
 é_pos
 ->
 dí_pŸ
@@ -31799,7 +31929,7 @@ DC
 SP
 )];
 
-678 
+679 
 	`uli°__dúe˘_evÆu©i⁄
  (*
 é_pos
@@ -31811,11 +31941,11 @@ Ns
 §c
 ]);
 
-684 
+685 
 	}
 }
 
-690 
+691 
 	$down_ˇlc
  (
 AŒNodes
@@ -31823,37 +31953,37 @@ AŒNodes
 AŒ_N
 )
 
-692 
+693 
 ªÆ_t
  
 r
 ;
 
-693 
+694 
 Poöt3
  
 c
 ;
 
-694 
+695 
 ªÆ_t
  *
 tvÆ
 ;
 
-695 
+696 
 ªÆ_t
  *
 ddí
 ;
 
-696 
+697 
 Node
 * 
 ¶_pos
 ;
 
-697 
+698 
 Pos
 * 
 SP
@@ -31861,7 +31991,7 @@ SP
 AŒ_N
 ->SP;
 
-698 
+699 
 Tøns_m©rix
 * 
 TM
@@ -31869,7 +31999,7 @@ TM
 AŒ_N
 ->TM;
 
-699 
+700 
 ve˘‹
 <
 NodeTªe
@@ -31881,7 +32011,7 @@ AŒ_N
 N
 ;
 
-702 
+703 
 	`compuã_DC2DE_m©
  (
 TM
@@ -31889,7 +32019,7 @@ TM
 SP
 );
 
-705 
+706 
 TM
 ->
 DE2DC
@@ -31899,19 +32029,19 @@ DE2DC
 	`mÆloc
  ((real_t*) * 2*2*2);
 
-707 
+708 
 a
 =0;á<2;á++) {
 
-708 
+709 
 b
 =0; b<2; b++) {
 
-709 
+710 
 c
 =0; c<2; c++) {
 
-710 
+711 
 Index3
  
 	`idx
@@ -31923,7 +32053,7 @@ b
 c
 );
 
-711 
+712 
 	`compuã_DE2DC_m©
  (
 idx
@@ -31933,7 +32063,7 @@ TM
 SP
 );
 
-717 
+718 
 i
  = 0; i < 
 nodeVec
@@ -31941,7 +32071,7 @@ nodeVec
 	`size
 (); i++) {
 
-718 i‡(
+719 i‡(
 nodeVec
 [
 i
@@ -31951,7 +32081,7 @@ i
 LET_TRGNODE
 ) {
 
-719 i‡(
+720 i‡(
 nodeVec
 [
 i
@@ -31959,7 +32089,7 @@ i
 dïth
  >= 3) {
 
-720 
+721 
 ∑ª¡
  = 
 nodeVec
@@ -31967,7 +32097,7 @@ nodeVec
 i
 ].parent;
 
-721 
+722 
 Index3
  
 	`cidx
@@ -31981,7 +32111,7 @@ i
 ∑ª¡
 ].path2Node);
 
-723 
+724 
 tvÆ
  = &
 AŒ_N
@@ -31997,7 +32127,7 @@ DC
 SP
 )];
 
-724 
+725 
 ddí
  = &
 AŒ_N
@@ -32013,11 +32143,11 @@ DE
 SP
 )];
 
-725 
+726 
 §cDOF
  = 1;
 
-726 
+727 
 ªÆ_t
  *
 tmpDí
@@ -32033,7 +32163,7 @@ DE
 n
 );
 
-727 
+728 
 	`ªÆs_zîo
  (
 SP
@@ -32045,7 +32175,7 @@ n
 tmpDí
 );
 
-728 
+729 
 l
  = 
 nodeVec
@@ -32055,13 +32185,13 @@ nodeVec
 dïth
 ;
 
-729 
+730 
 ªÆ_t
  
 degVec
 [1]; degVec[0] = 1;
 
-730 
+731 
 ªÆ_t
  
 s˛vec
@@ -32069,13 +32199,13 @@ s˛vec
 §cDOF
 ];
 
-731 
+732 
 s
 =0; s<
 §cDOF
 ; s++)
 
-732 
+733 
 s˛vec
 [
 s
@@ -32087,11 +32217,11 @@ l
 degVec
 [s]);
 
-733 
+734 
 ˙t
  = 0;
 
-734 
+735 
 j
 =0; j < 
 SP
@@ -32101,13 +32231,13 @@ DE
 n
 ; j++)
 
-735 
+736 
 s
 =0; s < 
 §cDOF
 ; s++) {
 
-736 
+737 
 tmpDí
 [
 ˙t
@@ -32119,11 +32249,11 @@ s˛vec
 s
 ];
 
-737 
+738 
 ˙t
 ++;
 
-739 
+740 
 ªÆ_t
  *
 DE2DCii
@@ -32135,7 +32265,7 @@ DE2DC
 	`cidx
 (2)+cidx(1)*2+cidx(0)*2*2];
 
-740 
+741 
 	`dgemv
 (
 TM
@@ -32151,7 +32281,7 @@ tmpDí
 tvÆ
 );
 
-743 i‡(
+744 i‡(
 nodeVec
 [
 i
@@ -32159,7 +32289,7 @@ i
 dïth
  >= 2) {
 
-745 
+746 
 tvÆ
  = &
 AŒ_N
@@ -32175,7 +32305,7 @@ DC
 SP
 )];
 
-746 
+747 
 ddí
  = &
 AŒ_N
@@ -32191,11 +32321,11 @@ DE
 SP
 )];
 
-747 
+748 
 §cDOF
  = 1;
 
-748 
+749 
 ªÆ_t
  *
 tmpDí
@@ -32211,7 +32341,7 @@ DE
 n
 );
 
-749 
+750 
 	`ªÆs_zîo
  (
 SP
@@ -32223,7 +32353,7 @@ n
 tmpDí
 );
 
-750 
+751 
 	`dgemv
 (
 TM
@@ -32239,7 +32369,7 @@ tvÆ
 tmpDí
 );
 
-753 
+754 
 l
  = 
 nodeVec
@@ -32249,13 +32379,13 @@ i
 dïth
 ;
 
-754 
+755 
 ªÆ_t
  
 degVec
 [1]; degVec[0] = 1;
 
-755 
+756 
 ªÆ_t
  
 s˛vec
@@ -32263,13 +32393,13 @@ s˛vec
 §cDOF
 ];
 
-756 
+757 
 s
 =0; s<
 §cDOF
 ; s++)
 
-757 
+758 
 s˛vec
 [
 s
@@ -32281,11 +32411,11 @@ l
 degVec
 [s]);
 
-758 
+759 
 ˙t
  = 0;
 
-759 
+760 
 j
 =0; j < 
 SP
@@ -32295,13 +32425,13 @@ DE
 n
 ; j++)
 
-760 
+761 
 s
 =0; s < 
 §cDOF
 ; s++) {
 
-761 
+762 
 ddí
 [
 ˙t
@@ -32313,11 +32443,11 @@ s˛vec
 s
 ];
 
-762 
+763 
 ˙t
 ++;
 
-770 #¥agm®
+771 #¥agm®
 omp
  
 ∑øŒñ
@@ -32333,7 +32463,7 @@ c
 r
 )
 
-771 
+772 
 i
  = 0; i < 
 nodeVec
@@ -32341,7 +32471,7 @@ nodeVec
 	`size
 (); i++) {
 
-772 i‡(
+773 i‡(
 nodeVec
 [
 i
@@ -32351,7 +32481,7 @@ i
 LET_TRGNODE
 ) {
 
-773 i‡(
+774 i‡(
 nodeVec
 [
 i
@@ -32359,7 +32489,7 @@ i
 chûd
  == -1) {
 
-775 
+776 
 c
  = 
 	`˚¡î
@@ -32369,7 +32499,7 @@ i
 nodeVec
 );
 
-776 
+777 
 r
  = 
 	`ødius
@@ -32379,13 +32509,13 @@ i
 nodeVec
 );
 
-777 
+778 
 Node
 * 
 ¶_pos
 ;
 
-778 
+779 
 ¶_pos
  = (
 Node
@@ -32395,7 +32525,7 @@ Node
 IDEAL_ALIGNMENT
 );
 
-780 
+781 
 ¶_pos
 ->
 x
@@ -32411,7 +32541,7 @@ DE
 n
 );
 
-781 
+782 
 ¶_pos
 ->
 y
@@ -32427,7 +32557,7 @@ DE
 n
 );
 
-782 
+783 
 ¶_pos
 ->
 z
@@ -32443,7 +32573,7 @@ DE
 n
 );
 
-783 
+784 
 ¶_pos
 ->
 num_±s
@@ -32455,7 +32585,7 @@ DE
 n
 ;
 
-784 
+785 
 	`compuã_loˇÕos
  (
 c
@@ -32469,7 +32599,7 @@ SP
 DE
 ]);
 
-785 
+786 
 ¶_pos
 ->
 dí_pŸ
@@ -32487,7 +32617,7 @@ DE
 SP
 )];
 
-787 
+788 
 	`uli°__dúe˘_evÆu©i⁄
  (
 AŒ_N
@@ -32499,11 +32629,11 @@ i
 ¶_pos
 );
 
-793 
+794 
 	}
 }
 
-799 
+800 
 	$c›y_åg_vÆ
  (
 AŒNodes
@@ -32511,11 +32641,11 @@ AŒNodes
 AŒ_N
 )
 
-801 
+802 
 i
 ;
 
-802 
+803 
 ve˘‹
 <
 NodeTªe
@@ -32527,7 +32657,7 @@ AŒ_N
 N
 ;
 
-804 
+805 
 i
  = 0; i < 
 nodeVec
@@ -32535,7 +32665,7 @@ nodeVec
 	`size
 (); i++)
 
-805 if–
+806 if–
 nodeVec
 [
 i
@@ -32545,7 +32675,7 @@ i
 LET_TRGNODE
 )
 
-806 i‡(
+807 i‡(
 nodeVec
 [
 i
@@ -32553,7 +32683,7 @@ i
 chûd
  == -1) {
 
-807 
+808 
 	`£t_vÆue
  (
 nodeVec
@@ -32573,7 +32703,7 @@ dí_pŸ
 ågOwnVecIdxs
 );
 
-811 
+812 
 	}
 }
 
@@ -34238,7 +34368,7 @@ i
 }
 
 286 
-	$kî√l
+	$mykî√l
  (
 ¢
 , 
@@ -34251,7 +34381,11 @@ x1
 x2
 ,Ñól_t* 
 x3
-,Ñól_t* 
+,
+
+287 
+ªÆ_t
+* 
 y1
 ,Ñól_t* 
 y2
@@ -34259,17 +34393,21 @@ y2
 y3
 ,
 
-287 
+288 
 ªÆ_t
 * 
 m©
+,Ñól_t* 
+ødii
+,Ñól_à*
+f‹˚_Ve˘‹
 )
 
-289 
+290 
 i
 ;
 
-290 
+291 
 SIMD_REG
  
 OOFP_R__
@@ -34279,13 +34417,13 @@ OOFP_R__
 OOFP_R
 );
 
-292 
+293 
 i
  = 0; i < 
 ¢
 ; i++) {
 
-293 
+294 
 SIMD_REG
  
 SX__
@@ -34297,7 +34435,7 @@ x1
 i
 ]);
 
-294 
+295 
 SIMD_REG
  
 SY__
@@ -34309,7 +34447,7 @@ x2
 i
 ]);
 
-295 
+296 
 SIMD_REG
  
 SZ__
@@ -34321,11 +34459,11 @@ x3
 i
 ]);
 
-296 
+297 
 j
 ;
 
-297 
+298 
 j
  = 0; (j+
 SIMD_LEN
@@ -34333,7 +34471,7 @@ SIMD_LEN
 ä
 ; j+=SIMD_LEN) {
 
-298 
+299 
 SIMD_REG
  
 TX1__
@@ -34349,7 +34487,7 @@ y1
 j
 ]));
 
-299 
+300 
 SIMD_REG
  
 TY1__
@@ -34365,7 +34503,7 @@ y2
 j
 ]));
 
-300 
+301 
 SIMD_REG
  
 TZ1__
@@ -34381,7 +34519,7 @@ y3
 j
 ]));
 
-301 
+302 
 SIMD_REG
  
 R__
@@ -34391,7 +34529,7 @@ R__
 TX1__
 , TX1__);
 
-302 
+303 
 R__
  = 
 	`SIMD_ADD
@@ -34401,7 +34539,7 @@ R__
 TY1__
 , TY1__));
 
-303 
+304 
 R__
  = 
 	`SIMD_ADD
@@ -34411,13 +34549,13 @@ R__
 TZ1__
 , TZ1__));
 
-304 #i‡!
+305 #i‡!
 	`deföed
  (
 USE_FLOAT
 )
 
-305 
+306 
 SIMD_REG
  
 XHALF__
@@ -34429,13 +34567,13 @@ XHALF__
 R__
 );
 
-306 
+307 
 R__
  = 
 	`SIMD_INV_SQRT_S
  (R__);
 
-307 
+308 
 SIMD_REG
  
 RNR__
@@ -34445,7 +34583,7 @@ RNR__
 R__
 , R__);
 
-308 
+309 
 RNR__
  = 
 	`SIMD_MUL
@@ -34453,7 +34591,7 @@ RNR__
 XHALF__
 );
 
-309 
+310 
 RNR__
  = 
 	`SIMD_SUB
@@ -34461,7 +34599,7 @@ RNR__
 	`SIMD_SET1
  (1.5), RNR__);
 
-310 
+311 
 R__
  = 
 	`SIMD_MUL
@@ -34469,13 +34607,13 @@ R__
 RNR__
 , R__);
 
-312 
+313 
 R__
  = 
 	`SIMD_INV_SQRT
  (R__);
 
-314 
+315 
 R__
  = 
 	`SIMD_MUL
@@ -34483,7 +34621,7 @@ R__
 OOFP_R__
 );
 
-315 
+316 
 	`SIMD_STORE_U
  (&
 m©
@@ -34497,13 +34635,13 @@ j
 R__
 );
 
-318 ; 
+319 ; 
 j
  < 
 ä
 ; j++) {
 
-319 
+320 
 dx
 , 
 dy
@@ -34511,15 +34649,15 @@ dy
 dz
 ;
 
-320 
+321 
 dr2
 ;
 
-321 
+322 
 dr
 ;
 
-322 
+323 
 dx
  = 
 x1
@@ -34531,7 +34669,7 @@ y1
 j
 ];
 
-323 
+324 
 dy
  = 
 x2
@@ -34543,7 +34681,7 @@ y2
 j
 ];
 
-324 
+325 
 dz
  = 
 x3
@@ -34555,7 +34693,7 @@ y3
 j
 ];
 
-325 
+326 
 dr2
  = 
 dx
@@ -34565,13 +34703,13 @@ dy
 dz
 *dz;
 
-326 #i‡!
+327 #i‡!
 	`deföed
  (
 USE_FLOAT
 )
 
-327 
+328 
 dr
  = 
 	`sqπ
@@ -34579,7 +34717,7 @@ dr
 dr2
 );
 
-329 
+330 
 dr
  = 
 	`sqπf
@@ -34587,7 +34725,7 @@ dr
 dr2
 );
 
-331 
+332 
 m©
 [
 i
@@ -34601,11 +34739,11 @@ OOFP_R
 dr
 ;
 
-335 
+336 
 	}
 }
 
-340 
+341 
 	$compuã_f·_§c
  (
 AŒNodes
@@ -34617,43 +34755,43 @@ FFT_PLAN
 f‹∂™
 )
 
-342 
+343 
 i
  = 0;
 
-343 
+344 
 eff_size
 ;
 
-344 
+345 
 ¡hªads
-;
-
-345 
-ªÆ_t
-* 
-edí
 ;
 
 346 
 ªÆ_t
 * 
-udí
+edí
 ;
 
 347 
 ªÆ_t
 * 
-rdí
+udí
 ;
 
 348 
 ªÆ_t
 * 
+rdí
+;
+
+349 
+ªÆ_t
+* 
 tdí
 ;
 
-350 
+351 
 ve˘‹
 <
 NodeTªe
@@ -34665,7 +34803,7 @@ AŒ_N
 N
 ;
 
-351 
+352 
 eff_size
  = 
 	`eff_d©a_size
@@ -34673,7 +34811,7 @@ eff_size
 UE
 );
 
-352 
+353 
 Pos
 * 
 SP
@@ -34681,7 +34819,7 @@ SP
 AŒ_N
 ->SP;
 
-353 
+354 
 Pos
 * 
 RP
@@ -34689,19 +34827,19 @@ RP
 AŒ_N
 ->RP;
 
-355 #¥agm®
+356 #¥agm®
 omp
  
 ∑øŒñ
 
 
-357 
+358 
 ¡hªads
  = 
 	`omp_gë_num_thªads
 ();
 
-359 
+360 
 ªÆ_t
 * 
 ªg_dí
@@ -34715,7 +34853,7 @@ n
 ¡hªads
 );
 
-360 
+361 
 ªÆ_t
 * 
 tmp_dí
@@ -34731,7 +34869,7 @@ n
 ¡hªads
 );
 
-362 i‡(
+363 i‡(
 nodeVec
 [
 i
@@ -34741,7 +34879,7 @@ i
 LET_SRCNODE
 ) {
 
-363 
+364 
 edí
  = &
 AŒ_N
@@ -34753,7 +34891,7 @@ i
 eff_size
 ];
 
-364 
+365 
 udí
  = &
 AŒ_N
@@ -34769,7 +34907,7 @@ UE
 SP
 )];
 
-365 
+366 
 	`∂nDí2EffDíöô
 (
 nodeVec
@@ -34787,7 +34925,7 @@ f‹∂™
 AŒ_N
 );
 
-369 #¥agm®
+370 #¥agm®
 omp
  
 ∑øŒñ
@@ -34807,7 +34945,7 @@ rdí
 tdí
 )
 
-370 
+371 
 i
  = 1; i<
 nodeVec
@@ -34815,13 +34953,13 @@ nodeVec
 	`size
 (); i++) {
 
-371 
+372 
 tid
  = 
 	`omp_gë_thªad_num
 ();
 
-372 i‡(
+373 i‡(
 nodeVec
 [
 i
@@ -34831,7 +34969,7 @@ i
 LET_SRCNODE
 ) {
 
-373 
+374 
 edí
  = &
 AŒ_N
@@ -34843,7 +34981,7 @@ i
 eff_size
 ];
 
-374 
+375 
 udí
  = &
 AŒ_N
@@ -34859,7 +34997,7 @@ UE
 SP
 )];
 
-375 
+376 
 rdí
  = &
 ªg_dí
@@ -34871,7 +35009,7 @@ RP
 n
 ];
 
-376 
+377 
 tdí
  = &
 tmp_dí
@@ -34885,7 +35023,7 @@ UE
 n
 ];
 
-377 
+378 
 	`∂nDí2EffDí
 (
 nodeVec
@@ -34907,11 +35045,11 @@ f‹∂™
 AŒ_N
 );
 
-382 
+383 
 	}
 }
 
-387 
+388 
 	$compuã_f·_å™s
  (
 AŒNodes
@@ -34923,15 +35061,15 @@ FFT_PLAN
 f‹∂™
 )
 
-389 
+390 
 §cDOF
 ;
 
-390 
+391 
 ågDOF
 ;
 
-391 
+392 
 effNum
  = 
 	`eff_d©a_size
@@ -34939,13 +35077,13 @@ effNum
 UE
 );
 
-392 
+393 
 ªÆ_t
  
 R
  = 1;
 
-393 
+394 
 Pos
 * 
 RP
@@ -34953,7 +35091,7 @@ RP
 AŒ_N
 ->RP;
 
-394 
+395 
 Tøns_m©rix
 * 
 TM
@@ -34961,15 +35099,15 @@ TM
 AŒ_N
 ->TM;
 
-395 
+396 
 §cDOF
  = 1;
 
-396 
+397 
 ågDOF
  = 1;
 
-399 
+400 
 TM
 ->
 UE2DC
@@ -34979,7 +35117,7 @@ UE2DC
 	`mÆloc
  ((real_t*) * 7*7*7);
 
-401 #¥agm®
+402 #¥agm®
 omp
  
 ∑øŒñ
@@ -34987,19 +35125,19 @@ omp
 	`scheduÀ
 ()
 
-402 
+403 
 i1
 =-3; i1<=3; i1++)
 
-403 
+404 
 i2
 =-3; i2<=3; i2++)
 
-404 
+405 
 i3
 =-3; i3<=3; i3++)
 
-405 i‡(
+406 i‡(
 	`abs
 (
 i1
@@ -35009,11 +35147,11 @@ i2
 i3
 )>1 ) {
 
-407 
+408 
 idx
 ;
 
-408 
+409 
 idx
  = (
 i1
@@ -35023,25 +35161,25 @@ i2
 i3
 +3)*7*7;
 
-409 
+410 
 ªÆ_t
  
 díPosX
 [1];
 
-410 
+411 
 ªÆ_t
  
 díPosY
 [1];
 
-411 
+412 
 ªÆ_t
  
 díPosZ
 [1];
 
-412 
+413 
 díPosX
 [0] = (
 ªÆ_t
@@ -35051,7 +35189,7 @@ i1
 R
 ;
 
-413 
+414 
 díPosY
 [0] = (
 ªÆ_t
@@ -35061,7 +35199,7 @@ i2
 R
 ;
 
-414 
+415 
 díPosZ
 [0] = (
 ªÆ_t
@@ -35071,7 +35209,7 @@ i3
 R
 ;
 
-416 
+417 
 ªÆ_t
  
 chkPosX
@@ -35089,7 +35227,7 @@ R
 x
 , chkPosX) ;
 
-417 
+418 
 ªÆ_t
  
 chkPosY
@@ -35107,7 +35245,7 @@ R
 y
 , chkPosY) ;
 
-418 
+419 
 ªÆ_t
  
 chkPosZ
@@ -35125,7 +35263,7 @@ R
 z
 , chkPosZ) ;
 
-419 
+420 
 ªÆ_t
 * 
 â
@@ -35141,7 +35279,7 @@ n
 §cDOF
 );
 
-420 
+421 
 	`kî√l
 (1, 
 RP
@@ -35163,7 +35301,7 @@ chkPosZ
 â
 );
 
-423 
+424 
 ªÆ_t
 * 
 tmp
@@ -35179,7 +35317,7 @@ n
 §cDOF
 );
 
-424 
+425 
 k
 =0; k<
 RP
@@ -35187,7 +35325,7 @@ RP
 n
 ;k++) {
 
-425 
+426 
 tmp
 [
 k
@@ -35195,7 +35333,7 @@ k
 â
 [k];
 
-427 
+428 
 ªÆ_t
  *
 UpwEqu2DwnChkii
@@ -35209,7 +35347,7 @@ UpwEqu2DwnChkii
 effNum
 );
 
-428 
+429 
 	`FFT_RE_EXECUTE
 (
 f‹∂™
@@ -35221,7 +35359,7 @@ FFT_COMPLEX
 UpwEqu2DwnChkii
 ));
 
-429 
+430 
 TM
 ->
 UE2DC
@@ -35231,11 +35369,11 @@ idx
 UpwEqu2DwnChkii
 ;
 
-432 
+433 
 	}
 }
 
-437 
+438 
 	$compuã_if·_åg
  (
 AŒNodes
@@ -35243,47 +35381,47 @@ AŒNodes
 AŒ_N
 )
 
-439 
+440 
 i
  = 0;
 
-440 
+441 
 öv£t
  = 0;
 
-441 
+442 
 eff_size
 ;
 
-442 
+443 
 ¡hªads
-;
-
-443 
-ªÆ_t
- *
-evÆ
 ;
 
 444 
 ªÆ_t
  *
-tvÆ
+evÆ
 ;
 
 445 
 ªÆ_t
  *
-rvÆ
+tvÆ
 ;
 
 446 
+ªÆ_t
+ *
+rvÆ
+;
+
+447 
 FFT_PLAN
  
 öv∂™
 ;
 
-447 
+448 
 ve˘‹
 <
 NodeTªe
@@ -35295,7 +35433,7 @@ AŒ_N
 N
 ;
 
-448 
+449 
 Pos
 * 
 SP
@@ -35303,7 +35441,7 @@ SP
 AŒ_N
 ->SP;
 
-449 
+450 
 Pos
 * 
 RP
@@ -35311,7 +35449,7 @@ RP
 AŒ_N
 ->RP;
 
-451 
+452 
 eff_size
  = 
 	`eff_d©a_size
@@ -35319,11 +35457,11 @@ eff_size
 DC
 );
 
-452 
+453 
 öv£t
  == 0) {
 
-453 if–
+454 if–
 nodeVec
 [
 i
@@ -35337,7 +35475,7 @@ Vnodes
 	`size
 ()>0) {
 
-454 
+455 
 tvÆ
  = &
 AŒ_N
@@ -35353,7 +35491,7 @@ DC
 SP
 )];
 
-455 
+456 
 evÆ
  = &
 AŒ_N
@@ -35365,7 +35503,7 @@ i
 eff_size
 ];
 
-456 
+457 
 ªÆ_t
  
 ƒmfc
@@ -35377,13 +35515,13 @@ RP
 n
 );
 
-457 
+458 
 k
 =0; k<
 eff_size
 ; k++)
 
-458 
+459 
 evÆ
 [
 k
@@ -35391,7 +35529,7 @@ k
 ƒmfc
 ;
 
-459 
+460 
 	`effVÆ2P VÆöô
 (
 nodeVec
@@ -35409,27 +35547,27 @@ tvÆ
 AŒ_N
 );
 
-460 
+461 
 öv£t
  = 1;
 
-462 
+463 
 i
 ++;
 
-465 #¥agm®
+466 #¥agm®
 omp
  
 ∑øŒñ
 
 
-467 
+468 
 ¡hªads
  = 
 	`omp_gë_num_thªads
 ();
 
-469 
+470 
 ªÆ_t
 * 
 ªg_vÆ
@@ -35443,7 +35581,7 @@ n
 ¡hªads
 );
 
-471 #¥agm®
+472 #¥agm®
 omp
  
 ∑øŒñ
@@ -35459,7 +35597,7 @@ evÆ
 rvÆ
 )
 
-472 
+473 
 j
 =
 i
@@ -35469,13 +35607,13 @@ nodeVec
 	`size
 (); j++) {
 
-473 
+474 
 tid
  = 
 	`omp_gë_thªad_num
 ();
 
-474 if–
+475 if–
 nodeVec
 [
 j
@@ -35489,7 +35627,7 @@ Vnodes
 	`size
 ()>0) {
 
-475 
+476 
 tvÆ
  = &
 AŒ_N
@@ -35505,7 +35643,7 @@ DC
 SP
 )];
 
-476 
+477 
 evÆ
  = &
 AŒ_N
@@ -35517,7 +35655,7 @@ j
 eff_size
 ];
 
-477 
+478 
 rvÆ
  = &
 ªg_vÆ
@@ -35529,7 +35667,7 @@ RP
 n
 ];
 
-478 
+479 
 ªÆ_t
  
 ƒmfc
@@ -35541,13 +35679,13 @@ RP
 n
 );
 
-479 
+480 
 k
 =0; k<
 eff_size
 ; k++)
 
-480 
+481 
 evÆ
 [
 k
@@ -35555,7 +35693,7 @@ k
 ƒmfc
 ;
 
-481 
+482 
 	`effVÆ2P VÆ
 (
 nodeVec
@@ -35575,17 +35713,17 @@ rvÆ
 AŒ_N
 );
 
-485 
+486 
 	`FFT_DESTROY
 (
 öv∂™
 );
 
-487 
+488 
 	}
 }
 
-492 
+493 
 	$vli°_ˇlc
  (
 AŒNodes
@@ -35593,53 +35731,53 @@ AŒNodes
 AŒ_N
 )
 
-494 i‡(
+495 i‡(
 AŒ_N
 ) {
 
-496 
+497 
 eff_§c_size
 ;
 
-497 
+498 
 eff_åg_size
 ;
 
-498 
+499 
 effNum
 ;
 
-499 
+500 
 dim
  = 3;
 
-500 
+501 
 §cDOF
  = 1;
 
-501 
+502 
 ågDOF
  = 1;
 
-502 
+503 
 ªÆ_t
  *
 edí
 ;
 
-503 
+504 
 ªÆ_t
  *
 evÆ
 ;
 
-504 
+505 
 ªÆ_t
  *
 UpwEqu2DwnChkii
 ;
 
-505 
+506 
 ve˘‹
 <
 NodeTªe
@@ -35651,7 +35789,7 @@ AŒ_N
 N
 ;
 
-506 
+507 
 Pos
 * 
 SP
@@ -35659,7 +35797,7 @@ SP
 AŒ_N
 ->SP;
 
-507 
+508 
 Pos
 * 
 RP
@@ -35667,7 +35805,7 @@ RP
 AŒ_N
 ->RP;
 
-508 
+509 
 Tøns_m©rix
 * 
 TM
@@ -35675,7 +35813,7 @@ TM
 AŒ_N
 ->TM;
 
-509 * 
+510 * 
 Ti
  = 
 AŒ_N
@@ -35683,13 +35821,13 @@ AŒ_N
 Tv
 ;
 
-511 
+512 
 FFT_PLAN
  
 f‹∂™
 ;
 
-512 
+513 
 	`compuã_f·_§c
  (
 AŒ_N
@@ -35697,7 +35835,7 @@ AŒ_N
 f‹∂™
 );
 
-513 
+514 
 	`compuã_f·_å™s
  (
 AŒ_N
@@ -35705,7 +35843,7 @@ AŒ_N
 f‹∂™
 );
 
-516 
+517 
 eff_åg_size
  = 
 	`eff_d©a_size
@@ -35713,7 +35851,7 @@ eff_åg_size
 DC
 );
 
-517 
+518 
 eff_§c_size
  = 
 	`eff_d©a_size
@@ -35721,13 +35859,13 @@ eff_§c_size
 UE
 );
 
-518 
+519 
 effNum
  = 
 eff_§c_size
 ;
 
-519 #¥agm®
+520 #¥agm®
 omp
  
 ∑øŒñ
@@ -35741,19 +35879,19 @@ evÆ
 UpwEqu2DwnChkii
 )
 
-521 
+522 
 i
 , 
 j
 ;
 
-522 
+523 
 tid
  = 
 	`omp_gë_thªad_num
 ();
 
-523 
+524 
 i
  = 
 Ti
@@ -35761,7 +35899,7 @@ Ti
 tid
 ]; i < Ti[tid+1]; i++) {
 
-524 if–
+525 if–
 nodeVec
 [
 i
@@ -35775,7 +35913,7 @@ Vnodes
 	`size
 ()>0) {
 
-525 
+526 
 evÆ
  = &
 AŒ_N
@@ -35787,7 +35925,7 @@ i
 eff_åg_size
 ];
 
-526 
+527 
 Poöt3
  
 	`gNodeIdxCå
@@ -35799,7 +35937,7 @@ i
 nodeVec
 ));
 
-527 
+528 
 ªÆ_t
  
 D
@@ -35811,7 +35949,7 @@ i
 nodeVec
 );
 
-528 
+529 
 j
  = 0; j < 
 nodeVec
@@ -35823,7 +35961,7 @@ Vnodes
 	`size
 (); j++) {
 
-529 
+530 
 §c
  = 
 nodeVec
@@ -35835,7 +35973,7 @@ Vnodes
 j
 ];
 
-530 
+531 
 Poöt3
  
 	`viCå
@@ -35847,19 +35985,19 @@ Poöt3
 nodeVec
 ));
 
-531 
+532 
 Index3
  
 idx
 ;
 
-532 
+533 
 d
 =0; d<
 dim
 ; d++) {
 
-533 
+534 
 	`idx
 (
 d
@@ -35873,7 +36011,7 @@ gNodeIdxCå
 D
  ));
 
-535 
+536 
 edí
  = &
 AŒ_N
@@ -35885,13 +36023,13 @@ eff_dí
 eff_§c_size
 ];
 
-537 
+538 
 id
  = (
 	`idx
 (0)+3) + (idx(1)+3)*7 + (idx(2)+3)*7*7;
 
-538 
+539 
 UpwEqu2DwnChkii
  = 
 TM
@@ -35901,7 +36039,7 @@ UE2DC
 id
 ];
 
-539 
+540 
 ªÆ_t
  
 ƒmfc
@@ -35913,7 +36051,7 @@ RP
 n
 );
 
-540 
+541 
 FFT_COMPLEX
 * 
 m©På
@@ -35921,7 +36059,7 @@ m©På
 UpwEqu2DwnChkii
 );
 
-541 
+542 
 FFT_COMPLEX
 * 
 díPå
@@ -35929,7 +36067,7 @@ díPå
 edí
 );
 
-542 
+543 
 FFT_COMPLEX
 * 
 chkPå
@@ -35937,7 +36075,7 @@ chkPå
 evÆ
 );
 
-543 
+544 
 m©Sç
  = 
 §cDOF
@@ -35945,19 +36083,19 @@ m©Sç
 ågDOF
 ;
 
-544 
+545 
 díSç
  = 
 §cDOF
 ;
 
-545 
+546 
 chkSç
  = 
 ågDOF
 ;
 
-547 
+548 
 ªÆ_t
  
 √wÆpha
@@ -35965,19 +36103,19 @@ chkSç
 ƒmfc
 ;
 
-548 
+549 
 i
 =0; i<
 ågDOF
 ; i++)
 
-549 
+550 
 k
 =0; k<
 §cDOF
 ; k++) {
 
-550 
+551 
 m©Off
  = 
 k
@@ -35987,19 +36125,19 @@ k
 i
 ;
 
-551 
+552 
 díOff
  = 
 k
 ;
 
-552 
+553 
 chkOff
  = 
 i
 ;
 
-553 
+554 
 	`poötwi£_mu…
  (
 effNum
@@ -36023,17 +36161,17 @@ chkOff
 chkSç
 );
 
-560 
+561 
 	`compuã_if·_åg
  (
 AŒ_N
 );
 
-564 
+565 
 	}
 }
 
-571 
+572 
 	$poötwi£_mu…
  (
 n
@@ -36053,11 +36191,11 @@ z
 iz
 )
 
-573 
+574 
 i
 ;
 
-574 
+575 
 SIMD_REG
  
 tmp
@@ -36065,7 +36203,7 @@ tmp
 SIMD_SET_1
 ;
 
-575 
+576 
 i
  = 0; i + 
 SIMD_LEN
@@ -36073,7 +36211,7 @@ SIMD_LEN
 n
  * 2); i+=SIMD_LEN) {
 
-576 
+577 
 SIMD_REG
  
 Z
@@ -36085,7 +36223,7 @@ z
 i
 ]);
 
-577 
+578 
 SIMD_REG
  
 X
@@ -36097,7 +36235,7 @@ x
 i
 ]);
 
-578 
+579 
 SIMD_REG
  
 Y
@@ -36109,7 +36247,7 @@ y
 i
 ]);
 
-580 
+581 
 SIMD_REG
  
 x0
@@ -36121,7 +36259,7 @@ X
 SHUFFLE_0
 );
 
-581 
+582 
 SIMD_REG
  
 p0
@@ -36133,7 +36271,7 @@ x0
 Y
 );
 
-582 
+583 
 Z
  = 
 	`SIMD_ADD
@@ -36141,7 +36279,7 @@ Z
 p0
 );
 
-584 
+585 
 x0
  = 
 	`SIMD_SHUFFLE
@@ -36151,7 +36289,7 @@ X
 SHUFFLE_1
 );
 
-585 
+586 
 SIMD_REG
  
 y0
@@ -36163,7 +36301,7 @@ Y
 SHUFFLE_2
 );
 
-586 
+587 
 p0
  = 
 	`SIMD_MUL
@@ -36173,7 +36311,7 @@ x0
 y0
 );
 
-587 
+588 
 p0
  = 
 	`SIMD_MUL
@@ -36181,7 +36319,7 @@ p0
 tmp
 );
 
-588 
+589 
 Z
  = 
 	`SIMD_ADD
@@ -36189,7 +36327,7 @@ Z
 p0
 );
 
-590 
+591 
 	`SIMD_STORE
  (&(*
 z
@@ -36199,13 +36337,13 @@ i
 Z
 );
 
-593 ; 
+594 ; 
 i
  < (
 n
  * 2); i+=2) {
 
-594 (*
+595 (*
 z
 )[0] +–(*
 x
@@ -36213,7 +36351,7 @@ x
 y
 )[0] - (*x)[1] * (*y)[1]);
 
-595 (*
+596 (*
 z
 )[1] +–(*
 x
@@ -36221,23 +36359,23 @@ x
 y
 )[1] + (*x)[1] * (*y)[0]);
 
-596 
+597 
 x
  = x + 1;
 
-597 
+598 
 y
  = y + 1;
 
-598 
+599 
 z
  = z + 1;
 
-601 
+602 
 	}
 }
 
-607 
+608 
 	$wli°_ˇlc
  (
 AŒNodes
@@ -36245,23 +36383,23 @@ AŒNodes
 AŒ_N
 )
 
-609 
+610 
 §cDOF
  = 1;
 
-610 
+611 
 ªÆ_t
  
 r
 ;
 
-611 
+612 
 Poöt3
  
 c
 ;
 
-612 
+613 
 Pos
 * 
 SP
@@ -36269,7 +36407,7 @@ SP
 AŒ_N
 ->SP;
 
-613 
+614 
 ve˘‹
 <
 NodeTªe
@@ -36281,7 +36419,7 @@ AŒ_N
 N
 ;
 
-615 #¥agm®
+616 #¥agm®
 omp
  
 ∑øŒñ
@@ -36295,7 +36433,7 @@ c
 r
 )
 
-616 
+617 
 i
  = 0; i < 
 nodeVec
@@ -36303,7 +36441,7 @@ nodeVec
 	`size
 (); i++) {
 
-617 if–
+618 if–
 nodeVec
 [
 i
@@ -36313,7 +36451,7 @@ i
 LET_TRGNODE
 ) {
 
-618 if–
+619 if–
 nodeVec
 [
 i
@@ -36321,7 +36459,7 @@ i
 chûd
  == -1) {
 
-619 
+620 
 j
  = 0; j < 
 nodeVec
@@ -36333,7 +36471,7 @@ Wnodes
 	`size
 (); j++) {
 
-620 
+621 
 §c
  = 
 nodeVec
@@ -36345,7 +36483,7 @@ Wnodes
 j
 ];
 
-621 if(
+622 if(
 nodeVec
 [
 §c
@@ -36363,7 +36501,7 @@ UE
 SP
 )) {
 
-623 
+624 
 	`uli°__dúe˘_evÆu©i⁄
  (
 AŒ_N
@@ -36377,7 +36515,7 @@ Ns
 §c
 ]);
 
-627 
+628 
 c
  = 
 	`˚¡î
@@ -36387,7 +36525,7 @@ c
 nodeVec
 );
 
-628 
+629 
 r
  = 
 	`ødius
@@ -36397,13 +36535,13 @@ r
 nodeVec
 );
 
-629 
+630 
 Node
 * 
 ¶_pos
 ;
 
-630 
+631 
 ¶_pos
  = (
 Node
@@ -36413,7 +36551,7 @@ Node
 IDEAL_ALIGNMENT
 );
 
-632 
+633 
 ¶_pos
 ->
 x
@@ -36429,7 +36567,7 @@ UE
 n
 );
 
-633 
+634 
 ¶_pos
 ->
 y
@@ -36445,7 +36583,7 @@ UE
 n
 );
 
-634 
+635 
 ¶_pos
 ->
 z
@@ -36461,7 +36599,7 @@ UE
 n
 );
 
-635 
+636 
 ¶_pos
 ->
 num_±s
@@ -36473,7 +36611,7 @@ UE
 n
 ;
 
-637 
+638 
 	`compuã_loˇÕos
  (
 c
@@ -36487,7 +36625,7 @@ SP
 UE
 ]);
 
-638 
+639 
 ¶_pos
 ->
 dí_pŸ
@@ -36505,7 +36643,7 @@ UE
 SP
 )];
 
-639 
+640 
 	`uli°__dúe˘_evÆu©i⁄
  (
 AŒ_N
@@ -36517,11 +36655,11 @@ i
 ¶_pos
 );
 
-646 
+647 
 	}
 }
 
-652 
+653 
 	$xli°_ˇlc
  (
 AŒNodes
@@ -36529,23 +36667,23 @@ AŒNodes
 AŒ_N
 )
 
-654 
+655 
 ågDOF
  = 1;
 
-655 
+656 
 Poöt3
  
 c
 ;
 
-656 
+657 
 ªÆ_t
  
 r
 ;
 
-657 
+658 
 Pos
 * 
 SP
@@ -36553,7 +36691,7 @@ SP
 AŒ_N
 ->SP;
 
-658 
+659 
 ve˘‹
 <
 NodeTªe
@@ -36565,7 +36703,7 @@ AŒ_N
 N
 ;
 
-660 #¥agm®
+661 #¥agm®
 omp
  
 ∑øŒñ
@@ -36579,7 +36717,7 @@ c
 r
 )
 
-661 
+662 
 i
  = 0; i < 
 nodeVec
@@ -36587,7 +36725,7 @@ nodeVec
 	`size
 (); i++) {
 
-662 if–
+663 if–
 nodeVec
 [
 i
@@ -36597,7 +36735,7 @@ i
 LET_TRGNODE
 ) {
 
-663 
+664 
 j
  = 0; j < 
 nodeVec
@@ -36609,7 +36747,7 @@ Xnodes
 	`size
 (); j++) {
 
-664 
+665 
 §c
  = 
 nodeVec
@@ -36621,7 +36759,7 @@ Xnodes
 j
 ];
 
-665 if(
+666 if(
 nodeVec
 [
 i
@@ -36639,7 +36777,7 @@ DC
 SP
 )) {
 
-666 
+667 
 	`uli°__dúe˘_evÆu©i⁄
  (
 AŒ_N
@@ -36653,7 +36791,7 @@ Ns
 §c
 ]);
 
-670 
+671 
 c
  = 
 	`˚¡î
@@ -36663,7 +36801,7 @@ i
 nodeVec
 );
 
-671 
+672 
 r
  = 
 	`ødius
@@ -36673,13 +36811,13 @@ i
 nodeVec
 );
 
-672 
+673 
 Node
 * 
 é_pos
 ;
 
-673 
+674 
 é_pos
  = (
 Node
@@ -36689,26 +36827,10 @@ Node
 IDEAL_ALIGNMENT
 );
 
-675 
-é_pos
-->
-x
- = (
-ªÆ_t
- *Ë
-	`ªÆs_Æloc__Æig√d
- (
-SP
-[
-DC
-].
-n
-);
-
 676 
 é_pos
 ->
-y
+x
  = (
 ªÆ_t
  *Ë
@@ -36724,7 +36846,7 @@ n
 677 
 é_pos
 ->
-z
+y
  = (
 ªÆ_t
  *Ë
@@ -36740,6 +36862,22 @@ n
 678 
 é_pos
 ->
+z
+ = (
+ªÆ_t
+ *Ë
+	`ªÆs_Æloc__Æig√d
+ (
+SP
+[
+DC
+].
+n
+);
+
+679 
+é_pos
+->
 num_±s
  = 
 SP
@@ -36749,7 +36887,7 @@ DC
 n
 ;
 
-680 
+681 
 	`compuã_loˇÕos
  (
 c
@@ -36763,7 +36901,7 @@ SP
 DC
 ]);
 
-681 
+682 
 é_pos
 ->
 dí_pŸ
@@ -36781,7 +36919,7 @@ DC
 SP
 )];
 
-683 
+684 
 	`uli°__dúe˘_evÆu©i⁄
  (*
 é_pos
@@ -36793,11 +36931,11 @@ Ns
 §c
 ]);
 
-689 
+690 
 	}
 }
 
-695 
+696 
 	$down_ˇlc
  (
 AŒNodes
@@ -36805,37 +36943,37 @@ AŒNodes
 AŒ_N
 )
 
-697 
+698 
 ªÆ_t
  
 r
 ;
 
-698 
+699 
 Poöt3
  
 c
 ;
 
-699 
+700 
 ªÆ_t
  *
 tvÆ
 ;
 
-700 
+701 
 ªÆ_t
  *
 ddí
 ;
 
-701 
+702 
 Node
 * 
 ¶_pos
 ;
 
-702 
+703 
 Pos
 * 
 SP
@@ -36843,7 +36981,7 @@ SP
 AŒ_N
 ->SP;
 
-703 
+704 
 Tøns_m©rix
 * 
 TM
@@ -36851,7 +36989,7 @@ TM
 AŒ_N
 ->TM;
 
-704 
+705 
 ve˘‹
 <
 NodeTªe
@@ -36863,7 +37001,7 @@ AŒ_N
 N
 ;
 
-707 
+708 
 	`compuã_DC2DE_m©
  (
 TM
@@ -36871,7 +37009,7 @@ TM
 SP
 );
 
-710 
+711 
 TM
 ->
 DE2DC
@@ -36881,19 +37019,19 @@ DE2DC
 	`mÆloc
  ((real_t*) * 2*2*2);
 
-712 
+713 
 a
 =0;á<2;á++) {
 
-713 
+714 
 b
 =0; b<2; b++) {
 
-714 
+715 
 c
 =0; c<2; c++) {
 
-715 
+716 
 Index3
  
 	`idx
@@ -36905,7 +37043,7 @@ b
 c
 );
 
-716 
+717 
 	`compuã_DE2DC_m©
  (
 idx
@@ -36915,7 +37053,7 @@ TM
 SP
 );
 
-722 
+723 
 i
  = 0; i < 
 nodeVec
@@ -36923,7 +37061,7 @@ nodeVec
 	`size
 (); i++) {
 
-723 i‡(
+724 i‡(
 nodeVec
 [
 i
@@ -36933,7 +37071,7 @@ i
 LET_TRGNODE
 ) {
 
-724 i‡(
+725 i‡(
 nodeVec
 [
 i
@@ -36941,7 +37079,7 @@ i
 dïth
  >= 3) {
 
-725 
+726 
 ∑ª¡
  = 
 nodeVec
@@ -36949,7 +37087,7 @@ nodeVec
 i
 ].parent;
 
-726 
+727 
 Index3
  
 	`cidx
@@ -36963,7 +37101,7 @@ i
 ∑ª¡
 ].path2Node);
 
-728 
+729 
 tvÆ
  = &
 AŒ_N
@@ -36979,7 +37117,7 @@ DC
 SP
 )];
 
-729 
+730 
 ddí
  = &
 AŒ_N
@@ -36995,11 +37133,11 @@ DE
 SP
 )];
 
-730 
+731 
 §cDOF
  = 1;
 
-731 
+732 
 ªÆ_t
  *
 tmpDí
@@ -37015,7 +37153,7 @@ DE
 n
 );
 
-732 
+733 
 	`ªÆs_zîo
  (
 SP
@@ -37027,7 +37165,7 @@ n
 tmpDí
 );
 
-733 
+734 
 l
  = 
 nodeVec
@@ -37037,13 +37175,13 @@ nodeVec
 dïth
 ;
 
-734 
+735 
 ªÆ_t
  
 degVec
 [1]; degVec[0] = 1;
 
-735 
+736 
 ªÆ_t
  
 s˛vec
@@ -37051,13 +37189,13 @@ s˛vec
 §cDOF
 ];
 
-736 
+737 
 s
 =0; s<
 §cDOF
 ; s++)
 
-737 
+738 
 s˛vec
 [
 s
@@ -37069,11 +37207,11 @@ l
 degVec
 [s]);
 
-738 
+739 
 ˙t
  = 0;
 
-739 
+740 
 j
 =0; j < 
 SP
@@ -37083,13 +37221,13 @@ DE
 n
 ; j++)
 
-740 
+741 
 s
 =0; s < 
 §cDOF
 ; s++) {
 
-741 
+742 
 tmpDí
 [
 ˙t
@@ -37101,11 +37239,11 @@ s˛vec
 s
 ];
 
-742 
+743 
 ˙t
 ++;
 
-744 
+745 
 ªÆ_t
  *
 DE2DCii
@@ -37117,7 +37255,7 @@ DE2DC
 	`cidx
 (2)+cidx(1)*2+cidx(0)*2*2];
 
-745 
+746 
 	`dgemv
 (
 TM
@@ -37133,7 +37271,7 @@ tmpDí
 tvÆ
 );
 
-748 i‡(
+749 i‡(
 nodeVec
 [
 i
@@ -37141,7 +37279,7 @@ i
 dïth
  >= 2) {
 
-750 
+751 
 tvÆ
  = &
 AŒ_N
@@ -37157,7 +37295,7 @@ DC
 SP
 )];
 
-751 
+752 
 ddí
  = &
 AŒ_N
@@ -37173,11 +37311,11 @@ DE
 SP
 )];
 
-752 
+753 
 §cDOF
  = 1;
 
-753 
+754 
 ªÆ_t
  *
 tmpDí
@@ -37193,7 +37331,7 @@ DE
 n
 );
 
-754 
+755 
 	`ªÆs_zîo
  (
 SP
@@ -37205,7 +37343,7 @@ n
 tmpDí
 );
 
-755 
+756 
 	`dgemv
 (
 TM
@@ -37221,7 +37359,7 @@ tvÆ
 tmpDí
 );
 
-758 
+759 
 l
  = 
 nodeVec
@@ -37231,13 +37369,13 @@ i
 dïth
 ;
 
-759 
+760 
 ªÆ_t
  
 degVec
 [1]; degVec[0] = 1;
 
-760 
+761 
 ªÆ_t
  
 s˛vec
@@ -37245,13 +37383,13 @@ s˛vec
 §cDOF
 ];
 
-761 
+762 
 s
 =0; s<
 §cDOF
 ; s++)
 
-762 
+763 
 s˛vec
 [
 s
@@ -37263,11 +37401,11 @@ l
 degVec
 [s]);
 
-763 
+764 
 ˙t
  = 0;
 
-764 
+765 
 j
 =0; j < 
 SP
@@ -37277,13 +37415,13 @@ DE
 n
 ; j++)
 
-765 
+766 
 s
 =0; s < 
 §cDOF
 ; s++) {
 
-766 
+767 
 ddí
 [
 ˙t
@@ -37295,11 +37433,11 @@ s˛vec
 s
 ];
 
-767 
+768 
 ˙t
 ++;
 
-775 #¥agm®
+776 #¥agm®
 omp
  
 ∑øŒñ
@@ -37315,7 +37453,7 @@ c
 r
 )
 
-776 
+777 
 i
  = 0; i < 
 nodeVec
@@ -37323,7 +37461,7 @@ nodeVec
 	`size
 (); i++) {
 
-777 i‡(
+778 i‡(
 nodeVec
 [
 i
@@ -37333,7 +37471,7 @@ i
 LET_TRGNODE
 ) {
 
-778 i‡(
+779 i‡(
 nodeVec
 [
 i
@@ -37341,7 +37479,7 @@ i
 chûd
  == -1) {
 
-780 
+781 
 c
  = 
 	`˚¡î
@@ -37351,7 +37489,7 @@ i
 nodeVec
 );
 
-781 
+782 
 r
  = 
 	`ødius
@@ -37361,13 +37499,13 @@ i
 nodeVec
 );
 
-782 
+783 
 Node
 * 
 ¶_pos
 ;
 
-783 
+784 
 ¶_pos
  = (
 Node
@@ -37377,7 +37515,7 @@ Node
 IDEAL_ALIGNMENT
 );
 
-785 
+786 
 ¶_pos
 ->
 x
@@ -37393,7 +37531,7 @@ DE
 n
 );
 
-786 
+787 
 ¶_pos
 ->
 y
@@ -37409,7 +37547,7 @@ DE
 n
 );
 
-787 
+788 
 ¶_pos
 ->
 z
@@ -37425,7 +37563,7 @@ DE
 n
 );
 
-788 
+789 
 ¶_pos
 ->
 num_±s
@@ -37437,7 +37575,7 @@ DE
 n
 ;
 
-789 
+790 
 	`compuã_loˇÕos
  (
 c
@@ -37451,7 +37589,7 @@ SP
 DE
 ]);
 
-790 
+791 
 ¶_pos
 ->
 dí_pŸ
@@ -37469,7 +37607,7 @@ DE
 SP
 )];
 
-792 
+793 
 	`uli°__dúe˘_evÆu©i⁄
  (
 AŒ_N
@@ -37481,11 +37619,11 @@ i
 ¶_pos
 );
 
-798 
+799 
 	}
 }
 
-804 
+805 
 	$c›y_åg_vÆ
  (
 AŒNodes
@@ -37493,11 +37631,11 @@ AŒNodes
 AŒ_N
 )
 
-806 
+807 
 i
 ;
 
-807 
+808 
 ve˘‹
 <
 NodeTªe
@@ -37509,7 +37647,7 @@ AŒ_N
 N
 ;
 
-809 
+810 
 i
  = 0; i < 
 nodeVec
@@ -37517,7 +37655,7 @@ nodeVec
 	`size
 (); i++)
 
-810 if–
+811 if–
 nodeVec
 [
 i
@@ -37527,7 +37665,7 @@ i
 LET_TRGNODE
 )
 
-811 i‡(
+812 i‡(
 nodeVec
 [
 i
@@ -37535,7 +37673,7 @@ i
 chûd
  == -1) {
 
-812 
+813 
 	`£t_vÆue
  (
 nodeVec
@@ -37555,7 +37693,7 @@ dí_pŸ
 ågOwnVecIdxs
 );
 
-816 
+817 
 	}
 }
 
@@ -40423,7 +40561,7 @@ SP
 DC
 ]);
 
-23 
+22 
 	`compuã_ªgpos
  (
 ≈
@@ -40431,11 +40569,11 @@ DC
 RP
 );
 
-26 
+24 
 	}
 }
 
-32 
+30 
 	$compuã_ßmpos
 (
 ≈
@@ -40449,11 +40587,11 @@ Pos
 SP
 )
 
-34 
+32 
 i
 ;
 
-35 
+33 
 SP
 ->
 n
@@ -40461,7 +40599,7 @@ n
 ≈
 *np*np - (np-2)*(np-2)*(np-2);
 
-38 
+36 
 SP
 ->
 x
@@ -40473,10 +40611,22 @@ x
 n
 );
 
-39 
+37 
 SP
 ->
 y
+ = (
+ªÆ_t
+ *Ë
+	`ªÆs_Æloc__Æig√d
+ (SP->
+n
+);
+
+38 
+SP
+->
+z
  = (
 ªÆ_t
  *Ë
@@ -40486,18 +40636,6 @@ n
 );
 
 40 
-SP
-->
-z
- = (
-ªÆ_t
- *Ë
-	`ªÆs_Æloc__Æig√d
- (SP->
-n
-);
-
-42 
 ªÆ_t
  
 °ï
@@ -40505,35 +40643,35 @@ n
 ≈
 -1);
 
-43 
+41 
 ªÆ_t
  
 öô
  = -1.0;
 
-44 
+42 
 ˙t
  = 0;
 
-45 
+43 
 i
 =0; i<
 ≈
 ; i++)
 
-46 
+44 
 j
 =0; j<
 ≈
 ; j++)
 
-47 
+45 
 k
 =0; k<
 ≈
 ; k++) {
 
-48 if(
+46 if(
 i
 ==0 || i==
 ≈
@@ -40543,7 +40681,7 @@ j
 k
 ==0 || k==np-1) {
 
-49 
+47 
 ªÆ_t
  
 x
@@ -40555,7 +40693,7 @@ i
 °ï
 ;
 
-50 
+48 
 ªÆ_t
  
 y
@@ -40567,7 +40705,7 @@ j
 °ï
 ;
 
-51 
+49 
 ªÆ_t
  
 z
@@ -40579,7 +40717,7 @@ k
 °ï
 ;
 
-52 
+50 
 SP
 ->
 x
@@ -40589,7 +40727,7 @@ x
 R
 *x;
 
-53 
+51 
 SP
 ->
 y
@@ -40599,7 +40737,7 @@ y
 R
 *y;
 
-54 
+52 
 SP
 ->
 z
@@ -40609,15 +40747,15 @@ z
 R
 *z;
 
-55 
+53 
 ˙t
 ++;
 
-60 
+58 
 	}
 }
 
-65 
+63 
 	$compuã_ªgpos
 (
 ≈
@@ -40631,7 +40769,7 @@ Pos
 RP
 )
 
-67 
+65 
 RP
 ->
 n
@@ -40639,10 +40777,30 @@ n
 ≈
 *2*np*2*np;
 
-68 
+66 
 RP
 ->
 x
+ = 
+	`ªÆs_Æloc__Æig√d
+(RP->
+n
+);
+
+67 
+RP
+->
+y
+ = 
+	`ªÆs_Æloc__Æig√d
+(RP->
+n
+);
+
+68 
+RP
+->
+z
  = 
 	`ªÆs_Æloc__Æig√d
 (RP->
@@ -40650,26 +40808,6 @@ n
 );
 
 69 
-RP
-->
-y
- = 
-	`ªÆs_Æloc__Æig√d
-(RP->
-n
-);
-
-70 
-RP
-->
-z
- = 
-	`ªÆs_Æloc__Æig√d
-(RP->
-n
-);
-
-71 
 ªÆ_t
  
 °ï
@@ -40677,29 +40815,29 @@ n
 ≈
 -1);
 
-72 
+70 
 ˙t
  = 0;
 
-73 
+71 
 k
 =0; k<2*
 ≈
 ; k++)
 
-74 
+72 
 j
 =0; j<2*
 ≈
 ; j++)
 
-75 
+73 
 i
 =0; i<2*
 ≈
 ; i++) {
 
-76 
+74 
 gi
  = (
 i
@@ -40707,7 +40845,7 @@ i
 ≈
 ) ? i : i-2*np;
 
-77 
+75 
 gj
  = (
 j
@@ -40715,7 +40853,7 @@ j
 ≈
 ) ? j : j-2*np;
 
-78 
+76 
 gk
  = (
 k
@@ -40723,7 +40861,7 @@ k
 ≈
 ) ? k : k-2*np;
 
-79 
+77 
 RP
 ->
 x
@@ -40737,7 +40875,7 @@ gi
 °ï
 ;
 
-80 
+78 
 RP
 ->
 y
@@ -40751,7 +40889,7 @@ gj
 °ï
 ;
 
-81 
+79 
 RP
 ->
 z
@@ -40765,15 +40903,15 @@ gk
 °ï
 ;
 
-82 
+80 
 ˙t
  ++;
 
-85 
+83 
 	}
 }
 
-91 
+89 
 	$compuã_loˇÕos
  (
 Poöt3
@@ -40793,11 +40931,11 @@ Pos
 SP
 )
 
-93 
+91 
 i
 ;
 
-94 
+92 
 i
  = 0; i < 
 t
@@ -40805,7 +40943,7 @@ t
 num_±s
 ; i++) {
 
-95 
+93 
 t
 ->
 x
@@ -40819,7 +40957,7 @@ i
 SP
 ->x[i];
 
-96 
+94 
 t
 ->
 y
@@ -40833,7 +40971,7 @@ i
 SP
 ->y[i];
 
-97 
+95 
 t
 ->
 z
@@ -40847,29 +40985,29 @@ i
 SP
 ->z[i];
 
-101 
+99 
 	}
 }
 
-107 
+105 
 	$eff_d©a_size
 (
 ç
 )
 
-109 
+107 
 ≈
  = 
 	`gëív__accuøcy
 ();
 
-110 
+108 
 effNum
  = (2*
 ≈
 +2)*(2*np)*(2*np);
 
-111 if(
+109 if(
 ç
 ==
 UE
@@ -40877,41 +41015,41 @@ UE
 DE
 )
 
+110  
+effNum
+;
+
 112  
 effNum
 ;
 
-114  
-effNum
-;
-
-115 
+113 
 	}
 }
 
-120 
+118 
 ªÆ_t
  
 	$Æt
 ()
 
-122 
+120 
 ≈
  = 
 	`gëív__accuøcy
 ();
 
-123  
+121  
 	`pow
 (0.1, 
 ≈
 +1);
 
-124 
+122 
 	}
 }
 
-129 
+127 
 	$∂n_size
 (
 ç
@@ -40921,21 +41059,31 @@ Pos
 SP
 )
 
-131 
+129 
 §cDOF
  = 1;
 
-132 
+130 
 ågDOF
  = 1;
 
-134 i‡(
+132 i‡(
 ç
 ==
 UE
  ||Åp==
 DE
 )
+
+133  
+SP
+[
+ç
+].
+n
+ * 
+§cDOF
+;
 
 135  
 SP
@@ -40944,24 +41092,14 @@ SP
 ].
 n
  * 
-§cDOF
-;
-
-137  
-SP
-[
-ç
-].
-n
- * 
 ågDOF
 ;
 
-138 
+136 
 	}
 }
 
-144 
+142 
 	$compuã_UC2UE_m©
  (
 Tøns_m©rix
@@ -40973,19 +41111,19 @@ Pos
 SP
 )
 
-146 
+144 
 ªÆ_t
  
 R
  = 1;
 
-147 
+145 
 ªÆ_t
  *
 ud2c
 ;
 
-149 
+147 
 r
  = 
 	`∂n_size
@@ -40995,7 +41133,7 @@ UC
 SP
 );
 
-150 
+148 
 c
  = 
 	`∂n_size
@@ -41005,7 +41143,7 @@ UE
 SP
 );
 
-151 
+149 
 ud2c
  = (
 ªÆ_t
@@ -41017,7 +41155,7 @@ r
 c
 );
 
-153 
+151 
 ªÆ_t
  
 chkPosX
@@ -41037,7 +41175,7 @@ R
 x
 , chkPosX) ;
 
-154 
+152 
 ªÆ_t
  
 chkPosY
@@ -41057,7 +41195,7 @@ R
 y
 , chkPosY) ;
 
-155 
+153 
 ªÆ_t
  
 chkPosZ
@@ -41077,7 +41215,7 @@ R
 z
 , chkPosZ) ;
 
-157 
+155 
 ªÆ_t
  
 díPosX
@@ -41097,7 +41235,7 @@ R
 x
 , denPosX) ;
 
-158 
+156 
 ªÆ_t
  
 díPosY
@@ -41117,7 +41255,7 @@ R
 y
 , denPosY) ;
 
-159 
+157 
 ªÆ_t
  
 díPosZ
@@ -41137,7 +41275,7 @@ R
 z
 , denPosZ) ;
 
-161 
+159 
 	`kî√l
  (
 SP
@@ -41163,7 +41301,7 @@ chkPosZ
 ud2c
 );
 
-163 
+161 
 TM
 ->
 UC2UE
@@ -41177,7 +41315,7 @@ c
 r
 );
 
-164 
+162 
 TM
 ->
 m
@@ -41185,7 +41323,7 @@ m
 c
 ;
 
-165 
+163 
 TM
 ->
 n
@@ -41193,7 +41331,7 @@ n
 r
 ;
 
-166 
+164 
 	`pöv
 (
 ud2c
@@ -41209,11 +41347,11 @@ r
 c
 );
 
-169 
+167 
 	}
 }
 
-175 
+173 
 	$compuã_UE2UC_m©
  (
 Index3
@@ -41229,19 +41367,19 @@ Pos
 SP
 )
 
-177 
+175 
 ªÆ_t
  
 R
  = 1;
 
-178 
+176 
 ªÆ_t
  *
 ue2uc
 ;
 
-180 
+178 
 r
  = 
 	`∂n_size
@@ -41251,7 +41389,7 @@ UC
 SP
 );
 
-181 
+179 
 c
  = 
 	`∂n_size
@@ -41261,7 +41399,7 @@ UE
 SP
 );
 
-182 
+180 
 ue2uc
  = (
 ªÆ_t
@@ -41273,7 +41411,7 @@ r
 c
 );
 
-184 
+182 
 ªÆ_t
  
 chkPosX
@@ -41293,7 +41431,7 @@ R
 x
 , chkPosX) ;
 
-185 
+183 
 ªÆ_t
  
 chkPosY
@@ -41313,7 +41451,7 @@ R
 y
 , chkPosY) ;
 
-186 
+184 
 ªÆ_t
  
 chkPosZ
@@ -41333,7 +41471,7 @@ R
 z
 , chkPosZ) ;
 
-187 
+185 
 ªÆ_t
  
 díPosX
@@ -41353,7 +41491,7 @@ R
 x
 , denPosX) ;
 
-188 
+186 
 ªÆ_t
  
 díPosY
@@ -41373,7 +41511,7 @@ R
 y
 , denPosY) ;
 
-189 
+187 
 ªÆ_t
  
 díPosZ
@@ -41393,7 +41531,7 @@ R
 z
 , denPosZ) ;
 
-192 
+190 
 j
  = 0; j < 
 SP
@@ -41403,7 +41541,7 @@ UE
 n
 ; j++) {
 
-193 
+191 
 díPosX
 [
 j
@@ -41413,7 +41551,7 @@ j
 R
 ;
 
-194 
+192 
 díPosY
 [
 j
@@ -41423,7 +41561,7 @@ j
 R
 ;
 
-195 
+193 
 díPosZ
 [
 j
@@ -41433,7 +41571,7 @@ j
 R
 ;
 
-198 
+196 
 	`kî√l
  (
 SP
@@ -41459,7 +41597,7 @@ chkPosZ
 ue2uc
 );
 
-200 
+198 
 TM
 ->
 UE2UC
@@ -41469,11 +41607,11 @@ UE2UC
 ue2uc
 ;
 
-203 
+201 
 	}
 }
 
-209 
+207 
 	$compuã_DC2DE_m©
  (
 Tøns_m©rix
@@ -41485,19 +41623,19 @@ Pos
 SP
 )
 
-211 
+209 
 ªÆ_t
  
 R
  = 1;
 
-212 
+210 
 ªÆ_t
  *
 dd2c
 ;
 
-214 
+212 
 r
  = 
 	`∂n_size
@@ -41507,7 +41645,7 @@ DC
 SP
 );
 
-215 
+213 
 c
  = 
 	`∂n_size
@@ -41517,7 +41655,7 @@ DE
 SP
 );
 
-216 
+214 
 dd2c
  = (
 ªÆ_t
@@ -41529,7 +41667,7 @@ r
 c
 );
 
-218 
+216 
 ªÆ_t
  
 chkPosX
@@ -41549,7 +41687,7 @@ R
 x
 , chkPosX) ;
 
-219 
+217 
 ªÆ_t
  
 chkPosY
@@ -41569,7 +41707,7 @@ R
 y
 , chkPosY) ;
 
-220 
+218 
 ªÆ_t
  
 chkPosZ
@@ -41589,7 +41727,7 @@ R
 z
 , chkPosZ) ;
 
-222 
+220 
 ªÆ_t
  
 díPosX
@@ -41609,7 +41747,7 @@ R
 x
 , denPosX) ;
 
-223 
+221 
 ªÆ_t
  
 díPosY
@@ -41629,7 +41767,7 @@ R
 y
 , denPosY) ;
 
-224 
+222 
 ªÆ_t
  
 díPosZ
@@ -41649,7 +41787,7 @@ R
 z
 , denPosZ) ;
 
-226 
+224 
 	`kî√l
  (
 SP
@@ -41675,7 +41813,7 @@ chkPosZ
 dd2c
 );
 
-227 
+225 
 TM
 ->
 DC2DE
@@ -41689,7 +41827,7 @@ c
 r
 );
 
-228 
+226 
 TM
 ->
 m
@@ -41697,7 +41835,7 @@ m
 c
 ;
 
-229 
+227 
 TM
 ->
 n
@@ -41705,7 +41843,7 @@ n
 r
 ;
 
-230 
+228 
 	`pöv
 (
 dd2c
@@ -41721,11 +41859,11 @@ r
 c
 );
 
-233 
+231 
 	}
 }
 
-238 
+236 
 	$compuã_DE2DC_m©
  (
 Index3
@@ -41741,19 +41879,19 @@ Pos
 SP
 )
 
-240 
+238 
 ªÆ_t
  
 R
  = 1;
 
-241 
+239 
 ªÆ_t
  *
 de2dc
 ;
 
-243 
+241 
 r
  = 
 	`∂n_size
@@ -41763,7 +41901,7 @@ DC
 SP
 );
 
-244 
+242 
 c
  = 
 	`∂n_size
@@ -41773,7 +41911,7 @@ DE
 SP
 );
 
-245 
+243 
 de2dc
  = (
 ªÆ_t
@@ -41785,7 +41923,7 @@ r
 c
 );
 
-247 
+245 
 ªÆ_t
  
 díPosX
@@ -41805,7 +41943,7 @@ R
 x
 , denPosX) ;
 
-248 
+246 
 ªÆ_t
  
 díPosY
@@ -41825,7 +41963,7 @@ R
 y
 , denPosY) ;
 
-249 
+247 
 ªÆ_t
  
 díPosZ
@@ -41845,7 +41983,7 @@ R
 z
 , denPosZ) ;
 
-250 
+248 
 ªÆ_t
  
 chkPosX
@@ -41865,7 +42003,7 @@ R
 x
 , chkPosX) ;
 
-251 
+249 
 ªÆ_t
  
 chkPosY
@@ -41885,7 +42023,7 @@ R
 y
 , chkPosY) ;
 
-252 
+250 
 ªÆ_t
  
 chkPosZ
@@ -41905,7 +42043,7 @@ R
 z
 , chkPosZ) ;
 
-255 
+253 
 j
  = 0; j < 
 SP
@@ -41915,7 +42053,7 @@ DC
 n
 ; j++) {
 
-256 
+254 
 chkPosX
 [
 j
@@ -41925,7 +42063,7 @@ j
 R
 ;
 
-257 
+255 
 chkPosY
 [
 j
@@ -41935,7 +42073,7 @@ j
 R
 ;
 
-258 
+256 
 chkPosZ
 [
 j
@@ -41945,7 +42083,7 @@ j
 R
 ;
 
-261 
+259 
 	`kî√l
  (
 SP
@@ -41971,7 +42109,7 @@ chkPosZ
 de2dc
 );
 
-263 
+261 
 TM
 ->
 DE2DC
@@ -41981,11 +42119,11 @@ DE2DC
 de2dc
 ;
 
-266 
+264 
 	}
 }
 
-272 
+270 
 	$∂nDí2EffDíöô
 (
 l
@@ -42005,11 +42143,11 @@ AŒNodes
 AŒ_N
 )
 
-274 
+272 
 §cDOF
  = 1;
 
-275 
+273 
 Pos
 * 
 SP
@@ -42017,7 +42155,7 @@ SP
 AŒ_N
 ->SP;
 
-276 
+274 
 Pos
 * 
 RP
@@ -42025,7 +42163,7 @@ RP
 AŒ_N
 ->RP;
 
-278 
+276 
 ªÆ_t
 * 
 ªg_dí
@@ -42037,19 +42175,19 @@ RP
 n
 *
 §cDOF
+);
+
+277 
+	`ªÆs_zîo
+(
+RP
+->
+n
+, 
+ªg_dí
 );
 
 279 
-	`ªÆs_zîo
-(
-RP
-->
-n
-, 
-ªg_dí
-);
-
-281 
 ªÆ_t
 * 
 tmp_dí
@@ -42065,7 +42203,7 @@ UE
 n
 );
 
-282 
+280 
 	`ªÆs_zîo
 (
 SP
@@ -42077,13 +42215,13 @@ n
 tmp_dí
 );
 
-284 
+282 
 ªÆ_t
  
 degVec
 [1]; degVec[0] = 1;
 
-285 
+283 
 ªÆ_t
  
 s˛vec
@@ -42091,13 +42229,13 @@ s˛vec
 §cDOF
 ];
 
-286 
+284 
 s
 =0; s<
 §cDOF
 ; s++)
 
-287 
+285 
 s˛vec
 [
 s
@@ -42109,11 +42247,11 @@ l
 degVec
 [s]);
 
-289 
+287 
 ˙t
  = 0;
 
-290 
+288 
 i
 =0; i<
 SP
@@ -42123,13 +42261,13 @@ UE
 n
 ; i++)
 
-291 
+289 
 s
 =0; s<
 §cDOF
 ; s++) {
 
-292 
+290 
 tmp_dí
 [
 ˙t
@@ -42141,11 +42279,11 @@ s˛vec
 s
 ];
 
-293 
+291 
 ˙t
 ++;
 
-295 
+293 
 	`ßmDí2RegDí
  (
 tmp_dí
@@ -42153,19 +42291,19 @@ tmp_dí
 ªg_dí
 );
 
-297 
+295 
 ≈
  = 
 	`gëív__accuøcy
 ();
 
-298 
+296 
 ¬n
 [3];Ç¬[0] = 2*
 ≈
 ;Çnn[1] = 2*np;Çnn[2] = 2*np;
 
-299 
+297 
 f‹∂™
  = 
 	`FFT_CREATE
@@ -42185,17 +42323,17 @@ eff_dí
 FFTW_ESTIMATE
 );
 
-300 
+298 
 	`FFT_EXECUTE
 (
 f‹∂™
 );
 
-303 
+301 
 	}
 }
 
-309 
+307 
 	$∂nDí2EffDí
 (
 l
@@ -42219,11 +42357,11 @@ AŒNodes
 AŒ_N
 )
 
-311 
+309 
 §cDOF
  = 1;
 
-312 
+310 
 Pos
 * 
 SP
@@ -42231,7 +42369,7 @@ SP
 AŒ_N
 ->SP;
 
-313 
+311 
 Pos
 * 
 RP
@@ -42239,13 +42377,13 @@ RP
 AŒ_N
 ->RP;
 
-315 
+313 
 ªÆ_t
  
 degVec
 [1]; degVec[0] = 1;
 
-316 
+314 
 ªÆ_t
  
 s˛vec
@@ -42253,13 +42391,13 @@ s˛vec
 §cDOF
 ];
 
-317 
+315 
 s
 =0; s<
 §cDOF
 ; s++)
 
-318 
+316 
 s˛vec
 [
 s
@@ -42271,11 +42409,11 @@ l
 degVec
 [s]);
 
-320 
+318 
 ˙t
  = 0;
 
-321 
+319 
 i
 =0; i<
 SP
@@ -42285,13 +42423,13 @@ UE
 n
 ; i++)
 
-322 
+320 
 s
 =0; s<
 §cDOF
 ; s++) {
 
-323 
+321 
 tmp_dí
 [
 ˙t
@@ -42303,11 +42441,11 @@ s˛vec
 s
 ];
 
-324 
+322 
 ˙t
 ++;
 
-326 
+324 
 	`ßmDí2RegDí
  (
 tmp_dí
@@ -42315,7 +42453,7 @@ tmp_dí
 ªg_dí
 );
 
-328 
+326 
 	`FFT_RE_EXECUTE
 (
 f‹∂™
@@ -42327,11 +42465,11 @@ FFT_COMPLEX
 eff_dí
 ));
 
-331 
+329 
 	}
 }
 
-336 
+334 
 	$ßmDí2RegDí
 (c⁄° 
 ªÆ_t
@@ -42341,45 +42479,45 @@ eff_dí
 ªg_dí
 )
 
-338 
+336 
 ≈
  = 
 	`gëív__accuøcy
 ();
 
-339 
+337 
 rgnum
  = 2*
 ≈
 ;
 
-340 
+338 
 §cDOF
  = 1;
 
-341 
+339 
 ˙t
 =0;
 
-343 
+341 
 i
 =0; i<
 ≈
 ; i++)
 
-344 
+342 
 j
 =0; j<
 ≈
 ; j++)
 
-345 
+343 
 k
 =0; k<
 ≈
 ; k++) {
 
-346 if(
+344 if(
 i
 ==0 || i==
 ≈
@@ -42389,7 +42527,7 @@ j
 k
 ==0 || k==np-1) {
 
-348 
+346 
 rgoff
  = (
 k
@@ -42403,13 +42541,13 @@ j
 i
 +np/2);
 
-349 
+347 
 f
 =0; f<
 §cDOF
 ; f++) {
 
-350 
+348 
 ªg_dí
 [
 §cDOF
@@ -42423,15 +42561,15 @@ f
 ˙t
  + f];
 
-352 
+350 
 ˙t
 ++;
 
-357 
+355 
 	}
 }
 
-363 
+361 
 	$effVÆ2P VÆöô
 (
 l
@@ -42451,17 +42589,17 @@ AŒNodes
 AŒ_N
 )
 
-365 
+363 
 ågDOF
  = 1;
 
-366 
+364 
 ≈
  = 
 	`gëív__accuøcy
 ();
 
-367 
+365 
 Pos
 * 
 RP
@@ -42469,13 +42607,13 @@ RP
 AŒ_N
 ->RP;
 
-369 
+367 
 ¬n
 [3];Ç¬[0] = 2*
 ≈
 ;Çnn[1] = 2*np;Çnn[2] = 2*np;
 
-370 
+368 
 ªÆ_t
 * 
 ªg_vÆ
@@ -42489,7 +42627,7 @@ n
 ågDOF
 );
 
-371 
+369 
 öv∂™
  = 
 	`IFFT_CREATE
@@ -42509,13 +42647,13 @@ NULL
 FFTW_ESTIMATE
 );
 
-372 
+370 
 	`IFFT_EXECUTE
 (
 öv∂™
 );
 
-374 
+372 
 	`ªgVÆ2SamVÆ
 (
 ªg_vÆ
@@ -42523,11 +42661,11 @@ FFTW_ESTIMATE
 ∂n_vÆ
 );
 
-377 
+375 
 	}
 }
 
-383 
+381 
 	$effVÆ2P VÆ
 (
 l
@@ -42549,7 +42687,7 @@ AŒNodes
 AŒ_N
 )
 
-385 
+383 
 	`IFFT_RE_EXECUTE
 (
 öv∂™
@@ -42561,7 +42699,7 @@ eff_vÆ
 ªg_vÆ
 );
 
-386 
+384 
 	`ªgVÆ2SamVÆ
 (
 ªg_vÆ
@@ -42569,11 +42707,11 @@ eff_vÆ
 ∂n_vÆ
 );
 
-389 
+387 
 	}
 }
 
-395 
+393 
 	$ªgVÆ2SamVÆ
 (c⁄° 
 ªÆ_t
@@ -42583,45 +42721,45 @@ eff_vÆ
 ßm_vÆ
 )
 
-397 
+395 
 ≈
  = 
 	`gëív__accuøcy
 ();
 
-398 
+396 
 rgnum
  = 2*
 ≈
 ;
 
-399 
+397 
 ågDOF
  = 1;
 
-400 
+398 
 ˙t
 =0;
 
-402 
+400 
 i
 =0; i<
 ≈
 ; i++)
 
-403 
+401 
 j
 =0; j<
 ≈
 ; j++)
 
-404 
+402 
 k
 =0; k<
 ≈
 ; k++) {
 
-405 if(
+403 if(
 i
 ==0 || i==
 ≈
@@ -42631,7 +42769,7 @@ j
 k
 ==0 || k==np-1) {
 
-407 
+405 
 rgoff
  = (
 k
@@ -42645,13 +42783,13 @@ j
 i
 +np/2);
 
-408 
+406 
 f
 =0; f<
 ågDOF
 ; f++) {
 
-409 
+407 
 ßm_vÆ
 [
 ågDOF
@@ -42665,11 +42803,11 @@ f
 rgoff
  + f];
 
-411 
+409 
 ˙t
 ++;
 
-416 
+414 
 	}
 }
 
@@ -42689,92 +42827,116 @@ __TRANS_H__
 	~"ªÆs.h
 "
 
-11 íum {
-	mUE
+6 (*
+kî√l
+)(
+¢
+, 
+ä
+, 
+ªÆ_t
+* 
+x1
+,Ñól_t* 
+x2
+,Ñól_t* 
+x3
+,Ñól_t* 
+y1
+,Ñól_t* 
+y2
+,Ñól_t* 
+y3
+,Ñól_t* 
+m©
+);
+
+14 íum {
+UE
 =0, 
-	mUC
+UC
 =1, 
-	mDE
+DE
 =2, 
-	mDC
+DC
 =3,};
 
-14 
+17 
 ªÆ_t
  *
-	mx
+x
 ;
 
-15 
+18 
 ªÆ_t
  *
-	my
+y
 ;
 
-16 
+19 
 ªÆ_t
  *
-	mz
+z
 ;
 
-17 
-	mn
+20 
+n
 ;
 
-18 } 
+21 } 
 	tPos
 ;
 
-21 
-	mm
+24 
+m
 , 
-	mn
-;
-
-23 
-ªÆ_t
- *
-	mUC2UE
-;
-
-24 
-ªÆ_t
- **
-	mUE2UC
-;
-
-25 
-ªÆ_t
- **
-	mUE2DC
+n
 ;
 
 26 
 ªÆ_t
  *
-	mDC2DE
+UC2UE
 ;
 
 27 
 ªÆ_t
  **
-	mDE2DC
+UE2UC
 ;
 
-28 }
+28 
+ªÆ_t
+ **
+UE2DC
+;
+
+29 
+ªÆ_t
+ *
+DC2DE
+;
+
+30 
+ªÆ_t
+ **
+DE2DC
+;
+
+31 }
 	tTøns_m©rix
 ;
 
-30 
+33 
 	~"öput.h
 "
 
-31 
+34 
 	~"node.h
 "
 
-33 
-å™s_£tup
+36 
+	`å™s_£tup
  (
 Pos
  *
@@ -42783,8 +42945,8 @@ SP
 RP
 );
 
-35 
-∂n_size
+38 
+	`∂n_size
 (
 ç
 , 
@@ -42793,14 +42955,14 @@ Pos
 SP
 );
 
-37 
-eff_d©a_size
+40 
+	`eff_d©a_size
 (
 ç
 );
 
-39 
-compuã_ßmpos
+42 
+	`compuã_ßmpos
 (
 ≈
 , 
@@ -42813,8 +42975,8 @@ Pos
 SP
 );
 
-41 
-compuã_ªgpos
+44 
+	`compuã_ªgpos
 (
 ≈
 , 
@@ -42827,8 +42989,8 @@ Pos
 RP
 );
 
-43 
-compuã_loˇÕos
+46 
+	`compuã_loˇÕos
  (
 Poöt3
  
@@ -42847,8 +43009,8 @@ Pos
 SP
 );
 
-45 
-compuã_UC2UE_m©
+48 
+	`compuã_UC2UE_m©
  (
 Tøns_m©rix
  *
@@ -42859,36 +43021,8 @@ Pos
 SP
 );
 
-47 
-compuã_UE2UC_m©
- (
-Index3
- 
-idx
-, 
-Tøns_m©rix
- *
-TM
-, 
-Pos
- *
-SP
-);
-
-49 
-compuã_DC2DE_m©
- (
-Tøns_m©rix
- *
-TM
-, 
-Pos
- *
-SP
-);
-
-51 
-compuã_DE2DC_m©
+50 
+	`compuã_UE2UC_m©
  (
 Index3
  
@@ -42903,8 +43037,36 @@ Pos
 SP
 );
 
-53 
-ßmDí2RegDí
+52 
+	`compuã_DC2DE_m©
+ (
+Tøns_m©rix
+ *
+TM
+, 
+Pos
+ *
+SP
+);
+
+54 
+	`compuã_DE2DC_m©
+ (
+Index3
+ 
+idx
+, 
+Tøns_m©rix
+ *
+TM
+, 
+Pos
+ *
+SP
+);
+
+56 
+	`ßmDí2RegDí
 (c⁄° 
 ªÆ_t
 * 
@@ -42913,8 +43075,8 @@ SP
 ªg_dí
 );
 
-55 
-ªgVÆ2SamVÆ
+58 
+	`ªgVÆ2SamVÆ
 (c⁄° 
 ªÆ_t
 * 

@@ -26,6 +26,11 @@ usage__ (const char* use)
 /* ----------------------------------------------------------------------------------------------------------
 */
 
+int (*kernel)(int sn, int tn, real_t* x1, real_t* x2, real_t* x3, 
+									 real_t* y1, real_t* y2, real_t* y3, 
+									 real_t* mat, real_t* radii, real_t *force_Vector);
+
+
 double get_seconds () {
   struct timeval tv;
   double t;
@@ -217,6 +222,9 @@ int main (int argc, char* argv[])
   int pts_max;
   int src_node_count, trg_node_count;  
   real_t rerr;
+
+  kernel = &mykernel;
+
 
   vector<NodeTree> nodeVec;
   vector<int> nodeLevel;

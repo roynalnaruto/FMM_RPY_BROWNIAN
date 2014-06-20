@@ -287,8 +287,9 @@ ulist__direct_evaluation (Node trg, Node src)
 }
 
   int 
-kernel (int sn, int tn, real_t* x1, real_t* x2, real_t* x3, real_t* y1, real_t* y2, real_t* y3,
-    real_t* mat) 
+mykernel (int sn, int tn, real_t* x1, real_t* x2, real_t* x3, 
+									 real_t* y1, real_t* y2, real_t* y3, 
+									 real_t* mat, real_t* radii, real_t *force_Vector) 
 {
   int i, j;
   real_t x, y, z, r2, r;
@@ -397,7 +398,7 @@ compute_fft_trans (AllNodes *All_N, FFT_PLAN& forplan)
           real_t chkPosY[RP->n];	 reals_zero(RP->n, chkPosY);	 daxpy(RP->n, R, RP->y, chkPosY) ; //scale
           real_t chkPosZ[RP->n];	 reals_zero(RP->n, chkPosZ);	 daxpy(RP->n, R, RP->z, chkPosZ) ; //scale
           real_t* tt = reals_alloc__aligned (RP->n*trgDOF*srcDOF);
-          kernel(1, RP->n, denPosX, denPosY, denPosZ, chkPosX, chkPosY, chkPosZ, tt);
+          kernel(1, RP->n, denPosX, denPosY, denPosZ, chkPosX, chkPosY, chkPosZ, tt, NULL, NULL);
 
           // move data to tmp
           real_t* tmp = reals_alloc__aligned (RP->n*trgDOF*srcDOF);

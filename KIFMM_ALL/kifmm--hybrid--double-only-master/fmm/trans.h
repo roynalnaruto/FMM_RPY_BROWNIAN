@@ -3,6 +3,12 @@
 
 #include "reals.h"
 
+
+extern int (*kernel)(int sn, int tn, real_t* x1, real_t* x2, real_t* x3, 
+									 real_t* y1, real_t* y2, real_t* y3, 
+									 real_t* mat, real_t* radii, real_t *force_Vector);
+
+
 /*  UE = Upper Equivalent
   * UC = Upper Check
   * DE = Downward Equivalent

@@ -6,12 +6,15 @@
 
 #include <math.h>
 #include <node.h>
-
 #define OOFP_R  (1.0/(4.0 * M_PI))
 
 //#if defined (__cplusplus)
 //extern "C" {
 //#endif
+
+extern int (*kernel)(int sn, int tn, real_t* x1, real_t* x2, real_t* x3, 
+									 real_t* y1, real_t* y2, real_t* y3, 
+									 real_t* mat, real_t* radii, real_t *force_Vector);
 
 typedef struct FMMWrapper FMMWrapper_t;
 
@@ -29,7 +32,9 @@ void get_input (AllNodes* All_N);
 
 int ulist__direct_evaluation (Node trg, Node src);
 int pointwise_mult (int n, FFT_COMPLEX* x, int ix, FFT_COMPLEX* y, int iy, FFT_COMPLEX* z, int iz);
-int kernel (int sn, int tn, real_t* x1, real_t* x2, real_t* x3, real_t* y1, real_t* y2, real_t* y3, real_t* mat); 
+int mykernel (int sn, int tn, real_t* x1, real_t* x2, real_t* x3,
+							  real_t* y1, real_t* y2, real_t* y3, 
+							  real_t* mat, real_t* radii, real_t *force_Vector); 
 
 int up_calc__cpu (FMMWrapper_t* F);
 int ulist_calc__cpu (FMMWrapper_t* F);

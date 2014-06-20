@@ -19,9 +19,7 @@ trans_setup (Pos *SP, Pos *RP)
   compute_sampos (np+2, 3.0, &SP[UC]);
   compute_sampos (np, 3.0, &SP[DE]);
   compute_sampos (np, 1.0, &SP[DC]);
-
   compute_regpos (np, 1.0, RP);
-
   return 0;
 }
 
@@ -158,7 +156,7 @@ compute_UC2UE_mat (Trans_matrix *TM, Pos *SP)
   real_t denPosY[SP[UE].n];	 reals_zero(SP[UE].n, denPosY);	 daxpy(SP[UE].n, R, SP[UE].y, denPosY) ; //scale
   real_t denPosZ[SP[UE].n];	 reals_zero(SP[UE].n, denPosZ);	 daxpy(SP[UE].n, R, SP[UE].z, denPosZ) ; //scale
 	
-  kernel (SP[UE].n, SP[UC].n, denPosX, denPosY, denPosZ, chkPosX ,chkPosY, chkPosZ, ud2c);
+  kernel (SP[UE].n, SP[UC].n, denPosX, denPosY, denPosZ, chkPosX ,chkPosY, chkPosZ, ud2c, NULL, NULL);
   
   TM->UC2UE = (real_t *) reals_alloc__aligned (c * r);
   TM->m = c;
@@ -195,7 +193,7 @@ compute_UE2UC_mat (Index3 idx, Trans_matrix *TM, Pos *SP)
     denPosZ[j] = denPosZ[j] + (2 * idx(2) - 1) * R;
   }
   	 
-	kernel (SP[UE].n, SP[UC].n, denPosX, denPosY, denPosZ, chkPosX ,chkPosY, chkPosZ, ue2uc);
+	kernel (SP[UE].n, SP[UC].n, denPosX, denPosY, denPosZ, chkPosX ,chkPosY, chkPosZ, ue2uc, NULL, NULL);
  
   TM->UE2UC[idx(2)+idx(1)*2+idx(0)*2*2] = ue2uc;
   
@@ -223,7 +221,7 @@ compute_DC2DE_mat (Trans_matrix *TM, Pos *SP)
   real_t denPosY[SP[DE].n];	 reals_zero(SP[DE].n, denPosY);	 daxpy(SP[DE].n, R, SP[DE].y, denPosY) ; //scale
   real_t denPosZ[SP[DE].n];	 reals_zero(SP[DE].n, denPosZ);	 daxpy(SP[DE].n, R, SP[DE].z, denPosZ) ; //scale
 	
-  kernel (SP[DE].n, SP[DC].n, denPosX, denPosY, denPosZ, chkPosX ,chkPosY, chkPosZ, dd2c);
+  kernel (SP[DE].n, SP[DC].n, denPosX, denPosY, denPosZ, chkPosX ,chkPosY, chkPosZ, dd2c, NULL, NULL);
   TM->DC2DE = (real_t *) reals_alloc__aligned (c * r);
   TM->m = c;
   TM->n = r;
@@ -258,7 +256,7 @@ compute_DE2DC_mat (Index3 idx, Trans_matrix *TM, Pos *SP)
     chkPosZ[j] = chkPosZ[j] + (idx(2) - 0.5) * R;
   }
   	 
-	kernel (SP[DE].n, SP[DC].n, denPosX, denPosY, denPosZ, chkPosX ,chkPosY, chkPosZ, de2dc);
+	kernel (SP[DE].n, SP[DC].n, denPosX, denPosY, denPosZ, chkPosX ,chkPosY, chkPosZ, de2dc, NULL, NULL);
  
   TM->DE2DC[idx(2)+idx(1)*2+idx(0)*2*2] = de2dc;
   
