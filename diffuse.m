@@ -1,0 +1,38 @@
+data = dlmread('./output_data/pos.csv.1001', ',');
+x1 = data(:, 1);
+y1 = data(:, 2);
+z1 = data(:, 3);
+diff = zeros(1);
+diff2 = zeros(1);
+t=0;
+tau = 100;
+tstep = 0.002;
+for i=(1001+tau):tau:10000
+    t=t+1;
+    pos_index = sprintf('./output_data/pos.csv.%04d', i);
+    data = dlmread(pos_index, ',');
+    x2 = data(:, 1);
+    y2 = data(:, 2);
+    z2 = data(:, 3);
+    dx = x2 - x1;
+    dx2 = dx.^2;
+    dy = y2 - y1;
+    dy2 = dy.^2;
+    dz = z2 - z1;
+    dz2 = dz.^2;
+    dr2 = dx2 + dy2 + dz2;
+    diff(i) = mean(dr2)/(6*tau);
+    diff2(t) = diff(i);
+    x1 = x2;
+    y1 = y2;
+    z1 = z2;
+end
+display(diff2);
+figure;
+plot(diff, '.');
+title('Diffusion co-efficient for Volume Fraction = 2.17% (tau = 100)');
+xlabel('Time steps (1 time step = 0.002 sec)');
+ylabel('Diffusion co-efficient');
+meanD = mean(diff2);
+absD = meanD/tstep;
+fprintf('tau = %d ----> %08f , %08f\n', tau, meanD, absD);
