@@ -166,6 +166,8 @@ int interactions(int npos, double *pos, double L, int boxdim, double cutoff2, do
 
     *numpairs_p = numpairs;
 
+    //printf("Total number of overlapping pairs : %d\n", numpairs);
+
     return 0;
 }
 
@@ -199,7 +201,8 @@ void interactionsFilter(int *numpairs_p, int *pairs, int *finalPairs, double *ra
     }
 
     *numpairs_p = interactingPairs;
-    printf("Non shell particles , number of overlaps %d \n", nonshellPairs);
+    //printf("Non shell particles , number of overlaps %d \n", nonshellPairs);
+    printf("Total number of overlapping particles : %d\n", interactingPairs);
 }
 
 
@@ -339,7 +342,7 @@ void computeForceSerial(double *f, double *pos, double *rad, double *shell){
         }
     }
     assert(npairs%2==0);
-    printf("exit computeForce: npairs  = %d \n", npairs/2);
+    //printf("exit computeForce: npairs  = %d \n", npairs/2);
 }
 
 

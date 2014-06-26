@@ -188,7 +188,7 @@ c
        		CHARACTER(LEN=100) :: dir
 
 		nsource = n
-		write(*,*) "n is ", nsource
+c		write(*,*) "n is ", nsource
 		
 	        done=1
 	        pi=4*atan(done)

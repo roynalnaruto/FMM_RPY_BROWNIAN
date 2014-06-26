@@ -1,5 +1,6 @@
 #include "headers.h"
 #include "normal.h"
+#include "sphere_grid.h"
 
 inline int min(int a, int b){
     return ((a>b)? b : a);
@@ -13,12 +14,7 @@ inline double mod(double x){
 	return ((x>0)? x : -x) ;
 }
 
-
-
-
-
 void printPairs(int *array, int pair){
-
     int i;
     printf("\n");
     for(i=0; i<pair; i+=2){
@@ -27,36 +23,42 @@ void printPairs(int *array, int pair){
     printf("\n");
 }
 
-
-
-
-
-
 void printVectors(double *array, int size, int dimension){
     int i,j;
     printf("\n");
     for(i=0;i<size;i++){
         for(j=0;j<dimension;j++)
-            printf("%lf\t", array[3*i + j]);
+            printf("%lf\t", array[dimension*i + j]);
         printf("\n");
     }
     printf("\n");
 }
-
-
 
 void printVectorsComplex(complex *array, int size, int dimension){
     int i,j;
     printf("\n");
     for(i=0;i<size;i++){
         for(j=0;j<dimension;j++)
-            printf("(%lf, %lf)\t", array[3*i + j].dr, array[3*i + j].di);
+            printf("(%lf, %lf)\t", array[dimension*i + j].dr, array[dimension*i + j].di);
         printf("\n");
     }
     printf("\n");
 }
 
+void printVectorsToFile(double *A, int n){
+    int i, j;
+    FILE *mob;
+    mob = fopen("./file_out.csv", "w");
 
+    for(i=0; i<n; i++){
+        for(j=0; j<n; j++){
+            fprintf(mob, "%lf\t", A[n*i + j]);
+        }
+        fprintf(mob, "\n");
+    }
+
+    fclose(mob);
+}
 
 void setPosRad(double *pos, double *rad){
     //printf("enter setPosRad\n");
@@ -66,12 +68,13 @@ void setPosRad(double *pos, double *rad){
 
         //r, phi and theta
         temp_r = (double)rand()/(double)(RAND_MAX/1.0);
-        temp_r = pow(temp_r, 1.0/3.0)*(shell_radius - 1.0);
+        temp_r = pow(temp_r, 1.0/3.0)*(shell_radius - 2.0);
         temp_theta = -1.0 + (float)rand()/(float)(RAND_MAX/2.0);
         temp_theta = acos(temp_theta);
         temp_phi = (float)rand()/(float)(RAND_MAX/(2.0*pie));
 
-        rad[i] = 0.3 + (double)rand()/(double)(RAND_MAX/0.7);
+        //rad[i] = 1.0 + (double)rand()/(double)(RAND_MAX/4.0); // USED FOR VARIABLE RADII
+        rad[i] = 1.0;                                           // USED FOR CONST RADII        
         //spherical co-ordinates to cartesian
         pos[0+(i*3)] = temp_r*sin(temp_theta)*cos(temp_phi) + shell_radius;
         pos[1+(i*3)] = temp_r*sin(temp_theta)*sin(temp_phi) + shell_radius;
@@ -81,17 +84,13 @@ void setPosRad(double *pos, double *rad){
     //printf("exit setPosRad\n");
 }
 
-
-
-
-
-
 void getShell(double *shell){
     //printf("enter getShell\n");
     char input_index[100];
     int i, j;
     FILE *input;
     sprintf(input_index, "./data-for-outer-shell/data%d_%d.csv", nsphere, shell_radius);
+    //sprintf(input_index, "./test_data.csv");
     input = fopen(input_index, "r");
     if(input == NULL){
 		printf("File for getShell could not be opened\n");
@@ -107,6 +106,18 @@ void getShell(double *shell){
     fclose(input);
     //printf("exit getShell\n");
 }
+
+/*
+void getShell(double *shell){
+    int factor;
+    int node;
+    //int node_num;
+    factor = 110;
+    nsphere = sphere_icos_point_num ( factor );
+    printf("Number of particles on the shell : %d\n", nsphere);
+    shell = sphere_icos1_points ( factor, nsphere , (double)shell_radius );
+}
+*/
 
 double relError(double *V1, double *V2, int size, int dimension){
 	
@@ -131,8 +142,6 @@ double relErrorRealComplex(double *V1, complex *V2, int size, int dimension){
     return (error/total);
 }
 
-
-
 double maxError(double *V1, double *V2, int size, int dimension){
 	
 	int i;
@@ -146,11 +155,9 @@ double maxError(double *V1, double *V2, int size, int dimension){
 		maxError = (maxError>error)? maxError : error;
 	}
 	
-	printf("Index is %d \n", index);
+	//printf("Index is %d \n", index);
 	return maxError;	
 }
-
-
 
 double maxErrorRealComplex(double *V1, complex *V2, int size, int dimension){
 
@@ -167,16 +174,6 @@ double maxErrorRealComplex(double *V1, complex *V2, int size, int dimension){
 	printf("Index is %d,V1[i]: %lf, V2[i]: %lf\n", index, V1[index], V2[index].dr);
 	return maxError;	
 }
-
-
-
-
-
-
-
-
-
-
 
 void createDiag(double *A, double *rad){
     //printf("enter createDiag\n");
@@ -197,7 +194,6 @@ void createDiag(double *A, double *rad){
 
     //printf("exit createDiag\n");
 }
-
 
 void mobilityMatrix(double *A, double *pos, double *rad){
     //printf("enter mobilityMatrix\n");
@@ -282,10 +278,7 @@ void mobilityMatrix(double *A, double *pos, double *rad){
     //printf("exit mobilityMatrix\n");
 }
 
-
 void multiplyMatrix(double *A, double *f){
-    //printf("enter multiplyMatrix\n");
-
     int i, j;
     double temp_value[3*npos];
     for(i=0; i<3*(npos); i++){
@@ -294,44 +287,45 @@ void multiplyMatrix(double *A, double *f){
             temp_value[i] += A[i+3*npos*j]*f[j];
         }
     }
-
     for(i=0; i<3*npos; i++){
         A[i] = temp_value[i];
     }
-    
-    //printf("exit multiplyMatrix\n");
 }
 
 void multiplyMatrix_AZ(double *A, double *Az, double *z){
-    //printf("enter multiplyMatrix_AZ\n");
-
     int i, j;
-    //double temp_value[3*npos];
     for(i=0; i<3*(npos); i++){
         Az[i] = 0.0;
         for(j = 0; j<3*(npos); j++){
             Az[i] += A[i+3*npos*j]*z[j];
         }
     }
-
-    //printf("exit multiplyMatrix_AZ\n");
 }
 
-
-
-void getNorm(int seed, float *z){
-	//printf("enter getNorm\n");
-	
+void getNorm(int seed, double *z){
 	int i;
 	for(i=0; i<3*npos; i++){
-		z[i] = r4_normal_01(&seed);
+		z[i] = r8_normal_01(&seed);
 	}
-	
-	//printf("exit getNorm\n");
 }
 
+void updatePos(double *pos, complex *rpy, double *z){
+    int i;
+    for(i=0; i<3*npos; i++){
+        pos[i] += rpy[i].dr*dt + sqrt(2*dt)*z[i];
+    }
+}
 
-
-
-
-
+void savePos(double *pos, double *rad, int index){
+    FILE *file;
+    char pos_index[50];
+    int i, j;
+    sprintf(pos_index, "./output_data/pos.csv.%04d", index);
+    file = fopen(pos_index, "w");
+    for(i=0; i<npos; i++){
+        for(j=0; j<3; j++)
+            fprintf(file, "%f, ", pos[3*i + j]);
+        fprintf(file, "%f\n", rad[i]);
+    }
+    fclose(file);
+}

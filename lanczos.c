@@ -110,7 +110,7 @@ void compute_lanczos (lanczos_t *lanczos, double tol,
     struct timeval tv1;
     struct timeval tv2;
     double timepass;
-    DPRINTF ("  Computing lanczos nrhs = %d mobtype = %d...\n", nrhs, mobtype);
+    //DPRINTF ("  Computing lanczos nrhs = %d mobtype = %d...\n", nrhs, mobtype);
     gettimeofday (&tv1, NULL);
     
     int i;
@@ -200,7 +200,7 @@ void compute_lanczos (lanczos_t *lanczos, double tol,
         zz = &(z[ldz * nn]);
         b = lanczos->b;
         b2 = lanczos->b2;
-        DPRINTF ("    nrhs = %d\n", _nrhs);        
+        //DPRINTF ("    nrhs = %d\n", _nrhs);        
         if (_nrhs == 1)
         {
             ldh = PAD_LEN (maxits, sizeof(double));
@@ -322,7 +322,7 @@ void compute_lanczos (lanczos_t *lanczos, double tol,
 
         if (converged == 1)
         {
-            DPRINTF ("    converge in %d iterations\n", i + 1);
+            //DPRINTF ("    converged in %d iterations\n", i + 1);
             for (j = 0; j < _nrhs; j++)
             {
                 cblas_dcopy (nm, &(b[j * ldv]), 1, &(zz[j * ldz]), 1);
@@ -357,6 +357,10 @@ void compute_lanczos (lanczos_t *lanczos, double tol,
     }
     else
     */
+
+
+    /////////UNCOMMENT TO DISPLAY TIME REQUIRED FOR LANCZOS
+    /*
       if(mobtype == FMM)
     {
 		DPRINTF ("    takes %.3le secs\n",
@@ -367,5 +371,6 @@ void compute_lanczos (lanczos_t *lanczos, double tol,
         DPRINTF ("   Serial takes %.3le secs\n",
             timepass);
     }
+    */
 
 }
