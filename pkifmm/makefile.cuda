@@ -1,0 +1,59 @@
+# ----------------------------machine dependent file
+# MPI +  OpenMP  + CUDA
+#
+
+USE_GPU?=no
+USE_OPENMP?=yes
+USE_GPU_DOUBLE?=no  # double precision on the gpu
+
+# OPENMP
+OPENMP_LIB=
+ifeq ($(USE_OPENMP),yes)
+		 OPENMP_LIB= -openmp          
+endif
+CPPFLAGS += ${OPENMP_LIB}     # gcc compiler change accoringly
+
+CPPFLAGS += -DUSE_SSE
+CFLAGS = -DPETSC_USE_LOG 
+FFLAGS =
+CPPFLAGS +=  -I.. ${FFTW_INCLUDE} -I${DENDRO_DIR}/include/oct  \
+            -I${DENDRO_DIR}/include/point -I${DENDRO_DIR}/include \
+            -I${DENDRO_DIR}/include/par -I${DENDRO_DIR}/include/binOps \
+            -I${DENDRO_DIR}/include/seq
+FPPFLAGS =
+FFLAGS =
+FFTW_LIB=-L${FFTW_DIR}/lib -lfftw3
+FFTW_INCLUDE=-I${FFTW_DIR}/include
+
+ifeq  ($(USE_GPU),yes)
+CUDA_DIR ?= /usr/local/cuda
+CUDA_SDK_DIR?=/usr/local/cudasdk/C
+CUDA_LIBS= -L$(CUDA_DIR)/lib64 -lcublas -lcudart -Wl,-rpath $(CUDA_DIR)/lib64
+CUDA_INCLUDE=-I$(CUDA_DIR)/include
+LIBS += $(CUDA_LIBS)
+NVCC =$(CUDA_DIR)/bin/nvcc -I.. -I$(CUDA_DIR)  \
+    -I$(CUDA_SDK_DIR)/common/inc -I$(MPI_DIR)/include -g 
+CPPFLAGS += -DCOMPILE_GPU -DDS_ORG $(CUDA_INCLUDE) 
+NVFLAGS += -DCOMPILE_GPU -DDS_ORG $(CUDA_INCLUDE)
+ifeq ($(USE_GPU_DOUBLE),yes)
+		 NVFLAGS+=-DUSE_DOUBLE -arch=sm_13
+		 CPPFLAGS+=-DUSE_DOUBLE
+		 CFLAGS+=-DUSE_DOUBLE
+endif
+endif
+
+LIBS += ${FFTW_LIB} -L${DENDRO_DIR}/lib -lOct -lPar -lBinOps -lSys -lPC ${OPENMP_LIB}
+AR = ar
+ARFLAGS = -r
+RANLIB = ranlib
+
+include ${PETSC_DIR}/conf/base
+
+ifeq ($(USE_GPU),yes)
+%.o: %.cu
+		 $(NVCC) $(NVFLAGS) -c $*.cu
+endif
+
+
+
+

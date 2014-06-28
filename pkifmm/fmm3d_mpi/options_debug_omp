@@ -1,0 +1,56 @@
+-log_summary
+-fuse_dense
+-use_treebased_broadcast
+
+-u_weight 10
+-v_weight 8
+-w_weight 1
+-x_weight 1
+
+
+-balance_octree
+-repartition  uniformOct %weighted_leaves %uniformOct % weighted_leaves %blockPart % 
+
+-distribution ellipseUniformAngles %uniform %normal %ellipseUniformAngles %uniform %normal %uniform %ellipseUniformAngles % 
+
+-isogranular
+-numsrc 10000            %number of source points
+
+-trgs_and_srcs_coinc
+
+-numchk 10
+
+-kt 311                    %laplace equation, single layer, evaluating potential
+
+-fmm3d_np 4
+-fmm3d_let3d_ptsmax 250  % FIND OUT OPTIMAL!
+-fmm3d_let3d_maxlevel 30
+
+% -useRegularOctreeAtLevel 3  % will use same number of levels for preloading!
+
+% -gpu_ulist
+% -do_2nd_eval
+% -info
+% -eval_skip_communication
+
+% -vecscatter_merge
+% -vecscatter_alltoall
+
+% -malloc
+% -malloc_debug
+% -malloc_dump
+% -malloc_info
+%  -numtrg 100000         %number of target points (where the potential needs to be evaluated)
+%  -preload_numtrg 10  %number of target points (where the potential needs to be evaluated) WHEN PRELOADING
+
+% -numchk and -preload_numchk are ignored when -check_all and
+% -preload_check_all are set, respectively
+% -preload_numchk 1
+% -check_all
+% -preload_check_all
+
+% -kt 111                  % stokes equation, single layer velocity
+% -log_summary
+% -log_trace whereItCrashes
+
+

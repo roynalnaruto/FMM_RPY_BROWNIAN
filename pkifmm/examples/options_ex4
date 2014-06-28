@@ -1,0 +1,21 @@
+-use_treebased_broadcast
+-fuse_dense
+-repartition uniformOct
+-distribution ball %3_balls_horiz %mesh_of_balls %   two_balls_vert % 
+-isogranular
+-numsrc 84000		%number of source points
+
+-time_step 5
+-volume_ratio 0.15
+% number of time steps
+-num_iter 10
+-write_fraction 3  % if we only have 2 iter, don't write anything
+-log_summary
+
+% -dump_ids
+% -preserve_order
+
+-fmm3d_np 4
+-fmm3d_let3d_ptsmax 300  
+-fmm3d_let3d_maxlevel 30
+

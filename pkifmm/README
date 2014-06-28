@@ -1,0 +1,34 @@
+pKIFMM 
+Parallel Kernel Independent Fast Multipole Method.
+
+
+This package implements a parallel fast multipole method and supports
+multiple kernels (Laplace, Stokes, Navier, modified Laplacian). It
+supports OpenMP, MPI, and GPU-acceleration.
+
+see  INSTALL for installation instructions.
+see examples/*.cpp and examples/README for usage examples.
+
+References:
+"A massively parallel adaptive fast-multipole method on heterogeneous
+architectures"
+I Lashuk, A Chandramowlishwaran, H Langston, TA Nguyen, R Sampath, A
+Shringarpure, R Vuduc, L Ying, D Zorin, G Biros - ACM/IEEE SC09
+
+"A kernel-independent adaptive fast multipole algorithm in two and
+three dimensions"
+L Ying, G Biros, D Zorin - Journal of Computational Physics, 2004
+
+"A New Parallel Kernel-Independent Fast Multipole Method"
+L Ying, G Biros, D Zorin, Harper Langston  -   ACM/IEEE SC03
+
+
+
+RELEASE NOTES
+
+* Currently, all source and target points must be contained in
+  the unit cube.  See examples/ex2.cpp for a workaround.
+
+* See ../fmm3d_mpi/kernel3d_mpi.hpp for supported kernels
+
+

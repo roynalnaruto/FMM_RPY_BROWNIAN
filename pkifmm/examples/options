@@ -1,0 +1,24 @@
+
+-numsrc 10000		                %number of source points
+-fmm3d_np 4                     % accuracy [4, 6, 8], the higher the more accurate
+-fmm3d_let3d_ptsmax 200         % points per box (on gpu's this number should be ~600
+
+% for GPU version
+% make sure you complile with appropriate makefile.this_machine
+%-gpu_ulist    % offload U-list to GPU
+%-gpu_vlist    % offload V-list to GPU
+%-gpu_s2m      % offload source-to-multipole to GPU
+#-gpu_l2t      % offload local-to-target to GPU
+#-gpu_wlist    % offload W-list to GPU
+#	-gpu_xlist   % offload X-list to GPU
+
+-log_summary   % report timing statistics
+
+
+#---------- do not change
+-use_treebased_broadcast
+-fuse_dense
+-fmm3d_let3d_maxlevel 30
+
+
+

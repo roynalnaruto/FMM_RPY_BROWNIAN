@@ -1,0 +1,77 @@
+
+=== TO BUILD 
+
+step 1. Install required packages (see below) and define the following
+   environment variables
+   PETSC_DIR   (bash : export PETSC_DIR=/petsc_directory)
+   DENDRO_DIR
+   FFTW_DIR
+	 MPI_DIR
+
+	 if you use GPU, you also need CUDA 3 and the forloowing environment
+   variables
+   CUDA_DIR
+   CUDA_SDK_DIR
+
+step 2.  Copy one of makefile.{mpi,mpi_with_openmp,cuda} to makefile.this_machine
+		    and modify the compiler flags if necessary.
+
+step 3. Type "make ACTION=all tree"  in current directory. 
+   (you can use "make ACTION=all clean" to clean up)
+
+=== TO RUN THE EXAMPLES
+
+step 1: cd examples
+step 2: make
+step 3. run:
+ 	 export OMP_NUM_THREADS=2;
+   mpirun -np 2 ex0 
+   mpirun -np 2 ex1
+   mpirun -np 2 ex2
+   mpirun -np 2 ex3  etc.
+
+(you can use "make clean" to remove object files and executables)
+
+ex0 : evaluates the Laplace potential
+ex1 : evaluates the Laplace potential and its derivatives
+ex2 : evaluates the Laplace potential on points that are not in the unit cube.
+     (Currently, the tree construction REQUIRES that all input points
+		 are in the unit cube.)
+  
+
+=== REQUIRED PACKAGES
+
+
+- BLAS, LAPACK (see PETSc installation instructions at PETSc's web page)
+
+- MPI (see PETSc installation instructions)
+
+- PETSC-3.0.0
+  http://ftp.mcs.anl.gov/pub/petsc/software_old/petsc-3.0.0-p12.tar.gz
+	should compile with cxx, reals, and mpi.
+  example of building PETSC:
+  > cd $PETSC_DIR
+	> configure  --with-clanguage=c++ --with-scalar-type=real \
+             --with-blas-lapack-dir=/opt/intel/Compiler/11.1/059/mkl \
+             --with-mpi-dir=/opt/openmpi-1.3.3 --with-shared=0
+  > make
+
+
+- fftw-3
+  http://www.fftw.org/fftw-3.2.2.tar.gz
+
+- CUDA: compatible with version 3. 
+	    see examples/options on how to use the CUDA acceleration
+
+- DENDRO-3.0.1 
+	http://padas.ices.utexas.edu/static/dendro/releases/dendro-3.0.1.tgz
+	Quick instructions for Dendro, assuming PETSC has been installed and PETSC_DIR is set.
+ 
+  tar xzf dendro-3.0.1.tgz
+	cd Dendro-3.0.1
+	export DENDRO_DIR=$PWD
+	make all
+
+ 
+  
+

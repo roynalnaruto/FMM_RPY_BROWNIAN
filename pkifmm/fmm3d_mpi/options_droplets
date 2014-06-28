@@ -1,0 +1,31 @@
+-use_treebased_broadcast
+-fuse_dense
+-balance_octree
+
+
+-log_summary
+-repartition uniformOct
+-distribution ball %3_balls_horiz %mesh_of_balls %   two_balls_vert % 
+-isogranular
+-numsrc 84000		%number of source points
+
+-time_step 5
+% -particle_size 0.0316
+-volume_ratio 0.15
+-num_iter 2
+-write_fraction 3  % if we only have 2 iter, don't write anything
+
+% -preserve_order
+
+-fmm3d_np 4
+-fmm3d_let3d_ptsmax 300  % FIND OUT OPTIMAL!
+-fmm3d_let3d_maxlevel 30
+
+% -useRegularOctreeAtLevel 4  % will use same number of levels for preloading!
+% -eval_skip_communication
+% -vecscatter_merge
+
+% -malloc
+% -malloc_debug
+% -malloc_dump
+% -malloc_info

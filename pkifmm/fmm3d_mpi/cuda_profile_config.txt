@@ -1,0 +1,50 @@
+# timestamp        # Time stamps for kernel launches and memory transfers.
+                 # This can be used for timeline analysis.
+
+gridsize         # Number of blocks in a grid along the X and Y dimensions for 
+                 # a kernel launch          
+
+threadblocksize  # Number of threads in a block along the X, Y and Z dimensions 
+                 # for a kernel launch
+
+# dynsmemperblock  # Size of dynamically allocated shared memory per block in bytes
+                 # for a kernel launch
+
+stasmemperblock  # Size of statically allocated shared memory per block in bytes
+                 # for a kernel launch
+
+regperthread     # Number of registers used per thread for a kernel launch.
+
+# memtransferdir   # Memory transfer direction, a direction value of 0 is used for 
+                 # host->device memory copies and a value of 1 is used for device->host
+                 # memory copies.                  
+
+# memtransfersize  # Memory copy size in bytes
+
+# streamid         # Stream Id for a kernel launch
+
+
+# The profiler supports logging of following counters during kernel execution:
+
+gld_incoherent   # Non-coalesced (incoherent) global memory loads
+
+# gld_coherent     # Coalesced (coherent) global memory loads
+
+gst_incoherent   # Non-coalesced (incoherent) global memory stores
+
+# gst_coherent     # Coalesced (coherent) global memory stores
+
+# local_load       # Local memory loads
+
+# local_store      # Local memory stores
+# 
+# branch           # Branches taken by threads executing a kernel.
+# 
+# divergent_branch # Divergent branches taken by threads executing a kernel.
+# 
+# instructions     # Instructions executed
+
+warp_serialize   # Number of thread warps that serialize on address conflicts 
+                 # to either shared or constant memory
+
+cta_launched     # Number of threads blocks executed

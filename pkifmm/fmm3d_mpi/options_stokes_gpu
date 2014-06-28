@@ -1,0 +1,37 @@
+
+-kt 111 % stokes equation
+# offload u-list (exact near field evaluations) to the GPU
+-ds_org
+#-gpu_ulist
+#-gpu_vlist
+#-gpu_vlist_alternative
+#-gpu_s2m
+#-gpu_l2t
+#-gpu_wlist
+#	-gpu_xlist
+
+
+% defines the accuracy of the FMM
+-fmm3d_np 4  #6, 8  
+
+# determines point distribution
+-distribution ellipseUniformAngles  #normal, lognormal, ellipseUniformAngles, uniform
+
+% points per leaf box, defines actual level of tree and controls work
+% partition between the exact and the approximate part of the FMM
+-fmm3d_let3d_ptsmax 600  
+
+-use_treebased_broadcast
+-fuse_dense
+
+% numsrc: number of source points _per_ processor
+-isogranular # if you comment this out, numsrc will be the _total_ number  of points 
+-numsrc 400000		
+
+-fmm3d_let3d_maxlevel 30
+-do_preloading  # see petsc manual
+-trgs_and_srcs_coinc
+-numchk 10
+-preload_numchk 10
+-preload_numsrc 10   
+-log_summary

@@ -1,0 +1,36 @@
+# ----------------------------machine dependent file
+# MPI only without OpenMP or CUDA
+#
+# 
+
+OPENMP_LIB=
+#CPPFLAFGS+= -openmp
+CPPFLAGS += -DUSE_SSE
+
+CFLAGS = -DPETSC_USE_LOG
+FFLAGS =
+CPPFLAGS =  -I.. ${FFTW_INCLUDE} -I${DENDRO_DIR}/include/oct  \
+            -I${DENDRO_DIR}/include/point -I${DENDRO_DIR}/include \
+            -I${DENDRO_DIR}/include/par -I${DENDRO_DIR}/include/binOps \
+            -I${DENDRO_DIR}/include/seq
+CFLAGS = -DPETSC_USE_LOG
+FPPFLAGS =
+FFLAGS =
+FFTW_LIB=-L${FFTW_DIR}/lib -lfftw3
+FFTW_INCLUDE=-I${FFTW_DIR}/include
+
+LIBS = ${FFTW_LIB} -L${DENDRO_DIR}/lib -lOct -lPar -lBinOps -lSys -lPC ${OPENMP_LIB}
+AR = ar
+ARFLAGS = -r
+RANLIB = ranlib
+
+
+include ${PETSC_DIR}/conf/base
+
+
+%.d: %.cpp
+	@set -e; rm -f $@; \
+	  ${PCC} -MM ${PCC_FLAGS} ${CFLAGS} ${CCPPFLAGS} $< > $@.$$$$; \
+	  sed 's,\($*\)\.o[ :]*,\1.o $@ : ,g' < $@.$$$$ > $@; \
+	  rm -f $@.$$$$
+

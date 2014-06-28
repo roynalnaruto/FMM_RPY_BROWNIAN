@@ -1,0 +1,78 @@
+Here all the runs assume MPICH and BASH so that the executables are invoked
+using  mpirun -np mpi_size ./executable_name executable options.
+
+Performance:
+In your system, you may need additional environment commants to ensure
+thread pinning and binding of MPI process to sockets. 
+
+/* ************************************************** */
+* ex0.cpp:
+ In this example, we create points on the surface of an ellipsoid
+	 and we compute the Harmonic potential (Laplace kernel).
+
+
+example run 
+1 OpenMP thread,  several MPI ranks, strong scaling (100,000 points total)
+
+export OMP_NUM_THREADS=1; mpirun -np 1 ./ex0 -numsrc 100000
+export OMP_NUM_THREADS=1; mpirun -np 2 ./ex0 -numsrc 50000
+export OMP_NUM_THREADS=1; mpirun -np 4 ./ex0 -numsrc 25000
+
+multiple OpenMP threads, several MPI ranks, strong scaling (100,000 points
+total), with timing
+
+export OMP_NUM_THREADS=1; time mpirun -np 2 ./ex0 -numsrc 50000
+export OMP_NUM_THREADS=2; time mpirun -np 1 ./ex0 -numsrc 100000
+export OMP_NUM_THREADS=2; time mpirun -np 2 ./ex0 -numsrc 50000
+export OMP_NUM_THREADS=2; time mpirun -np 4 ./ex0 -numsrc 25000
+export OMP_NUM_THREADS=4; time mpirun -np 1 ./ex0 -numsrc 100000
+
+multiple OpenMP threads, several MPI ranks, weak (50,000 points per
+process), with timing
+
+export OMP_NUM_THREADS=1; time mpirun -np 1 ./ex0 -numsrc 50000  
+export OMP_NUM_THREADS=2; time mpirun -np 1 ./ex0 -numsrc 50000
+export OMP_NUM_THREADS=1; time mpirun -np 2 ./ex0 -numsrc 100000
+export OMP_NUM_THREADS=2; time mpirun -np 2 ./ex0 -numsrc 100000
+export OMP_NUM_THREADS=1; time mpirun -np 4 ./ex0 -numsrc 200000
+export OMP_NUM_THREADS=2; time mpirun -np 4 ./ex0 -numsrc 200000
+export OMP_NUM_THREADS=4; time mpirun -np 4 ./ex0 -numsrc 200000
+
+you can also run it using the options file "options"
+mpirun -np 2 ./ex0 -options_file options
+
+See "options" for additional inputs to the executable.
+
+
+/* ************************************************** */
+* ex1.cpp:
+
+In this example, we create points on the surface of an ellipsoid and
+ we compute the Harmonic potential (Laplace kernel) AND the gradient
+ of the potential.  Other than that everything else is the same as
+ ex0.cpp To compute the gradients, we select a different kernel and
+ the output is longer. The potentials (u) are ouput blockwise per
+ point: u_pnt0, ux_pnt0, uy_pnt0, uz_pnt0, u_pnt1, ux_pnt1, uy_pnt1,
+ uz_pnt1, ...
+
+
+/* ************************************************** */
+* ex2.cpp:
+  This is similar to ex0.cpp but now the source points are not in the
+  unit cube. Appropriate scalings have to take place. (The scalings
+  are kernel dependent.)
+
+/* ************************************************** */
+* ex3.cpp: Laplace kernel, repartitioning points (MPI) FMM
+repartitions the input points. This example demonstrates how the
+original ordering can be preserved and how the output potentials can
+be remapped to the original ordering.  The fmm class maintains the
+original partitioning and we will use this information to map between
+the fmm partitioning and the original partitioning.
+
+/* ************************************************** */
+* ex4.cpp: this is a more complex examples in which includes time
+stepping (RK4), repartitioning the particles at every time step for loa
+	
+
+
