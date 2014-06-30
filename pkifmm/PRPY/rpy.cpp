@@ -1,6 +1,15 @@
 #include "headers.h"
 
 
+double shell_radius;
+double shell_particle_radius;
+int nsphere;
+int npos;
+
+
+PetscInt  procLclNum(Vec pos) { PetscInt tmp; VecGetLocalSize(pos, &tmp); return tmp/3  /*dim*/; }
+PetscInt  procGlbNum(Vec pos) { PetscInt tmp; VecGetSize(     pos, &tmp); return tmp/3  /*dim*/; }
+
 int main(int argc, char** argv)
 {
    PetscInitialize(&argc,&argv,"options",NULL); 
@@ -11,8 +20,29 @@ int main(int argc, char** argv)
 	pC( PetscOptionsGetInt(0, "-numsrc", &n_pos, &flg) );
 	if(flg!=true)n_pos=1000;	
 	
+	
+	
+	
 	int dim = 3;
 	npos = n_pos;
+	
+	shell_radius = 0.5;
+	shell_particle_radius = 0.001;
+	nsphere = 90000;
+
+	
+	
+	cout<<"COMES HERE :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"<<endl;
+
+/*
+ *  Variables for Timings
+ */ 	
+	struct timeval startTime, endTime;
+	long long time1, time2, totaltime;
+	gettimeofday(&startTime, NULL);
+
+
+	
 	
 	double *pos = new double[(npos + nsphere)*dim];
 	double *rad = new double[npos];
@@ -60,11 +90,25 @@ int main(int argc, char** argv)
 //**********************************************************************	
 */
 
+
+
 	
 	setPosRad(pos, rad);
 	savePos(pos, rad, 0);
 	getShell(shell);
 	
+	
+	printVectors(pos, npos, 3, cout);
+	cout<<"------------------------------------"<<endl;
+	printVectors(rad, npos, 1, cout);
+	cout<<"------------------------------------"<<endl;
+	
+	printf("%lf\n", shell[0*0 + 0]);
+	printf("%lf\n", shell[0*0 + 1]);
+	printf("%lf\n", shell[0*0 + 2]);
+	
+	
+/*	
 	for(int tstep=0; tstep<TMAX; tstep++){
 
 	    interactions(npos+nsphere, pos, L, boxdim, cutoff2, distances2, pairs, maxnumpairs, &numpairs_p);
@@ -93,12 +137,14 @@ int main(int argc, char** argv)
 //			compute_lanczos(lanczos1, 1e-4, 1, standardNormalZ1, 3*npos,
 //					SERIAL, force, lanczos_out, pos, rad, numpairs_p, finalPairs, A);
 //			
-			multiplyMatrix(A, force_serial, 1);
+			multiplyMatrix(A, force_serial);
 					
 		}
 		
 		
-		computeRPY(npos, pos, force, rad, rpy, temp_rpy);
+		computeRpy(npos, pos, force, rad, rpy, temp_rpy);
+		printVectors(rpy, npos, 3, cout);
+		
 		postCorrectionAll(npos, pos, rad, numpairs_p, pairs, force, rpy);
 		
 //		create_lanczos (&lanczos, 1, maxiters, npos*3);
@@ -120,7 +166,8 @@ int main(int argc, char** argv)
 	PetscFinalize();
 	gettimeofday(&endTime, NULL);
 	totaltime = (endTime.tv_sec-startTime.tv_sec)*1000000 + endTime.tv_usec-startTime.tv_usec;
-	printf("Total time computing %d time steps (%d particles) : %ld msec\n", tmax, npos, totaltime/1000);
+	printf("Total time computing %d time steps (%d particles) : %ld msec\n", TMAX, npos, totaltime/1000);
+*/
 	return 0;
 }
 																																							 

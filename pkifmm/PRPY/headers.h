@@ -9,9 +9,17 @@
 #include <sys/time.h>
 #include <assert.h>
 #include <cstring>
+#include <string>
+# include <iomanip>
+# include <ctime>
+# include <complex>
+
+
+
+using namespace std;
 
 #include "normal.hpp"
-#include "lanczos.h"
+//#include "lanczos.h"
 #include "sphere_grid.hpp"
 
 
@@ -25,10 +33,21 @@
 #define constantC1 0.75
 #define constantC2 0.50
 
+///!TODO CHANGE ALL THIS TO CAPS
+#define kparticle 65.0
+#define kshell 150.0
+#define dt 0.002
+#define pie 3.14159
+///---------------------------
+
+#define NUM_BOX_NEIGHBORS 13
+
+#define CHECKCODE 1
+#define TMAX 1
 
 //Petsc functions.
-PetscInt  procLclNum(Vec pos) { PetscInt tmp; VecGetLocalSize(pos, &tmp); return tmp/3  /*dim*/; }
-PetscInt  procGlbNum(Vec pos) { PetscInt tmp; VecGetSize(     pos, &tmp); return tmp/3  /*dim*/; }
+extern PetscInt  procLclNum(Vec pos); //{ PetscInt tmp; VecGetLocalSize(pos, &tmp); return tmp/3  /*dim*/; }
+extern PetscInt  procGlbNum(Vec pos); //{ PetscInt tmp; VecGetSize(     pos, &tmp); return tmp/3  /*dim*/; }
 
 
 
@@ -91,10 +110,10 @@ struct box{
 
 
 //Variables
-double shell_radius;
-double shell_particle_radius;
-int nsphere;
-int npos;
+extern double shell_radius;
+extern double shell_particle_radius;
+extern int nsphere;
+extern int npos;
 
 
 #endif

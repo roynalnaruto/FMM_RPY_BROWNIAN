@@ -332,24 +332,3 @@ void computeForceSerial(double *f, double *pos, double *rad, double *shell){
     //printf("exit computeForce: npairs  = %d \n", npairs/2);
 }
 
-
-
-/*
-* Post Correction
-*/
-int postCorrection(int npos, double *pos, double *rad, int numpairs_p, int *pairs, 
-						complex *f1, complex *f2, complex *f3, complex *rpy){
-	
-	int i;
-	complex C1;
-	C1.dr = 0.75;
-	C1.di = 0;
-	for(i=0; i<2*(numpairs_p); i+=2){
-		if((pairs[i] <= npos) && (pairs[i+1] <= npos)){
-			//printf("Post Correcting pairs %d and %d \n", pairs[i], pairs[i+1]);
-			postcorrection_(&pairs[i], &pairs[i+1], pos, f1, f2, f3, rpy, &npos, rad, &C1);
-			postcorrection_(&pairs[i+1], &pairs[i], pos, f1, f2, f3, rpy, &npos, rad, &C1);		
-		}
-	}
-}
-

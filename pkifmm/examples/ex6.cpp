@@ -309,8 +309,9 @@ void postCorrection(int index1, int index2, double *srcPosition, double *forceVe
 		distanceVec[i] = srcPosition[3*index1 + i] - srcPosition[3*index2 + i];
 		modDistance += distanceVec[i] * distanceVec[i];
 	}	
-	
 	modDistance = sqrt(modDistance);
+	
+	
 	for(int i=0;i<3;i++){
 		for(int j=0;j<3;j++){
 			identity = (i==j)? 1.0 : 0;

@@ -19,8 +19,6 @@ int box_neighbors[NUM_BOX_NEIGHBORS][3] =
 
 int interactions(int npos, double *pos, double L, int boxdim, double cutoff2, double *distances2, int *pairs, int maxnumpairs, int *numpairs_p){
     
-
-
     if (boxdim < 4 || cutoff2 > (L/boxdim)*(L/boxdim))
     {
         printf("interactions: bad input parameters\n");

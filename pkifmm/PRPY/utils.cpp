@@ -120,10 +120,14 @@ void getShell(double *shell){
 	int factor;
 	int node;
 	//int node_num;
-	factor = 10;
+	factor = 4;
 	nsphere = sphere_icos_point_num ( factor );
 	printf("Number of particles on the shell : %d\n", nsphere);
-	shell = sphere_icos1_points (factor, nsphere);
+	
+	///!TODO : Change this, infi memory leak going on here. !!CHANGE
+	double *shell1 = sphere_icos1_points (factor, nsphere);
+	for(int i=0;i<3*nsphere;i++)
+		shell[i] = shell1[i];
 }
 
 
@@ -196,8 +200,8 @@ void mobilityMatrix(double *A, double *pos, double *rad){
                 a_mean = sqrt((1.0/2.0)*(a1*a1 + a2*a2));
                 term1 = (1.0/a_mean) - (9.0*s)/(32.0*a_mean*a_mean);
                 term2 = (3.0*s)/(32.0*a_mean*a_mean);
-                for(m=0; m<3; m++){
-                    for(n=0; n<3; n++){
+                for(int m=0; m<3; m++){
+                    for(int n=0; n<3; n++){
                         A12[m][n] = term1*eye3[m][n] + term2*ee[m][n];
                     }
                 }
@@ -252,7 +256,7 @@ void multiplyMatrix_AZ(double *A, double *Az, double *z){
 
 void getNorm(int seed, double *z){
 	for(int i=0; i<3*npos; i++){
-		z[i] = r8_normal_01(&seed);
+		z[i] = r8_normal_01(seed);
 	}
 }
 
