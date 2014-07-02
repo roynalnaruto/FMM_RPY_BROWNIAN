@@ -30,7 +30,7 @@ int main(int argc, char** argv)
 	
 	cout<<n_pos<<endl;
 	shell_radius = 0.5;
-	shell_particle_radius = 0.05;
+	shell_particle_radius = 0.02;
 	nsphere = 900;
 
 	
@@ -101,10 +101,16 @@ int main(int argc, char** argv)
 
 	time_t t;
 	srand((unsigned) time(&t));
+	srand48((long)time(NULL));
 	
 	setPosRad(pos, rad);
 	savePos(pos, rad, 0);
 	getShell(shell);
+	
+	
+
+    
+    
 	
 	for(int tstep=0; tstep<TMAX; tstep++){
 		
@@ -142,7 +148,6 @@ int main(int argc, char** argv)
 					
 		}
 		
-		
 		computeRpy(npos, pos, force, rad, rpy, temp_rpy);
 		postCorrectionAll(npos, pos, rad, numpairs_p, finalPairs, force, rpy);
 	
@@ -151,9 +156,7 @@ int main(int argc, char** argv)
 					
 		double error2 = maxError(A, rpy, npos, 3);
 		printf("Max Error in computeRpy %lf\n", error2); 
-	
-		
-		
+				
 //		create_lanczos (&lanczos, 1, maxiters, npos*3);
 //		compute_lanczos(lanczos, 1e-4, 1, standardNormalZ, 3*npos,
 //					FMM, force, lanczos_out, pos, rad, numpairs_p, finalPairs, A);

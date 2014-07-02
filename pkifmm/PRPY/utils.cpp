@@ -73,11 +73,11 @@ void setPosRad(double *pos, double *rad){
     double center[3] = {shell_radius, shell_radius, shell_radius};
     for(int i=0; i<npos; i++){
 		
-		r = (double)rand()/(double)(RAND_MAX/1.0);
-        r = pow(r, 1.0/3.0)*(shell_radius - 0.1);
-        theta = -1.0 + (float)rand()/(float)(RAND_MAX/2.0);
+		r = drand48();
+        r = pow(r, 1.0/3.0) * (shell_radius - 0.1);
+        theta = -1.0 + (2* drand48());
         theta = acos(theta);
-        phi = (float)rand()/(float)(RAND_MAX/(2.0*pie));
+        phi = drand48() * 2.0 * pie;
 
         //spherical co-ordinates to cartesian
         pos[0+(i*3)] = center[0] + r*sin(theta)*cos(phi);
@@ -85,8 +85,8 @@ void setPosRad(double *pos, double *rad){
         pos[2+(i*3)] = center[2] + r*cos(theta);
                 
         ///!TODO: SCALE RADIUS APPROPRIATELY
-        rad[i] = 0.01 * (1.0 + (double)rand()/(double)(RAND_MAX/4.0)); // USED FOR VARIABLE RADII
-        //rad[i] = 0.05;                                           // USED FOR CONST RADII        
+        rad[i] = 0.2 * (shell_particle_radius) * drand48(); // USED FOR VARIABLE RADII
+        //rad[i] = shell_particle_radius * 0.2;                                           // USED FOR CONST RADII        
     }
 }
 

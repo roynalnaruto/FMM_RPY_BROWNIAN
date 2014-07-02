@@ -261,8 +261,7 @@ void computeForce(double *f, double *pos, double *rad, int *pairs, int numpairs)
             f[3*j + 2] += kparticle*(1 - (a1 + a2)/s)*r3;
 			}
 
-		}
-		
+		}	 
 //	cout<<"NON_SHELL OVERLAPPING PARTICLES COUNT: "<<count<<endl;	
 }
 

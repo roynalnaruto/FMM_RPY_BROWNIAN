@@ -1,6 +1,6 @@
 
 -numsrc 10000		                %number of source points
--fmm3d_np 4                     % accuracy [4, 6, 8], the higher the more accurate
+-fmm3d_np 6                     % accuracy [4, 6, 8], the higher the more accurate
 -fmm3d_let3d_ptsmax 200         % points per box (on gpu's this number should be ~600
 
 % for GPU version

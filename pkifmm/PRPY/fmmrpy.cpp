@@ -39,9 +39,9 @@ int part1rpy(int numsrc, double *srcposition, double *forceVec, double *radii, d
 	fmm->knl() = knl;
  	MPI_Barrier(comm);
 	/* ************************************************** */
-	pC( PetscPrintf(comm, "\n\n\t FMM SETUP BEGINS\n"));
+//	pC( PetscPrintf(comm, "\n\n\t FMM SETUP BEGINS\n"));
 	pC( fmm->setup() );                                           // SETUP
-	pC( PetscPrintf(comm, "\t FMM SETUP ENDS\n"));
+//	pC( PetscPrintf(comm, "\t FMM SETUP ENDS\n"));
 	/* ************************************************** */
 
 	// setup destroys srcPos, srcNor, trgPos (after creating new, redistributed ones) 
@@ -51,9 +51,6 @@ int part1rpy(int numsrc, double *srcposition, double *forceVec, double *radii, d
 
 	int srcDOF = knl.srcDOF();
 	int trgDOF = knl.trgDOF();  
-	
-	cout<<"SRC DOF "<<srcDOF<<endl;
-	cout<<"TRG DOF "<<trgDOF<<endl;
 	
 
 	lclnumsrc = procLclNum(srcPos);
@@ -77,9 +74,9 @@ int part1rpy(int numsrc, double *srcposition, double *forceVec, double *radii, d
 	Vec trgPot;  pC( VecCreateMPI(comm, lclnumtrg*trgDOF, PETSC_DETERMINE, &trgPot) );
 
 	/* ************************************************** */
-	pC( PetscPrintf(comm, "\n\n\t FMM EVALUATE BEGINS\n"));
+//	pC( PetscPrintf(comm, "\n\n\t FMM EVALUATE BEGINS\n"));
 	pC( fmm->evaluate(srcDen, trgPot) );                         // EVALUATE
-	pC( PetscPrintf(comm, "\t FMM EVALUATE ENDS\n"));
+//	pC( PetscPrintf(comm, "\t FMM EVALUATE ENDS\n"));
 	/* ************************************************** */
 	
 	double *tempOutput;
@@ -146,9 +143,9 @@ int part2rpy(int numsrc, double *srcposition, double *forceVec, double* &output)
 	fmm->knl() = knl;
  	MPI_Barrier(comm);
 	/* ************************************************** */
-	pC( PetscPrintf(comm, "\n\n\t FMM SETUP BEGINS\n"));
+	//pC( PetscPrintf(comm, "\n\n\t FMM SETUP BEGINS\n"));
 	pC( fmm->setup() );                                           // SETUP
-	pC( PetscPrintf(comm, "\t FMM SETUP ENDS\n"));
+	//pC( PetscPrintf(comm, "\t FMM SETUP ENDS\n"));
 	/* ************************************************** */
 
 	// setup destroys srcPos, srcNor, trgPos (after creating new, redistributed ones) 
@@ -178,9 +175,9 @@ int part2rpy(int numsrc, double *srcposition, double *forceVec, double* &output)
 	Vec trgPot;  pC( VecCreateMPI(comm, lclnumtrg*trgDOF, PETSC_DETERMINE, &trgPot) );
 
 	/* ************************************************** */
-	pC( PetscPrintf(comm, "\n\n\t FMM EVALUATE BEGINS\n"));
+	//pC( PetscPrintf(comm, "\n\n\t FMM EVALUATE BEGINS\n"));
 	pC( fmm->evaluate(srcDen, trgPot) );                         // EVALUATE
-	pC( PetscPrintf(comm, "\t FMM EVALUATE ENDS\n"));
+	//pC( PetscPrintf(comm, "\t FMM EVALUATE ENDS\n"));
 	/* ************************************************** */
 	
 	
