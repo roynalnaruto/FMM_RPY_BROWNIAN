@@ -51,6 +51,10 @@ int part1rpy(int numsrc, double *srcposition, double *forceVec, double *radii, d
 
 	int srcDOF = knl.srcDOF();
 	int trgDOF = knl.trgDOF();  
+	
+	cout<<"SRC DOF "<<srcDOF<<endl;
+	cout<<"TRG DOF "<<trgDOF<<endl;
+	
 
 	lclnumsrc = procLclNum(srcPos);
 	PetscInt lclnumtrg = lclnumsrc;
@@ -62,6 +66,7 @@ int part1rpy(int numsrc, double *srcposition, double *forceVec, double *radii, d
 	
 	
 	for(PetscInt k=0; k<lclnumsrc; k++){
+		
 		srcDenarr[k*srcDOF + 0] = radii[k];
 		srcDenarr[k*srcDOF + 1] = forceVec[3*k + 0];
 		srcDenarr[k*srcDOF + 2] = forceVec[3*k + 1];
@@ -80,7 +85,7 @@ int part1rpy(int numsrc, double *srcposition, double *forceVec, double *radii, d
 	double *tempOutput;
 	pC( VecGetArray(trgPot, &tempOutput) );
 	
-	 VecView(trgPot,PETSC_VIEWER_STDOUT_WORLD);
+//	 VecView(trgPot,PETSC_VIEWER_STDOUT_WORLD);
 	 //output = tempOutput;
 
 
@@ -188,7 +193,7 @@ int part2rpy(int numsrc, double *srcposition, double *forceVec, double* &output)
 		output[k] = tempOutput[k];
 	}
 
-	 VecView(trgPot,PETSC_VIEWER_STDOUT_WORLD);
+//	 VecView(trgPot,PETSC_VIEWER_STDOUT_WORLD);
 
 	// clean up
 	delete fmm;
@@ -207,8 +212,16 @@ void computeRpy(int nsrc, double *srcPos, double *forceVec, double *radii, doubl
 
 	///TODO! : Don't Allocate this array again and again. : DONE. use temp_output
 	
+	
 	part1rpy(nsrc, srcPos, forceVec, radii, output);
 	part2rpy(nsrc, srcPos, forceVec, temp_output);
+	
+	//cout<<"*****************************PART 1*****************************"<<endl;
+	//printVectors(output, nsrc, 3, cout);
+	//cout<<"******************************PART 2****************************"<<endl;
+	//printVectors(temp_output, nsrc, 3, cout);
+	//cout<<"**********************************************************"<<endl;
+	
 	
 	for(int i=0; i<nsrc; i++){
 		for(int j=0; j<3; j++){
@@ -216,7 +229,7 @@ void computeRpy(int nsrc, double *srcPos, double *forceVec, double *radii, doubl
 			output[3*i + j] += forceVec[3*i + j]/radii[i];  //Adding diagonal
 		}
 	}
-	
+	 	
 	///TODO! : PostCorrection
 }
 
@@ -226,12 +239,15 @@ void postCorrectionAll(int npos, double *srcpos, double *radii, int numpairs_p, 
 						double *forceVec, double *output){
 	
 	double C1 = constantC1;
+	int count = 0;
 	for(int i=0; i<2*(numpairs_p); i+=2){
 		if((pairs[i] <= npos) && (pairs[i+1] <= npos)){
-			postCorrection(pairs[i], pairs[i+1], srcpos, forceVec, radii, output);
-			postCorrection(pairs[i+1], pairs[i], srcpos, forceVec, radii, output);		
+			count++;
+			postCorrection(pairs[i]-1, pairs[i+1]-1, srcpos, forceVec, radii, output);
+			postCorrection(pairs[i+1]-1, pairs[i]-1, srcpos, forceVec, radii, output);		
 		}
-	}
+	}	
+	cout<<"NON_SHELL OVERLAPPING PARTICLES COUNT FROM FMM: "<<count<<endl;	
 }
 
 

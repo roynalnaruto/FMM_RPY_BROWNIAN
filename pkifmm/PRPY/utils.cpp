@@ -74,7 +74,7 @@ void setPosRad(double *pos, double *rad){
     for(int i=0; i<npos; i++){
 		
 		r = (double)rand()/(double)(RAND_MAX/1.0);
-        r = pow(r, 1.0/3.0)*(shell_radius - 2.0);
+        r = pow(r, 1.0/3.0)*(shell_radius - 0.1);
         theta = -1.0 + (float)rand()/(float)(RAND_MAX/2.0);
         theta = acos(theta);
         phi = (float)rand()/(float)(RAND_MAX/(2.0*pie));
@@ -85,34 +85,10 @@ void setPosRad(double *pos, double *rad){
         pos[2+(i*3)] = center[2] + r*cos(theta);
                 
         ///!TODO: SCALE RADIUS APPROPRIATELY
-        //rad[i] = 1.0 + (double)rand()/(double)(RAND_MAX/4.0); // USED FOR VARIABLE RADII
-        rad[i] = 0.5;                                           // USED FOR CONST RADII        
+        rad[i] = 0.01 * (1.0 + (double)rand()/(double)(RAND_MAX/4.0)); // USED FOR VARIABLE RADII
+        //rad[i] = 0.05;                                           // USED FOR CONST RADII        
     }
 }
-
-
-
-/*
-void getShell(double *shell){
-    
-    char filename[100];
-    FILE *input;
-    sprintf(filename, "./data-for-outer-shell/data%d_%d.csv", nsphere, shell_radius);
-    input = fopen(filename, "r");
-    if(input == NULL){
-		printf("File:%s in getShell  could not be opened\n", filename);
-		exit(0);
-	}
-    for(int i=0; i<nsphere; i++){
-        for(int j=0; j<3; j++){
-            fscanf(input, "%lf, ", &shell[3*i + j]);
-            shell[3*i + j] += shell_radius;
-        }
-        fscanf(input, "\n");
-    }
-    fclose(input);
-}
-*/
 
 
 
@@ -134,8 +110,11 @@ void getShell(double *shell){
 
 void createDiag(double *A, double *rad){
  
-	/// !This might create problems. TODO.
-    memset(A, 0, npos * npos * sizeof(double)); 
+    for(int i=0; i<(3*npos); i++) 
+		for(int j=0; j<(3*npos); j++) 
+			A[j+3*npos*i] = 0.0;
+	
+    
     for(int i=0; i<(3*npos); i++) 
 		    A[i+3*npos*i] = 1.0/rad[i/3];
             
@@ -187,11 +166,12 @@ void mobilityMatrix(double *A, double *pos, double *rad){
             a2 = rad[j];
 
             //compute A12
-            if(s >= (a1+a2)){
+            if((s >= (a1+a2)) || false){
                 for(int m=0; m<3; m++){
                     for(int n=0; n<3; n++){
-                        A12[m][n] = (1.0/s)*((3.0/4.0)*(eye3[m][n]+ee[m][n]) + (1.0/4.0)*(a1*a1 + a2*a2)*(eye3[m][n]-3.0*ee[m][n])/(s*s));
-                    }
+                        A12[m][n] = (1.0/s)*((3.0/4.0)*(eye3[m][n]+ee[m][n]) +
+									(1.0/4.0)*(a1*a1 + a2*a2)*(eye3[m][n]-3.0*ee[m][n])/(s*s));
+					}
                 }
             }
             
@@ -213,9 +193,7 @@ void mobilityMatrix(double *A, double *pos, double *rad){
                 for(int n=0; n<3; n++){
                     index2 = 3*(j+1)-(3-n);
                     A[index1 + 3*npos*index2] += A12[m][n];
-                    //A_vec[3*npos*index1 + index2] = A[index1][index2];
                     A[index2 + 3*npos*index1] += A12[n][m];
-                    //A_vec[3*npos*index2 + index1] = A[index2][index1];
                 }
             }
 

@@ -17,13 +17,15 @@ int box_neighbors[NUM_BOX_NEIGHBORS][3] =
     { 0, 0,-1}
 };
 
-int interactions(int npos, double *pos, double L, int boxdim, double cutoff2, double *distances2, int *pairs, int maxnumpairs, int *numpairs_p){
+int interactions(int numpos, double *pos, double L, int boxdim, double cutoff2, double *distances2, int *pairs, int maxnumpairs, int *numpairs_p){
+    
     
     if (boxdim < 4 || cutoff2 > (L/boxdim)*(L/boxdim))
     {
         printf("interactions: bad input parameters\n");
         return 1;
     }
+
 
     struct box b[boxdim][boxdim][boxdim];
     struct box *bp;
@@ -40,35 +42,41 @@ int interactions(int npos, double *pos, double L, int boxdim, double cutoff2, do
         b[idx][idy][idz].head = -1;
 
     // allocate implied linked list
-    int *next = (int *) malloc(npos*sizeof(int));
+    int *next = (int *) malloc(numpos*sizeof(int));
     if (next == NULL)
     {
-        printf("interactions: could not malloc array for %d particles\n", npos);
+        printf("interactions: could not malloc array for %d particles\n", numpos);
         return 1;
     }
+    
 
     // traverse all particles and assign to boxes
     int i;
-    for (i=0; i<npos; i++)
+    for (i=0; i<numpos; i++)
     {
         // initialize entry of implied linked list
         next[i] = -1;
 
         // which box does the particle belong to?
         // assumes particles have positions within [0,L]^3
-        idx = (int)(pos[3*i  ]/L*boxdim);
+		idx = (int)(pos[3*i  ]/L*boxdim);
         idy = (int)(pos[3*i+1]/L*boxdim);
-        idz = (int)(pos[3*i+2]/L*boxdim);
-
+        idz = (int)(pos[3*i+2]/L*boxdim);    
         // add to beginning of implied linked list
         bp = &b[idx][idy][idz];
+
         next[i] = bp->head;
         bp->head = i;
     }
 
+
+
     int numpairs = 0;
     int p1, p2;
     double d2, dx, dy, dz;
+    
+
+
 
     for (idx=0; idx<boxdim; idx++)
     {
@@ -77,7 +85,6 @@ int interactions(int npos, double *pos, double L, int boxdim, double cutoff2, do
             for (idz=0; idz<boxdim; idz++)
             {
                 bp = &b[idx][idy][idz];
-
                 // within box interactions
                 p1 = bp->head;
                 while (p1 != -1)
@@ -92,8 +99,8 @@ int interactions(int npos, double *pos, double L, int boxdim, double cutoff2, do
                         dx = pos[3*p1+0] - pos[3*p2+0];
                         dy = pos[3*p1+1] - pos[3*p2+1];
                         dz = pos[3*p1+2] - pos[3*p2+2];
-
-                        if ((d2 = dx*dx+dy*dy+dz*dz) < cutoff2)
+                        
+                        if ((d2 = dx*dx+dy*dy+dz*dz) <= cutoff2)
                         {
                             pairs[2*numpairs]   = p1 + 1;
                             pairs[2*numpairs+1] = p2 + 1;
@@ -110,11 +117,15 @@ int interactions(int npos, double *pos, double L, int boxdim, double cutoff2, do
                 int j;
                 for (j=0; j<NUM_BOX_NEIGHBORS; j++)
                 {
-                    neigh_idx = (idx + box_neighbors[j][0] + boxdim) % boxdim;
+					neigh_idx = (idx + box_neighbors[j][0] + boxdim) % boxdim;
                     neigh_idy = (idy + box_neighbors[j][1] + boxdim) % boxdim;
                     neigh_idz = (idz + box_neighbors[j][2] + boxdim) % boxdim;
 
+					//cout<<"done allocating neigh_id"<<endl;
+
                     neigh_bp = &b[neigh_idx][neigh_idy][neigh_idz];
+                    
+                    //cout<<"hey 1"<<endl;
 
                     // when using boxes, the minimum image computation is 
                     // known beforehand, thus we can  compute position offsets 
@@ -128,10 +139,14 @@ int interactions(int npos, double *pos, double L, int boxdim, double cutoff2, do
                     if (idx + box_neighbors[j][0] == boxdim) xoffset =  L;
                     if (idy + box_neighbors[j][1] == boxdim) yoffset =  L;
                     if (idz + box_neighbors[j][2] == boxdim) zoffset =  L;
+                    
+                    //cout<<"hey 2"<<endl;
 
                     p1 = neigh_bp->head;
+                    //cout<<"entering WHILE"<<endl;
                     while (p1 != -1)
                     {
+						//cout<<"still p1 there"<<endl;
                         p2 = bp->head;
                         while (p2 != -1)
                         {
@@ -159,12 +174,10 @@ int interactions(int npos, double *pos, double L, int boxdim, double cutoff2, do
             }
         }
     }
-
+    
     free(next);
-
     *numpairs_p = numpairs;
-
-    //printf("Total number of overlapping pairs : %d\n", numpairs);
+	printf("Total number of overlapping pairs : %d\n", numpairs);
 
     return 0;
 }
@@ -192,14 +205,14 @@ void interactionsFilter(int *numpairs_p, int *pairs, int *finalPairs, double *ra
             finalPairs[2*interactingPairs] = min(pairs[i], pairs[i+1]);
             finalPairs[2*interactingPairs+1] = max(pairs[i], pairs[i+1]);
             interactingPairs++;
-            if((pairs[i] <= npos) && (pairs[i+1] <= npos))
+            //if((pairs[i] <= npos) && (pairs[i+1] <= npos))
 			nonshellPairs++;
         }
         
     }
 
     *numpairs_p = interactingPairs;
-    //printf("Non shell particles , number of overlaps %d \n", nonshellPairs);
+    printf("Non shell particles , number of overlaps %d \n", nonshellPairs);
     printf("Total number of overlapping particles : %d\n", interactingPairs);
 }
 
@@ -218,6 +231,8 @@ void computeForce(double *f, double *pos, double *rad, int *pairs, int numpairs)
         f[3*i + 1] = 0.0;
         f[3*i + 2] = 0.0;
     }
+    
+    int count=0;
 
     for(pair=0; pair<2*numpairs; pair+=2){
 
@@ -236,7 +251,8 @@ void computeForce(double *f, double *pos, double *rad, int *pairs, int numpairs)
             f[3*i + 2] += -kshell*(1 - (a1 + shell_particle_radius)/s)*r3;
 		}
         else{
-            a2 = rad[j];
+			count++;
+			a2 = rad[j];
             f[3*i + 0] += -kparticle*(1 - (a1 + a2)/s)*r1;
             f[3*i + 1] += -kparticle*(1 - (a1 + a2)/s)*r2;
             f[3*i + 2] += -kparticle*(1 - (a1 + a2)/s)*r3;
@@ -246,6 +262,8 @@ void computeForce(double *f, double *pos, double *rad, int *pairs, int numpairs)
 			}
 
 		}
+		
+//	cout<<"NON_SHELL OVERLAPPING PARTICLES COUNT: "<<count<<endl;	
 }
 
 
@@ -329,6 +347,6 @@ void computeForceSerial(double *f, double *pos, double *rad, double *shell){
         }
     }
     assert(npairs%2==0);
-    //printf("exit computeForce: npairs  = %d \n", npairs/2);
+    printf("exit computeForce: npairs  = %d \n", npairs/2);
 }
 

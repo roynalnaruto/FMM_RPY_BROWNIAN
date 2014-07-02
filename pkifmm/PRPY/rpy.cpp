@@ -12,6 +12,7 @@ PetscInt  procGlbNum(Vec pos) { PetscInt tmp; VecGetSize(     pos, &tmp); return
 
 int main(int argc, char** argv)
 {
+   
    PetscInitialize(&argc,&argv,"options",NULL); 
    
 	// set the number of sources and points per mpi rank
@@ -24,16 +25,17 @@ int main(int argc, char** argv)
 	
 	
 	int dim = 3;
+	
 	npos = n_pos;
 	
+	cout<<n_pos<<endl;
 	shell_radius = 0.5;
-	shell_particle_radius = 0.001;
-	nsphere = 90000;
+	shell_particle_radius = 0.05;
+	nsphere = 900;
 
 	
 	
-	cout<<"COMES HERE :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"<<endl;
-
+	
 /*
  *  Variables for Timings
  */ 	
@@ -44,10 +46,10 @@ int main(int argc, char** argv)
 
 	
 	
-	double *pos = new double[(npos + nsphere)*dim];
+	double *pos = new double[(npos + nsphere)*3];
 	double *rad = new double[npos];
 	double *force = new double[npos*dim];	
-	double *shell = pos + (dim * npos);
+	double *shell = pos + (3 * npos);
 	
 	double *rpy = new double[npos*dim];	
 	double *temp_rpy = new double[npos*dim];
@@ -70,7 +72,7 @@ int main(int argc, char** argv)
 	
 //***************** Variables for Local Interactions********************	
 	//! TODO : make boxdim variable.
-	double L = 2 * shell_radius;
+	double L = 2 * shell_radius + 0.001;
 	int boxdim = 10;
 	double cutoff2 = 4 * shell_particle_radius * shell_particle_radius;
 	int maxnumpairs = 5000000;
@@ -78,6 +80,11 @@ int main(int argc, char** argv)
 	int *finalPairs = new int[2 * maxnumpairs];	
 	double *distances2 = new double[maxnumpairs];
 	int numpairs_p;
+	
+	if((pairs==NULL) || (finalPairs==NULL) || (distances2==NULL)){
+		cout<<"COULD NOT ALLOCATE SPACE FOR INTERACTIONS. "<<endl;
+		exit(0);
+	}
 //**********************************************************************
 
 
@@ -92,44 +99,38 @@ int main(int argc, char** argv)
 
 
 
+	time_t t;
+	srand((unsigned) time(&t));
 	
 	setPosRad(pos, rad);
 	savePos(pos, rad, 0);
 	getShell(shell);
 	
-	
-	printVectors(pos, npos, 3, cout);
-	cout<<"------------------------------------"<<endl;
-	printVectors(rad, npos, 1, cout);
-	cout<<"------------------------------------"<<endl;
-	
-	printf("%lf\n", shell[0*0 + 0]);
-	printf("%lf\n", shell[0*0 + 1]);
-	printf("%lf\n", shell[0*0 + 2]);
-	
-	
-/*	
 	for(int tstep=0; tstep<TMAX; tstep++){
-
-	    interactions(npos+nsphere, pos, L, boxdim, cutoff2, distances2, pairs, maxnumpairs, &numpairs_p);
-    	interactionsFilter(&numpairs_p, pairs, finalPairs, rad, pos);
-    	
-    	getNorm((100000000+(rand()%99999999)), standardNormalZ);
 		
+		interactions(npos+nsphere, pos, L, boxdim, cutoff2, distances2, pairs, maxnumpairs, &numpairs_p);
+		interactionsFilter(&numpairs_p, pairs, finalPairs, rad, pos);   
+		 	
+//    	getNorm((100000000+(rand()%99999999)), standardNormalZ);		
     	computeForce(force, pos, rad, finalPairs, numpairs_p);
 
 		if(CHECKCODE){
 			
-			computeForceSerial(force_serial, pos, rad, shell);
+			computeForceSerial(force_serial, pos, rad, shell);			
+//			cout<<"-----------------FORCE INTERACTIVE------------------------"<<endl;
+//			printVectors(force, npos, 3, cout);
+//			cout<<"-----------------FORCE SERIAL------------------------"<<endl;
+//			printVectors(force_serial, npos, 3, cout);
+			
 			double error1 = relError(force_serial, force, npos, 3);
 			printf("Relative Error in computeForce %lf\n", error1);
-			
+						
 			double error2 = maxError(force_serial, force, npos, 3);
 			printf("Max Error in computeForce %lf\n", error2); 
 			
-			for(int i=0;i<3*npos;i++){
-				standardNormalZ1[i] = standardNormalZ[i];
-			}
+//			for(int i=0;i<3*npos;i++){
+//				standardNormalZ1[i] = standardNormalZ[i];
+//			}
 			
 			createDiag(A, rad);
 			mobilityMatrix(A, pos, rad);
@@ -137,15 +138,21 @@ int main(int argc, char** argv)
 //			compute_lanczos(lanczos1, 1e-4, 1, standardNormalZ1, 3*npos,
 //					SERIAL, force, lanczos_out, pos, rad, numpairs_p, finalPairs, A);
 //			
-			multiplyMatrix(A, force_serial);
+			multiplyMatrix(A, force);
 					
 		}
 		
 		
 		computeRpy(npos, pos, force, rad, rpy, temp_rpy);
-		printVectors(rpy, npos, 3, cout);
+		postCorrectionAll(npos, pos, rad, numpairs_p, finalPairs, force, rpy);
+	
+		double error1 = relError(A, rpy, npos, 3);
+		printf("Relative Error in computeRpy %lf\n", error1);
+					
+		double error2 = maxError(A, rpy, npos, 3);
+		printf("Max Error in computeRpy %lf\n", error2); 
+	
 		
-		postCorrectionAll(npos, pos, rad, numpairs_p, pairs, force, rpy);
 		
 //		create_lanczos (&lanczos, 1, maxiters, npos*3);
 //		compute_lanczos(lanczos, 1e-4, 1, standardNormalZ, 3*npos,
@@ -153,21 +160,18 @@ int main(int argc, char** argv)
 //					
 		
 		if(CHECKCODE){
-			
-			printf("relative Error : %lf\n", relError(standardNormalZ, standardNormalZ1, npos, 3));
+		//	printf("relative Error : %lf\n", relError(standardNormalZ, standardNormalZ1, npos, 3));
 		}
-		
-		
 	//	updatePos(pos, rpy, standardNormalZ);
 	//	savePos(pos, rad, tstep+1);
 		printf("%d time steps done\n", tstep+1);
-	}
 	
-	PetscFinalize();
-	gettimeofday(&endTime, NULL);
-	totaltime = (endTime.tv_sec-startTime.tv_sec)*1000000 + endTime.tv_usec-startTime.tv_usec;
-	printf("Total time computing %d time steps (%d particles) : %ld msec\n", TMAX, npos, totaltime/1000);
-*/
+	}	
+//		PetscFinalize();
+		gettimeofday(&endTime, NULL);
+		totaltime = (endTime.tv_sec-startTime.tv_sec)*1000000 + endTime.tv_usec-startTime.tv_usec;
+		printf("Total time computing %d time steps (%d particles) : %ld msec\n", TMAX, npos, totaltime/1000);
+
 	return 0;
 }
 																																							 

@@ -3219,8 +3219,8 @@ double *sphere_icos1_points ( int factor, int node_num )
   {
     for ( dim = 0; dim < 3; dim++ )
     {
-      node_xyz[dim+node*3] = point_coord[dim+point*3];
-      printf("%lf, :::::::::", node_xyz[dim + node*3]);
+      node_xyz[dim+node*3] = 0.5*point_coord[dim+point*3] + 0.5;
+      //printf("%lf, :::::::::", node_xyz[dim + node*3]);
     }
     printf("\n");
     node = node + 1;
@@ -3248,7 +3248,7 @@ double *sphere_icos1_points ( int factor, int node_num )
 
       for ( dim = 0; dim < 3; dim++ )
       {
-        node_xyz[dim+node*3] = node_xyz[dim+node*3] / node_norm;
+        node_xyz[dim+node*3] = 0.5*(node_xyz[dim+node*3] / node_norm) + 0.5;
       }
       node = node + 1;
     }
@@ -3278,7 +3278,7 @@ double *sphere_icos1_points ( int factor, int node_num )
 
         for ( dim = 0; dim < 3; dim++ )
         {
-          node_xyz[dim+node*3] = node_xyz[dim+node*3] / node_norm;
+          node_xyz[dim+node*3] = 0.5*(node_xyz[dim+node*3] / node_norm) + 0.5;
         }
         node = node + 1;
       }

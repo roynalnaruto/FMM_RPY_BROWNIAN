@@ -23,6 +23,8 @@
 #include <emmintrin.h>
 #endif
 
+#include <iostream>
+using namespace std;
 #include "common/vecmatop.hpp"
 #include "kernel3d_mpi.hpp"
 #include "comobject_mpi.hpp"
@@ -601,6 +603,7 @@ int Kernel3d_MPI::density2potential(const DblNumMat& srcPos, const DblNumVec& sr
 														(identity - (3 * (distance[ii] * distance[jj]) * invR2));
 									}
 								}
+								//cout<<"1) --------- "<<den[4*s + 1]<<" "<<den[4*s + 2]<<" "<<den[4*s + 3]<<endl;;					
 							}
 						pot[3*t]   += p[0]*OOFP*kernel_coef;
 						pot[3*t+1] += p[1]*OOFP*kernel_coef;
@@ -615,7 +618,7 @@ int Kernel3d_MPI::density2potential(const DblNumMat& srcPos, const DblNumVec& sr
 		const double OOFP = 1.0;
 				for (int t=0; t<nt; t++)
 					{
-						double p[3]={0,0,0};
+						double p[3]={0.0,0.0,0.0};
 						double tx=trg[3*t];
 						double ty=trg[3*t+1];
 						double tz=trg[3*t+2];
@@ -647,7 +650,8 @@ int Kernel3d_MPI::density2potential(const DblNumMat& srcPos, const DblNumVec& sr
 														(identity - (3 * (distance[ii] * distance[jj]) * invR2));
 									}
 								}
-							}
+								//cout<<"2) --------- "<<den[3*s + 0]<<" "<<den[3*s + 1]<<" "<<den[3*s + 2]<<endl;;					
+						}
 						pot[3*t]   += p[0]*OOFP*kernel_coef;
 						pot[3*t+1] += p[1]*OOFP*kernel_coef;
 						pot[3*t+2] += p[2]*OOFP*kernel_coef;

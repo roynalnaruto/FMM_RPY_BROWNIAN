@@ -99,7 +99,7 @@ void savePos(double *pos, double *rad, int index);
 void computeForce(double *f, double *pos, double *rad, int *pairs, int numpairs);
 void computeForceSerial(double *f, double *pos, double *rad, double *shell);
 void interactionsFilter(int *numpairs_p, int *pairs, int *finalPairs, double *rad, double *pos);
-int interactions(int npos, double *pos, double L, int boxdim, double cutoff2,
+int interactions(int numpos, double *pos, double L, int boxdim, double cutoff2,
 							double *distances2, int *pairs, int maxnumpairs, int *numpairs_p);
 
 
