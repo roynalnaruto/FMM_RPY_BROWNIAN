@@ -153,18 +153,19 @@ int FMM3d_MPI::setup()
 		      _knl_s2c = _knl_mm;
 		      _knl_e2t = _knl;
 		      break;
+
 	
    case KNL_RPY: 
 		      _knl_mm = Kernel3d_MPI(KNL_STK_F_U, _knl.coefs());
-		      _knl_s2c = _knl_mm;
-		      _knl_e2t = _knl;
+		      _knl_s2c = _knl;
+		      _knl_e2t = _knl_mm;
 		      break;	      
 	
 	
 	case KNL_RPY2: 
 		      _knl_mm = Kernel3d_MPI(KNL_STK_F_U, _knl.coefs());
-		      _knl_s2c = _knl_mm;
-		      _knl_e2t = _knl;
+		      _knl_s2c = _knl;
+		      _knl_e2t = _knl_mm;
 		      break;	      
 	
 		      
@@ -174,15 +175,18 @@ int FMM3d_MPI::setup()
 		      _knl_s2c = _knl;
 		      _knl_e2t = _knl_mm;
 		      break;
+		      
     case KNL_STK_S_UG: 
 		      _knl_mm = Kernel3d_MPI(KNL_STK_F_U, _knl.coefs()); 
 		      _knl_s2c = Kernel3d_MPI(KNL_STK_S_U, _knl.coefs()) ;
 		      _knl_e2t = Kernel3d_MPI(KNL_STK_F_UG, _knl.coefs());
 		       break;
+		       
     case KNL_STK_S_P: _knl_mm = Kernel3d_MPI(KNL_LAP_S_U, vector<double>());
 		      _knl_s2c = _knl;
 		      _knl_e2t = _knl_mm;
 		      break;
+		      
     case KNL_STK_D_U: _knl_mm = Kernel3d_MPI(KNL_STK_F_U, _knl.coefs());
 		      _knl_s2c = _knl;
 		      _knl_e2t = _knl_mm;

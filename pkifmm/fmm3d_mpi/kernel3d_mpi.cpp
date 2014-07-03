@@ -605,6 +605,8 @@ int Kernel3d_MPI::density2potential(const DblNumMat& srcPos, const DblNumVec& sr
 								}
 								//cout<<"1) --------- "<<den[4*s + 1]<<" "<<den[4*s + 2]<<" "<<den[4*s + 3]<<endl;;					
 							}
+							
+						//cout<<p[0]<<" "<<p[1]<<" "<<p[2]<<endl; 	
 						pot[3*t]   += p[0]*OOFP*kernel_coef;
 						pot[3*t+1] += p[1]*OOFP*kernel_coef;
 						pot[3*t+2] += p[2]*OOFP*kernel_coef;
