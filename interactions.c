@@ -200,7 +200,7 @@ void interactionsFilter(int *numpairs_p, int *pairs, int *finalPairs, double *ra
 
     *numpairs_p = interactingPairs;
     //printf("Non shell particles , number of overlaps %d \n", nonshellPairs);
-    printf("Total number of overlapping particles : %d\n", interactingPairs);
+    //printf("Total number of overlapping particles : %d\n", interactingPairs);
 }
 
 

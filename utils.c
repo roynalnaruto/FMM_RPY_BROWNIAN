@@ -69,16 +69,16 @@ void setPosRad(double *pos, double *rad){
         //r, phi and theta
         temp_r = (double)rand()/(double)(RAND_MAX/1.0);
         temp_r = pow(temp_r, 1.0/3.0)*(shell_radius - 2.0);
-        temp_theta = -1.0 + (float)rand()/(float)(RAND_MAX/2.0);
+        temp_theta = -1.0 + (double)rand()/(double)(RAND_MAX/2.0);
         temp_theta = acos(temp_theta);
-        temp_phi = (float)rand()/(float)(RAND_MAX/(2.0*pie));
+        temp_phi = (double)rand()/(double)(RAND_MAX/(2.0*pie));
 
-        //rad[i] = 1.0 + (double)rand()/(double)(RAND_MAX/4.0); // USED FOR VARIABLE RADII
-        rad[i] = 1.0;                                           // USED FOR CONST RADII        
+        rad[i] = 0.3 + (double)rand()/(double)(RAND_MAX/0.7); // USED FOR VARIABLE RADII
+        //rad[i] = 1.0;                                           // USED FOR CONST RADII        
         //spherical co-ordinates to cartesian
         pos[0+(i*3)] = temp_r*sin(temp_theta)*cos(temp_phi) + shell_radius;
         pos[1+(i*3)] = temp_r*sin(temp_theta)*sin(temp_phi) + shell_radius;
-        pos[2+(i*3)] = temp_r*cos(temp_theta) + shell_radius;
+        pos[2+(i*3)] = temp_r*cos(temp_theta)               + shell_radius;
 
     }
     //printf("exit setPosRad\n");
@@ -195,6 +195,15 @@ void createDiag(double *A, double *rad){
     //printf("exit createDiag\n");
 }
 
+void sqrtMatrix(double *A, double *Z){
+    int i;
+    //printVectors(A, 3*npos, 3*npos);
+    for(i=0; i<3*npos; i++){
+        Z[i] = Z[i]*sqrt(A[i*(3*npos+1)]);
+    }
+    //printVectors(Z, npos, 3);
+}
+
 void mobilityMatrix(double *A, double *pos, double *rad){
     //printf("enter mobilityMatrix\n");
 
@@ -286,6 +295,7 @@ void multiplyMatrix(double *A, double *f){
         for(j = 0; j<3*(npos); j++){
             temp_value[i] += A[i+3*npos*j]*f[j];
         }
+        //printf("temp_value[%d] = %lf\n", i, temp_value[i]);
     }
     for(i=0; i<3*npos; i++){
         A[i] = temp_value[i];
@@ -293,6 +303,7 @@ void multiplyMatrix(double *A, double *f){
 }
 
 void multiplyMatrix_AZ(double *A, double *Az, double *z){
+    //printf("entered multiplyMatrix_AZ\n");
     int i, j;
     for(i=0; i<3*(npos); i++){
         Az[i] = 0.0;
@@ -300,6 +311,7 @@ void multiplyMatrix_AZ(double *A, double *Az, double *z){
             Az[i] += A[i+3*npos*j]*z[j];
         }
     }
+    //printf("exit multiplyMatrix_AZ\n");
 }
 
 void getNorm(int seed, double *z){
@@ -313,6 +325,13 @@ void updatePos(double *pos, complex *rpy, double *z){
     int i;
     for(i=0; i<3*npos; i++){
         pos[i] += rpy[i].dr*dt + sqrt(2*dt)*z[i];
+    }
+}
+
+void updatePosSerial(double *pos, double *A, double *z){
+    int i;
+    for(i=0; i<3*npos; i++){
+        pos[i] += A[i]*dt + sqrt(2*dt)*z[i];
     }
 }
 
