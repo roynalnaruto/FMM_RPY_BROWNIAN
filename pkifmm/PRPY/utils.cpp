@@ -67,7 +67,7 @@ void printVectors(double *array, int size, int dimension, ostream & file_buffer)
 
 
 
-void setPosRad(int npos, double *pos, double *rad){
+void setPosRad(int npos, double *pos, double *rad, double shell_radius, double shell_particle_radius){
     
     double r, theta, phi;   
     double center[3] = {shell_radius, shell_radius, shell_radius};

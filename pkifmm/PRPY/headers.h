@@ -83,7 +83,7 @@ void computeRpy(int nsrc, double *srcPos, double *forceVec, double *radii, doubl
 
 
 
-void setPosRad(int npos, double *pos, double *rad);
+void setPosRad(int npos, double *pos, double *rad, double shell_radius, double shell_particle_radius);
 void getShell(int *nsphere, double *shell);
 void createDiag(int npos, double *A, double *rad);
 void mobilityMatrix(int npos, double *A, double *pos, double *rad);
@@ -96,9 +96,9 @@ void savePos(int npos, double *pos, double *rad, int index);
 
 
 //!Interactive functions
-void computeForce(int npos, double *f, double *pos, double *rad, int *pairs, int numpairs);
-void computeForceSerial(int npos, int nsphere, double *f, double *pos, double *rad, double *shell);
-void interactionsFilter(int npos, int *numpairs_p, int *pairs, int *finalPairs, double *rad, double *pos);
+void computeForce(int npos, double *f, double *pos, double *rad, int *pairs, int numpairs, double shell_particle_radius);
+void computeForceSerial(int npos, int nsphere, double *f, double *pos, double *rad, double *shell, double shell_particle_radius);
+void interactionsFilter(int npos, int *numpairs_p, int *pairs, int *finalPairs, double *rad, double *pos, double shell_particle_radius);
 int interactions(int numpos, double *pos, double L, int boxdim, double cutoff2,
 							double *distances2, int *pairs, int maxnumpairs, int *numpairs_p);
 

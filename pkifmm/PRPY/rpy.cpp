@@ -1,8 +1,6 @@
 #include "headers.h"
 
 
-double shell_radius;
-double shell_particle_radius;
 
 
 PetscInt  procLclNum(Vec pos) { PetscInt tmp; VecGetLocalSize(pos, &tmp); return tmp/3  /*dim*/; }
@@ -17,6 +15,8 @@ int main(int argc, char** argv)
 	
 	int nsphere;
 	int npos;
+	double shell_radius;
+	double shell_particle_radius;
 
 	
 	PetscTruth flg;
@@ -30,7 +30,6 @@ int main(int argc, char** argv)
 	int dim = 3;
 	
 	npos = n_pos;
-	
 	cout<<n_pos<<endl;
 	shell_radius = 0.5;
 	shell_particle_radius = 0.02;
@@ -105,7 +104,7 @@ int main(int argc, char** argv)
 	srand((unsigned) time(&t));
 	srand48((long)time(NULL));
 	
-	setPosRad(npos, pos, rad);
+	setPosRad(npos, pos, rad, shell_radius, shell_particle_radius);
 	savePos(npos, pos, rad, 0);
 	getShell(&nsphere, shell);
 	printf("Number of particles on the shell : %d\n", nsphere);
@@ -115,14 +114,14 @@ int main(int argc, char** argv)
 	for(int tstep=0; tstep<TMAX; tstep++){
 		
 		interactions(npos+nsphere, pos, L, boxdim, cutoff2, distances2, pairs, maxnumpairs, &numpairs_p);
-		interactionsFilter(npos, &numpairs_p, pairs, finalPairs, rad, pos);   
+		interactionsFilter(npos, &numpairs_p, pairs, finalPairs, rad, pos, shell_particle_radius);   
 		 	
 //    	getNorm((100000000+(rand()%99999999)), standardNormalZ);		
-    	computeForce(npos, force, pos, rad, finalPairs, numpairs_p);
+    	computeForce(npos, force, pos, rad, finalPairs, numpairs_p, shell_particle_radius);
 
 		if(CHECKCODE){
 			
-			computeForceSerial(npos, nsphere, force_serial, pos, rad, shell);			
+			computeForceSerial(npos, nsphere, force_serial, pos, rad, shell, shell_particle_radius);			
 //			cout<<"-----------------FORCE INTERACTIVE------------------------"<<endl;
 //			printVectors(force, npos, 3, cout);
 //			cout<<"-----------------FORCE SERIAL------------------------"<<endl;
