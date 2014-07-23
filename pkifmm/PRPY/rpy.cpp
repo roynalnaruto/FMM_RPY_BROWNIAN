@@ -122,7 +122,7 @@ int main(int argc, char** argv)
 
 		if(CHECKCODE){
 			
-			computeForceSerial(npos, force_serial, pos, rad, shell);			
+			computeForceSerial(npos, nsphere, force_serial, pos, rad, shell);			
 //			cout<<"-----------------FORCE INTERACTIVE------------------------"<<endl;
 //			printVectors(force, npos, 3, cout);
 //			cout<<"-----------------FORCE SERIAL------------------------"<<endl;

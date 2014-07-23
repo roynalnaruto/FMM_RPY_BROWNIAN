@@ -271,7 +271,7 @@ void computeForce(int npos, double *f, double *pos, double *rad, int *pairs, int
 
 
 
-void computeForceSerial(int npos, double *f, double *pos, double *rad, double *shell){
+void computeForceSerial(int npos, int nsphere, double *f, double *pos, double *rad, double *shell){
     //printf("enter computeForce\n");
     //initialize variables
     double a1, a2;

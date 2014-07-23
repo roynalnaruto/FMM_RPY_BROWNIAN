@@ -97,7 +97,7 @@ void savePos(int npos, double *pos, double *rad, int index);
 
 //!Interactive functions
 void computeForce(int npos, double *f, double *pos, double *rad, int *pairs, int numpairs);
-void computeForceSerial(int npos, double *f, double *pos, double *rad, double *shell);
+void computeForceSerial(int npos, int nsphere, double *f, double *pos, double *rad, double *shell);
 void interactionsFilter(int npos, int *numpairs_p, int *pairs, int *finalPairs, double *rad, double *pos);
 int interactions(int numpos, double *pos, double L, int boxdim, double cutoff2,
 							double *distances2, int *pairs, int maxnumpairs, int *numpairs_p);
