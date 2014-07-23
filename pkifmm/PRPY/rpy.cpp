@@ -105,9 +105,8 @@ int main(int argc, char** argv)
 	setPosRad(npos, pos, rad);
 	savePos(npos, pos, rad, 0);
 	getShell(&nsphere, shell);
-	//printf("Number of particles on the shell : %d\n", nsphere);
+	printf("Number of particles on the shell : %d\n", nsphere);
 	
-	//return 0;
 	
 	
 	for(int tstep=0; tstep<TMAX; tstep++){
