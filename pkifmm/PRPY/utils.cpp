@@ -98,7 +98,6 @@ void getShell(int *nsphere, double *shell){
 	//int node_num;
 	factor = 4;
 	*nsphere = sphere_icos_point_num ( factor );
-	printf("Number of particles on the shell : %d\n", *nsphere);
 	
 	///!TODO : Change this, infi memory leak going on here. !!CHANGE
 	double *shell1 = sphere_icos1_points (factor, *nsphere);
