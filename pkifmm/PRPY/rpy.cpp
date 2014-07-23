@@ -104,12 +104,9 @@ int main(int argc, char** argv)
 	
 	setPosRad(npos, pos, rad);
 	savePos(npos, pos, rad, 0);
-	getShell(shell);
+	getShell(&nsphere, shell);
 	
 	
-
-    
-    
 	
 	for(int tstep=0; tstep<TMAX; tstep++){
 		

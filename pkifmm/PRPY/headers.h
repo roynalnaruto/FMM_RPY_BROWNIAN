@@ -84,7 +84,7 @@ void computeRpy(int nsrc, double *srcPos, double *forceVec, double *radii, doubl
 
 
 void setPosRad(int npos, double *pos, double *rad);
-void getShell(double *shell);
+void getShell(int *nsphere, double *shell);
 void createDiag(int npos, double *A, double *rad);
 void mobilityMatrix(int npos, double *A, double *pos, double *rad);
 void multiplyMatrix(int npos, double *A, double *f);

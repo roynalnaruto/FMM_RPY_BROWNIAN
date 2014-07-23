@@ -92,17 +92,17 @@ void setPosRad(int npos, double *pos, double *rad){
 
 
 
-void getShell(double *shell){
+void getShell(int *nsphere, double *shell){
 	int factor;
 	int node;
 	//int node_num;
 	factor = 4;
-	nsphere = sphere_icos_point_num ( factor );
-	printf("Number of particles on the shell : %d\n", nsphere);
+	*nsphere = sphere_icos_point_num ( factor );
+	printf("Number of particles on the shell : %d\n", *nsphere);
 	
 	///!TODO : Change this, infi memory leak going on here. !!CHANGE
-	double *shell1 = sphere_icos1_points (factor, nsphere);
-	for(int i=0;i<3*nsphere;i++)
+	double *shell1 = sphere_icos1_points (factor, *nsphere);
+	for(int i=0;i<3*(*nsphere);i++)
 		shell[i] = shell1[i];
 }
 
