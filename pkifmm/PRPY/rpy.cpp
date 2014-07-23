@@ -102,8 +102,8 @@ int main(int argc, char** argv)
 	srand((unsigned) time(&t));
 	srand48((long)time(NULL));
 	
-	setPosRad(pos, rad);
-	savePos(pos, rad, 0);
+	setPosRad(npos, pos, rad);
+	savePos(npos, pos, rad, 0);
 	getShell(shell);
 	
 	
@@ -114,14 +114,14 @@ int main(int argc, char** argv)
 	for(int tstep=0; tstep<TMAX; tstep++){
 		
 		interactions(npos+nsphere, pos, L, boxdim, cutoff2, distances2, pairs, maxnumpairs, &numpairs_p);
-		interactionsFilter(&numpairs_p, pairs, finalPairs, rad, pos);   
+		interactionsFilter(npos, &numpairs_p, pairs, finalPairs, rad, pos);   
 		 	
 //    	getNorm((100000000+(rand()%99999999)), standardNormalZ);		
-    	computeForce(force, pos, rad, finalPairs, numpairs_p);
+    	computeForce(npos, force, pos, rad, finalPairs, numpairs_p);
 
 		if(CHECKCODE){
 			
-			computeForceSerial(force_serial, pos, rad, shell);			
+			computeForceSerial(npos, force_serial, pos, rad, shell);			
 //			cout<<"-----------------FORCE INTERACTIVE------------------------"<<endl;
 //			printVectors(force, npos, 3, cout);
 //			cout<<"-----------------FORCE SERIAL------------------------"<<endl;
@@ -137,13 +137,13 @@ int main(int argc, char** argv)
 //				standardNormalZ1[i] = standardNormalZ[i];
 //			}
 			
-			createDiag(A, rad);
-			mobilityMatrix(A, pos, rad);
+			createDiag(npos, A, rad);
+			mobilityMatrix(npos, A, pos, rad);
 //			create_lanczos (&lanczos1, 1, maxiters, npos*3);
 //			compute_lanczos(lanczos1, 1e-4, 1, standardNormalZ1, 3*npos,
 //					SERIAL, force, lanczos_out, pos, rad, numpairs_p, finalPairs, A);
 //			
-			multiplyMatrix(A, force);
+			multiplyMatrix(npos, A, force);
 					
 		}
 		

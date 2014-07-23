@@ -67,7 +67,7 @@ void printVectors(double *array, int size, int dimension, ostream & file_buffer)
 
 
 
-void setPosRad(double *pos, double *rad){
+void setPosRad(int npos, double *pos, double *rad){
     
     double r, theta, phi;   
     double center[3] = {shell_radius, shell_radius, shell_radius};
@@ -108,7 +108,7 @@ void getShell(double *shell){
 
 
 
-void createDiag(double *A, double *rad){
+void createDiag(int npos, double *A, double *rad){
  
     for(int i=0; i<(3*npos); i++) 
 		for(int j=0; j<(3*npos); j++) 
@@ -122,7 +122,7 @@ void createDiag(double *A, double *rad){
 
 
 
-void mobilityMatrix(double *A, double *pos, double *rad){
+void mobilityMatrix(int npos, double *A, double *pos, double *rad){
 
     double a1, a2;
     int k, index1, index2;
@@ -205,7 +205,7 @@ void mobilityMatrix(double *A, double *pos, double *rad){
 
 
 
-void multiplyMatrix(double *A, double *f){
+void multiplyMatrix(int npos, double *A, double *f){
     
     double sum;
     for(int i=0; i<3*(npos); i++){
@@ -221,7 +221,7 @@ void multiplyMatrix(double *A, double *f){
 
 
 
-void multiplyMatrix_AZ(double *A, double *Az, double *z){
+void multiplyMatrix_AZ(int npos, double *A, double *Az, double *z){
     for(int i=0; i<3*(npos); i++){
         Az[i] = 0.0;
         for(int j = 0; j<3*(npos); j++){
@@ -232,7 +232,7 @@ void multiplyMatrix_AZ(double *A, double *Az, double *z){
 
 
 
-void getNorm(int seed, double *z){
+void getNorm(int npos, int seed, double *z){
 	for(int i=0; i<3*npos; i++){
 		z[i] = r8_normal_01(seed);
 	}
@@ -240,7 +240,7 @@ void getNorm(int seed, double *z){
 
 
 
-void updatePos(double *pos, double *rpy, double *z){
+void updatePos(int npos, double *pos, double *rpy, double *z){
     int i;
     for(i=0; i<3*npos; i++){
         pos[i] += rpy[i]*dt + sqrt(2*dt)*z[i];
@@ -250,7 +250,7 @@ void updatePos(double *pos, double *rpy, double *z){
 
 
 
-void savePos(double *pos, double *rad, int index){
+void savePos(int npos, double *pos, double *rad, int index){
     
     FILE *file;
     char filename[50];

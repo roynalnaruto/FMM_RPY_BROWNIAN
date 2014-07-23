@@ -83,22 +83,22 @@ void computeRpy(int nsrc, double *srcPos, double *forceVec, double *radii, doubl
 
 
 
-void setPosRad(double *pos, double *rad);
+void setPosRad(int npos, double *pos, double *rad);
 void getShell(double *shell);
-void createDiag(double *A, double *rad);
-void mobilityMatrix(double *A, double *pos, double *rad);
-void multiplyMatrix(double *A, double *f);
-void multiplyMatrix_AZ(double *A, double *Az, double *z);
-void getNorm(int seed, double *z);
-void updatePos(double *pos, double *rpy, double *z);
-void savePos(double *pos, double *rad, int index);
+void createDiag(int npos, double *A, double *rad);
+void mobilityMatrix(int npos, double *A, double *pos, double *rad);
+void multiplyMatrix(int npos, double *A, double *f);
+void multiplyMatrix_AZ(int npos, double *A, double *Az, double *z);
+void getNorm(int npos, int seed, double *z);
+void updatePos(int npos, double *pos, double *rpy, double *z);
+void savePos(int npos, double *pos, double *rad, int index);
 
 
 
 //!Interactive functions
-void computeForce(double *f, double *pos, double *rad, int *pairs, int numpairs);
-void computeForceSerial(double *f, double *pos, double *rad, double *shell);
-void interactionsFilter(int *numpairs_p, int *pairs, int *finalPairs, double *rad, double *pos);
+void computeForce(int npos, double *f, double *pos, double *rad, int *pairs, int numpairs);
+void computeForceSerial(int npos, double *f, double *pos, double *rad, double *shell);
+void interactionsFilter(int npos, int *numpairs_p, int *pairs, int *finalPairs, double *rad, double *pos);
 int interactions(int numpos, double *pos, double L, int boxdim, double cutoff2,
 							double *distances2, int *pairs, int maxnumpairs, int *numpairs_p);
 

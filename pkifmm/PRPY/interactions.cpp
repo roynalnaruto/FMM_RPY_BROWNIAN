@@ -182,7 +182,7 @@ int interactions(int numpos, double *pos, double L, int boxdim, double cutoff2, 
     return 0;
 }
 
-void interactionsFilter(int *numpairs_p, int *pairs, int *finalPairs, double *rad, double *pos){
+void interactionsFilter(int npos, int *numpairs_p, int *pairs, int *finalPairs, double *rad, double *pos){
 
     int kk, i, interactingPairs = 0;
     double r[3];
@@ -219,7 +219,7 @@ void interactionsFilter(int *numpairs_p, int *pairs, int *finalPairs, double *ra
 
 
 
-void computeForce(double *f, double *pos, double *rad, int *pairs, int numpairs){
+void computeForce(int npos, double *f, double *pos, double *rad, int *pairs, int numpairs){
 
     int i, j, pair;
     double a1, a2;
@@ -271,7 +271,7 @@ void computeForce(double *f, double *pos, double *rad, int *pairs, int numpairs)
 
 
 
-void computeForceSerial(double *f, double *pos, double *rad, double *shell){
+void computeForceSerial(int npos, double *f, double *pos, double *rad, double *shell){
     //printf("enter computeForce\n");
     //initialize variables
     double a1, a2;
