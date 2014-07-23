@@ -3,8 +3,6 @@
 
 double shell_radius;
 double shell_particle_radius;
-int nsphere;
-int npos;
 
 
 PetscInt  procLclNum(Vec pos) { PetscInt tmp; VecGetLocalSize(pos, &tmp); return tmp/3  /*dim*/; }
@@ -16,6 +14,11 @@ int main(int argc, char** argv)
    PetscInitialize(&argc,&argv,"options",NULL); 
    
 	// set the number of sources and points per mpi rank
+	
+	int nsphere;
+	int npos;
+
+	
 	PetscTruth flg;
 	PetscInt n_pos;  
 	pC( PetscOptionsGetInt(0, "-numsrc", &n_pos, &flg) );

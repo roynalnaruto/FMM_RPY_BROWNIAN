@@ -112,8 +112,6 @@ struct box{
 //Variables
 extern double shell_radius;
 extern double shell_particle_radius;
-extern int nsphere;
-extern int npos;
 
 
 #endif
