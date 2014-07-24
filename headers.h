@@ -11,10 +11,10 @@
 #include "lanczos.h"
 #include "sphere_grid.h"
 
-#define kparticle 65.0
-#define kshell 150.0
+#define kparticle 25.0
+#define kshell 60.0
 #define dt 0.002
-#define tmax 10000
+#define tmax 1
 #define shell_particle_radius 1.0
 #define pie 3.14159
 #define NUM_BOX_NEIGHBORS 13
@@ -44,13 +44,16 @@ double maxErrorRealComplex(double *V1, complex *V2, int size, int dimension);
 
 void computeForceSerial(double *f, double *pos, double *rad, double *shell);
 void multiplyMatrix(double *A, double *f);
+void multiplyMatrix_AZ(double *A, double *Az, double *z);
 void mobilityMatrix(double *A, double *pos, double *rad);
 void createDiag(double *A, double *rad);
+void sqrtMatrix(double *A, double *Z);
 
 int postCorrection(int npos, double *pos, double *rad, int numpairs_p, int *pairs,
 					complex *f1, complex *f2, complex *f3, complex *rpy);
 
 void updatePos(double *pos, complex *rpy, double *z);
+void updatePosSerial(double *pos, double *A, double *z);
 void savePos(double *pos, double *rad, int index);
 
 struct box{
@@ -60,6 +63,5 @@ struct box{
 int shell_radius;
 int nsphere;
 int npos;
-//double vf = 0.075;
 
 #endif

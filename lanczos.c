@@ -264,7 +264,11 @@ void compute_lanczos (lanczos_t *lanczos, double tol,
                 else if(mobtype == SERIAL)
                 {
                     double *tempin =  &(v[i * ldv]);
+                    //printf("calling MM_AZ\n");
+                    //printf("from Lanczos iteration %d, A : \n", i);
+                    //printVectors(A, 3*npos, 3*npos);
                     multiplyMatrix_AZ(A, w, tempin);
+                    //printf("done MM_AZ\n");
                 }
 
                 // w = w - h(i-1, i) * v(i-1)                
