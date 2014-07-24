@@ -153,9 +153,6 @@ int main(int argc, char** argv)
 		gettimeofday(&endTime, NULL);
 		totaltime = (endTime.tv_sec-startTime.tv_sec)*1000000 + endTime.tv_usec-startTime.tv_usec;
 		printf("Total time computing %d time steps (%d particles) : %ld msec\n", TMAX, npos, totaltime/1000);
-
-		
-		
 		postCorrectionAll(npos, pos, rad, numpairs_p, finalPairs, force, rpy);
 	
 		

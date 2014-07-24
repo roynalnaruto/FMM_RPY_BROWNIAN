@@ -13,6 +13,8 @@ inline double mod(double x){
  * Error Computing Functions
  * 
  */ 
+ 
+///Computes Relative Error b/w 2 vectors. 
 double relError(double *V1, double *V2, int size, int dimension){
 	
 	long double total = 0;
@@ -24,6 +26,8 @@ double relError(double *V1, double *V2, int size, int dimension){
 	return (error/total);	
 }
 
+
+///Computes the maximum difference in any dimension b/w 2 vectors 
 double maxError(double *V1, double *V2, int size, int dimension){
 	
 	long double maxError = 0;
@@ -45,6 +49,8 @@ double maxError(double *V1, double *V2, int size, int dimension){
 /** 
  *	Some Printing Routines
  */ 
+ 
+///Prints elements of a one dimensional array  in pairs.
 void printPairs(int *array, int pair, ostream & file_buffer){
 
     for(int i=0; i<pair; i+=2){
@@ -52,6 +58,7 @@ void printPairs(int *array, int pair, ostream & file_buffer){
     }
 }
 
+///Prints elements of a multi dimensional array(but stored as a single dimensional array).
 void printVectors(double *array, int size, int dimension, ostream & file_buffer){
     
     for(int i=0;i<size;i++){
@@ -66,7 +73,10 @@ void printVectors(double *array, int size, int dimension, ostream & file_buffer)
 
 
 
-
+/**
+ * Randomly(and uniformly) generates positions within a sphere(called shell henceforth) 
+ * Also gives a certain radii to those points
+ */ 
 void setPosRad(int npos, double *pos, double *rad, double shell_radius, double shell_particle_radius){
     
     double r, theta, phi;   
@@ -84,6 +94,7 @@ void setPosRad(int npos, double *pos, double *rad, double shell_radius, double s
         pos[1+(i*3)] = center[1] + r*sin(theta)*sin(phi);
         pos[2+(i*3)] = center[2] + r*cos(theta);
                 
+        //point generated, now give it a certain radius.
         ///!TODO: SCALE RADIUS APPROPRIATELY
         rad[i] = 0.2 * (shell_particle_radius) * drand48(); // USED FOR VARIABLE RADII
         //rad[i] = shell_particle_radius * 0.2;                                           // USED FOR CONST RADII        
@@ -91,11 +102,16 @@ void setPosRad(int npos, double *pos, double *rad, double shell_radius, double s
 }
 
 
-
+/**
+ * Gets points on the surface of the shell.
+ * The points are generated like a grid on the shell.
+ * 
+ */ 
 void getShell(int *nsphere, double *shell){
 	int factor;
 	int node;
-	//int node_num;
+	//factor determines the number of points generated on the shell. 
+	//The greater the factor, larger the number of points generated. 
 	factor = 4;
 	*nsphere = sphere_icos_point_num ( factor );
 	
@@ -107,6 +123,11 @@ void getShell(int *nsphere, double *shell){
 
 
 
+
+/**
+ * Generates a diagonal matrix. 
+ * Used only for debugging purposes.
+ */
 void createDiag(int npos, double *A, double *rad){
  
     for(int i=0; i<(3*npos); i++) 
@@ -120,6 +141,10 @@ void createDiag(int npos, double *A, double *rad){
 }
 
 
+/**
+ * Generates the (3N * 3N) mobility matrix for the RPY tensor for different particle radii. 
+ * Used only for debugging purposes.
+ */ 
 
 void mobilityMatrix(int npos, double *A, double *pos, double *rad){
 
@@ -203,7 +228,11 @@ void mobilityMatrix(int npos, double *A, double *pos, double *rad){
 
 
 
-
+/**
+ * A is a N*N matrix. f is a N length vector
+ * Multiplies Af and stores it in the first few entries of A.
+ * 
+ */ 
 void multiplyMatrix(int npos, double *A, double *f){
     
     double sum;
@@ -219,7 +248,10 @@ void multiplyMatrix(int npos, double *A, double *f){
 
 
 
-
+/**
+ * A is a N*N matrix. z is a N length vector
+ * Multiplies Az and stores it in Az. 
+ */ 
 void multiplyMatrix_AZ(int npos, double *A, double *Az, double *z){
     for(int i=0; i<3*(npos); i++){
         Az[i] = 0.0;
@@ -230,7 +262,9 @@ void multiplyMatrix_AZ(int npos, double *A, double *Az, double *z){
 }
 
 
-
+/**
+ * Generates a standard normal distribution of dimension 3*npos.
+ */ 
 void getNorm(int npos, int seed, double *z){
 	for(int i=0; i<3*npos; i++){
 		z[i] = r8_normal_01(seed);
@@ -238,7 +272,9 @@ void getNorm(int npos, int seed, double *z){
 }
 
 
-
+/**
+ *Update Position for the next time step. 
+ */
 void updatePos(int npos, double *pos, double *rpy, double *z){
     int i;
     for(i=0; i<3*npos; i++){
@@ -248,7 +284,9 @@ void updatePos(int npos, double *pos, double *rpy, double *z){
 
 
 
-
+/**
+ * Save position in a file whose name is indexed by <index>
+ */ 
 void savePos(int npos, double *pos, double *rad, int index){
     
     FILE *file;

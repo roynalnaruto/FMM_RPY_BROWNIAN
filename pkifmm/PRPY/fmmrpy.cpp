@@ -1,6 +1,8 @@
 #include "headers.h"
 
-
+/**
+ * The first call to the kifmm routine for RPY tensor.
+ */ 
 int part1rpy(int numsrc, double *srcposition, double *forceVec, double *radii, double* &output){
 	
 	MPI_Comm comm; comm = PETSC_COMM_WORLD;
@@ -103,6 +105,9 @@ int part1rpy(int numsrc, double *srcposition, double *forceVec, double *radii, d
 
 
 
+/**
+ * The second call to the kifmm routine for RPY tensor.
+ */ 
 
 int part2rpy(int numsrc, double *srcposition, double *forceVec, double* &output){
 	
@@ -203,7 +208,11 @@ int part2rpy(int numsrc, double *srcposition, double *forceVec, double* &output)
 
 
 
-
+/**
+ * Handles both the calls to KIFMM routine.
+ * Doesn't do post Corrections. That needs to be called seperately.
+ * 
+ */ 
 
 void computeRpy(int nsrc, double *srcPos, double *forceVec, double *radii, double *output, double *temp_output){
 
@@ -232,6 +241,12 @@ void computeRpy(int nsrc, double *srcPos, double *forceVec, double *radii, doubl
 
 
 
+
+/**
+ * Does postCorrection for all particles.
+ * Call this function for postCorrection
+ */ 
+
 void postCorrectionAll(int npos, double *srcpos, double *radii, int numpairs_p, int *pairs, 
 						double *forceVec, double *output){
 	
@@ -252,8 +267,13 @@ void postCorrectionAll(int npos, double *srcpos, double *radii, int numpairs_p, 
 
 
 
-
-//Corrects stuff for index1 only!
+/**
+ * 
+ * Post Correction for a pair of particles.
+ * Corrects stuff for index1 only! 
+ * If post correction has to be done for both indices, then a seperate call has to be made.
+ */
+  
 void postCorrection(int index1, int index2, double *srcPosition, double *forceVector, double *radii, double *output){
 	
 	double effectiveRadius = (radii[index1] * radii[index1]) + (radii[index2] * radii[index2]);

@@ -17,6 +17,12 @@ int box_neighbors[NUM_BOX_NEIGHBORS][3] =
     { 0, 0,-1}
 };
 
+
+
+/**
+ * Returns all pairs which are at a distance less than cutoff.
+ * 
+ */ 
 int interactions(int numpos, double *pos, double L, int boxdim, double cutoff2, double *distances2, int *pairs, int maxnumpairs, int *numpairs_p){
     
     
@@ -182,6 +188,14 @@ int interactions(int numpos, double *pos, double L, int boxdim, double cutoff2, 
     return 0;
 }
 
+
+
+
+/**
+ * 
+ * Filter out all particles which are not actually overlapping.
+ * 
+ */ 
 void interactionsFilter(int npos, int *numpairs_p, int *pairs, int *finalPairs, double *rad, double *pos, double shell_particle_radius){
 
     int kk, i, interactingPairs = 0;
@@ -218,7 +232,10 @@ void interactionsFilter(int npos, int *numpairs_p, int *pairs, int *finalPairs, 
 
 
 
-
+/**
+ * Computes the Force vector using overlapping pairs obtained from the interactions routine
+ * 
+ */ 
 void computeForce(int npos, double *f, double *pos, double *rad, int *pairs, int numpairs, double shell_particle_radius){
 
     int i, j, pair;
@@ -269,7 +286,10 @@ void computeForce(int npos, double *f, double *pos, double *rad, int *pairs, int
 
 
 
-
+/**
+ * Computes Force Vector in a naive way
+ * Used only for debugging purposes.
+ */ 
 
 void computeForceSerial(int npos, int nsphere, double *f, double *pos, double *rad, double *shell, double shell_particle_radius){
     //printf("enter computeForce\n");
