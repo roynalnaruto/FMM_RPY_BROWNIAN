@@ -1,35 +1,28 @@
-#source /opt/intel/bin/compilervars.sh intel64
+
 #gcc -L/home/vipul/final sample.c /home/rohit/final/normal-lib/normal.o -lm -lfmmrpy -lgfortran -g 
 
 # Configuration ################################################################
 
-
-
-
-CC = g++
+CC = gcc
 #CFLAGS = -Wall -Wextra
-#CFLAGS += -DNDEBUG -O									# For production and benchmarks
-#CFLAGS = -DDEBUG -g -L/opt/intel/mkl/lib/intel64		# For debugging
-CPPFLAGS = -DDEBUG -g
-#CFLAGS += -L/opt/intel/lib/intel64
-#INCLUDES = -I. -I/opt/intel/mkl/include 
-INCLUDES = -I. -I../fmm3d_mpi
-LIBS = -lm -lfmmrpy -lmkl_intel_lp64 -lmkl_core -lmkl_intel_thread -liomp5
+#CFLAGS += -DNDEBUG -O		# For production and benchmarks
+CFLAGS = -DDEBUG -g		# For debugging
+INCLUDES = -I.
+LIBS = -lm -lfmmrpy -lgfortran
 
 # Project Paths
-
-PROJECT_BASE = ../../$(CURDIR)
-PROJECT_ROOT = $(CURDIR)
+PROJECT_ROOT ?= $(CURDIR)
 SRCDIR = $(PROJECT_ROOT)
 OBJDIR = $(PROJECT_ROOT)/objs
-DOCDIR = $(PROJECT_BASE)/doc
+DOCDIR = $(PROJECT_ROOT)/doc
 NORMDIR = $(PROJECT_ROOT)/normal-lib
+FORTRANDIR = $(PROJECT_ROOT)/fmmlibFortran/examples
+
 # Main #########################################################################
 
-OBJS = $(SRCS:%.cpp=$(OBJDIR)/%.o)
-DEPS = $(SRCS:%.cpp=$(OBJDIR)/%.d)
-SRCS = rpy.cpp utils.cpp interactions.cpp 
-#	add lanczos
+OBJS = $(SRCS:%.c=$(OBJDIR)/%.o)
+DEPS = $(SRCS:%.c=$(OBJDIR)/%.d)
+SRCS = new.c utils.c interactions.c  
 EXE = rpy
 
 .PHONY: all clean doc
@@ -39,15 +32,19 @@ all: $(OBJDIR)/$(EXE)
 $(OBJDIR):
 	@mkdir -p $(OBJDIR)
 
-$(OBJDIR)/$(EXE): $(OBJS) | $(OBJDIR)
-	$(CC) -L$(PROJECT_ROOT) $(CPPFLAGS) $(INCLUDES)  -o $@ $(NORMDIR)/normal.o $(OBJS) $(LIBS)
+$(OBJDIR)/$(EXE): fortranlibrary $(OBJS) | $(OBJDIR)
+	$(CC) -L$(PROJECT_ROOT) $(CFLAGS) $(INCLUDES)  -o $@ $(OBJS) $(LIBS)
+
+$(OBJDIR)/%.o : $(SRCDIR)/%.c | $(OBJDIR)
+	$(CC) $(CFLAGS) $(INCLUDES) -c -o $@ $<
+
+$(OBJDIR)/%.d: $(SRCDIR)/%.c | $(OBJDIR)
+	@$(CC) $(CFLAGS) $(INCLUDES) -MM -MT $(@:%.d=%.o) $< > $@
 
 
-$(OBJDIR)/%.o : $(SRCDIR)/%.cpp | $(OBJDIR)
-	$(CC) $(CPPFLAGS) $(INCLUDES) -c -o $@ $<
-
-$(OBJDIR)/%.d: $(SRCDIR)/%.cpp | $(OBJDIR)
-	@$(CC) $(CPPFLAGS) $(INCLUDES) -MM -MT $(@:%.d=%.o) $< > $@
+fortranlibrary: $(FORTRANDIR)/*.o
+	rm -rf libfmmrpy.a
+	@ar -cvq libfmmrpy.a $(FORTRANDIR)/*.o
 
 
 doc:
@@ -61,7 +58,7 @@ doc:
 clean:
 	@rm -rf $(OBJDIR) $(DOCDIR)/*.aux $(DOCDIR)/*.pdf $(DOCDIR)/*.dvi $(DOCDIR)/*.log $(DOCDIR)/*~
 	@rm -rf $(PROJECT_ROOT)/*.aux $(PROJECT_ROOT)/*.pdf $(PROJECT_ROOT)/*.dvi $(PROJECT_ROOT)/*.log $(PROJECT_ROOT)/*~
-	@rm -rf $(PROJECT_ROOT)/*.out
+	@rm -rf $(PROJECT_ROOT)/*.out $(PROJECT_ROOT)/*.o
 
 -include $(DEPS)
 

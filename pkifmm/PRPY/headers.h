@@ -42,7 +42,7 @@ using namespace std;
 
 #define NUM_BOX_NEIGHBORS 13
 
-#define CHECKCODE 1
+#define CHECKCODE 0
 #define TMAX 1
 
 //Petsc functions.

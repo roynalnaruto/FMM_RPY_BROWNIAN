@@ -41,7 +41,6 @@ int main(int argc, char** argv)
  */ 	
 	struct timeval startTime, endTime;
 	long long time1, time2, totaltime;
-	gettimeofday(&startTime, NULL);
 
 
 	
@@ -75,7 +74,7 @@ int main(int argc, char** argv)
 	double L = 2 * shell_radius + 0.001;
 	int boxdim = 10;
 	double cutoff2 = 4 * shell_particle_radius * shell_particle_radius;
-	int maxnumpairs = 5000000;
+	int maxnumpairs = 50000000;
 	int *pairs = new int[2 * maxnumpairs];
 	int *finalPairs = new int[2 * maxnumpairs];	
 	double *distances2 = new double[maxnumpairs];
@@ -148,15 +147,24 @@ int main(int argc, char** argv)
 					
 		}
 		
-		computeRpy(npos, pos, force, rad, rpy, temp_rpy);
+		
+		gettimeofday(&startTime, NULL);
+		computeRpy(npos, pos, force, rad, rpy, temp_rpy);		
+		gettimeofday(&endTime, NULL);
+		totaltime = (endTime.tv_sec-startTime.tv_sec)*1000000 + endTime.tv_usec-startTime.tv_usec;
+		printf("Total time computing %d time steps (%d particles) : %ld msec\n", TMAX, npos, totaltime/1000);
+
+		
+		
 		postCorrectionAll(npos, pos, rad, numpairs_p, finalPairs, force, rpy);
 	
-		double error1 = relError(A, rpy, npos, 3);
-		printf("Relative Error in computeRpy %lf\n", error1);
-					
-		double error2 = maxError(A, rpy, npos, 3);
-		printf("Max Error in computeRpy %lf\n", error2); 
-				
+		
+		if(CHECKCODE){
+			double error1 = relError(A, rpy, npos, 3);
+			printf("Relative Error in computeRpy %lf\n", error1);						
+			double error2 = maxError(A, rpy, npos, 3);
+			printf("Max Error in computeRpy %lf\n", error2); 
+		}		
 //		create_lanczos (&lanczos, 1, maxiters, npos*3);
 //		compute_lanczos(lanczos, 1e-4, 1, standardNormalZ, 3*npos,
 //					FMM, force, lanczos_out, pos, rad, numpairs_p, finalPairs, A);
@@ -170,10 +178,7 @@ int main(int argc, char** argv)
 		printf("%d time steps done\n", tstep+1);
 	
 	}	
-//		PetscFinalize();
-		gettimeofday(&endTime, NULL);
-		totaltime = (endTime.tv_sec-startTime.tv_sec)*1000000 + endTime.tv_usec-startTime.tv_usec;
-		printf("Total time computing %d time steps (%d particles) : %ld msec\n", TMAX, npos, totaltime/1000);
+		PetscFinalize();
 
 	return 0;
 }

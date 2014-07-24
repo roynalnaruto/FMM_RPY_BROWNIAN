@@ -21,6 +21,12 @@ step 3. Type "make ACTION=all tree"  in current directory.
 
 === TO RUN THE EXAMPLES
 
+
+
+/configure --with-debugging=no --with-clanguage=c++ --with-cc=gcc --with-cxx=g++ --with-fc=gfortran --download-fblaslapack --download-mpich
+
+
+
 step 1: cd examples
 step 2: make
 step 3. run:

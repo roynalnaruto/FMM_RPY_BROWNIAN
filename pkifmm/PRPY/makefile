@@ -31,4 +31,4 @@ SRCS = rpy.cpp utils.cpp interactions.cpp
 temp: $(OBJDIR)/$(OBJS)
 
 rpy: rpy.o fmmrpy.o interactions.o utils.o
-	${CLINKER} -o rpy rpy.o fmmrpy.o interactions.o utils.o $(NORMOBJS) ../fmm3d_mpi/libfmm3d_mpi.a ../common/libcommon.a ${LIBS} ${PETSC_LIB} 
+	${CLINKER} -fopenmp -o rpy rpy.o fmmrpy.o interactions.o utils.o $(NORMOBJS) ../fmm3d_mpi/libfmm3d_mpi.a ../common/libcommon.a ${LIBS} ${PETSC_LIB} 

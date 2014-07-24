@@ -39,8 +39,8 @@ void destroy_lanczos (lanczos_t *lanczos);
 void compute_lanczos (lanczos_t *lanczos, double tol,
                       int nrhs, double *z, int ldz,
                       int mobtype,
-                      complex *fmmin1, complex *fmmin2, complex *fmmin3,
-                      complex *fmmout, 
+                      real *forceVec,
+                      real *fmmout, 
                       double *sourcepos, double *radii,
                       int numpairs_p, int *pairs, double *A,...);
                       
